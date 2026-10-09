@@ -13,7 +13,7 @@ export const partner: PartnerDictionary = {
     eyebrow: 'Partner with us',
     title: ['Let’s talk about distributing', 'your products to poultry farms.'],
     intro:
-      'We welcome conversations with manufacturers and suppliers of poultry products about supply or agency opportunities that serve the broiler, layer and breeder farms we work with.',
+      'We welcome conversations with manufacturers and suppliers of poultry farm products about supply or agency opportunities that serve the broiler, layer and breeder farms we work with.',
   },
   relationship: {
     title: 'Areas we’re open to discussing',
@@ -64,9 +64,9 @@ export const partner: PartnerDictionary = {
       'Share your company details and the product line you’re proposing. Our team will get in touch after reviewing your request.',
     fields: {
       company: 'Company name',
-      role: 'Your role',
+      role: 'Job title',
       productLine: 'Proposed product line',
-      productLineHint: 'For example: feed supplements or poultry vaccines',
+      productLineHint: 'For example: feed supplements or veterinary vaccines for poultry',
       website: 'Company website',
     },
   },

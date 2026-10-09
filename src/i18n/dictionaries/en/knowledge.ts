@@ -24,7 +24,7 @@ export const knowledge: KnowledgeDictionary = {
         key: 'farm-business',
         name: 'Poultry farm business',
         description:
-          'Practical topics on planning a farm’s product needs, organising orders and working with suppliers.',
+          'Practical topics on planning a farm’s product needs, organising purchase requests and working with suppliers.',
       },
       {
         key: 'feed-supplements',
@@ -45,8 +45,8 @@ export const knowledge: KnowledgeDictionary = {
       },
     ],
     empty: {
-      title: 'Our first articles are in review',
-      body: 'We’re preparing a set of articles for poultry farms, and they’re currently in editorial and professional review before being published here. Until then, our team is happy to answer your questions about products and orders.',
+      title: 'No articles published yet',
+      body: 'Articles appear here once they have been reviewed and approved. Until then, our team is happy to answer your questions about products and requests.',
       cta: 'Contact our team',
     },
     card: {

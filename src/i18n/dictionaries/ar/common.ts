@@ -103,7 +103,7 @@ export const common = {
     },
     supplements: {
       name: 'مكملات الأعلاف',
-      short: 'مكملات لأعلاف الدواجن نوفرها بمعلومات ملصقاتها المعتمدة.',
+      short: 'مكملات لأعلاف الدواجن نوفرها مع المعلومات الواردة في ملصقاتها المعتمدة.',
     },
     medicines: {
       name: 'الأدوية البيطرية',
@@ -339,10 +339,10 @@ export const common = {
   },
   demoBanner: 'بيئة تجريبية: البيانات المعروضة هنا بيانات اختبار، وليست منتجات حقيقية.',
   englishReviewNotice: 'النسخة الإنجليزية — بانتظار المراجعة التحريرية',
-  readingTime: '{minutes} دقائق قراءة',
+  readingTime: '{minutes} دقائق للقراءة',
   readingTimeOne: 'دقيقة واحدة للقراءة',
   readingTimeTwo: 'دقيقتان للقراءة',
-  readingTimeMany: '{minutes} دقيقة قراءة',
+  readingTimeMany: '{minutes} دقيقة للقراءة',
 }
 
 export type CommonDictionary = typeof common

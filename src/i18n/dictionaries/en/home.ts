@@ -7,7 +7,7 @@ import type { HomeDictionary } from '../ar/home'
 
 export const home: HomeDictionary = {
   meta: {
-    title: 'Specialised supply solutions for poultry farms',
+    title: 'Specialised Supply Solutions for Poultry Farms',
     description:
       'Alshorouk supplies poultry feed and feed supplements, and distributes veterinary medicines and vaccines, for broiler, layer and breeder farms.',
   },
@@ -23,7 +23,7 @@ export const home: HomeDictionary = {
   },
   proof: {
     eyebrow: 'Alshorouk in numbers',
-    title: 'Established working relationships with broiler, layer and breeder farms.',
+    title: 'Ongoing working relationships with broiler, layer and breeder farms.',
     footnote: 'Figures are approximate and reflect the current scope of our business.',
   },
   statement: {
@@ -104,7 +104,7 @@ export const home: HomeDictionary = {
         key: 'medicines',
         index: '03',
         name: 'Veterinary medicines',
-        body: 'Poultry veterinary medicines from a portfolio of approximately 150 veterinary medicine and vaccine products we distribute. For use in line with approved guidelines and under veterinary supervision.',
+        body: 'Veterinary medicines for poultry, distributed to farms with the information from their approved labels. Veterinary products should be used in line with approved guidelines and under the supervision of a veterinarian.',
         cta: 'Browse category',
       },
       {
@@ -119,7 +119,7 @@ export const home: HomeDictionary = {
   },
   journey: {
     eyebrow: 'How we work',
-    title: 'From farm needs to follow-up on your request',
+    title: 'From the farm’s needs to follow-up on your request',
     intro:
       'A clear path that starts with understanding your farm’s needs and continues with follow-up after supply, so you know what comes next at every step.',
     steps: [
@@ -168,7 +168,7 @@ export const home: HomeDictionary = {
         key: 'reliability',
         name: 'Reliability',
         latin: 'Reliability',
-        body: 'Our long-standing relationships with farms rest on doing what we agree and communicating clearly whenever something changes.',
+        body: 'Our ongoing relationships with farms rest on doing what we agree and communicating clearly whenever something changes.',
       },
       {
         key: 'expertise',
@@ -192,7 +192,7 @@ export const home: HomeDictionary = {
     eyebrow: 'From the field',
     title: 'Relationships built cycle after cycle',
     narrative:
-      'We measure our work in long-term relationships, not one-off deals. Today, three figures sum up their scope: around 300 poultry farms we serve on an ongoing basis, around 15 million birds within the production capacity of the farms we serve, and around 150 veterinary medicine and vaccine products we distribute. These farms span broilers, layers and breeders, and each segment has its own rhythm and needs.',
+      'We measure our work in long-term relationships, not one-off deals. Today, three approximate figures sum up their scope: around 300 poultry farms we serve on an ongoing basis, around 15 million birds within the production capacity of the farms we serve, and around 150 veterinary medicine and vaccine products we distribute. These farms span broilers, layers and breeders, and each segment has its own rhythm and needs.',
     segments: [
       {
         key: 'broilers',

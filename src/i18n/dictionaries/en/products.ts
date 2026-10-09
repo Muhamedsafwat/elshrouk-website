@@ -61,7 +61,7 @@ export const products: ProductsDictionary = {
     categoryBrowser: {
       title: 'Browse by category',
       intro:
-        'We supply poultry farm products across four main categories. Choose a category to see its products in the catalogue, or send an inquiry about it directly.',
+        'We make poultry farm products available across four main categories. Choose a category to see its products in the catalogue, or send an inquiry about it directly.',
       viewProducts: 'View products',
       inquire: 'Ask about this category',
     },

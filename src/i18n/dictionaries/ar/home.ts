@@ -8,7 +8,8 @@
 // verbatim — never edit the figures, qualifiers or labels inside them.
 // journey.steps describe a PROPOSED process pending client confirmation: no SLA and no delivery-time promise.
 // High-visibility lines pending client approval: meta.title, hero.eyebrow, hero.headline, statement.lines, closing.headline.
-// faq.items answer business/process questions only — no medical advice. Render common.vetSafetyNote near veterinary content.
+// faq.items answer business/process questions only — no medical advice.
+// productUniverse.items[medicines].body ends with the exact veterinary safety sentence (common.vetSafetyNote); keep it verbatim.
 
 export const home = {
   meta: {
@@ -60,7 +61,7 @@ export const home = {
         index: '02',
         name: 'البياض',
         latin: 'Layers',
-        title: 'احتياجات ثابتة على امتداد دورة الإنتاج',
+        title: 'احتياجات منتظمة على امتداد دورة الإنتاج',
         body: 'تمتد دورة إنتاج البيض لأشهر طويلة، وتحتاج المزرعة خلالها إلى إمداد منتظم يمكن التخطيط له مسبقًا. نساعد مزارع البياض في توفير احتياجاتها من فئات منتجاتنا الأربع.',
         points: [
           'طلبات مجدولة على امتداد فترة الإنتاج',
@@ -109,7 +110,7 @@ export const home = {
         key: 'medicines',
         index: '03',
         name: 'الأدوية البيطرية',
-        body: 'أدوية بيطرية للدواجن من بين حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية. تُستخدم وفق الإرشادات المعتمدة وتحت إشراف الطبيب البيطري.',
+        body: 'أدوية بيطرية للدواجن نوزعها للمزارع بمعلومات نشراتها المعتمدة. تُستخدم المنتجات البيطرية وفقًا للإرشادات المعتمدة وتحت إشراف الطبيب البيطري.',
         cta: 'تصفح الفئة',
       },
       {

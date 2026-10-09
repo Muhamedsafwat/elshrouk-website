@@ -12,7 +12,7 @@ Role owner: QA / Browser Testing Agent (spec §13.11). QA is a **separate pass a
 - Any "done" claim, any layout/motion bug report, any dependency or token change with visual impact.
 
 ## Inputs
-- Running app: the shared dev server `http://localhost:3000` (do not start another `next dev`); a production build on another port only when the task authorises `pnpm build` (`pnpm start` uses :3000 — run `next start --port 3100` via the orchestrator).
+- Running app: the shared dev server `http://localhost:3000` (do not start another `next dev`); a production build on another port only when the task authorises `pnpm build` (`pnpm start` is pinned to :3000 — use `pnpm exec next start --port 3100`, coordinated with the orchestrator).
 - Playwright 1.64 with the cached Chromium; Chrome and Edge channels also available. WebKit and Firefox are **not installed** — Safari/iOS behaviour is untested unless a human checks a real device.
 - `pnpm screenshots` (= `playwright test --project=screenshots`), `pnpm test:e2e`, `docs/motion-storyboard.md`, `docs/art-direction.md`, the colour-ratio script in the visual-art-direction skill, `docs/test-report.md`.
 
@@ -38,8 +38,8 @@ Role owner: QA / Browser Testing Agent (spec §13.11). QA is a **separate pass a
    - Console: zero `console.error`, `pageerror`, hydration warnings (`/hydrat|did not match/i`).
    - Network: no failed same-origin requests, no responses ≥ 400 except deliberate 404 pages; no broken images (`complete && naturalWidth === 0`).
    - Links: request every internal `a[href^="/"]` once per run → status < 400 (404 page links excepted).
-   - Placeholders: body text must not match `/\{\w+\}|TODO|lorem|undefined|NaN|\[object Object\]|PLACEHOLDER/i`.
-   - Structure: exactly one `h1`; `html[lang][dir]` correct; no Arabic-Indic digits in rendered text (`/[٠-٩۰-۹]/`).
+   - Placeholders: `document.body.innerText` must not match `/\{\w+\}|\bTODO\b|\b[Ll]orem\b|\bundefined\b|\bNaN\b|\[object Object\]|\bPLACEHOLDER\b/` (case-sensitive, so English words such as "maintenance" do not trip it).
+   - Structure: exactly one `h1`; `html[lang][dir]` correct; no Arabic-Indic digits in rendered text (`/[٠-٩۰-۹]/`, i.e. U+0660–0669 and U+06F0–06F9).
    - Touch: on mobile contexts, interactive controls ≥ 44×44 px (inline text links reported as warnings).
    - Overlays: focus each form field and assert `document.elementFromPoint` at its centre is the field (sticky CTA/header must not cover it).
 5. **Inspect the images yourself.** Open every captured screenshot (image viewer / Read tool) and note what you see per page; run the colour-ratio script on full-page shots at 390 and 1440. Then walk the visual regression checklist below.

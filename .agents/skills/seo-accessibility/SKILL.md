@@ -21,10 +21,10 @@ Role owner: SEO & Accessibility Specialist (spec §13.10). Done when titles/meta
 
 ## Procedure
 1. **Metadata per route** (`generateMetadata`): title template `%s | الشروق` (EN `%s | Alshorouk`), unique description from the dictionary/CMS (no stuffing; weave in intent phrases naturally where true: `منتجات مزارع دواجن`, `أدوية دواجن`, `لقاحات دواجن`, `مكملات أعلاف الدواجن`, `أعلاف الدواجن`), `alternates.canonical` = `absoluteUrl(path)` without query, Open Graph with an approved image and the official logo only, `openGraph.locale` from `ogLocale`.
-2. **Indexing policy.**
-   - `siteStatus = staging` or no approved domain → every page `robots: noindex` and `robots.txt` `Disallow: /`.
+2. **Indexing policy** (implemented by `buildMetadata()` in `src/lib/seo.ts` — extend it, do not bypass it).
+   - Indexable only when `NEXT_PUBLIC_SITE_ENV=production` **and** `site-settings.siteStatus = production`; otherwise every page is `noindex` and `robots.txt` disallows everything. No approved domain (OI-16) means not indexable.
    - `/en` → `noindex` and omitted from the sitemap and `hreflang` until `englishApproved`; afterwards `alternates.languages = { 'ar-EG': …, en: …, 'x-default': /ar… }` on pages that exist in both.
-   - Filtered or searched catalogue URLs (`category`, `type`, `q`, `page > 1` when filtered) → `noindex, follow`, canonical `/[locale]/products`.
+   - Catalogue URLs with any active filter or search (`hasActiveFilters()`: `category`, `segment`, `manufacturer`, `q`) → `noindex, follow`, canonical `/[locale]/products`.
    - Drafts, fixtures, previews, `/admin`, `/api` → never indexed; ask the orchestrator for `X-Robots-Tag: noindex` headers on `/admin` and `/api` in `next.config.ts`.
 3. **Sitemap and robots.** `src/app/sitemap.ts` lists only public routes per indexable locale plus approved+published products and articles (`lastModified` from `updatedAt`), with absolute URLs; no filter URLs, no fixtures. `src/app/robots.ts` allows `/` and disallows `/admin` and `/api` in production; staging disallows all.
 4. **Truthful JSON-LD** (one helper, `JSON.stringify(data).replace(/</g, '\\u003c')` inside `<script type="application/ld+json">`):
@@ -34,7 +34,13 @@ Role owner: SEO & Accessibility Specialist (spec §13.10). Done when titles/meta
    - `Product` only for approved+published products with factual fields (name, description, image, category; `manufacturer` only if verified). **No** `offers`, `price`, `availability`, `aggregateRating` or `review`.
    - `FAQPage` only for visible, approved Q&A (Google shows FAQ rich results only for a narrow set of sites — it is not a growth lever). No `LocalBusiness`/`geo` until an address is verified.
 5. **Semantics.** One `h1` per page; no skipped heading levels in content; landmarks (`header`, `nav` with `aria-label`, `main#main`, `footer`); skip link first in tab order (`تخطَّ إلى المحتوى`); `lang`/`dir` on `<html>` and on foreign-language runs; decorative motifs `aria-hidden="true"`; images with meaningful bilingual alt, decorative ones `alt=""`.
-6. **Keyboard and focus (manual pass on every template, AR and EN).** Tab order follows the visual RTL order; visible 2–3 px focus ring with ≥ 3:1 contrast; nothing focusable is hidden or off-screen; sticky header/CTA never covers the focused element (`scroll-padding-top` equal to header height — WCAG 2.4.11). Mobile menu and inquiry drawer: open on Enter/Space, focus moves inside, Tab is trapped, Esc and backdrop close, focus returns to the trigger, body scroll locked only while open, background `inert`. Accordions: buttons with `aria-expanded`/`aria-controls`. Tabs (if used for segments): roving tabindex, arrow keys follow the reading direction (in RTL ArrowLeft moves to the next tab). Filters: `fieldset`/`legend`, results count announced politely once.
+6. **Keyboard and focus (manual pass on every template, AR and EN).**
+   - Tab order follows the visual RTL order; visible 2–3 px focus ring with ≥ 3:1 contrast; nothing focusable is hidden, invisible or off-screen (pinned scenes included).
+   - Sticky header/CTA never covers the focused element: `scroll-padding-top` equals the header height (WCAG 2.4.11).
+   - Mobile menu and inquiry drawer: open on Enter/Space, focus moves inside, Tab is trapped, Esc and backdrop close, focus returns to the trigger, body scroll locked only while open, background `inert`.
+   - Accordions: real buttons with `aria-expanded`/`aria-controls`. Tabs (if used for segments): roving tabindex; arrow keys follow the reading direction (in RTL, ArrowLeft moves to the next tab).
+   - Filters: `fieldset`/`legend`; the results count is announced politely once, not on every keystroke.
+   - Client-side navigation keeps focus sensible (focus lands on the new page's `h1` or main region, never lost on `body`).
 7. **Forms.** Visible labels, required state, `autocomplete` tokens, `aria-invalid` + `aria-describedby`, error summary focused on submit failure, success focus management, no placeholder-as-label, targets ≥ 44 px (WCAG 2.5.8 minimum 24 px).
 8. **Contrast.** Use the matrix: white on vermilion only ≥ 24 px bold / ≥ 32 px; vermilion text never small on white (3.69:1); black on vermilion 5.69:1; never white on amber. Text over photos needs the black 40–60% overlay — verify manually (automated tools cannot judge text on images).
 9. **Motion and media.** `prefers-reduced-motion: reduce` shows all content with no pinning, parallax or count-up; nothing flashes; no autoplay audio; hero video (if any) muted, `playsInline`, poster, disabled on Save-Data/reduced motion. Reflow at 320 CSS px and 400% zoom without horizontal scrolling.

@@ -24,7 +24,7 @@ export const solutions: SolutionsDictionary = {
         name: 'Broilers',
         latin: 'Broilers',
         title: 'Short cycles that call for organised supply',
-        body: 'Broiler farms produce poultry meat in short, successive cycles. We supply feed, feed supplements, veterinary medicines and vaccines, and coordinate orders with farm management ahead of each cycle.',
+        body: 'Broiler farms produce poultry meat in short, successive cycles. We supply feed, feed supplements, veterinary medicines and vaccines, and coordinate requests with farm management ahead of each cycle.',
         cta: 'Explore broiler solutions',
       },
       {
@@ -109,7 +109,7 @@ export const solutions: SolutionsDictionary = {
           },
           {
             title: 'Continuity between cycles',
-            body: 'With cycles following one another, regular contact matters: we review the finished cycle’s orders with the farm and prepare with it for the next one.',
+            body: 'With cycles following one another, regular contact matters: we review the finished cycle’s requests with the farm and prepare with it for the next one.',
           },
         ],
       },
@@ -138,7 +138,7 @@ export const solutions: SolutionsDictionary = {
       resources: {
         title: 'Broiler farm resources',
         empty:
-          'There are no published resources on broiler farms at the moment. For any question about products or how to order, contact our team directly.',
+          'There are no published resources on broiler farms at the moment. For any question about products or how to request them, contact our team directly.',
       },
       form: {
         title: 'Request a product consultation for your broiler farm',
@@ -164,7 +164,7 @@ export const solutions: SolutionsDictionary = {
       },
       overview: {
         title: 'What a layer farm needs from supply',
-        body: 'Layer farms produce table eggs over a long cycle that moves from rearing to laying. Throughout that cycle, the farm relies on continuous supply of feed and feed supplements, and on the veterinary products set out in its veterinary programme being available at the right time.',
+        body: 'Layer farms produce table eggs over a long cycle that moves from rearing to laying. Throughout that cycle, the farm relies on continuous supply of feed and feed supplements, and on timely availability of the veterinary products set out in its veterinary programme.',
       },
       needs: {
         title: 'Supply needs on layer farms',
@@ -183,7 +183,7 @@ export const solutions: SolutionsDictionary = {
           },
           {
             title: 'Regular quantities you can plan for',
-            body: 'Steady consumption makes it possible to agree on clear recurring orders, with quantities reviewed with the farm whenever its needs change.',
+            body: 'Steady consumption makes it possible to agree on clear recurring requests, with quantities reviewed with the farm whenever its needs change.',
           },
         ],
       },
@@ -201,7 +201,7 @@ export const solutions: SolutionsDictionary = {
           },
           {
             title: 'We agree the details',
-            body: 'We review availability and quantities with you and confirm the request before any commitment. Recurring orders can also be reviewed periodically, as agreed.',
+            body: 'We review availability and quantities with you and confirm the request before any commitment. Recurring requests can also be reviewed periodically, as agreed.',
           },
           {
             title: 'We follow up throughout the cycle',
@@ -212,17 +212,17 @@ export const solutions: SolutionsDictionary = {
       resources: {
         title: 'Layer farm resources',
         empty:
-          'There are no published resources on layer farms at the moment. Our team is happy to answer your questions about products and ordering.',
+          'There are no published resources on layer farms at the moment. Our team is happy to answer your questions about products and how to request them.',
       },
       form: {
-        title: 'Contact the team about your layer farm',
+        title: 'Talk to our team about your layer farm',
         intro:
           'Send us the details of what you need, and the Alshorouk team will contact you to review the categories required and their availability. Production type is preset to Layers.',
       },
       next: {
         label: 'Go to breeder solutions',
       },
-      cta: 'Contact the team',
+      cta: 'Talk to our team',
     },
     breeders: {
       meta: {
@@ -232,7 +232,7 @@ export const solutions: SolutionsDictionary = {
       },
       hero: {
         label: 'Breeders',
-        title: ['Where the poultry', 'production chain begins.'],
+        title: ['Where the chain', 'of poultry production begins.'],
         intro:
           'Breeder flocks produce the hatching eggs that broiler and layer chicks come from. We work with these farms on precise supply of feed, feed supplements, veterinary medicines and vaccines.',
       },
@@ -286,7 +286,7 @@ export const solutions: SolutionsDictionary = {
       resources: {
         title: 'Breeder farm resources',
         empty:
-          'There are no published resources on breeder farms at the moment. Contact our team with any question about products or ordering.',
+          'There are no published resources on breeder farms at the moment. Contact our team with any question about products or how to request them.',
       },
       form: {
         title: 'Ask about breeder farm solutions',

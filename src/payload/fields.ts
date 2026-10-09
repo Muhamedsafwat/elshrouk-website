@@ -55,7 +55,8 @@ export const approvalFields = (): Field[] => [
     defaultValue: false,
     index: true,
     label: { ar: 'بيانات اختبار', en: 'Test fixture' },
-    access: { read: isStaffField, update: () => false, create: () => process.env.SEED_FIXTURES === 'true' },
+    // Readable on purpose: public queries filter on it (Payload rejects filters on unreadable fields).
+    access: { update: () => false, create: () => process.env.SEED_FIXTURES === 'true' },
     admin: { position: 'sidebar', readOnly: true, condition: (data) => Boolean(data?.isFixture) },
   },
 ]

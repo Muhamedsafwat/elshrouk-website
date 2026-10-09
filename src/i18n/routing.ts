@@ -63,6 +63,7 @@ export function isActiveRoute(pathname: string, locale: Locale, route: RouteKey)
 }
 
 export const absoluteUrl = (path: string): string => {
-  const base = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3100').replace(/\/$/, '')
+  // Server-side runtime SITE_URL first (NEXT_PUBLIC_* is inlined at build time).
+  const base = (process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3100').replace(/\/$/, '')
   return `${base}${path}`
 }

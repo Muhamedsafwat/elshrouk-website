@@ -23,7 +23,7 @@ Use this skill when you:
 ### Verified source facts (read from the page images)
 | PDF p. | Topic | Binding facts for the website |
 |---|---|---|
-| 3, 8 | Logo | One lockup: rooster head + wordmark `الشروق` + signature curve + descriptor `لتوزيع الأدوية واللقاحات البيطرية`. Never redraw, re-space or separate parts. Clear space x = 15% of logo width on every side. Minimum 110 px (full lockup). "Mark without descriptor" 72 px exists as a rule only — **no such artwork is supplied**. |
+| 3, 8 | Logo | One lockup: rooster head + wordmark `الشروق` + signature curve + descriptor (the artwork spells it «لتوزيع الادوية واللقاحات البيطرية», without hamza — keep it exactly as drawn). Never redraw, re-space or separate parts. Clear space x = 15% of logo width on every side. Minimum 110 px (full lockup). "Mark without descriptor" 72 px exists as a rule only — **no such artwork is supplied**. |
 | 9 | Variations | Full colour on white/light grey · white on black, vermilion or dark photo · black one-colour (also shown on amber) · amber or vermilion logo on black only (special use). |
 | 10 | Misuse | No stretching, rotation, recolouring, shadows/effects, transparency, busy backgrounds; no full colour on amber/red; no black on dark. |
 | 11 | Colour | `#FE3300` vermilion (action, brand signal) · `#FEB821` amber (highlight) · `#000000` · `#FFFFFF`; tints 60/40/20 + 50% shade; black 80/60/20 + warm grey. Ratio white 55 / black 25 / vermilion 15 / amber ≤ 5. Amber is never a text-block background. Vermilion→amber gradient only on large abstract areas and the curve. |
@@ -47,8 +47,8 @@ Use this skill when you:
    - Width: header desktop 125–155 px, mobile 112–128 px, never < 110 px. Clear space = 15% of rendered width on all sides (140 px logo → 21 px).
    - Keep the intrinsic aspect ratio from `extraction-meta.json` (full colour 255.192 × 237.145): `height: auto`, no `object-fit: cover`, no filters, opacity, blend modes, shadows, rotation or CSS recolouring. Accessible name `الشروق` / `Alshorouk`, not repeated as visible text.
 5. **Favicon / app icon.** Only a crop of the official emblem paths (rooster head) — never new art. The full lockup is illegible at 16–48 px. Produce candidates from the vector paths, mark them `review_required`, keep the favicon item open in `docs/open-items.md` until the client approves. Note: the Payload admin references `/favicon.svg` (`src/payload.config.ts`) — it must also come from this approved source.
-6. **Tokens.** Derive only from pp.11–12: four brand colours, documented tints, the spec §3.2 neutrals flagged as derived (`#FAFAF9 #F4F4F2 #E5E5E3 #707070 #171717`), headline `clamp(2.3rem, 7vw, 5.8rem)` tuned to the face actually loaded, body 16–18 px with 1.6–1.75 Arabic leading. Propose the `@theme` diff to the orchestrator; components never contain raw hex values.
-7. **Contrast matrix** (computed with the WCAG formula): white on vermilion **3.69:1** (the PDF prints 3.4:1) → large headings only (house rule ≥ 24 px bold / ≥ 32 px regular); vermilion text on white 3.69:1 → large text, icons, underlines and borders only, never body links or small eyebrows; black on vermilion 5.69:1 ✓; black on amber 12.09:1 ✓; white on amber 1.74:1 ✗ never; vermilion on black 5.69:1 ✓; `#707070` on white 4.95:1 ✓ but on `#F4F4F2` only 4.50:1 (avoid for small text).
+6. **Tokens.** Derive from the PDF's vector fills on pp.11–12 (sample the drawing list, not anti-aliased pixels): four brand colours, the tints/shades, the black/grey ramp and the warm grey (`#F6F5F3`). Per `docs/brand-audit.md` decision D2 these replace the spec §3.2 "derived neutrals"; where a PDF "60" swatch differs from a true 60 % mix, the PDF value is used pending brand-audit O5. Type: PDF levels (headline 32–56 px, subhead 20–28, body 16, caption 12); larger display sizes are staging-only until O7. Body 16–18 px with 1.6–1.75 Arabic leading. Propose the `@theme` diff to the orchestrator; components never contain raw hex values.
+7. **Contrast matrix** (computed with the WCAG formula; full table in `docs/brand-audit.md` §3): white on vermilion **3.69:1** (the PDF prints 3.4:1) → large headings only (house rule ≥ 24 px bold / ≥ 32 px regular); vermilion text on white 3.69:1 → large text, icons, underlines and borders only, never body links or small eyebrows; black on vermilion 5.69:1 ✓ (label colour on vermilion buttons); black on amber 12.09:1 ✓; white on amber 1.74:1 ✗ never; vermilion on black 5.69:1 ✓; muted grey `#767676` on white 4.54:1 ✓ but **on white only** (≈ 4.2:1 on the warm grey); small vermilion-family text uses the 50 % shade.
 8. **Fonts.** Thmanyah is licensed and absent: never download, mirror, subset or commit it from an unofficial source. Use the staging fallback in `src/styles/fonts.ts` and keep the Thmanyah item open. Montserrat (OFL) through `next/font` covers Latin text and Western digits.
 9. **Write it down.** Update `docs/brand-audit.md`: pages consulted, token table, logo provenance (page, bbox, path count, colours, hashes, diff metrics, compare-image path), contrast matrix, banned-content list, gaps (→ `docs/open-items.md`).
 
@@ -62,7 +62,7 @@ Use this skill when you:
 - [ ] No Sunrise motif over or touching the logo.
 
 **Token QA**
-- [ ] `@theme` contains only the four brand colours, documented tints and the flagged neutrals.
+- [ ] `@theme` contains only the four brand colours and the PDF's tints, shades, grey ramp and warm grey (brand-audit D2).
 - [ ] `rg -n "#[0-9a-fA-F]{3,8}\b" src --glob '!src/styles/**' --glob '!src/payload/**'` finds no ad-hoc colours in components.
 - [ ] Amber never a text-block background; gradients only on large abstract shapes or the curve.
 - [ ] Every text/background pair in use appears in the contrast matrix and passes for its size.

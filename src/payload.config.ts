@@ -28,7 +28,8 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 const isProduction = process.env.NODE_ENV === 'production'
-const serverURL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3100'
+// SITE_URL is read at runtime (NEXT_PUBLIC_* values are inlined at build time), so one build can serve any origin.
+const serverURL = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3100'
 
 const secret = process.env.PAYLOAD_SECRET
 if (!secret && isProduction) {

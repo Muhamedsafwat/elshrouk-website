@@ -24,7 +24,7 @@
 
   /* Warm neutral ramp derived from the PDF warm grey */
   --color-stone-50: #fafaf9;
-  --color-stone-100: #f4f4f2;
+  --color-stone-100: #f6f5f3; /* PDF warm grey (vector fill 0.9647 0.9608 0.9529) */
   --color-stone-200: #e5e5e3;
   --color-stone-300: #cfcfcb;
   --color-stone-400: #a3a39e;
@@ -40,7 +40,7 @@
   --font-num: var(--font-latin), ui-sans-serif, system-ui, sans-serif;
 
   /* Fluid type scale (Arabic-first; line-heights tuned so mask reveals never clip diacritics) */
-  --text-display-2xl: clamp(2.6rem, 1.05rem + 4.6vw, 6rem);
+  --text-display-2xl: clamp(2.4rem, 0.9rem + 4.4vw, 5.25rem);
   --text-display-2xl--line-height: 1.16;
   --text-display-xl: clamp(2.3rem, 1.1rem + 3.5vw, 4.75rem);
   --text-display-xl--line-height: 1.18;
@@ -94,7 +94,7 @@
 :root,
 [data-theme='light'] {
   --surface: #ffffff;
-  --surface-2: #f4f4f2;
+  --surface-2: #f6f5f3;
   --fg: #000000;
   --fg-soft: #262625;
   --fg-muted: #5c5c59; /* 6.9:1 on white, 6.3:1 on warm grey */
@@ -106,7 +106,7 @@
 }
 
 [data-theme='warm'] {
-  --surface: #f4f4f2;
+  --surface: #f6f5f3;
   --surface-2: #ffffff;
   --fg: #000000;
   --fg-soft: #262625;
@@ -238,7 +238,7 @@
   width: 100%;
   max-width: 96rem; /* 1536px */
   margin-inline: auto;
-  padding-inline: clamp(1.25rem, 4vw, 5.5rem);
+  padding-inline: clamp(1.25rem, 6vw, 5.5rem);
 }
 
 @utility container-wide {
@@ -373,6 +373,111 @@
   html.js:not(.motion-off) [data-reveal='draw']:not([data-revealed]) {
     opacity: 1;
   }
+}
+
+/* ==========================================================================
+   FIRST-PAINT INTRO (hero scenes): pure CSS so it starts before hydration — fast LCP, works without
+   JS, and resolves to the final state. Disabled entirely under reduced motion.
+   Usage: .intro-line > span (masked rise), .intro-fade (fade-up), .intro-mask (sunrise circle),
+   .intro-zoom (image settle), .intro-draw (SVG paths with pathLength="1"). Stagger with style="--i:n".
+   ========================================================================== */
+@keyframes als-rise {
+  from {
+    transform: translate3d(0, 110%, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes als-fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes als-sunrise-mask {
+  from {
+    clip-path: circle(58% at 50% 100%);
+  }
+  to {
+    clip-path: circle(150% at 50% 100%);
+  }
+}
+@keyframes als-zoom-settle {
+  from {
+    transform: scale(1.14);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes als-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes als-cue {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  45% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  55% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .intro-line > span {
+    animation: als-rise 1.1s var(--ease-sunrise) both;
+    animation-delay: calc(0.3s + var(--i, 0) * 0.1s);
+  }
+  .intro-fade {
+    animation: als-fade-up 0.8s var(--ease-soft) both;
+    animation-delay: calc(0.62s + var(--i, 0) * 0.08s);
+  }
+  .intro-mask {
+    animation: als-sunrise-mask 1.2s var(--ease-soft) 0.05s both;
+  }
+  .intro-zoom {
+    animation: als-zoom-settle 2.2s var(--ease-sunrise) 0.1s both;
+  }
+  .intro-draw path {
+    stroke-dasharray: 1;
+    animation: als-draw 1.6s var(--ease-flow) both;
+    animation-delay: calc(0.15s + var(--i, 0) * 0.14s);
+  }
+  .scroll-cue-line {
+    animation: als-cue 2.4s var(--ease-flow) 1.8s 2 both;
+  }
+}
+
+/* Drawer enters from the inline-end edge (left in RTL, right in LTR). */
+@keyframes drawer-in {
+  from {
+    transform: translateX(var(--drawer-from, 100%));
+  }
+  to {
+    transform: none;
+  }
+}
+[dir='rtl'] {
+  --drawer-from: -100%;
 }
 
 @media (prefers-reduced-motion: reduce) {

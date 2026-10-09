@@ -67,7 +67,7 @@ export const common: CommonDictionary = {
     requestCatalog: 'Request the product list',
     requestCurrentList: 'Request the current list',
     inquireProduct: 'Inquire about this product',
-    startPartnership: 'Partner with Alshorouk',
+    startPartnership: 'Start a partnership with Alshorouk',
     startRequest: 'Start your request',
     learnMore: 'Learn more',
     viewAll: 'View all',
@@ -114,7 +114,7 @@ export const common: CommonDictionary = {
     items: [
       {
         key: 'farms',
-        qualifier: '~',
+        qualifier: 'Approx.',
         value: '300',
         unit: '',
         label: 'Poultry farms we serve on an ongoing basis',
@@ -122,7 +122,7 @@ export const common: CommonDictionary = {
       },
       {
         key: 'birds',
-        qualifier: '~',
+        qualifier: 'Approx.',
         value: '15',
         unit: 'million',
         label: 'Birds within the production capacity of the farms we serve',
@@ -130,7 +130,7 @@ export const common: CommonDictionary = {
       },
       {
         key: 'products',
-        qualifier: '~',
+        qualifier: 'Approx.',
         value: '150',
         unit: '',
         label: 'Veterinary medicine and vaccine products we distribute',
@@ -310,7 +310,7 @@ export const common: CommonDictionary = {
   },
   notFound: {
     meta: {
-      title: 'Page not found',
+      title: 'Page Not Found',
       description:
         'The page you are looking for is not available. Return to the Alshorouk home page or browse our poultry farm product categories.',
     },

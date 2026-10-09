@@ -17,10 +17,10 @@
 2. **Colours:** vermilion `#FE3300`, amber `#FEB821`, black `#000000`, white `#FFFFFF`, warm grey `#F6F5F3`. The tints, shades and greys are listed in §2. Target page share: white ~55%, black ~25%, vermilion ~15%, amber ≤5%. Amber is never a text-block background.
 3. **Contrast:** white on vermilion measures **3.69:1**, so it is allowed only for display headings ≥24 px bold or ≥32 px regular. Black on vermilion is **5.69:1** and black on amber is **12.09:1**; both pass at every size. Vermilion text on white is 3.69:1, so the same large-only rule applies. Vermilion text on black is 5.69:1 and passes. Amber with white or light grey fails at every size (§3).
 4. **Gradient:** two stops only, `#FE3300` → `#FEB821`, linear, in sRGB. Use it only on Sunrise curves or large abstract shapes. Never on text, the logo or any UI control.
-5. **Typography:** Thmanyah for Arabic. It is licensed and not in the repo, so it is a **blocker**; staging uses one OFL face. Montserrat is used for Latin text **and every figure**. Digits are Western 0–9 (`nu-latn`). The scale is headline 32–56 px / 1.1, subhead 20–28 px / 1.2, body 16 px / 1.5–1.7 and caption 12 px / 1.4. Never justify text, never use kashida, and set English at 90% inside Arabic text.
+5. **Typography:** Thmanyah for Arabic. It is licensed and not in the repo, so it is a **blocker**; staging uses one OFL face. Montserrat is used for Latin text **and every figure**. Digits are Western 0–9 (`nu-latn`). The scale is headline 32–56 px / 1.1, subhead 20–28 px / 1.2, body 16 px / 1.7 for Arabic and 1.6 for English (the PDF allows 150–170%), and caption 12 px / 1.4. Never justify text, never use kashida, and set English at 90% inside Arabic text.
 6. **Logo:** use the three extracted SVGs, and only through `<Logo>`. Clear space is 15% of the rendered width on every side. Minimum width is 110 px. The full-colour version goes on white or warm grey only. No version may be redrawn, recoloured, re-spaced, split, shadowed, made transparent or given a gradient. The descriptor-less mark and a favicon are **not supplied** (§5).
 7. **Sunrise System:** one motif per major section. The four motifs are never used together and never over the logo. The hero uses the Signature Curve only (§7).
-8. **Photography:** documentary, warm natural light, licensed or commissioned only, poultry subjects only. White text sits on a black overlay of at least 60% (§3.5, §8.1).
+8. **Photography:** documentary, warm natural light, licensed or commissioned only, poultry subjects only. White text sits on a 60% black overlay by default; a lighter overlay needs a measured contrast pass (§3.5, §8.1).
 9. **Icons:** 24-unit grid, 2-unit stroke, round caps and joins, no fills. They are black on light grounds, white on dark grounds, and vermilion only for the one active state (§8.2).
 10. **Digital rule from the PDF (p.21 / f.22):** "white pages, black text, vermilion for actions, amber for single highlights, curve in hero areas".
 
@@ -69,7 +69,7 @@ Where this audit and the master spec disagree on a visual standard, the PDF (ran
 | 12 / 13 | 2.9–2.12 Typography | Thmanyah plus Montserrat. "No third family." "This PDF previews with substitute fonts." The type scale. Alignment, numbers, mixed text, kashida. | All of it (§4). | The specimen is set in DejaVu Sans substitutes, **not Thmanyah**. |
 | 13 / 14 | 2.13–2.17 Sunrise System | Signature curve, distribution flow, crest pattern and veterinary grid, plus Why / Where / How much / Never. | All of it (§7). | The samples drift from their own rules: the flow's diagonals run at ≈54–58° and the crest pattern is drawn at 25%. Follow the rule text. |
 | 14 / 15 | 2.18–2.19 Photography | Subjects, style, things to avoid, treatment, overlay ("Black 40–60% under white text"), cropping ("Curve over the lower third") and rights. A note about **cow, sheep and chicken cut-outs**. | Style, treatment, cropping and rights. The subjects, adapted to poultry (§8.1). | Cold-chain storage, warehouse picking, loading and delivery may appear only if they show real, verified operations. Composited and cut-out animals are banned. A 40% overlay can fail WCAG (§3.5). |
-| 15 / 16 | 2.20 Iconography | The icon spec and eight icons: Medicine, Vaccination, Delivery, Warehouse, Quality, Poultry, **Livestock**, Veterinary. | The spec. Medicine, Vaccination, Veterinary and Quality. Delivery and Warehouse with care (§8.2). | **The Livestock icon is banned.** It also reads as a cat, which would make it pet imagery. The "Poultry" glyph reads as a tulip. |
+| 15 / 16 | 2.20 Iconography | The icon spec and eight icons: Medicine, Vaccination, Delivery, Warehouse, Quality, Poultry, **Livestock**, Veterinary. | The spec. Medicine, Vaccination and Veterinary. Delivery, Warehouse and Quality with care (§8.2). | **The Livestock icon is banned.** It also reads as a cat, which would make it pet imagery. The "Poultry" glyph reads as a tulip. |
 | 16 / 17 | Ch.3 divider | "03 Applications", with the lockup. | None. | None. |
 | 17 / 18 | 3.1–3.5 Stationery & stamp | Photographic mockups. Business card (90 × 50 mm, logo top-right). Letterhead (A4, 20 mm margins, black footer rule). Vermilion folder with white logo. Black ID card with white logo and vermilion bar. Stamp: one-colour black logo in an oval. | These confirm the pairings white logo on vermilion and white logo on black. Print logic. | The mockups are renders in which the **descriptor is re-typeset** (§6 F5). Do not use them as imagery or as a logo source. |
 | 18 / 19 | 3.6–3.9 Environment & signage | Reception: metal logo on a black wall. Exterior: halo-lit full-colour logo. Warehouse: zone bands. Directional: black panel, white text, vermilion arrow. Event: vermilion backdrop with a curve across the base. "One logo per surface; 3× clear space." | "One logo per surface", interpreted as one per viewport (§5.6). The directional pattern can inspire wayfinding UI. | The mockups do not prove that offices or warehouses exist. The 3× clear space applies to signage only. |
@@ -270,7 +270,7 @@ Columns: normal text AA ≥ 4.5; large text AA ≥ 3.0; UI and graphics ≥ 3.0;
 1. **White on vermilion: 3.69:1.** It fails for normal text and passes for large text and UI. The project rule in `AGENTS.md` is stricter than WCAG's large-text definition: use it for display headings ≥ 24 px bold or ≥ 32 px regular only. Never use it for body copy, captions, button labels, form text or small links. The PDF prints this ratio as "3.4:1"; the computed value is 3.69:1, and the restriction holds either way.
 2. **Black on vermilion: 5.69:1.** It passes AA at every size, though not AAA for normal text. This is the accessible label colour for vermilion actions.
 3. **Black on amber: 12.09:1.** It passes AAA, which agrees with the PDF's "Black on amber passes at all sizes."
-4. **Vermilion text on white: 3.69:1** (3.39:1 on warm grey). It is allowed for large text only, under the same threshold as point 1. Inline links in body copy are black text with a vermilion underline. Small vermilion-family text uses the vermilion shade `#7F1900` (10.29:1). The PDF itself sets 7.5–9 pt vermilion labels on white; do not copy that at small sizes.
+4. **Vermilion text on white: 3.69:1** (3.39:1 on warm grey). It is allowed for large text only, under the same threshold as point 1. Inline links in body copy are black text with a vermilion underline. Small vermilion-family text uses the vermilion shade `#7F1900` (10.29:1). The PDF itself sets 6.8–9 pt vermilion labels and running headers on white; do not copy that at small sizes.
 5. **Vermilion text on black: 5.69:1.** It passes AA at every size.
 
 ### 3.5 Photo overlay: what "Black 40–60% under white text" guarantees
@@ -359,7 +359,7 @@ Conflicts with the spec, each resolved by precedence:
 The PDF says: "One lockup: rooster head, Arabic wordmark, signature curve, descriptor." "The crest is the most recognisable shape. The short dashes either side of the head echo the horizon. Never redraw, re-space or separate the parts."
 
 Measured parts of the master SVG, numbered in document order from 0:
-- **Rooster head:** crest outline 51; vermilion crest fill 52; head, neck and feather strokes 46–50; vermilion wattle 53; amber beak 54–55; eye 56–57.
+- **Rooster head:** crest outline 51; vermilion crest fill 52; the head, beak and wattle contour plus the neck and feather strokes 46–50; vermilion wattle 53; amber beak 54–55, with its nostril 57; eye 56.
 - **Horizon dashes:** 0 and 38.
 - **Wordmark «الشروق»:** 39–45.
 - **Signature curve** (the arc under the wordmark): 2.
@@ -373,7 +373,7 @@ Three further facts about the artwork:
 ### 5.2 Clear space
 PDF rule: "Clear space x = 15% of logo width, on every side." "No text, edges or imagery enter this zone."
 - **Web rule:** the padding equals 0.15 × the rendered logo width on all four sides. That zone must stay free of the header's bottom edge, border or shadow, of nav items and CTAs, of curves and of photo edges.
-- Measured: the dashed frame on p.8 is wider than x. Its margins are 74 pt left and right and about 42–44 pt top and bottom, around a lockup 214.7 pt wide, where x = 32.2 pt. The frame is illustrative; the rule text governs.
+- Measured: the dashed frame on p.8 is wider than x. Its margins are 74.1 pt left, 74.2 pt right, 41.5 pt top and 43.5 pt bottom, around a lockup 214.7 pt wide, where x = 32.2 pt. The frame is illustrative; the rule text governs.
 - Signage uses 3× clear space (p.18 / f.19). That applies to physical environments only.
 
 ### 5.3 Minimum sizes
@@ -468,7 +468,7 @@ Consequences for UX and visual design (interpretation, recorded as decision D9):
 ### 5.8 Favicon and app icon: needs brand-owner approval (O4)
 - The PDF supplies no favicon, no app icon and no square mark.
 - The full lockup cannot work at 16–48 px, because its minimum is 110 px.
-- The only allowed route is **a subset of the official vector paths: the rooster head**, which is paths 46–57 of the master SVG. These are the crest outline and its vermilion fill, the head, neck and feather strokes, the vermilion wattle, the amber beak and the eye. In master units the subset spans x 72.29–175.18 and y 0–142.74, a portrait shape of about 0.72:1. Place these paths **unmodified** on a square canvas: no redrawing, no simplification and no new strokes.
+- The only allowed route is **a subset of the official vector paths: the rooster head**, which is paths 46–57 of the master SVG. These are the crest outline and its vermilion fill, the head contour with the neck and feather strokes, the vermilion wattle, the amber beak with its nostril, and the eye. In master units the subset spans x 72.29–175.18 and y 0–142.74, a portrait shape of about 0.72:1. Place these paths **unmodified** on a square canvas: no redrawing, no simplification and no new strokes.
 - The face is unfilled, so a browser-tab icon needs a backplate: either a white tile, or a black tile behind the head from the one-colour drawing. That container is a further decision that also needs approval.
 - Status: a candidate may be prepared for review, but nothing ships as final until it is approved. The same applies to `apple-touch-icon`, the manifest icons and any loader. The spec's Scene 0 "rooster-outline loading state" is **not allowed**, because it would animate or separate parts of the logo. If a loader is ever needed, use a Signature Curve line (D10).
 
@@ -497,7 +497,7 @@ Consequences for UX and visual design (interpretation, recorded as decision D9):
 - **Result: the extraction is faithful to the PDF.**
 
 Findings that matter for production:
-- **F1. The aspect ratio differs between PDF instances,** because Chromium placed the same artwork at slightly different non-uniform scales. Measured width ÷ height of the full-colour lockup:
+- **F1. The aspect ratio differs between PDF instances.** The most likely cause is that the HTML-to-PDF layout (Chromium) placed the same artwork at slightly different non-uniform scales. Measured width ÷ height of the full-colour lockup:
   - 1.0723 on the p.1 cover;
   - 1.0761 on p.3, p.7 and p.16 (the extracted master);
   - 1.0814 on p.8;
@@ -505,13 +505,13 @@ Findings that matter for production:
   - 1.0689 on the p.9 bottom row.
 
   The total spread is about 1.2%. The artwork's native ratio cannot be proven from the PDF alone (O2). The effect on screen is no more than about 2 px of height at 155 px width, which is visually negligible.
-- **F2. The bottom row of p.9 is stretched vertically.** That row ("Black · one colour", "Amber · on black only", "Vermilion · on black only" and the unlabelled card) is scaled by **+0.884%** on the vertical axis compared with the top row. A point-by-point check found every x coordinate identical and every y multiplied by 1.00884. The top-row "Black · amber" card contains the **identical black drawing at top-row scale**, with a maximum point difference of 0.0001 pt from "White · dark".
+- **F2. The bottom row of p.9 is stretched vertically.** That row ("Black · one colour", "Amber · on black only", "Vermilion · on black only" and the unlabelled card) is scaled by **+0.884%** on the vertical axis compared with the top row. A point-by-point check over every path found the x coordinates identical (maximum difference 0.0001 pt) and every y coordinate multiplied by 1.00884–1.00885. The top-row "Black · amber" card contains the **identical black drawing at top-row scale**, with a maximum point difference of 0.0001 pt from "White · dark".
 
   *Optional, low priority:* re-extract `alshorouk-logo-black.svg` from the "Black · amber" card, which also uses `#030303`. The white and black files would then share identical geometry (viewBox 92.319 × 85.615).
 - **F3.** "Amber · on black only" is filled `#FFB724`, not `#FEB821`. It was not extracted. If it is ever needed, the brand owner must approve it and confirm the colour.
 - **F4.** The unlabelled eighth card (a `#030303` logo on `#555555`, 2.77:1) was not extracted and is not approved (O6).
 - **F5. Mockups are not sources.** The application pages (p.17–p.20) are JPEG mockups (1120 × 1500 and 1500 × 837 px). The stamp, storefront, outdoor banner, carton and truck all re-typeset the descriptor in another typeface, with a hamza on «الأدوية». The storefront and exterior signs also fill the face. These mockups are never a logo source.
-- **F6.** Every logo instance in the PDF is vector; the PDF contains no raster logo.
+- **F6.** Every correct-usage logo instance in the PDF is vector. Raster renderings of the logo appear only in two places: the misuse examples on p.10 (the "Do not recolour" and "No shadows or effects" cards, both PNG) and the photographic mockups on p.17–p.20.
 - **F7. Not available from the PDF:** the mark without descriptor (O3), a favicon or app icon (O4), and the original design files in AI, EPS or SVG (O2).
 
 ---
@@ -551,7 +551,7 @@ Findings that matter for production:
 **Web rules:**
 - Use 1–3 smooth single-arc lines: one cubic Bézier each, with no S-bends, no waves and no filled swooshes. They enter or leave through one edge, which crops them. Only one group per section.
 - The `SunriseCurve` component should be built from the geometry above. Scale it uniformly and keep the PDF's order and colours.
-- The stroke is about 1% of the drawing's width (0.5% for the black line on the cover), and never thinner than 1.5 px on screen. The gradient (§2.6) is allowed on a single curve.
+- The stroke is about 1–1.5% of the drawing's width (0.5% for the black line on the cover), and never thinner than 1.5 px on screen. The gradient (§2.6) is allowed on a single curve.
 - Over a photograph, the curve runs across the lower third (p.14). It never passes through text blocks or the logo's clear space.
 - Motion follows spec §8.4: the line draws on along its path and settles. Under reduced motion, show the final state.
 - The red filled wave on the p.19 storefront is **not** this motif.
@@ -577,7 +577,7 @@ Findings that matter for production:
 #### Crest Pattern
 **PDF rule:** "Three overlapping circles from the crest. 10–20% opacity or tone on tone. Inside flaps, tape, wall bands. Never behind text."
 
-**Measured:** the p.13 sample is a tiled raster. Each motif is one larger circle centred above two smaller ones, all three overlapping. The tile repeats about every 30 units in the 200-unit panel. It is drawn in black at **25%** opacity, rendering as `#C1C1C1` on white, which is stronger than the stated 10–20%.
+**Measured:** the p.13 sample is a tiled raster. Each motif is one larger circle centred above two smaller ones; the larger circle's diameter is about 1.3× theirs. Each lower circle overlaps the upper one, but the two lower circles do not touch each other. The tile repeats about every 30 units in the 200-unit panel. It is drawn in black at **25%** opacity, rendering as `#C1C1C1` on white, which is stronger than the stated 10–20%.
 
 **Web rules:**
 - Draw stroke-only circles at **10–20%**: black over white or warm grey (about `#E6E6E6`–`#CCCCCC` on white), or tone on tone over vermilion or black (for example, black at 10–20% over vermilion, or white at 10–20% over black).
@@ -714,7 +714,7 @@ Print and physical rules that carry over as references only:
 - Section numbers in vermilion.
 - Bilingual section titles, with Latin on the left and Arabic on the right.
 
-The PDF's own 7.5–9 pt vermilion labels and its `#777777` meta text fail WCAG at those sizes. On the website, enlarge them or use black.
+The PDF's own 6.8–9 pt vermilion labels and its `#777777` meta text fail WCAG at those sizes. On the website, enlarge them or use black.
 
 ---
 
@@ -832,8 +832,9 @@ The PDF's personality ("Professional, steady, alert, direct. Strong without aggr
 ---
 
 ## Appendix A: How the numbers were obtained (reproducible)
-- **Vector colours and geometry.** PyMuPDF 1.x `page.get_drawings()` reads fills, strokes, widths and bounding boxes. Raw content-stream operators supplied the `rg`/`RG` colour values, the Bézier and polyline path data, the ExtGState opacities (`ca .5`, `ca .25`, `CA .25`) and the line caps, joins and widths (`LC 1`, `LJ 1`, `LW 2` for the icons). Shading pattern P57 on p.11 holds the gradient.
-- **Raster samples.** Pillow modal colour inside swatch interiors of `page-11.png` (110 dpi) and of the card areas on `page-04.png`, `page-05.png` and `page-12.png`. MuPDF renders at 4–8× were used to read the motif colours.
+- **Tools.** Python 3.13 with PyMuPDF 1.27.2.2, Pillow 12.1.1 and NumPy.
+- **Vector colours and geometry.** PyMuPDF `page.get_drawings()` reads fills, strokes, widths and bounding boxes. Raw content-stream operators supplied the `rg`/`RG` colour values, the Bézier and polyline path data, the ExtGState opacities (`ca .5`, `ca .25`, `CA .25`) and the line caps, joins and widths (`LC 1`, `LJ 1`, `LW 2` for the icons). Shading pattern P57 on p.11 holds the gradient.
+- **Raster samples.** Pillow modal colour inside the swatch interiors of `page-11.png` (110 dpi), and inside the warm-grey areas of `page-04.png`, `page-05.png`, `page-08.png`, `page-12.png`, `page-13.png`, `page-14.png` and `page-15.png`; all of them read `#F5F5F2`. MuPDF renders at 4–8× were used to read the motif colours.
 - **Contrast.** WCAG 2.x relative luminance and contrast ratio, computed from 8-bit sRGB values (§3.1). The overlay thresholds come from solving the worst case, a white photo pixel under the overlay.
 - **Logo checks.** Path-by-path geometry comparison across the p.9 cards, after normalising each card to its own bounding box. Aspect ratios of the full-colour lockup were measured on p.1, p.3, p.7, p.8, p.9, p.16 and p.21. The SVG and PDF renders were compared by mean absolute difference at 6×.
 - The scripts lived in the session scratchpad and are not part of the repo. Every figure above can be regenerated from `Alshorouk_Brand_Guidelines.pdf` with the steps listed here.

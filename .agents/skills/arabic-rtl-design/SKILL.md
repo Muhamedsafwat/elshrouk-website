@@ -27,11 +27,20 @@ Role owners: Frontend Architect + Arabic Copywriter & Localizer (spec §13.7, §
 5. **Digits and numbers.** Western digits in both locales. Use `formatNumber()` (en-US digits) and `formatDate()` (`ar-EG-u-nu-latn`). Never `Intl.NumberFormat('ar-EG')` without `-u-nu-latn` — it outputs Arabic-Indic digits (٣٠٠). Approved metric strings come from the `metrics` global / dictionary as authored (`حوالي 15 مليون`), never computed with compact notation.
 6. **Inputs accept every digit form.** Forms and search accept Arabic-Indic (U+0660–0669) and Extended Arabic-Indic (U+06F0–06F9) digits and normalise with `toWesternDigits()` (`src/lib/search/normalize.ts`); phone parsing also strips bidi marks (U+200E/200F, U+202A–202E, U+2066–2069) pasted from RTL text.
 7. **Bidi isolation.** Wrap Latin/numeric runs inside Arabic sentences in `<bdi>` when order matters: SKUs, inquiry references (`{reference}`), product names in Latin, units with symbols. Phone numbers, emails and URLs render with `dir="ltr"` (and `unicode-bidi: isolate` via the element). Tel/email inputs: `dir="ltr"`, `inputMode="tel"`/`"email"`, `autoComplete`, aligned with the RTL column (`rtl:text-right`).
-8. **Typography.** Font stack `var(--font-latin), var(--font-arabic), system-ui, sans-serif`. Arabic body 16–18 px with line-height 1.6–1.75, measure ≈ 60–70ch (`max-inline-size`); headings 1.1–1.25 line-height but never clipped. Mixed lines: English at `0.9em`. Never apply `letter-spacing`/`tracking-*` or `uppercase` to Arabic (breaks joining) — scope them with `ltr:` or to Latin-only elements. No `text-align: justify`, no kashida, no hyphenation. Headings `text-wrap: balance`; paragraphs `text-wrap: pretty` to avoid one-word orphans; long Latin tokens (URLs, SKUs) get `overflow-wrap: anywhere`.
-9. **Headlines are authored lines.** Dictionaries store display headlines as arrays (`title: ['كتالوج منتجات', 'مزارع الدواجن']`) rendered by `TextReveal` (`.mask-line > span`). Never split Arabic into characters; words or authored lines only. Mask wrappers need vertical breathing room so ascenders (ا ل ك ط), descenders (ي ق ج ع م) and marks (ُ ً ّ أ إ ؤ ئ) are not clipped — test at the heaviest weight and both font faces.
+8. **Typography.**
+   - Font stack `var(--font-latin), var(--font-arabic), system-ui, sans-serif` (Montserrat first; Arabic glyphs fall through).
+   - Arabic body 16–18 px, line-height 1.6–1.75, measure ≈ 60–70ch (`max-inline-size`); headings 1.1–1.25 line-height, never clipped.
+   - Mixed lines: English at `0.9em` with `lang="en"`.
+   - Never `letter-spacing`/`tracking-*` or `uppercase` on Arabic (breaks joining) — scope them with `ltr:` or to Latin-only elements.
+   - No `text-align: justify`, no kashida, no hyphenation.
+   - Headings `text-wrap: balance`; paragraphs `text-wrap: pretty` (no one-word orphans); long Latin tokens (URLs, SKUs) `overflow-wrap: anywhere`.
+9. **Headlines are authored lines.** Dictionaries store display headlines as arrays (`title: ['كتالوج منتجات', 'مزارع الدواجن']`) rendered by `TextReveal` (`.mask-line > span`). Never split Arabic into characters; words or authored lines only. Mask wrappers need vertical breathing room so ascenders (ا ل ك ط), descenders (ي ق ج ع م) and marks (ُ ً ّ أ إ ؤ ئ) are not clipped — test at the heaviest weight and both font faces, with real copy such as «يُستخدم»، «الأمهات»، «لقاحات»، «إمداد»، «الشروق».
 10. **Plurals and interpolation.** Use `Intl.PluralRules('ar')` categories (zero/one/two/few/many/other) with the dictionary keys (`countZero`, `countOne`, `countTwo`, `countFew`, `countMany`, `count`); fill placeholders with `interpolate()`. EN dictionaries are typed against the AR shape — a missing key is a type error, not a runtime fallback.
 11. **Arabic punctuation and tone.** Use ، ؛ ؟ and «» in Arabic copy; professional Egyptian MSA (spec §7.4); no English-style exclamation marks.
-12. **Locale switching.** `LocaleSwitcher` uses `switchLocalePath(pathname, otherLocale(locale), search)` so `/ar/products?category=vaccines` ↔ `/en/products?category=vaccines`; product slugs are Latin and identical in both locales. Missing English content never 404s — the page renders, and Arabic fallback values (Payload `localization.fallback: true`) are wrapped with `lang="ar" dir="rtl"`. `/en` stays `noindex` until `site-settings.englishApproved`.
+12. **Locale switching.**
+    - `LocaleSwitcher` uses `switchLocalePath(pathname, otherLocale(locale), search)`: `/ar/products?category=vaccines` ↔ `/en/products?category=vaccines`. Product slugs are Latin and identical in both locales.
+    - Missing English content never 404s — the page renders; Arabic fallback values (Payload `localization.fallback: true`) are wrapped with `lang="ar" dir="rtl"` so they shape and order correctly inside the LTR page.
+    - `/en` stays `noindex` until `site-settings.englishApproved`; the switcher fires `trackEvent('language_toggle', { from, to })` (no-op until analytics is approved).
 13. **Mobile Arabic.** Section titles 2–4 lines at 320–390 px; no orphan words; CTAs keep full Arabic labels (no truncation); tap targets ≥ 44 px.
 
 ## Checklists
@@ -44,7 +53,7 @@ Role owners: Frontend Architect + Arabic Copywriter & Localizer (spec §13.7, §
 
 **Every page (AR and EN, 320 / 390 / 1440)**
 - [ ] `html[lang][dir]` correct; one `h1`; reading order matches visual order.
-- [ ] Digits are Western everywhere (scan the DOM: `/[٠-٩۰-۹]/` must not match rendered text).
+- [ ] Digits are Western everywhere (scan the DOM: `/[٠-٩۰-۹]/` — U+0660–0669 and U+06F0–06F9 — must not match rendered text).
 - [ ] Diacritics and descenders intact in reveals; no text outside the viewport; no horizontal scroll.
 - [ ] Locale switch lands on the equivalent route with query preserved.
 - [ ] English layout intact (longer strings, LTR icons) and labelled `noindex` until approved.

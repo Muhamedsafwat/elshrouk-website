@@ -33,10 +33,10 @@ Role owners: Arabic Copywriter & Localizer (spec §13.9) with the Orchestrator a
 
 ## Procedure
 1. **Classify every statement** you write or review: (a) approved verbatim, (b) descriptive and claim-free (e.g. what a broiler operation needs to source), (c) new claim. Category (c) is never published: add it to `content/approval-register.md` as `review_required` with owner and the evidence needed, and phrase the UI neutrally or hide it.
-2. **Run the scans** from the repo root (Git Bash; or the Grep tool with the same patterns). Scope = outward content: `src/i18n src/content src/scripts content` (add `src/app src/components` when JSX contains literal text). Comment lines that document a ban are fine; every other hit is fixed or justified in your report.
+2. **Run the scans** from the repo root. In Claude Code's Bash tool `rg` is a built-in shell function (bundled ripgrep), not an executable — inside scripts or other runtimes use the Grep tool or `grep -rniP` with the same patterns. Scope = outward content: `src/i18n src/content src/scripts content` (add `src/app src/components` when JSX contains literal text). Comment lines that document a ban, and code identifiers such as `cats` (categories) in scripts, are false positives; every other hit is fixed or justified in your report. A link built from a `verified` `site-settings` value (e.g. the footer's `wa.me` link) is legitimate.
    ```bash
    # non-poultry animals / livestock vocabulary — target: zero
-   rg -n -i --glob '!**/*.svg' -e '\b(cows?|cattle|calf|calves|bovine|sheep|lambs?|goats?|horses?|equine|camels?|dairy|livestock|herds?|pets?|cats?|dogs?|swine|pigs?)\b' -e 'أبقار|بقرة|ماشية|مواشي|أغنام|خراف|ماعز|خيول|عجول|ألبان|جاموس|حيوانات أليفة|قطط|كلاب' src content public
+   rg -n -i --glob '!**/*.svg' -e '\b(cows?|cattle|calf|calves|bovine|sheep|lambs?|goats?|horses?|equine|camels?|dairy|livestock|herds?|pets?|cats?|dogs?|swine|pigs?)\b' -e 'أبقار|بقرة|ماشية|مواشي|أغنام|خراف|ماعز|خيول|عجول|ألبان|جاموس|حيوانات أليفة|قطط|كلاب' src/i18n src/content src/scripts src/app src/components content public
    # manufacturing / ownership claims
    rg -n -i -e 'نصنع|ننتج|مصنعنا|مصانعنا|تصنيعنا|we (manufacture|produce)|our (factory|factories|plant|formula)' src/i18n src/content src/scripts content
    # unverified operations, certifications, superlatives
@@ -46,7 +46,7 @@ Role owners: Arabic Copywriter & Localizer (spec §13.9) with the Orchestrator a
    # metric integrity — inspect every hit for qualifier + exact label
    rg -n -e '\b300\b|15 ?(مليون|million)|\b150\b' src/i18n src/content src/scripts src/payload content
    # invented contact data
-   rg -n -e '(\+|00)?20 ?1[0125][0-9 ]{8,10}|\b01[0125][0-9]{8}\b|wa\.me|api\.whatsapp|maps\.(google|app)|goo\.gl/maps|(facebook|instagram|linkedin|tiktok|youtube|twitter|x)\.com/' src content --glob '!tests/**'
+   rg -n -e '(\+|00)?20 ?1[0125][0-9 ]{8,10}|\b01[0125][0-9]{8}\b|wa\.me|api\.whatsapp|maps\.(google|app)|goo\.gl/maps|\b(facebook|instagram|linkedin|tiktok|youtube|twitter|x)\.com/' src content --glob '!tests/**'
    ```
    Disclaimers that negate a claim ("لا تُعد توصية علاجية أو إرشادًا للاستخدام أو الجرعات") are legitimate hits — note them, keep them.
 3. **Metric rules.** Display text comes from the `metrics` global or the dictionary — never hard-coded in components. `حوالي` / `~` / "approximately" is visible next to the number at every size and in every animation frame; the `srLabel` is the full sentence. Never: "150 feeds/supplements", "15 million birds vaccinated/sold/owned/served", annual output, exact counts, "300+ clients" or a count-up from 0 implying measurement. A paraphrase needs its own approval-register row.

@@ -10,8 +10,8 @@ import { cn } from '@/lib/cn'
  * an edge. Vermilion → amber → black (or grey on dark), one curve group per layout, never over the logo
  * and never under body text. Draws in on entry; optional subtle scroll drift.
  *
- * The geometry is a gentle convex arc rising toward the inline-end, matching the brand cover (p.1).
- * Mirrored automatically in RTL so it always rises away from the reading start.
+ * The geometry is a gentle convex arc rising to the right, matching the brand cover (p.1). It keeps the PDF
+ * orientation in both locales (never mirrored — reference-audit P15); `mirror` exists only for special cases.
  */
 type Props = {
   lines?: 1 | 2 | 3
@@ -27,6 +27,8 @@ type Props = {
   drift?: number
   strokeWidth?: number
   mirror?: boolean
+  /** First-paint CSS draw (no JS) — used by hero scenes; disables the GSAP draw. */
+  cssDraw?: boolean
 }
 
 const PATHS = [
@@ -45,7 +47,8 @@ export function SunriseCurve({
   duration = 1.6,
   drift = 0,
   strokeWidth = 6,
-  mirror = true,
+  mirror = false,
+  cssDraw = false,
 }: Props) {
   const ref = useRef<SVGSVGElement>(null)
   const colors =
@@ -58,7 +61,15 @@ export function SunriseCurve({
   useGSAP(
     () => {
       const svg = ref.current
-      if (!svg || isStatic || motionDisabled()) return
+      if (!svg || motionDisabled()) return
+      if (drift && window.matchMedia('(min-width: 64rem) and (pointer: fine)').matches) {
+        gsap.to(svg, {
+          y: -drift,
+          ease: 'none',
+          scrollTrigger: { trigger: svg, start: 'top bottom', end: 'bottom top', scrub: 0.6 },
+        })
+      }
+      if (isStatic || cssDraw) return
       const paths = svg.querySelectorAll('path')
       const tl = gsap.timeline({
         delay,
@@ -67,16 +78,8 @@ export function SunriseCurve({
       })
       tl.fromTo(paths, { drawSVG: '0% 0%' }, { drawSVG: '0% 100%', duration, ease: 'expo.inOut', stagger: 0.14 })
       if (trigger === 'immediate') tl.play()
-
-      if (drift && window.matchMedia('(min-width: 64rem) and (pointer: fine)').matches) {
-        gsap.to(svg, {
-          y: -drift,
-          ease: 'none',
-          scrollTrigger: { trigger: svg, start: 'top bottom', end: 'bottom top', scrub: 0.6 },
-        })
-      }
     },
-    { scope: ref, dependencies: [isStatic, trigger] },
+    { scope: ref, dependencies: [isStatic, trigger, cssDraw] },
   )
 
   return (
@@ -86,7 +89,7 @@ export function SunriseCurve({
       preserveAspectRatio="xMidYMid slice"
       aria-hidden
       focusable="false"
-      className={cn('block h-auto w-full overflow-visible', mirror && 'rtl:-scale-x-100', className)}
+      className={cn('block h-auto w-full overflow-visible', mirror && 'rtl:-scale-x-100', cssDraw && 'intro-draw', className)}
       data-sunrise-curve=""
     >
       {PATHS.slice(0, lines).map((d, i) => (
@@ -98,6 +101,8 @@ export function SunriseCurve({
           strokeWidth={i === 2 ? strokeWidth * 0.55 : strokeWidth}
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"
+          pathLength={cssDraw ? 1 : undefined}
+          style={cssDraw ? ({ '--i': i } as React.CSSProperties) : undefined}
         />
       ))}
     </svg>

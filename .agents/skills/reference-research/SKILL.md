@@ -19,7 +19,32 @@ Role owner: Research & Reference Analyst (spec §13.2). Output feeds Gate 1 and 
 - Storage: analysis text in `docs/reference-audit.md` (committed); screenshots and videos in `.reference/<site>/` (git-ignored, internal only — never under `public/`, never deployed).
 
 ## Procedure
-1. **Capture (per site × viewport).** Desktop 1440×900 (`deviceScaleFactor: 1`) and mobile 390×844 (`isMobile: true, hasTouch: true, deviceScaleFactor: 2`). Use one context at a time with `recordVideo: { dir }`. `page.goto(url, { waitUntil: 'networkidle', timeout: 60_000 })`, then scroll in steps of 0.8 × viewport height with ~600 ms pauses, taking a viewport screenshot at every step (`.reference/<site>/<viewport>/NN.png`). Prefer stepped viewport shots over `fullPage` — full-page capture breaks pinned/sticky scenes. Repeat one pass with `reducedMotion: 'reduce'` to see how each site degrades.
+1. **Capture (per site × viewport).** Desktop 1440×900 and mobile 390×844 (touch, DPR 2), one context at a time with video. Stepped viewport shots beat `fullPage` — full-page capture breaks pinned/sticky scenes. Repeat one pass with `reducedMotion: 'reduce'` to see how each site degrades. Skeleton (`node capture.mjs "<repo>/.reference"`, run from your scratch folder):
+   ```js
+   import { chromium } from 'playwright'
+   const sites = { byteforce: 'https://www.byteforceinc.com/', bsystems: 'https://www.bsystemseg.com/',
+                   mindoo: 'https://mindooco.com/en', imtyaze: 'https://www.imtyaze.com/' }
+   const views = { desktop: { viewport: { width: 1440, height: 900 } },
+                   mobile: { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 } }
+   const out = process.argv[2]
+   const browser = await chromium.launch()
+   for (const [site, url] of Object.entries(sites)) for (const [name, opts] of Object.entries(views)) {
+     const dir = `${out}/${site}/${name}`
+     const context = await browser.newContext({ ...opts, recordVideo: { dir, size: opts.viewport } })
+     const page = await context.newPage()
+     try {
+       await page.goto(url, { waitUntil: 'networkidle', timeout: 60_000 })
+       const height = await page.evaluate(() => document.documentElement.scrollHeight)
+       for (let y = 0, i = 0; y < height; y += opts.viewport.height * 0.8, i++) {
+         await page.evaluate((top) => window.scrollTo(0, top), y)
+         await page.waitForTimeout(600)
+         await page.screenshot({ path: `${dir}/${String(i).padStart(2, '0')}.png` })
+       }
+     } catch (error) { console.error(site, name, error.message) } // → access log in the audit
+     await context.close()
+   }
+   await browser.close()
+   ```
 2. **Section inventory.** For each site list sections in order: purpose, layout (columns/grid), colour field, headline scale (`getComputedStyle(h1|h2).fontSize`, `lineHeight`), CTA placement, proof devices, how the narrative moves from claim to proof to action.
 3. **Motion inventory.** For every motion beat record trigger (load/scroll/hover), properties, approximate duration (from video frame timestamps), easing feel, scrub vs one-shot, pinning, mobile behaviour, reduced-motion behaviour. Detect stacks as facts only: `window.gsap?.version`, `window.ScrollTrigger`, `window.Lenis`, `document.querySelectorAll('canvas').length`.
 4. **Performance and accessibility notes.** Transferred bytes (`performance.getEntriesByType('resource')` → `transferSize`), LCP via an in-page `PerformanceObserver`, console errors, `html[lang][dir]`, whether focus is visible after a few `Tab` presses (screenshot it).

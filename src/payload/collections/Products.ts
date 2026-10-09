@@ -189,10 +189,11 @@ export const Products: CollectionConfig = {
     slugField('Latin slug used in /ar/products/<slug> and /en/products/<slug>.'),
     ...approvalFields(),
     {
+      // Normalised name/SKU/manufacturer text for Arabic-aware search. Readable on purpose: public search
+      // filters on it (Payload rejects filters on unreadable fields); it only contains public name data.
       name: 'searchText',
       type: 'text',
       index: true,
-      access: { read: isStaffField },
       admin: { hidden: true },
     },
   ],

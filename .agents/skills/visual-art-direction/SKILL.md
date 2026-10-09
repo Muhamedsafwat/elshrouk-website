@@ -15,32 +15,17 @@ Role owners: Visual Product Designer with the Brand Guardian (spec §13.5, §13.
 ## Inputs
 - Art-direction sentence (spec §2): *the clarity of a scientific distribution partner, the energy of a modern technology company, and the optimism of sunrise — built around the poultry production ecosystem.*
 - Brand facts and contrast matrix: `.agents/skills/brand-extraction/SKILL.md`, `docs/brand-audit.md`; tokens in `src/styles/globals.css` (`--color-vermilion`, `--color-amber`, tints, `--ease-sunrise` …).
-- `docs/reference-audit.md` (adopt/reinterpret decisions), `docs/art-direction.md` (page-specific direction and review log), `docs/motion-storyboard.md`.
+- **`docs/art-direction.md` — the binding brief** (concept, ground sequence, Sunrise usage map, scene compositions, page families, component usage); `docs/reference-audit.md` (adopt/reinterpret decisions); `docs/motion-storyboard.md`.
 - Photography: registry `src/content/photos.ts` (src, size, focal point, segment, bilingual alt, licence) and `docs/image-provenance.md`. Current set = licensed stock; commissioned photography is an open item.
 
 ## Procedure
-1. **Grid and rhythm.** 12 columns desktop (max ≈ 1440–1560 px, gutters `clamp(24px, 4vw, 88px)`), 8 tablet, 4 mobile. Section spacing 120–180 px desktop, 64–104 px mobile; spacing scale 4/8/12/16/20/24/32/40/48/64/80/96/128. Radii 0–12 px (pills only for tags/controls). No glassmorphism, purple glow, giant gradients, fake bevels or stock 3-card rows repeated down the page.
-2. **One prominent motif per section — never all four, never over the logo.** Proposed homepage map (confirm in `docs/art-direction.md`):
-
-   | Scene | Field | Prominent motif / device |
-   |---|---|---|
-   | 1 Hero | white canvas + documentary farm image | Signature Curve (sunrise line reveal) |
-   | 2 Proof 300/15m/150 | black | Distribution Flow micro-underlines |
-   | 3 Statement | white, masked vertical photo panel | none — typography + horizon line |
-   | 4 Segments (sticky) | white / `#FAFAF9` | numbering 01/02/03 + photo crossfade; Crest pattern only in margins |
-   | 5 Product pillars | white | asymmetric 2×2 editorial index 01–04 |
-   | 6 Distribution journey | black | Distribution Flow, one amber destination node |
-   | 7 Values | white | Veterinary Grid 4×4 (one vermilion, one black, ≤ 1 amber) |
-   | 8 Product preview | `#FAFAF9` | none — CMS cards or polished empty state |
-   | 9 Partner proof | black documentary | Crest pattern tone-on-tone (never behind text) |
-   | 10 FAQ | white | none |
-   | 11 Closing CTA | black | Signature Curve from the lower edge, different arc from the hero |
-
-3. **Colour discipline.** Global guideline white ≈ 55%, black ≈ 25%, vermilion ≈ 15%, amber ≤ 5% (single destination node, single grid cell, small highlight). Amber is never a text background. Vermilion→amber gradient only on large abstract shapes or the curve. Measure, don't guess — run on a full-page screenshot at 1440 and 390:
+1. **Work from the binding brief.** `docs/art-direction.md` (concept "From dawn to dawn") fixes the homepage ground sequence — 1 white · 2 black · 3 white · 4 warm grey · 5 black · 6 vermilion · 7–8 white · 9 warm grey · 10 white · 11 black — plus the scene compositions (§5), interior page families (§7), the arch-window photo mask and the component vocabulary (§8). Use the layout utilities it defines (`container-site`, `grid-site` 4/8/12 columns, `section-y`); spacing, radii and type sizes come from tokens. Change the brief (through the orchestrator) before changing a scene's concept in code.
+2. **Sunrise motifs — one prominent motif per section, never all four together, never over or touching the logo.** Usage map from the brief §4: Signature Curve bookends the page (hero + closing) and appears on interior `CtaBand`s and the mobile menu; Distribution Flow for the proof underlines, the home journey, the how-we-work process line and the solutions matrix (exactly one amber destination node); Crest Pattern only in empty areas (404, knowledge empty state, form asides) at 10–20% tone, never behind text; Veterinary Grid for the values scene and the About principles (one vermilion, one black, ≤ 1 amber module). No glassmorphism, purple glow, pastel or giant gradients, fake bevels, floating blobs or repeated icon-in-circle card rows.
+3. **Colour discipline.** Global guideline white ≈ 55%, black ≈ 25%, vermilion ≈ 15%, amber ≤ 5% (destination node, rising sun, one grid module). Amber is never a text background; the vermilion→amber gradient appears only on large abstract shapes or the curve (the brief allows it once on the home page: the closing rising sun). Measure, don't guess — run on full-page screenshots at 1440 and 390:
    ```python
    # python color_ratio.py screenshot.png  (Pillow + numpy; photos count as "other")
    import sys, numpy as np; from PIL import Image
-   BRAND = {"white": [(255,255,255),(250,250,249),(244,244,242),(229,229,227)], "black": [(0,0,0),(23,23,23)],
+   BRAND = {"white": [(255,255,255),(246,245,243)], "black": [(0,0,0),(51,51,51)],  # warm grey / #333 per brand audit
             "vermilion": [(254,51,0)], "amber": [(254,184,33)]}
    px = np.asarray(Image.open(sys.argv[1]).convert("RGB"), dtype=np.int16).reshape(-1, 3)
    best = np.full(len(px), 10**6); label = np.full(len(px), "other", dtype=object)
@@ -53,12 +38,12 @@ Role owners: Visual Product Designer with the Brand Guardian (spec §13.5, §13.
    print(f"other     {100*(label == 'other').mean():5.1f}% of all pixels")
    ```
    Flag amber > 5% or vermilion > ~20% of brand pixels; the result is a guideline check, not a pixel quota.
-4. **Accessible CTA and text treatments** (contrast matrix in the brand skill): primary CTA = black text on vermilion (5.69:1) or white text on black; white-on-vermilion only for display headings ≥ 24 px bold / ≥ 32 px regular. Vermilion is never small text on white (3.69:1) — eyebrows and inline links are black with a vermilion rule, dot or underline. Focus ring 2–3 px with contrast ≥ 3:1 against both the control and its background (black or white ring on vermilion buttons).
-5. **Photography direction.** Documentary, natural warm light, honest framing, close on hands and real farm work; segment-correct subjects (see the poultry-content-integrity skill). Hero: wide commercial chicken farm with the birds clearly visible; mobile hero gets its own crop/focal point — never a centre-crop that loses the subject. Text over photos only with a black 40–60% overlay, otherwise separate copy from image. Every image comes through `next/image` with explicit `sizes`, a registry entry and provenance; the single LCP hero image uses `preload` (Next 16 deprecates `priority`) or `fetchPriority="high"`.
-6. **Type hierarchy.** Oversized Arabic display headline (`clamp(2.3rem, 7vw, 5.8rem)`, bold, short authored lines), medium subheads, regular body; numerals and Latin in Montserrat. One display moment per viewport; editorial white space is a brand element, not leftover.
-7. **Icons.** PDF p.15 style: 24-unit grid, 2-unit stroke, round caps/joins, no fills; black on light, white on dark, vermilion for one active state. Never the PDF "Livestock" icon; "Delivery"/"Warehouse" icons only where they do not imply owned fleets or warehouses.
-8. **Page families** (spec §6): About — monochrome/dawn poultry image + logo, chapter markers, no fake timeline; Solutions and segment pages — distinct hero per segment, cross-category access, inquiry CTA; Catalogue — functional first, editorial header, unbranded category visuals as image fallback; Contact — conversion-first, minimal fields; 404/error — designed, on-brand, with a way home. Design empty, loading, error and success states for each (Gate 2).
-9. **Review loop.** Capture 1440 and 390 screenshots (browser-visual-qa naming), open every image, score it against the checklist below, fix, re-capture. When issues are found, run at least two polish rounds (Gate 7). Log each round in `docs/art-direction.md` (date, pages, findings, before/after paths).
+4. **Accessible CTA and text treatments** (contrast matrix in the brand skill and `docs/brand-audit.md` §3.6): `ButtonLink` variants — primary black (white label), accent vermilion with a **black** label (5.69:1), outline, inverse on dark; white-on-vermilion only for display headings ≥ 24 px bold / ≥ 32 px regular. Two-tone headlines may set one key phrase in vermilion, display sizes only (≥ 32 px), one phrase per headline. Vermilion is never small text on white (3.69:1) — eyebrows and inline links are black with a vermilion rule, dot or underline; small vermilion-family text uses the 50 % shade token. Focus ring 2–3 px with ≥ 3:1 contrast against both the control and its background (black or white ring on vermilion buttons).
+5. **Photography direction.** Documentary, natural warm light, honest framing, close on hands and real farm work; segment-correct subjects (see the poultry-content-integrity skill). Hero: wide commercial chicken farm with the birds clearly visible; mobile hero gets its own crop/focal point — never a centre-crop that loses the subject. Text over photos only with a black 40–60% overlay, otherwise separate copy from image. Every image comes through `next/image` with explicit `sizes`, a registry entry and provenance; the single LCP hero image uses `preload` (Next 16 deprecates `priority`) or `fetchPriority="high"`. Local sources must match `images.localPatterns` in `next.config.ts` (static imports, `/brand/**`, CMS media) and `quality` must be one of the configured `images.qualities`, otherwise images fail or are coerced.
+6. **Type hierarchy.** Oversized Arabic display headline (short authored lines, ~3 display lines max on desktop), medium subheads, regular body; numerals and Latin in Montserrat. Display sizes above the PDF's 56 px (the spec's `clamp(2.3rem, 7vw, 5.8rem)` hero) are staging-only until brand-audit item O7 is approved. One display moment per viewport; editorial white space is a brand element, not leftover.
+7. **Icons.** PDF p.15 grammar: 24-unit grid, 2-unit stroke, round caps/joins, no fills; black on light, white on dark, vermilion for one active state. Never the PDF "Livestock" icon; "Delivery"/"Warehouse" icons only where they imply no owned fleet or warehouse. New icons drawn to this grammar (poultry, feed, segments) need brand approval (brand-audit O8) — until then use text labels and photography.
+8. **Page families** follow the brief §7 (About chapters + monochrome→colour dawn image; solutions chapters with progress rail; segment heroes; functional catalogue with designed empty state; two-column product detail; vertical how-we-work flow; conversion-first contact; black partner hero; plain privacy; designed 404). Design empty, loading, error and success states for each (Gate 2).
+9. **Review loop.** Capture 1440 and 390 screenshots (browser-visual-qa naming), open every image, score it against the checklist below, fix, re-capture. When issues are found, run at least two polish rounds (Gate 7). Log each round in `docs/test-report.md` § Polish rounds (date, pages, findings, before/after paths); propose brief changes to the orchestrator, who owns `docs/art-direction.md`.
 10. **Distinctness test.** Swap the logo mentally: if a section would fit any agricultural template or another company, redesign it around poultry production, distribution flow or the sunrise geometry.
 
 ## Checklists
@@ -78,7 +63,8 @@ Role owners: Visual Product Designer with the Brand Guardian (spec §13.5, §13.
 - [ ] Hero subject visible at 320, 390, 768 and 1440; overlay present under any white text on photos.
 
 ## Deliverables
-- `docs/art-direction.md`: per-scene and per-page-family direction (field, motif, image, type, states), the motif map above as approved, and a review log with screenshot paths.
+- Section and page implementations that match `docs/art-direction.md`; proposed brief changes (with screenshots) sent to its owner, the orchestrator.
+- Review-round entries with screenshot paths in `docs/test-report.md`.
 - Implemented section styling in files your task owns; token or global-style needs sent to the orchestrator as diffs.
 - Ratio-script output for home at 1440 and 390 attached to the report.
 
@@ -90,7 +76,7 @@ Role owners: Visual Product Designer with the Brand Guardian (spec §13.5, §13.
 
 ## Failure recovery & escalation
 - **No suitable licensed photo for a segment:** use a typographic or motif-led composition and record the need in `docs/open-items.md`; never use non-poultry, AI-fantasy or unlicensed images.
-- **Ratio out of range:** rebalance colour fields (swap a black section for white) before touching tokens.
+- **Ratio out of range:** reduce accent area inside sections first (oversized vermilion panels, extra amber); if the ground sequence itself is the cause, propose a change to the brief rather than editing tokens.
 - **Design conflicts with accessibility:** accessibility wins; propose an alternative that keeps the brand signal (e.g. vermilion rule + black text).
 - **Too close to a reference site:** reinterpret with Sunrise geometry and poultry photography; ask the reference-research owner for a derivation check.
 
