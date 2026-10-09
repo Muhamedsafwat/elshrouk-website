@@ -26,6 +26,7 @@ export const products = {
       placeholder: 'ابحث بالاسم أو الشركة المصنعة أو كود المنتج',
       clear: 'مسح البحث',
       submit: 'بحث',
+      inCatalog: 'في الكتالوج: {count}',
     },
     filters: {
       title: 'تصفية النتائج',
@@ -38,6 +39,10 @@ export const products = {
       showFilters: 'عرض خيارات التصفية',
       hideFilters: 'إخفاء خيارات التصفية',
       any: 'الكل',
+      active: 'التصفية الحالية',
+      remove: 'إزالة {name}',
+      searchTerm: 'البحث: {q}',
+      close: 'إغلاق',
     },
     results: {
       count: '{count} منتج',
@@ -46,6 +51,8 @@ export const products = {
       countTwo: 'منتجان',
       countFew: '{count} منتجات',
       countMany: '{count} منتجًا',
+      searchFor: 'نتائج البحث عن «{q}»',
+      regionLabel: 'نتائج الكتالوج',
     },
     states: {
       loading: 'جارٍ تحميل المنتجات…',
@@ -57,10 +64,13 @@ export const products = {
       emptyCatalogBody:
         'تظهر المنتجات هنا تباعًا بعد مراجعة بياناتها واعتمادها. وحتى ذلك الحين، يمكنك طلب قائمة المنتجات الحالية من خلال النموذج.',
       emptyCatalogCta: 'اطلب قائمة المنتجات',
+      emptyCatalogFormIntro:
+        'أرسل بيانات التواصل والفئة التي تحتاجها مزرعتك، ويتابع فريقنا طلبك معك مباشرة.',
       errorTitle: 'تعذر تحميل المنتجات',
       errorBody:
         'حدث خطأ أثناء تحميل الكتالوج. أعد المحاولة بعد قليل، أو أرسل استفسارك مباشرة من صفحة التواصل.',
       retry: 'إعادة المحاولة',
+      errorContact: 'تواصل معنا',
     },
     categoryBrowser: {
       title: 'تصفح حسب الفئة',
@@ -68,6 +78,9 @@ export const products = {
         'نعمل على إتاحة منتجات مزارع الدواجن ضمن أربع فئات رئيسية. اختر فئة لعرض منتجاتها في الكتالوج، أو أرسل استفسارًا عنها مباشرة.',
       viewProducts: 'عرض منتجات الفئة',
       inquire: 'استفسر عن هذه الفئة',
+      emptyIntro:
+        'نوفر منتجات مزارع الدواجن ضمن أربع فئات رئيسية. اختر الفئة التي تحتاجها مزرعتك وأرسل استفسارك عنها، ويتابع فريقنا معك مباشرة.',
+      selected: 'الفئة المختارة',
     },
     pagination: {
       label: 'صفحات المنتجات',
@@ -75,6 +88,8 @@ export const products = {
       next: 'التالي',
       page: 'صفحة {page} من {total}',
       loadMore: 'عرض المزيد من المنتجات',
+      pageLink: 'الصفحة {page}',
+      pageShort: 'صفحة {page}',
     },
     card: {
       inquire: 'استفسر عن المنتج',
@@ -117,9 +132,18 @@ export const products = {
     vetNote: 'تُستخدم المنتجات البيطرية وفقًا للإرشادات المعتمدة وتحت إشراف الطبيب البيطري.',
     metaDescriptionFallback:
       'تعرّف على {name} ضمن كتالوج الشروق لمنتجات مزارع الدواجن، وأرسل استفسارك لتأكيد التوافر والسعر.',
+    factsTitle: 'بيانات المنتج',
+    galleryLabel: 'صور المنتج',
+    showImage: 'عرض الصورة {n}',
+    illustrativeNote: 'صورة تعبيرية لفئة {category}، وليست صورة المنتج.',
+    safetyTitle: 'تنبيه بيطري',
+    draftLabel: 'مسودة',
+    draftBanner: 'معاينة داخلية لفريق المحتوى: هذا المنتج غير منشور للزوار، ولا تفهرسه محركات البحث.',
+    draftStatus: 'حالة الاعتماد: {status}',
   },
   drawer: {
     title: 'استفسار عن منتج',
+    titleFor: 'استفسار عن {name}',
     productLabel: 'المنتج',
     intro:
       'أدخل بيانات التواصل وأي تفاصيل تساعد فريقنا على فهم طلبك، مثل الكمية التقريبية أو نوع الإنتاج.',

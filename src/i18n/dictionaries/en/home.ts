@@ -28,6 +28,7 @@ export const home: HomeDictionary = {
   },
   statement: {
     lines: ['Every farm has different needs.', 'And every stage deserves specialised support.'],
+    accent: 'specialised support',
     caption: 'That’s why we start with your farm, not with a product list.',
   },
   farmTypes: {
@@ -116,6 +117,7 @@ export const home: HomeDictionary = {
       },
     ],
     catalogCta: 'Browse the product catalogue',
+    exploreBadge: 'Explore',
   },
   journey: {
     eyebrow: 'How we work',
@@ -187,8 +189,11 @@ export const home: HomeDictionary = {
       'We are preparing approved product entries to publish here. In the meantime, you can request the current list directly from our team.',
     emptyCta: 'Request the current list',
     viewAll: 'View all products',
+    categoriesLabel: 'Browse the catalogue by category',
   },
   partnerProof: {
+    // The approximate qualifier exactly as it appears inside `narrative` (emphasised with each approved statement).
+    narrativeQualifier: 'around',
     eyebrow: 'From the field',
     title: 'Relationships built cycle after cycle',
     narrative:
@@ -240,6 +245,8 @@ export const home: HomeDictionary = {
   },
   closing: {
     headline: ['Your farm deserves a partner', 'that knows what it needs.'],
+    // Display-only vermilion phrase inside `headline` (ignored if the CMS headline no longer contains it).
+    accent: 'what it needs',
     subhead: 'Talk to the Alshorouk team about your farm’s needs and the products and solutions available.',
     primaryCta: 'Get in touch',
     secondaryCta: 'Browse products',

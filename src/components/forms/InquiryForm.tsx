@@ -1,9 +1,13 @@
 import type { Locale } from '@/i18n/config'
+import { href } from '@/i18n/routing'
 import type { InquiryKind } from '@/lib/inquiries/schema'
+import { InquiryFormClient } from './InquiryFormClient'
+import { buildInquiryStrings } from './inquiry-strings'
 
 /**
- * CONTRACT STUB — the forms agent replaces the implementation; the props below are the stable API used
- * by contact, partner, segment, how-we-work and product pages. One form implementation site-wide.
+ * The ONE inquiry form used site-wide (contact, partner, segment, how-we-work and product pages).
+ * Server component: assembles localized copy, then hands over to the client form, which validates with
+ * the shared Zod schema and submits to the `submitInquiry` server action (spec §4.3, §6.8, §11).
  */
 export type InquiryFormProps = {
   locale: Locale
@@ -26,10 +30,16 @@ export type InquiryFormProps = {
   id?: string
 }
 
-export function InquiryForm({ title, className, id }: InquiryFormProps) {
+export function InquiryForm({ locale, kind, product, ...rest }: InquiryFormProps) {
   return (
-    <div id={id} className={className}>
-      {title ? <h2 className="text-display-md font-bold">{title}</h2> : null}
-    </div>
+    <InquiryFormClient
+      {...rest}
+      locale={locale}
+      // A product context implies a product inquiry unless the host page says otherwise.
+      kind={kind ?? (product ? 'product' : undefined)}
+      product={product}
+      strings={buildInquiryStrings(locale)}
+      privacyHref={href(locale, 'privacy')}
+    />
   )
 }

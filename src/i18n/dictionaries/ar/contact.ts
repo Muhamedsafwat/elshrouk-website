@@ -15,6 +15,8 @@ export const contact = {
   hero: {
     eyebrow: 'تواصل معنا',
     title: ['تحدث مع فريق الشروق', 'عن احتياجات مزرعتك.'],
+    /** Phrase of the title shown in vermilion (display size only). */
+    accent: 'احتياجات مزرعتك',
     intro:
       'اختر نوع استفسارك واترك بياناتك، ويتواصل معك فريقنا لمناقشة طلبك، سواء كان احتياجًا لمزرعة دواجن أو منتجًا محددًا أو فرصة شراكة.',
   },
@@ -62,6 +64,21 @@ export const contact = {
     privacyNote:
       'نستخدم بياناتك للرد على طلبك ومتابعته فقط، ولا نبيعها أو نشاركها لأغراض تسويقية.',
     privacyLink: 'اقرأ سياسة الخصوصية',
+  },
+  formUi: {
+    spam: 'تعذّر إرسال طلبك. أعد تحميل الصفحة واكتب بياناتك يدويًا، ثم حاول مرة أخرى.',
+    newTab: '(تُفتح في علامة تبويب جديدة)',
+    referenceLabel: 'الرقم المرجعي',
+    productHint: 'يصل طلبك إلى الفريق مرتبطًا بهذا المنتج.',
+    sending: 'جارٍ إرسال طلبك…',
+  },
+  // Rendered only for channels marked verified in Site Settings (none today → block hidden).
+  channels: {
+    title: 'قنوات التواصل المعتمدة',
+    phone: 'الهاتف',
+    whatsapp: 'واتساب',
+    email: 'البريد الإلكتروني',
+    address: 'العنوان',
   },
   prefill: {
     productLabel: 'المنتج المختار',

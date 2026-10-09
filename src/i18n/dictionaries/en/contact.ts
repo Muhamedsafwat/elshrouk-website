@@ -12,6 +12,7 @@ export const contact: ContactDictionary = {
   hero: {
     eyebrow: 'Contact us',
     title: ['Talk to the Alshorouk team', 'about your farm’s needs.'],
+    accent: 'your farm’s needs',
     intro:
       'Choose an inquiry type and leave your details. Our team will contact you to discuss your request, whether it’s a poultry farm’s needs, a specific product or a partnership.',
   },
@@ -60,6 +61,20 @@ export const contact: ContactDictionary = {
     privacyNote:
       'We use your details only to respond to and follow up on your request. We don’t sell them or share them for marketing.',
     privacyLink: 'Read our privacy policy',
+  },
+  formUi: {
+    spam: 'We couldn’t send your request. Reload the page, type your details by hand and try again.',
+    newTab: '(opens in a new tab)',
+    referenceLabel: 'Reference',
+    productHint: 'Your request reaches the team linked to this product.',
+    sending: 'Sending your request…',
+  },
+  channels: {
+    title: 'Verified contact channels',
+    phone: 'Phone',
+    whatsapp: 'WhatsApp',
+    email: 'Email',
+    address: 'Address',
   },
   prefill: {
     productLabel: 'Selected product',

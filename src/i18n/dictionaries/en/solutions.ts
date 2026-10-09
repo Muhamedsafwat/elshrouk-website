@@ -17,6 +17,8 @@ export const solutions: SolutionsDictionary = {
       intro:
         'Every poultry segment has its own needs. We work with broiler, layer and breeder farms to supply poultry feed, feed supplements, veterinary medicines and vaccines, matched to each farm’s requirements.',
     },
+    indexLabel: 'Segment index',
+    railLabel: 'Segment navigation',
     chapters: [
       {
         key: 'broilers',

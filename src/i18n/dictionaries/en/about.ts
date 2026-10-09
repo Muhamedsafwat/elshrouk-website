@@ -12,6 +12,7 @@ export const about: AboutDictionary = {
   hero: {
     eyebrow: 'About Alshorouk',
     title: ['We know the value of every day', 'in the production cycle.'],
+    accent: 'every day',
     intro:
       'Alshorouk is a specialist distributor for poultry farms: broiler, layer and breeder. We supply feed and feed supplements and distribute veterinary medicines and vaccines, in step with each cycle.',
   },

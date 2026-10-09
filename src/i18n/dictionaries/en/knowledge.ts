@@ -14,10 +14,18 @@ export const knowledge: KnowledgeDictionary = {
     hero: {
       eyebrow: 'Knowledge',
       title: ['Practical knowledge', 'for poultry farms'],
+      accent: 'Practical',
       intro:
         'Clear, concise articles on poultry farm business, feed supplements, veterinary product handling and Alshorouk news, published after editorial review and, where needed, review by a qualified professional.',
     },
     categoriesTitle: 'Browse by topic',
+    topics: {
+      eyebrow: 'Topics',
+      title: 'Four editorial topics',
+    },
+    reviewTag: 'Subject to qualified professional review',
+    articlesEyebrow: 'Articles',
+    latestTitle: 'Latest articles',
     allCategories: 'All topics',
     categories: [
       {
@@ -49,6 +57,15 @@ export const knowledge: KnowledgeDictionary = {
       body: 'Articles appear here once they have been reviewed and approved. Until then, our team is happy to answer your questions about products and requests.',
       cta: 'Contact our team',
     },
+    emptyCategory: {
+      title: 'No articles published in this topic yet',
+      body: 'Choose another topic, or view articles across all topics.',
+    },
+    closing: {
+      title: 'Have a question about your farm’s needs?',
+      body: 'Send your inquiry through the contact form and the Alshorouk team will get back to you.',
+      cta: 'Contact our team',
+    },
     card: {
       readMore: 'Read article',
       minutes: '{minutes} min read',
@@ -68,6 +85,9 @@ export const knowledge: KnowledgeDictionary = {
     share: 'Share this article',
     copyLink: 'Copy link',
     copied: 'Link copied',
+    shareNative: 'Share',
+    draftBanner: 'Draft preview: this article is not published and is hidden from visitors and search engines.',
+    generalInfo: 'General information',
     backToHub: 'Back to the knowledge hub',
     reviewedNote: 'This article was reviewed by a qualified professional before publication.',
     disclaimer:

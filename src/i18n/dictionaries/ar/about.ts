@@ -17,6 +17,8 @@ export const about = {
   hero: {
     eyebrow: 'عن الشروق',
     title: ['نعرف قيمة كل يوم', 'في دورة الإنتاج.'],
+    // Presentation only: the phrase of `title` set in vermilion (display size). Must stay a substring of title.
+    accent: 'كل يوم',
     intro:
       'الشروق موزع متخصص في قطاع الدواجن. نوفر لمزارع التسمين والبياض والأمهات أعلاف الدواجن ومكملاتها، ونوزع الأدوية واللقاحات البيطرية، بتنسيق يراعي إيقاع كل دورة.',
   },

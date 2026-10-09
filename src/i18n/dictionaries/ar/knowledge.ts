@@ -19,10 +19,20 @@ export const knowledge = {
     hero: {
       eyebrow: 'المعرفة',
       title: ['معرفة عملية', 'لمزارع الدواجن'],
+      /** Display-size accent phrase inside title[0] (rendered in vermilion). */
+      accent: 'عملية',
       intro:
         'مقالات واضحة ومختصرة حول أعمال مزارع الدواجن ومكملات الأعلاف والتعامل مع المنتجات البيطرية وأخبار الشروق، تُنشر بعد مراجعة تحريرية، ومراجعة مهنية متخصصة عند الحاجة.',
     },
     categoriesTitle: 'تصفح حسب الموضوع',
+    topics: {
+      eyebrow: 'الموضوعات',
+      title: 'أربعة محاور تحريرية',
+    },
+    /** Tag on the veterinary-handling topic (spec §6.7). */
+    reviewTag: 'يخضع لمراجعة مختص مؤهل',
+    articlesEyebrow: 'المقالات',
+    latestTitle: 'أحدث المقالات',
     allCategories: 'كل الموضوعات',
     categories: [
       {
@@ -54,6 +64,15 @@ export const knowledge = {
       body: 'تُنشر المقالات هنا بعد مراجعتها واعتمادها. وإلى ذلك الحين، يسعد فريقنا بالإجابة عن أسئلتك حول المنتجات والطلبات.',
       cta: 'تواصل مع فريقنا',
     },
+    emptyCategory: {
+      title: 'لا توجد مقالات منشورة في هذا الموضوع بعد',
+      body: 'اختر موضوعًا آخر، أو اعرض المقالات في كل الموضوعات.',
+    },
+    closing: {
+      title: 'لديك سؤال عن احتياجات مزرعتك؟',
+      body: 'أرسل استفسارك عبر نموذج التواصل، وسيتواصل معك فريق الشروق.',
+      cta: 'تواصل مع فريقنا',
+    },
     card: {
       readMore: 'اقرأ المقال',
       minutes: '{minutes} دقائق',
@@ -73,6 +92,9 @@ export const knowledge = {
     share: 'شارك المقال',
     copyLink: 'نسخ الرابط',
     copied: 'تم نسخ الرابط',
+    shareNative: 'مشاركة',
+    draftBanner: 'معاينة مسودة: هذا المقال غير منشور، ولا يظهر للزوار أو لمحركات البحث.',
+    generalInfo: 'معلومات عامة',
     backToHub: 'العودة إلى مركز المعرفة',
     reviewedNote: 'خضع هذا المقال لمراجعة مختص مؤهل قبل نشره.',
     disclaimer:

@@ -192,7 +192,7 @@ export interface Product {
   sourceEvidence?: string | null;
   internalNotes?: string | null;
   /**
-   * Latin slug used in /ar/products/<slug> and /en/products/<slug>.
+   * Lowercase Latin letters, digits and hyphens — used in /ar/products/<slug> and /en/products/<slug>.
    */
   slug: string;
   /**

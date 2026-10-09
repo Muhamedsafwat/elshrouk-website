@@ -34,6 +34,8 @@ export const home = {
   },
   statement: {
     lines: ['كل مزرعة لها احتياج مختلف.', 'وكل مرحلة تستحق دعمًا متخصصًا.'],
+    /** Phrase rendered in vermilion when it appears in `lines` (display size only). */
+    accent: 'دعمًا متخصصًا',
     caption: 'لذلك نبدأ بفهم مزرعتك قبل الحديث عن المنتجات.',
   },
   farmTypes: {
@@ -122,6 +124,8 @@ export const home = {
       },
     ],
     catalogCta: 'تصفح كتالوج المنتجات',
+    /** Pointer-follow badge inside the category panels (decorative, fine pointer only). */
+    exploreBadge: 'استكشف',
   },
   journey: {
     eyebrow: 'كيف نعمل',
@@ -193,8 +197,11 @@ export const home = {
       'نعمل على إعداد بيانات المنتجات المعتمدة لعرضها هنا. وحتى ذلك الحين، يمكنك طلب القائمة الحالية من فريقنا مباشرة.',
     emptyCta: 'اطلب القائمة الحالية',
     viewAll: 'عرض كل المنتجات',
+    categoriesLabel: 'تصفح الكتالوج حسب الفئة',
   },
   partnerProof: {
+    // The approximate qualifier exactly as it appears inside `narrative` (emphasised with each approved statement).
+    narrativeQualifier: 'حوالي',
     eyebrow: 'من الميدان',
     title: 'علاقات تُبنى دورة بعد دورة',
     narrative:
@@ -246,6 +253,8 @@ export const home = {
   },
   closing: {
     headline: ['مزرعتك تستحق شريكًا', 'يعرف احتياجاتها.'],
+    // Display-only vermilion phrase inside `headline` (ignored if the CMS headline no longer contains it).
+    accent: 'احتياجاتها',
     subhead: 'تواصل مع فريق الشروق لمناقشة احتياجات مزرعتك من المنتجات والحلول المتاحة.',
     primaryCta: 'ابدأ التواصل',
     secondaryCta: 'تصفح المنتجات',

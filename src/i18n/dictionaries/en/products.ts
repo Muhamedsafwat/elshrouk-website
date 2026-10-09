@@ -22,6 +22,7 @@ export const products: ProductsDictionary = {
       placeholder: 'Search by name, manufacturer or product code',
       clear: 'Clear search',
       submit: 'Search',
+      inCatalog: 'In the catalogue: {count}',
     },
     filters: {
       title: 'Filter results',
@@ -34,6 +35,10 @@ export const products: ProductsDictionary = {
       showFilters: 'Show filters',
       hideFilters: 'Hide filters',
       any: 'All',
+      active: 'Active filters',
+      remove: 'Remove {name}',
+      searchTerm: 'Search: {q}',
+      close: 'Close',
     },
     results: {
       count: '{count} products',
@@ -42,6 +47,8 @@ export const products: ProductsDictionary = {
       countTwo: '2 products',
       countFew: '{count} products',
       countMany: '{count} products',
+      searchFor: 'Results for “{q}”',
+      regionLabel: 'Catalogue results',
     },
     states: {
       loading: 'Loading products…',
@@ -53,10 +60,13 @@ export const products: ProductsDictionary = {
       emptyCatalogBody:
         'Products will appear here as their details are reviewed and approved. In the meantime, you can request the current product list using the form.',
       emptyCatalogCta: 'Request the product list',
+      emptyCatalogFormIntro:
+        'Share your contact details and the category your farm needs, and our team will follow up on your request with you directly.',
       errorTitle: 'We couldn’t load the products',
       errorBody:
         'Something went wrong while loading the catalogue. Please try again shortly, or send your inquiry from the contact page.',
       retry: 'Try again',
+      errorContact: 'Contact us',
     },
     categoryBrowser: {
       title: 'Browse by category',
@@ -64,6 +74,9 @@ export const products: ProductsDictionary = {
         'We make poultry farm products available across four main categories. Choose a category to see its products in the catalogue, or send an inquiry about it directly.',
       viewProducts: 'View products',
       inquire: 'Ask about this category',
+      emptyIntro:
+        'We supply poultry farm products across four main categories. Choose the one your farm needs and send us an inquiry about it — our team will follow up with you directly.',
+      selected: 'Selected category',
     },
     pagination: {
       label: 'Product pages',
@@ -71,6 +84,8 @@ export const products: ProductsDictionary = {
       next: 'Next',
       page: 'Page {page} of {total}',
       loadMore: 'Load more products',
+      pageLink: 'Page {page}',
+      pageShort: 'Page {page}',
     },
     card: {
       inquire: 'Inquire about this product',
@@ -114,9 +129,18 @@ export const products: ProductsDictionary = {
       'Veterinary products should be used in line with approved guidelines and under the supervision of a veterinarian.',
     metaDescriptionFallback:
       'View {name} in Alshorouk’s poultry farm product catalogue and send an inquiry to confirm availability and price.',
+    factsTitle: 'Product details',
+    galleryLabel: 'Product images',
+    showImage: 'Show image {n}',
+    illustrativeNote: 'Illustrative image for the {category} category — not a photo of the product.',
+    safetyTitle: 'Veterinary note',
+    draftLabel: 'Draft',
+    draftBanner: 'Internal preview for the content team: this product is not published to visitors and is not indexed by search engines.',
+    draftStatus: 'Approval status: {status}',
   },
   drawer: {
     title: 'Product inquiry',
+    titleFor: 'Inquiry: {name}',
     productLabel: 'Product',
     intro:
       'Enter your contact details and anything that helps our team understand your request, such as the approximate quantity or production type.',

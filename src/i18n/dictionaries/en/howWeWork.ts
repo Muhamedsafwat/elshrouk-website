@@ -12,6 +12,7 @@ export const howWeWork: HowWeWorkDictionary = {
   hero: {
     eyebrow: 'How we work',
     title: ['From the farm’s needs', 'to follow-up on your request.'],
+    accent: 'follow-up',
     intro:
       'A clear way of working that starts with understanding your farm’s needs, confirms the details before any commitment, and continues with contact after supply.',
   },

@@ -14,6 +14,8 @@ export const howWeWork = {
   hero: {
     eyebrow: 'كيف نعمل',
     title: ['من احتياج المزرعة', 'إلى متابعة الطلب.'],
+    // Presentation only: the phrase of `title` set in vermilion (display size). Must stay a substring of title.
+    accent: 'متابعة الطلب',
     intro:
       'طريقة عمل واضحة تبدأ بفهم احتياج مزرعتك، وتمر بتأكيد التفاصيل قبل أي التزام، وتستمر بالتواصل بعد التوريد.',
   },

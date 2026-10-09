@@ -23,6 +23,9 @@ export const solutions = {
       intro:
         'لكل قطاع في إنتاج الدواجن طبيعته واحتياجاته. نعمل مع مزارع التسمين والبياض والأمهات على إمداد منظم بأعلاف الدواجن ومكملاتها والأدوية واللقاحات البيطرية، وفق احتياج كل مزرعة.',
     },
+    // Accessible names of the two in-page navigations (hero chapter index, sticky progress rail).
+    indexLabel: 'فهرس القطاعات',
+    railLabel: 'التنقل بين القطاعات',
     chapters: [
       {
         key: 'broilers',

@@ -12,6 +12,7 @@ export const partner: PartnerDictionary = {
   hero: {
     eyebrow: 'Partner with us',
     title: ['Let’s talk about distributing', 'your products to poultry farms.'],
+    accent: 'poultry farms',
     intro:
       'We welcome conversations with manufacturers and suppliers of poultry farm products about supply or agency opportunities that serve the broiler, layer and breeder farms we work with.',
   },
@@ -66,6 +67,8 @@ export const partner: PartnerDictionary = {
       company: 'Company name',
       role: 'Job title',
       productLine: 'Proposed product line',
+      rolePlaceholder: 'For example: export manager or business development manager',
+      messagePlaceholder: 'Tell us about your company, your products and their registration, and the kind of cooperation you propose.',
       productLineHint: 'For example: feed supplements or veterinary vaccines for poultry',
       website: 'Company website',
     },

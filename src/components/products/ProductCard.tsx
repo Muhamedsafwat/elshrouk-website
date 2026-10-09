@@ -82,16 +82,16 @@ export function ProductCard({
             {product.nameAlt}
           </p>
         ) : null}
-        <dl className="mt-1 flex flex-wrap gap-2 text-caption">
+        <div className="mt-1 flex flex-wrap gap-2 text-caption">
           {product.manufacturer ? <Tag>{product.manufacturer}</Tag> : null}
           {product.packSize ? <Tag>{product.packSize}</Tag> : null}
           {product.segments.map((s) => (
             <Tag key={s.key}>{s.name}</Tag>
           ))}
-        </dl>
-        <div className="mt-auto flex items-center justify-between gap-3 border-t border-line pt-4">
+        </div>
+        <div className="mt-auto flex flex-wrap items-center justify-between gap-x-3 gap-y-2 border-t border-line pt-4">
           <span className="text-caption font-medium text-fg-muted">{labels.availability[product.availability]}</span>
-          <span className="inline-flex items-center gap-1.5 text-small font-semibold text-fg transition-colors group-hover:text-accent">
+          <span className="inline-flex items-center gap-1.5 text-small font-semibold whitespace-nowrap text-fg transition-colors group-hover:text-accent">
             {labels.details}
             <ArrowIcon size={16} />
           </span>
