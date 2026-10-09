@@ -1,0 +1,55 @@
+[
+  {
+    "name": "alshorouk-logo-full-color",
+    "source_pdf_page": 3,
+    "paths": 58,
+    "bbox_pt": [
+      515.837,
+      153.607,
+      771.029,
+      390.752
+    ],
+    "width_pt": 255.192,
+    "height_pt": 237.145,
+    "colors": {
+      "#000000": 54,
+      "#FE3300": 2,
+      "#FEB821": 2
+    },
+    "bytes": 35066
+  },
+  {
+    "name": "alshorouk-logo-white",
+    "source_pdf_page": 9,
+    "paths": 54,
+    "bbox_pt": [
+      280.441,
+      130.386,
+      372.76,
+      216.001
+    ],
+    "width_pt": 92.319,
+    "height_pt": 85.615,
+    "colors": {
+      "#FFFFFF": 54
+    },
+    "bytes": 24560
+  },
+  {
+    "name": "alshorouk-logo-black",
+    "source_pdf_page": 9,
+    "paths": 54,
+    "bbox_pt": [
+      92.191,
+      263.128,
+      184.51,
+      349.501
+    ],
+    "width_pt": 92.319,
+    "height_pt": 86.372,
+    "colors": {
+      "#000000": 54
+    },
+    "bytes": 24571
+  }
+]

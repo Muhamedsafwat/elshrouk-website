@@ -1,0 +1,41 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# next / build
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# environment & secrets
+.env
+.env.*
+!.env.example
+
+# local databases & uploads (never commit PII or CMS data)
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+media/
+
+# large source assets & internal-only research
+assets-src/
+.reference/
+
+# testing
+coverage/
+playwright-report/
+test-results/
+blob-report/
+.vitest/
+
+# logs & OS
+*.log
+npm-debug.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db

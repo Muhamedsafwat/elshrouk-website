@@ -1,0 +1,387 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   ALSHOROUK — DESIGN TOKENS
+   Source: Alshorouk_Brand_Guidelines.pdf v1.0 (pp. 12–16) + master spec §3, §7, §8.3.
+   Ratio guideline: white ~55% · black ~25% · vermilion ~15% · amber ≤5%.
+   ========================================================================== */
+
+@theme {
+  /* Brand colours (PDF p.12) */
+  --color-vermilion: #fe3300;
+  --color-vermilion-hover: #e02d00;
+  --color-vermilion-deep: #7f1a00; /* 50% shade */
+  --color-vermilion-60: #fe8566;
+  --color-vermilion-40: #ffad99;
+  --color-vermilion-20: #ffd6cc;
+  --color-amber: #feb821;
+  --color-amber-deep: #7f5c11; /* 50% shade */
+  --color-amber-60: #fed47a;
+  --color-amber-40: #ffe3a6;
+  --color-amber-20: #fff1d3;
+  --color-ink: #000000;
+  --color-paper: #ffffff;
+
+  /* Warm neutral ramp derived from the PDF warm grey */
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f4f4f2;
+  --color-stone-200: #e5e5e3;
+  --color-stone-300: #cfcfcb;
+  --color-stone-400: #a3a39e;
+  --color-stone-500: #757571;
+  --color-stone-600: #5c5c59;
+  --color-stone-700: #3b3b39;
+  --color-stone-800: #262625;
+  --color-stone-900: #171717;
+
+  /* Typography — Thmanyah (licensed, pending) → staging fallback set in src/styles/fonts.ts.
+     Montserrat is listed first but only covers Latin + figures (unicode-range), so Arabic falls through. */
+  --font-sans: var(--font-latin), var(--font-arabic), ui-sans-serif, system-ui, 'Segoe UI', Tahoma, sans-serif;
+  --font-num: var(--font-latin), ui-sans-serif, system-ui, sans-serif;
+
+  /* Fluid type scale (Arabic-first; line-heights tuned so mask reveals never clip diacritics) */
+  --text-display-2xl: clamp(2.6rem, 1.05rem + 4.6vw, 6rem);
+  --text-display-2xl--line-height: 1.16;
+  --text-display-xl: clamp(2.3rem, 1.1rem + 3.5vw, 4.75rem);
+  --text-display-xl--line-height: 1.18;
+  --text-display-lg: clamp(2rem, 1.15rem + 2.45vw, 3.75rem);
+  --text-display-lg--line-height: 1.2;
+  --text-display-md: clamp(1.7rem, 1.15rem + 1.55vw, 2.75rem);
+  --text-display-md--line-height: 1.25;
+  --text-title: clamp(1.3rem, 1.05rem + 0.7vw, 1.75rem);
+  --text-title--line-height: 1.35;
+  --text-lead: clamp(1.1rem, 1rem + 0.35vw, 1.35rem);
+  --text-lead--line-height: 1.8;
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.8;
+  --text-small: 0.9375rem;
+  --text-small--line-height: 1.7;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.6;
+  --text-stat: clamp(4.25rem, 1.6rem + 9.4vw, 11.5rem);
+  --text-stat--line-height: 0.92;
+  --text-index: clamp(3.5rem, 2rem + 5vw, 8rem);
+  --text-index--line-height: 0.9;
+
+  /* Radii — crisp architectural edges; pills for tags/controls */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Motion (spec §8.3) */
+  --ease-sunrise: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-flow: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+
+  --breakpoint-xs: 23.75rem; /* 380px */
+  --breakpoint-3xl: 112rem; /* 1792px */
+}
+
+/* Semantic, section-aware colours. Any element with data-theme re-maps them. */
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-fg-soft: var(--fg-soft);
+  --color-fg-muted: var(--fg-muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+}
+
+:root,
+[data-theme='light'] {
+  --surface: #ffffff;
+  --surface-2: #f4f4f2;
+  --fg: #000000;
+  --fg-soft: #262625;
+  --fg-muted: #5c5c59; /* 6.9:1 on white, 6.3:1 on warm grey */
+  --line: rgb(0 0 0 / 0.12);
+  --line-strong: rgb(0 0 0 / 0.85);
+  --accent: #fe3300;
+  --accent-fg: #000000;
+  --focus: #fe3300;
+}
+
+[data-theme='warm'] {
+  --surface: #f4f4f2;
+  --surface-2: #ffffff;
+  --fg: #000000;
+  --fg-soft: #262625;
+  --fg-muted: #5c5c59;
+  --line: rgb(0 0 0 / 0.12);
+  --line-strong: rgb(0 0 0 / 0.85);
+  --accent: #fe3300;
+  --accent-fg: #000000;
+  --focus: #fe3300;
+}
+
+[data-theme='dark'] {
+  --surface: #000000;
+  --surface-2: #121211;
+  --fg: #ffffff;
+  --fg-soft: #e5e5e3;
+  --fg-muted: #a3a39e; /* 8.3:1 on black */
+  --line: rgb(255 255 255 / 0.16);
+  --line-strong: rgb(255 255 255 / 0.9);
+  --accent: #fe3300; /* large text / UI only on black (3.7:1) */
+  --accent-fg: #ffffff;
+  --focus: #feb821;
+}
+
+[data-theme='vermilion'] {
+  --surface: #fe3300;
+  --surface-2: #e02d00;
+  --fg: #000000; /* 5.7:1 */
+  --fg-soft: #000000;
+  --fg-muted: #1f0800;
+  --line: rgb(0 0 0 / 0.22);
+  --line-strong: #000000;
+  --accent: #ffffff; /* white on vermilion = large headings only */
+  --accent-fg: #000000;
+  --focus: #000000;
+}
+
+[data-theme] {
+  background-color: var(--surface);
+  color: var(--fg);
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-padding-top: 6.5rem;
+    background: #ffffff;
+  }
+
+  body {
+    min-height: 100dvh;
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    background: var(--surface);
+    color: var(--fg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  html[lang='en'] body {
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  dd {
+    text-wrap: pretty;
+  }
+
+  /* Never letter-space Arabic (breaks cursive joining); Latin display gets a slight optical tighten. */
+  html[lang='en'] :where(h1, h2, .tracking-display) {
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: var(--color-amber);
+    color: #000000;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus, #fe3300);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    display: block;
+    max-width: 100%;
+  }
+
+  button,
+  [role='button'] {
+    cursor: pointer;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  bdi,
+  .latin {
+    unicode-bidi: isolate;
+  }
+}
+
+/* ==========================================================================
+   LAYOUT PRIMITIVES
+   ========================================================================== */
+@utility container-site {
+  width: 100%;
+  max-width: 96rem; /* 1536px */
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 5.5rem);
+}
+
+@utility container-wide {
+  width: 100%;
+  max-width: 120rem; /* 1920px */
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 3vw, 4rem);
+}
+
+@utility section-y {
+  padding-block: clamp(4.5rem, 2.2rem + 7.6vw, 11rem);
+}
+
+@utility section-y-tight {
+  padding-block: clamp(3.5rem, 2rem + 4.8vw, 7.5rem);
+}
+
+@utility grid-site {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: clamp(1rem, 2vw, 2rem);
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+@utility measure {
+  max-width: 62ch;
+}
+
+@utility measure-narrow {
+  max-width: 46ch;
+}
+
+/* Latin run inside Arabic copy: Montserrat at 90% of the Arabic size (PDF p.13 "Mixed text"). */
+@utility latin-run {
+  font-family: var(--font-num);
+  font-size: 0.9em;
+  unicode-bidi: isolate;
+}
+
+@utility num {
+  font-family: var(--font-num);
+  font-variant-numeric: lining-nums tabular-nums;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Eyebrow: echoes the short horizon dashes either side of the rooster head in the logo. */
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: var(--text-small);
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--fg);
+  &::before {
+    content: '';
+    inline-size: 1.75rem;
+    block-size: 2px;
+    border-radius: 2px;
+    background: var(--color-vermilion);
+    flex: none;
+  }
+}
+
+/* Masked line used by TextReveal — padding keeps Arabic ascenders/descenders and dots unclipped. */
+@utility mask-line {
+  display: block;
+  overflow: clip;
+  overflow-clip-margin: 0.12em;
+  padding-block: 0.06em;
+  margin-block: -0.06em;
+  & > span {
+    display: block;
+  }
+}
+
+@utility hairline {
+  border-color: var(--line);
+}
+
+/* Underline sweep for text links (logical-direction aware). */
+@utility link-sweep {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1.5px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  transition: background-size 280ms var(--ease-soft);
+  &:where(:dir(ltr)) {
+    background-position: 0% 100%;
+  }
+  &:hover,
+  &:focus-visible {
+    background-size: 100% 1.5px;
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   MOTION GATING (spec §8.6): content is never hidden unless JS + motion are active.
+   html.js is added by an inline script; html.motion-off is the fail-safe.
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  html.js:not(.motion-off) [data-reveal]:not([data-revealed]) {
+    opacity: 0;
+  }
+  html.js:not(.motion-off) [data-reveal='up']:not([data-revealed]) {
+    transform: translate3d(0, 1.25rem, 0);
+  }
+  html.js:not(.motion-off) [data-reveal='lines']:not([data-revealed]) {
+    opacity: 1;
+  }
+  html.js:not(.motion-off) [data-reveal='lines']:not([data-revealed]) .mask-line > span {
+    display: block;
+    transform: translate3d(0, 110%, 0);
+  }
+  html.js:not(.motion-off) [data-reveal='image']:not([data-revealed]) {
+    opacity: 1;
+    clip-path: inset(100% 0 0 0);
+  }
+  html.js:not(.motion-off) [data-reveal='draw']:not([data-revealed]) {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
