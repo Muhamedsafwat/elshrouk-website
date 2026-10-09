@@ -4,11 +4,11 @@ import { cn } from '@/lib/cn'
 import { ArrowIcon } from './icons'
 
 /**
- * Buttons (spec §7.1): solid black or vermilion, understated directional sweep on hover,
- * 3px focus ring, ≥ 52px tall. Vermilion fills always carry BLACK text (5.7:1) — white on vermilion
- * is reserved for large headings per the brand book.
+ * Buttons (spec §7.1): primary = vermilion (brand action colour) with a black label, `ink` = solid black,
+ * understated directional sweep on hover, 3px focus ring, ≥ 52px tall. Vermilion fills always carry
+ * BLACK text (5.7:1) — white on vermilion is reserved for large headings per the brand book.
  */
-export type ButtonVariant = 'primary' | 'accent' | 'inverse' | 'outline' | 'ghost'
+export type ButtonVariant = 'primary' | 'accent' | 'ink' | 'inverse' | 'outline' | 'ghost'
 export type ButtonSize = 'md' | 'lg'
 
 const base =
@@ -25,9 +25,12 @@ const sizes: Record<ButtonSize, string> = {
 const sweep =
   "before:absolute before:inset-0 before:-z-10 before:origin-[var(--sweep-origin)] before:scale-x-0 before:transition-transform before:duration-500 before:ease-(--ease-sunrise) before:content-[''] hover:before:scale-x-100 focus-visible:before:scale-x-100 [--sweep-origin:right] ltr:[--sweep-origin:left]"
 
+/* Brand audit D4: the primary action is vermilion with a BLACK label (5.7:1); `ink` is the black secondary. */
+const vermilion = cn('bg-vermilion text-ink before:bg-ink hover:text-paper focus-visible:text-paper', sweep)
 const variants: Record<ButtonVariant, string> = {
-  primary: cn('bg-ink text-paper before:bg-vermilion hover:text-ink focus-visible:text-ink', sweep),
-  accent: cn('bg-vermilion text-ink before:bg-ink hover:text-paper focus-visible:text-paper', sweep),
+  primary: vermilion,
+  accent: vermilion,
+  ink: cn('bg-ink text-paper before:bg-vermilion hover:text-ink focus-visible:text-ink', sweep),
   inverse: cn('bg-paper text-ink before:bg-vermilion', sweep),
   outline: cn(
     'border-[1.5px] border-current bg-transparent text-fg before:bg-fg hover:text-surface focus-visible:text-surface',
