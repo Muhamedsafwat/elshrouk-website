@@ -9,6 +9,7 @@ export const approvalFields = (): Field[] => [
   {
     name: 'approvalStatus',
     type: 'select',
+    label: { ar: 'حالة الاعتماد', en: 'Approval status' },
     required: true,
     defaultValue: 'review_required',
     index: true,
@@ -61,7 +62,7 @@ export const approvalFields = (): Field[] => [
   },
 ]
 
-export const slugField = (description?: string): Field => ({
+export const slugField = (description?: { ar: string; en: string }): Field => ({
   name: 'slug',
   type: 'text',
   required: true,

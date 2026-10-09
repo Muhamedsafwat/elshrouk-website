@@ -82,6 +82,8 @@ export default buildConfig({
   admin: {
     user: Users.slug,
     theme: 'light',
+    // No Gravatar: avoids sending staff e-mail hashes to a third party (and satisfies the CSP).
+    avatar: 'default',
     importMap: { baseDir: path.resolve(dirname) },
     meta: {
       titleSuffix: ' — الشروق CMS',
@@ -89,6 +91,7 @@ export default buildConfig({
       icons: [{ rel: 'icon', type: 'image/svg+xml', url: '/favicon.svg' }],
     },
     components: {
+      beforeDashboard: ['@/payload/components/DashboardIntro#DashboardIntro'],
       graphics: {
         Logo: '@/payload/components/AdminLogo#AdminLogo',
         Icon: '@/payload/components/AdminLogo#AdminIcon',

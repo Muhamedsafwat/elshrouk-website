@@ -23,6 +23,7 @@ import { BoldFeatureClient as BoldFeatureClient_e70f5e05f09f93e00b997edb1ef0c864
 import { ItalicFeatureClient as ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { AdminIcon as AdminIcon_447ff3192ebba7c900dcdd949666720f } from '@/payload/components/AdminLogo'
 import { AdminLogo as AdminLogo_447ff3192ebba7c900dcdd949666720f } from '@/payload/components/AdminLogo'
+import { DashboardIntro as DashboardIntro_4fc4e329df84456b8abdc45768b300a7 } from '@/payload/components/DashboardIntro'
 import { CollectionCards as CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1 } from '@payloadcms/next/rsc'
 
 /** @type import('payload').ImportMap */
@@ -52,5 +53,6 @@ export const importMap = {
   "@payloadcms/richtext-lexical/client#ItalicFeatureClient": ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@/payload/components/AdminLogo#AdminIcon": AdminIcon_447ff3192ebba7c900dcdd949666720f,
   "@/payload/components/AdminLogo#AdminLogo": AdminLogo_447ff3192ebba7c900dcdd949666720f,
+  "@/payload/components/DashboardIntro#DashboardIntro": DashboardIntro_4fc4e329df84456b8abdc45768b300a7,
   "@payloadcms/next/rsc#CollectionCards": CollectionCards_f9c02e79a4aed9a3924487c0cd4cafb1
 }

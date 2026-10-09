@@ -61,7 +61,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const settings = await getSiteSettings(locale)
 
   const solutionsChildren = [
-    { key: 'solutions' as const, label: t.solutionsMenu.overview, description: dict.solutions.overview.hero.intro },
+    { key: 'solutions' as const, label: t.solutionsMenu.overview },
     { key: 'broilers' as const, label: t.segments.broilers.name, description: t.segments.broilers.short },
     { key: 'layers' as const, label: t.segments.layers.name, description: t.segments.layers.short },
     { key: 'breeders' as const, label: t.segments.breeders.name, description: t.segments.breeders.short },

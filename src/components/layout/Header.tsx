@@ -217,9 +217,16 @@ function NavDropdown({ locale, item, pathname }: { locale: HeaderProps['locale']
   const panelId = useId()
   const wrapperRef = useRef<HTMLDivElement>(null)
   const closeTimer = useRef<number | undefined>(undefined)
+  // A pointer hover opens the panel; the click that usually follows must not immediately close it.
+  const openedByHover = useRef(false)
   const active = isActiveRoute(pathname, locale, item.key)
 
-  useEffect(() => setOpen(false), [pathname])
+  // Close after client navigation (state adjusted during render — no effect cascade).
+  const [prevPath, setPrevPath] = useState(pathname)
+  if (pathname !== prevPath) {
+    setPrevPath(pathname)
+    setOpen(false)
+  }
 
   useEffect(() => {
     if (!open) return
@@ -242,7 +249,10 @@ function NavDropdown({ locale, item, pathname }: { locale: HeaderProps['locale']
 
   const hoverOpen = () => {
     window.clearTimeout(closeTimer.current)
-    if (window.matchMedia('(pointer: fine)').matches) setOpen(true)
+    if (!open && window.matchMedia('(pointer: fine)').matches) {
+      openedByHover.current = true
+      setOpen(true)
+    }
   }
   const hoverClose = () => {
     window.clearTimeout(closeTimer.current)
@@ -263,7 +273,14 @@ function NavDropdown({ locale, item, pathname }: { locale: HeaderProps['locale']
         type="button"
         aria-expanded={open}
         aria-controls={panelId}
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => {
+          if (open && openedByHover.current) {
+            openedByHover.current = false
+            return
+          }
+          openedByHover.current = false
+          setOpen(!open)
+        }}
         data-active={active || undefined}
         className="group relative inline-flex h-11 items-center gap-1.5 px-3 text-[0.95rem] font-medium text-fg-soft transition-colors hover:text-fg data-[active]:text-fg"
       >
@@ -282,7 +299,7 @@ function NavDropdown({ locale, item, pathname }: { locale: HeaderProps['locale']
         hidden={!open}
         className="absolute start-0 top-full z-50 w-[min(34rem,80vw)] pt-3"
       >
-        <ul className="grid gap-px overflow-hidden rounded-md border border-line bg-line shadow-[0_24px_60px_-28px_rgb(0_0_0/0.35)]">
+        <ul className="grid gap-px overflow-hidden rounded-md border border-stone-200 bg-stone-200 shadow-[0_24px_60px_-28px_rgb(0_0_0/0.35)]">
           {item.children?.map((child) => {
             const Icon = child.key in SEGMENT_ICONS ? SEGMENT_ICONS[child.key as keyof typeof SEGMENT_ICONS] : null
             const current = pathname === href(locale, child.key)

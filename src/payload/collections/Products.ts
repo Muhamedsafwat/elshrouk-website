@@ -20,6 +20,19 @@ export const PRODUCT_FORMS = [
 
 export const AVAILABILITY = ['inquiry_only', 'on_request', 'confirmed'] as const
 
+const FORM_LABELS: Record<(typeof PRODUCT_FORMS)[number], { ar: string; en: string }> = {
+  injectable: { ar: 'حقن', en: 'Injectable' },
+  'oral-solution': { ar: 'محلول فموي', en: 'Oral solution' },
+  'water-soluble-powder': { ar: 'مسحوق يذوب في الماء', en: 'Water-soluble powder' },
+  premix: { ar: 'بريمكس', en: 'Premix' },
+  'feed-pellets': { ar: 'علف محبب (بيليت)', en: 'Feed pellets' },
+  'feed-mash': { ar: 'علف ناعم (مش)', en: 'Feed mash' },
+  'feed-crumbles': { ar: 'علف مجروش (كرامبل)', en: 'Feed crumbles' },
+  liquid: { ar: 'سائل', en: 'Liquid' },
+  tablet: { ar: 'أقراص', en: 'Tablet' },
+  other: { ar: 'أخرى', en: 'Other' },
+}
+
 const computeSearchText: CollectionBeforeChangeHook = ({ data, originalDoc }) => {
   const pick = <K extends string>(key: K) => (data[key] ?? originalDoc?.[key]) as string | undefined
   data.searchText = buildSearchText([pick('nameAr'), pick('nameEn'), pick('sku'), pick('manufacturer')])
@@ -95,7 +108,7 @@ export const Products: CollectionConfig = {
                   name: 'form',
                   type: 'select',
                   label: { ar: 'الشكل', en: 'Form' },
-                  options: PRODUCT_FORMS.map((value) => ({ label: value, value })),
+                  options: PRODUCT_FORMS.map((value) => ({ label: FORM_LABELS[value], value })),
                 },
               ],
             },
@@ -186,7 +199,10 @@ export const Products: CollectionConfig = {
         },
       ],
     },
-    slugField('Latin slug used in /ar/products/<slug> and /en/products/<slug>.'),
+    slugField({
+      ar: 'حروف لاتينية صغيرة وأرقام وشرطات فقط، ويظهر في الرابط /ar/products/<slug>.',
+      en: 'Lowercase Latin letters, digits and hyphens — used in /ar/products/<slug> and /en/products/<slug>.',
+    }),
     ...approvalFields(),
     {
       // Normalised name/SKU/manufacturer text for Arabic-aware search. Readable on purpose: public search
