@@ -20,7 +20,10 @@
     "test": "pnpm test:unit && pnpm test:e2e",
     "test:unit": "cross-env NODE_OPTIONS=--no-deprecation vitest run",
     "test:e2e": "cross-env NODE_OPTIONS=--no-deprecation playwright test",
-    "screenshots": "cross-env NODE_OPTIONS=--no-deprecation playwright test --project=screenshots"
+    "screenshots": "cross-env NODE_OPTIONS=--no-deprecation playwright test --project=screenshots",
+    "build:e2e": "cross-env NEXT_DIST_DIR=.next-e2e DATABASE_URL=file:./data/e2e.db DEMO_FIXTURES=true SITE_URL=http://localhost:3200 NEXT_PUBLIC_SITE_URL=http://localhost:3200 NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build",
+    "start:e2e": "cross-env NEXT_DIST_DIR=.next-e2e DATABASE_URL=file:./data/e2e.db DEMO_FIXTURES=true SITE_URL=http://localhost:3200 NODE_OPTIONS=--no-deprecation next start --port 3200",
+    "seed:e2e": "cross-env DATABASE_URL=file:./data/e2e.db SEED_FIXTURES=true NODE_OPTIONS=--no-deprecation payload run src/scripts/seed.ts"
   },
   "dependencies": {
     "@gsap/react": "2.1.2",

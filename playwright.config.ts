@@ -57,15 +57,11 @@ export default defineConfig({
   ],
   webServer: startServer
     ? {
-        command: 'pnpm exec next start --port 3200',
+        // Requires `pnpm seed:e2e && pnpm build:e2e` first (isolated fixture DB + separate .next-e2e output).
+        command: 'pnpm start:e2e',
         url: 'http://localhost:3200/ar',
         reuseExistingServer: true,
         timeout: 180_000,
-        env: {
-          DATABASE_URL: 'file:./data/e2e.db',
-          DEMO_FIXTURES: 'true',
-          SITE_URL: 'http://localhost:3200',
-        },
       }
     : undefined,
 })

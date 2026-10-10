@@ -487,6 +487,7 @@ function InquirySession({
               <span className="text-body font-bold text-ink">{product.label}</span>
               <span className="text-caption text-fg-muted">{s.product.hint}</span>
             </div>
+            {lockKind ? null : (
             <button
               type="button"
               onClick={() => setProduct(null)}
@@ -495,6 +496,7 @@ function InquirySession({
               <CloseIcon size={16} />
               {s.product.clear}
             </button>
+            )}
             <input type="hidden" name="productId" value={product.id} />
             <input type="hidden" name="productLabel" value={product.label} />
           </div>

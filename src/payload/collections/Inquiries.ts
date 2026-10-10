@@ -1,6 +1,9 @@
 import { APIError, type CollectionAfterChangeHook, type CollectionBeforeChangeHook, type CollectionConfig } from 'payload'
 import { getUser, isAdmin, isAdminOrSales, nobody } from '../access'
 
+/** Submitted data is evidence of what the visitor sent: never editable after creation (spec §10.3, §11). */
+const immutable = () => false
+
 export const INQUIRY_TYPES = ['farm', 'product', 'partner', 'general'] as const
 export type InquiryType = (typeof INQUIRY_TYPES)[number]
 
@@ -85,9 +88,10 @@ export const Inquiries: CollectionConfig = {
     {
       type: 'row',
       fields: [
-        { name: 'reference', type: 'text', required: true, unique: true, index: true, admin: { readOnly: true }, label: { ar: 'الرقم المرجعي', en: 'Reference' } },
+        { name: 'reference', access: { update: immutable }, type: 'text', required: true, unique: true, index: true, admin: { readOnly: true }, label: { ar: 'الرقم المرجعي', en: 'Reference' } },
         {
           name: 'type',
+          access: { update: immutable },
           type: 'select',
           required: true,
           index: true,
@@ -125,19 +129,19 @@ export const Inquiries: CollectionConfig = {
         {
           type: 'row',
           fields: [
-            { name: 'name', type: 'text', required: true, admin: { readOnly: true }, label: { ar: 'الاسم', en: 'Name' } },
-            { name: 'phone', type: 'text', required: true, admin: { readOnly: true }, label: { ar: 'الهاتف', en: 'Phone' } },
+            { name: 'name', access: { update: immutable }, type: 'text', required: true, admin: { readOnly: true }, label: { ar: 'الاسم', en: 'Name' } },
+            { name: 'phone', access: { update: immutable }, type: 'text', required: true, admin: { readOnly: true }, label: { ar: 'الهاتف', en: 'Phone' } },
           ],
         },
         {
           type: 'row',
           fields: [
-            { name: 'email', type: 'email', admin: { readOnly: true }, label: { ar: 'البريد', en: 'Email' } },
-            { name: 'organization', type: 'text', admin: { readOnly: true }, label: { ar: 'المزرعة / الشركة', en: 'Farm / company' } },
-            { name: 'role', type: 'text', admin: { readOnly: true }, label: { ar: 'الصفة', en: 'Role' } },
+            { name: 'email', access: { update: immutable }, type: 'email', admin: { readOnly: true }, label: { ar: 'البريد', en: 'Email' } },
+            { name: 'organization', access: { update: immutable }, type: 'text', admin: { readOnly: true }, label: { ar: 'المزرعة / الشركة', en: 'Farm / company' } },
+            { name: 'role', access: { update: immutable }, type: 'text', admin: { readOnly: true }, label: { ar: 'الصفة', en: 'Role' } },
           ],
         },
-        { name: 'governorate', type: 'text', admin: { readOnly: true }, label: { ar: 'المحافظة', en: 'Governorate' } },
+        { name: 'governorate', access: { update: immutable }, type: 'text', admin: { readOnly: true }, label: { ar: 'المحافظة', en: 'Governorate' } },
       ],
     },
     {
@@ -149,6 +153,7 @@ export const Inquiries: CollectionConfig = {
           fields: [
             {
               name: 'segment',
+          access: { update: immutable },
               type: 'select',
               admin: { readOnly: true },
               label: { ar: 'نوع الإنتاج', en: 'Production type' },
@@ -161,6 +166,7 @@ export const Inquiries: CollectionConfig = {
             },
             {
               name: 'productCategory',
+          access: { update: immutable },
               type: 'select',
               admin: { readOnly: true },
               label: { ar: 'فئة المنتج', en: 'Product category' },
@@ -177,19 +183,19 @@ export const Inquiries: CollectionConfig = {
         {
           type: 'row',
           fields: [
-            { name: 'productRef', type: 'relationship', relationTo: 'products', admin: { readOnly: true }, label: { ar: 'المنتج', en: 'Product' } },
-            { name: 'productLabel', type: 'text', admin: { readOnly: true }, label: { ar: 'اسم المنتج وقت الطلب', en: 'Product name at submission' } },
+            { name: 'productRef', access: { update: immutable }, type: 'relationship', relationTo: 'products', admin: { readOnly: true }, label: { ar: 'المنتج', en: 'Product' } },
+            { name: 'productLabel', access: { update: immutable }, type: 'text', admin: { readOnly: true }, label: { ar: 'اسم المنتج وقت الطلب', en: 'Product name at submission' } },
           ],
         },
         {
           type: 'row',
           fields: [
-            { name: 'birdCapacity', type: 'text', admin: { readOnly: true }, label: { ar: 'الطاقة التقريبية', en: 'Approx. capacity' } },
-            { name: 'quantity', type: 'text', admin: { readOnly: true }, label: { ar: 'الكمية المطلوبة', en: 'Requested quantity' } },
-            { name: 'productLine', type: 'text', admin: { readOnly: true }, label: { ar: 'خط المنتجات (شراكة)', en: 'Product line (partner)' } },
+            { name: 'birdCapacity', access: { update: immutable }, type: 'text', admin: { readOnly: true }, label: { ar: 'الطاقة التقريبية', en: 'Approx. capacity' } },
+            { name: 'quantity', access: { update: immutable }, type: 'text', admin: { readOnly: true }, label: { ar: 'الكمية المطلوبة', en: 'Requested quantity' } },
+            { name: 'productLine', access: { update: immutable }, type: 'text', admin: { readOnly: true }, label: { ar: 'خط المنتجات (شراكة)', en: 'Product line (partner)' } },
           ],
         },
-        { name: 'requestDetails', type: 'textarea', admin: { readOnly: true }, label: { ar: 'الرسالة', en: 'Message' } },
+        { name: 'requestDetails', access: { update: immutable }, type: 'textarea', admin: { readOnly: true }, label: { ar: 'الرسالة', en: 'Message' } },
       ],
     },
     {
@@ -200,12 +206,12 @@ export const Inquiries: CollectionConfig = {
         {
           type: 'row',
           fields: [
-            { name: 'locale', type: 'select', options: ['ar', 'en'], admin: { readOnly: true } },
-            { name: 'sourcePath', type: 'text', admin: { readOnly: true }, label: { ar: 'صفحة المصدر', en: 'Source page' } },
-            { name: 'consentAt', type: 'date', required: true, admin: { readOnly: true, date: { pickerAppearance: 'dayAndTime' } }, label: { ar: 'وقت الموافقة', en: 'Consent at' } },
+            { name: 'locale', access: { update: immutable }, type: 'select', options: ['ar', 'en'], admin: { readOnly: true } },
+            { name: 'sourcePath', access: { update: immutable }, type: 'text', admin: { readOnly: true }, label: { ar: 'صفحة المصدر', en: 'Source page' } },
+            { name: 'consentAt', access: { update: immutable }, type: 'date', required: true, admin: { readOnly: true, date: { pickerAppearance: 'dayAndTime' } }, label: { ar: 'وقت الموافقة', en: 'Consent at' } },
           ],
         },
-        { name: 'idempotencyKey', type: 'text', unique: true, index: true, admin: { readOnly: true, hidden: true } },
+        { name: 'idempotencyKey', access: { update: immutable }, type: 'text', unique: true, index: true, admin: { readOnly: true, hidden: true } },
         {
           name: 'statusHistory',
           type: 'array',

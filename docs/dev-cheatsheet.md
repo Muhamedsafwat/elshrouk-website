@@ -97,3 +97,10 @@ node scripts/shot.mjs http://localhost:3100/ar/<route> screenshots/dev/<name>-39
 # options: --reduced, --scroll 0.5 (viewport shot at 50% of the page), /en/ URL for LTR
 ```
 The script prints `{ overflowX, errors[] }` — both must be clean. Look at screenshots with the Read tool. Dev server: http://localhost:3100 (shared; don't restart it).
+
+## Gotchas learned during the build
+- `.num` sets `direction: ltr` — a **block-level** `.num` (e.g. a giant index on its own line) aligns LEFT inside RTL copy. Make it `inline-block` or place it in a flex/grid aligned to start.
+- GSAP's CSSPlugin rounds px: tweening `strokeDashoffset` on a `pathLength="1"` path snaps 1→0. Tween `attr: { 'stroke-dashoffset': … }` or use DrawSVG without `pathLength`.
+- Don't put `once: true` ScrollTriggers on markup that is `display:none` at some breakpoints (it can self-destruct during a refresh and break sibling batches). Prefer `toggleActions` or create triggers inside the matching `gsap.matchMedia` branch.
+- Content inside streamed Suspense boundaries (routes with `loading.tsx`): prefer the CSS intro classes (`intro-line`, `intro-fade`, `intro-mask`) over `data-reveal`; `MotionRuntime` delays late nodes ~0.9 s but CSS intros never race hydration.
+- A route segment wrapped in Suspense (e.g. `loading.tsx`) turns `notFound()` into a streamed **200**. Pages that must return a real 404 (product/article slugs) must not have a loading boundary above them.

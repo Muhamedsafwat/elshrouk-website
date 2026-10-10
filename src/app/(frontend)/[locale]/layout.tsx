@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 
 import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 import { notFound } from 'next/navigation'
 import type { ReactNode } from 'react'
 import { Footer } from '@/components/layout/Footer'
@@ -77,7 +78,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   return (
     <html lang={locale} dir={localeDirection(locale)} className={`${arabicFont.variable} ${latinFont.variable}`} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: bootScript }} />
+        <Script id="als-boot" strategy="beforeInteractive">{bootScript}</Script>
         <JsonLd data={await organizationJsonLd(locale)} />
       </head>
       <body id="top">

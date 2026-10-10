@@ -177,3 +177,11 @@ _Last updated: 2026-10-09 (PM / technical-architect subagent). Maintained by the
 1. The owner supplies the asset, fact or decision (files to the orchestrator; contact values directly in CMS → Site settings by an admin; copy approvals as a dated note).
 2. The orchestrator records the evidence (approval register row, `docs/brand-audit.md`, or the relevant doc), updates dependent tasks on `docs/task-board.md`, and marks the item **closed** here with the date.
 3. Anything that changes public content is re-checked with the poultry-content-integrity scans and the relevant browser QA before it is published.
+
+## Added after the build (engineering decisions needed before production)
+
+| Item | Why needed | Blocked/degraded meanwhile | Current fallback | Owner | Priority |
+|---|---|---|---|---|---|
+| Shared rate-limit store for inquiries (Redis/DB) | The limiter is in-memory per process (5 / 10 min and 20 / 24 h per hashed IP). Multi-instance or serverless hosting needs a shared store behind the `RateLimitStore` interface (`src/lib/inquiries/rate-limit.ts`). | Nothing on a single Node instance; limits become per-instance on scaled hosting. | In-memory store (documented). | IT / hosting | High (at deployment) |
+| Trusted client-IP header per host (`INQUIRY_IP_HEADER`) | Rate limiting keys on the client IP; which proxy header is trustworthy depends on the hosting platform (e.g. `x-forwarded-for` behind a known proxy). | Spoofable header choice could weaken rate limiting. | Conservative default documented in the action. | IT / hosting | High (at deployment) |
+| Commissioned dawn/sunrise farm photograph | The About hero uses a daylight aerial (licensed stock) with a monochrome→colour treatment to evoke dawn. | None functionally. | `farmExterior` stock image. | Client brand | Medium |

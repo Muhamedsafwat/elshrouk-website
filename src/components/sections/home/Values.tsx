@@ -83,7 +83,6 @@ export function Values({ copy }: ValuesProps) {
               return (
                 <article
                   key={item.key}
-                  tabIndex={0}
                   aria-labelledby={`value-${item.key}`}
                   data-vg-cell=""
                   data-diag={slot.row - 1 + (slot.col - 1)}

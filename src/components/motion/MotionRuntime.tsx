@@ -105,14 +105,22 @@ export function MotionRuntime() {
 
     const triggers: ScrollTrigger[] = []
     const register = (elements: Element[]) => {
-      if (!elements.length) return
-      triggers.push(
-        ...ScrollTrigger.batch(elements, {
-          start: 'top 90%',
-          once: true,
-          onEnter: (batch) => animate(batch),
-        }),
-      )
+      const live = elements.filter((el) => el.isConnected && !el.hasAttribute('data-revealed'))
+      if (!live.length) return
+      try {
+        triggers.push(
+          ...ScrollTrigger.batch(live, {
+            start: 'top 90%',
+            once: true,
+            onEnter: (batch) => animate(batch),
+          }),
+        )
+      } catch (error) {
+        // Never leave content hidden because ScrollTrigger hit an internal error (e.g. a sibling trigger
+        // destroying itself during a refresh): show these elements in their final state instead.
+        console.warn('[motion] reveal registration failed; showing content statically', error)
+        markRevealed(live)
+      }
     }
 
     register(Array.from(document.querySelectorAll(SELECTOR)))
@@ -132,21 +140,32 @@ export function MotionRuntime() {
     }
     window.addEventListener('scroll', onScroll, { passive: true })
 
+    // Nodes added later (streamed Suspense boundaries, client lists) are registered after a short grace
+    // period so React finishes hydrating them first — touching their attributes/styles earlier causes
+    // hydration attribute mismatches.
+    const pending = new Set<Element>()
+    let flushTimer: number | undefined
+    const flush = () => {
+      flushTimer = undefined
+      const nodes = Array.from(pending)
+      pending.clear()
+      register(nodes)
+    }
     const observer = new MutationObserver((mutations) => {
-      const added: Element[] = []
       for (const m of mutations) {
         m.addedNodes.forEach((node) => {
           if (!(node instanceof Element)) return
-          if (node.matches(SELECTOR)) added.push(node)
-          added.push(...Array.from(node.querySelectorAll(SELECTOR)))
+          if (node.matches(SELECTOR)) pending.add(node)
+          node.querySelectorAll(SELECTOR).forEach((el) => pending.add(el))
         })
       }
-      if (added.length) register(added)
+      if (pending.size && flushTimer === undefined) flushTimer = window.setTimeout(flush, 900)
     })
     observer.observe(document.body, { childList: true, subtree: true })
 
     return () => {
       observer.disconnect()
+      if (flushTimer !== undefined) window.clearTimeout(flushTimer)
       window.removeEventListener('scroll', onScroll)
       triggers.forEach((t) => t.kill())
     }

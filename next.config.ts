@@ -37,8 +37,14 @@ const securityHeaders = [
 ]
 
 const nextConfig: NextConfig = {
+  // Separate output for the isolated fixture/e2e build (NEXT_DIST_DIR=.next-e2e) so it never clobbers the real build.
+  distDir: process.env.NEXT_DIST_DIR || '.next',
   reactStrictMode: true,
   poweredByHeader: false,
+  experimental: {
+    // Inquiry submissions are small text forms; reject anything larger early (the action also bounds input).
+    serverActions: { bodySizeLimit: '64kb' },
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     qualities: [60, 72, 80, 90],

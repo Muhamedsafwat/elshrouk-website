@@ -45,7 +45,8 @@ export function SectionHeading({
     <div className={cn('flex flex-col', align === 'center' && 'items-center text-center', className)}>
       {index || eyebrow ? (
         <div className="flex items-center gap-4" data-reveal="fade">
-          {index ? <span className="num text-small font-semibold text-accent">{index}</span> : null}
+          {/* Neutral index: vermilion text is reserved for ≥24px bold (brand audit D4). */}
+          {index ? <span className="num inline-block text-small font-semibold text-fg-muted">{index}</span> : null}
           {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
         </div>
       ) : null}

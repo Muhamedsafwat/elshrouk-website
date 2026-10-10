@@ -31,7 +31,8 @@ type Props = {
   cssDraw?: boolean
 }
 
-const PATHS = [
+/** Signature Curve geometry (viewBox 0 0 1200 620), PDF cover orientation. Exported for scenes that clip to it. */
+export const SIGNATURE_PATHS = [
   'M -20 520 C 300 430, 700 250, 1220 -10',
   'M -20 560 C 320 480, 720 310, 1220 60',
   'M 30 610 C 380 540, 760 380, 1220 140',
@@ -92,7 +93,7 @@ export function SunriseCurve({
       className={cn('block h-auto w-full overflow-visible', mirror && 'rtl:-scale-x-100', cssDraw && 'intro-draw', className)}
       data-sunrise-curve=""
     >
-      {PATHS.slice(0, lines).map((d, i) => (
+      {SIGNATURE_PATHS.slice(0, lines).map((d, i) => (
         <path
           key={d}
           d={d}
