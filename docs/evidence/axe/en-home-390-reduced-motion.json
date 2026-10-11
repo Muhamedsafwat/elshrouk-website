@@ -1,0 +1,117 @@
+{
+  "route": "/en",
+  "url": "http://localhost:3200/en",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "state": "reduced-motion",
+  "scope": "document",
+  "project": "desktop",
+  "reducedMotion": true,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:50:49.602Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 40,
+      "nodes": [
+        {
+          "target": [
+            ".intro-line.mask-line:nth-child(1) > span"
+          ],
+          "html": "<span>Rooted in the <span class=\"text-vermilion\">poultry</span> industry,</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "a[href$=\"#farm-types\"] > span"
+          ],
+          "html": "<span>Explore our solutions</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".border-\\[1\\.5px\\].border-current[href=\"/en/contact?type=farm\"] > span"
+          ],
+          "html": "<span>Contact us</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "article[aria-labelledby=\"farm-broilers-title\"] > div[data-reveal=\"up\"][data-revealed=\"\"] > .mt-9.group\\/link.focus-visible\\:text-accent > .pb-0\\.5.link-sweep"
+          ],
+          "html": "<span class=\"link-sweep pb-0.5\">Explore broiler solutions</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "article[aria-labelledby=\"farm-layers-title\"] > div[data-reveal=\"up\"][data-revealed=\"\"] > .mt-9.group\\/link.focus-visible\\:text-accent > .pb-0\\.5.link-sweep"
+          ],
+          "html": "<span class=\"link-sweep pb-0.5\">Explore layer solutions</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "article[aria-labelledby=\"farm-breeders-title\"] > div[data-reveal=\"up\"][data-revealed=\"\"] > .mt-9.group\\/link.focus-visible\\:text-accent > .pb-0\\.5.link-sweep"
+          ],
+          "html": "<span class=\"link-sweep pb-0.5\">Explore breeder solutions</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".lg\\:col-start-8.md\\:col-span-6.md\\:col-start-3 > .sm\\:w-auto.h-15.before\\:bg-ink > span"
+          ],
+          "html": "<span>Browse the product catalogue</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "a[aria-labelledby=\"pu-feed-name\"] > .xl\\:p-8.p-5.sm\\:p-6 > .tracking-\\[0\\.2em\\].text-white.num"
+          ],
+          "html": "<span class=\"num text-small font-semibold tracking-[0.2em] text-white\">01</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[aria-labelledby=\"pu-supplements-name\"] > .xl\\:p-8.p-5.sm\\:p-6 > .tracking-\\[0\\.2em\\].text-white.num"
+          ],
+          "html": "<span class=\"num text-small font-semibold tracking-[0.2em] text-white\">02</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[aria-labelledby=\"pu-medicines-name\"] > .xl\\:p-8.p-5.sm\\:p-6 > .tracking-\\[0\\.2em\\].text-white.num"
+          ],
+          "html": "<span class=\"num text-small font-semibold tracking-[0.2em] text-white\">03</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[aria-labelledby=\"pu-vaccines-name\"] > .xl\\:p-8.p-5.sm\\:p-6 > .tracking-\\[0\\.2em\\].text-white.num"
+          ],
+          "html": "<span class=\"num text-small font-semibold tracking-[0.2em] text-white\">04</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".shrink-0[data-reveal=\"fade\"][data-revealed=\"\"] > .h-13.px-6.text-\\[0\\.95rem\\] > span"
+          ],
+          "html": "<span>View all products</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    }
+  ],
+  "passes": 28
+}

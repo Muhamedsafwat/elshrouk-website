@@ -1,0 +1,24 @@
+{
+  "route": "/ar/partner-with-us",
+  "url": "http://localhost:3200/ar/partner-with-us",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "mobile",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:54:00.176Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [],
+  "passes": 29
+}

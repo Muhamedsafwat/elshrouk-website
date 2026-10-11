@@ -1,0 +1,543 @@
+{
+  "method": "every visible text element vs its effective solid background (reduced motion, after full scroll); text over photos listed separately",
+  "pages": [
+    {
+      "route": "/ar",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/about",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/poultry-solutions",
+      "viewport": 1440,
+      "belowThreshold": [
+        {
+          "text": "01",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 256,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 1155
+        },
+        {
+          "text": "02",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 256,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 2055
+        },
+        {
+          "text": "03",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 256,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 2955
+        }
+      ],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/solutions/broilers",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": [
+        "الرئيسية",
+        "حلول الدواجن",
+        "التسمين",
+        "قطاع التسمين",
+        "كل دورة تسمين",
+        "تبدأ بتخطيط واضح للإمداد.",
+        "نعمل مع مزارع التسمين على توفير أعلاف الدواجن ومكملات الأعلا"
+      ]
+    },
+    {
+      "route": "/ar/products",
+      "viewport": 1440,
+      "belowThreshold": [
+        {
+          "text": "اللقاحات البيطرية",
+          "tag": "span",
+          "cls": "truncate",
+          "fg": "#9d9d9b",
+          "bg": "#ffffff",
+          "ratio": 2.71,
+          "need": 4.5,
+          "size": 17,
+          "weight": 400,
+          "ariaHidden": false,
+          "top": 1175
+        },
+        {
+          "text": "0",
+          "tag": "span",
+          "cls": "num text-small text-fg-muted tabular-nums",
+          "fg": "#9d9d9b",
+          "bg": "#ffffff",
+          "ratio": 2.71,
+          "need": 4.5,
+          "size": 15,
+          "weight": 400,
+          "ariaHidden": false,
+          "top": 1178
+        }
+      ],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/products/fixture-feed-alpha",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/how-we-work",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/knowledge",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/contact",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/partner-with-us",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/privacy",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/nope-404",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/about",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/poultry-solutions",
+      "viewport": 1440,
+      "belowThreshold": [
+        {
+          "text": "01",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 256,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 1154
+        },
+        {
+          "text": "02",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 256,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 2054
+        },
+        {
+          "text": "03",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 256,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 3012
+        }
+      ],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/solutions/broilers",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": [
+        "Home",
+        "Poultry solutions",
+        "Broilers",
+        "Broilers",
+        "Every broiler cycle starts",
+        "with clear supply planning.",
+        "We work with broiler farms to supply poultry feed, feed supp"
+      ]
+    },
+    {
+      "route": "/en/products",
+      "viewport": 1440,
+      "belowThreshold": [
+        {
+          "text": "Veterinary vaccines",
+          "tag": "span",
+          "cls": "truncate",
+          "fg": "#9d9d9b",
+          "bg": "#ffffff",
+          "ratio": 2.71,
+          "need": 4.5,
+          "size": 17,
+          "weight": 400,
+          "ariaHidden": false,
+          "top": 1173
+        },
+        {
+          "text": "0",
+          "tag": "span",
+          "cls": "num text-small text-fg-muted tabular-nums",
+          "fg": "#9d9d9b",
+          "bg": "#ffffff",
+          "ratio": 2.71,
+          "need": 4.5,
+          "size": 15,
+          "weight": 400,
+          "ariaHidden": false,
+          "top": 1176
+        }
+      ],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/products/fixture-feed-alpha",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/how-we-work",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/knowledge",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/contact",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/partner-with-us",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/privacy",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/nope-404",
+      "viewport": 1440,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": [
+        "تسمين · بياض · أمهات"
+      ]
+    },
+    {
+      "route": "/ar/about",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/poultry-solutions",
+      "viewport": 390,
+      "belowThreshold": [
+        {
+          "text": "01",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 112,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 1112
+        },
+        {
+          "text": "02",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 112,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 1956
+        },
+        {
+          "text": "03",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 112,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 2800
+        }
+      ],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/solutions/broilers",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": [
+        "الرئيسية",
+        "حلول الدواجن",
+        "التسمين",
+        "قطاع التسمين",
+        "كل دورة تسمين",
+        "تبدأ بتخطيط واضح للإمداد.",
+        "نعمل مع مزارع التسمين على توفير أعلاف الدواجن ومكملات الأعلا"
+      ]
+    },
+    {
+      "route": "/ar/products",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/products/fixture-feed-alpha",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/how-we-work",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/knowledge",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/contact",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/partner-with-us",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/privacy",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/ar/nope-404",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": [
+        "Broilers · Layers · Breeders"
+      ]
+    },
+    {
+      "route": "/en/about",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/poultry-solutions",
+      "viewport": 390,
+      "belowThreshold": [
+        {
+          "text": "01",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 112,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 1212
+        },
+        {
+          "text": "02",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 112,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 2056
+        },
+        {
+          "text": "03",
+          "tag": "p",
+          "cls": "num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] ",
+          "fg": "#000000",
+          "bg": "#000000",
+          "ratio": 1,
+          "need": 3,
+          "size": 112,
+          "weight": 800,
+          "ariaHidden": true,
+          "top": 2900
+        }
+      ],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/solutions/broilers",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": [
+        "Home",
+        "Poultry solutions",
+        "Broilers",
+        "Broilers",
+        "Every broiler cycle starts",
+        "with clear supply planning.",
+        "We work with broiler farms to supply poultry feed, feed supp"
+      ]
+    },
+    {
+      "route": "/en/products",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/products/fixture-feed-alpha",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/how-we-work",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/knowledge",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/contact",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/partner-with-us",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/privacy",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    },
+    {
+      "route": "/en/nope-404",
+      "viewport": 390,
+      "belowThreshold": [],
+      "overPhoto": []
+    }
+  ]
+}

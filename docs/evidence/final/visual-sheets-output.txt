@@ -1,0 +1,81 @@
+D:\\u0648\u064a\u0628\u0633\u0627\u064a\u062a \u0627\u0644\u0634\u0631\u0648\u0642\scripts\visual-qa-sheets.py:81: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  for r, g, b in im.getdata():
+screenshots/_sheets/ar-about-phones.jpg
+screenshots/_sheets/ar-about-large.jpg
+screenshots/_sheets/ar-about-full.jpg
+screenshots/_sheets/ar-contact-phones.jpg
+screenshots/_sheets/ar-contact-large.jpg
+screenshots/_sheets/ar-contact-full.jpg
+screenshots/_sheets/ar-home-phones.jpg
+screenshots/_sheets/ar-home-large.jpg
+screenshots/_sheets/ar-home-middle-footer.jpg
+screenshots/_sheets/ar-home-1440-footer.jpg
+screenshots/_sheets/ar-home-390-full.jpg
+screenshots/_sheets/ar-home-1440-full.jpg
+screenshots/_sheets/ar-home-scroll-1440-1.jpg
+screenshots/_sheets/ar-home-scroll-1440-2.jpg
+screenshots/_sheets/ar-home-scroll-390-1.jpg
+screenshots/_sheets/ar-home-scroll-390-2.jpg
+screenshots/_sheets/ar-home-scroll-390-3.jpg
+screenshots/_sheets/ar-how-we-work-phones.jpg
+screenshots/_sheets/ar-how-we-work-large.jpg
+screenshots/_sheets/ar-how-we-work-full.jpg
+screenshots/_sheets/ar-knowledge-phones.jpg
+screenshots/_sheets/ar-knowledge-large.jpg
+screenshots/_sheets/ar-knowledge-full.jpg
+screenshots/_sheets/ar-missing-page-phones.jpg
+screenshots/_sheets/ar-missing-page-large.jpg
+screenshots/_sheets/ar-missing-page-full.jpg
+screenshots/_sheets/ar-partner-with-us-phones.jpg
+screenshots/_sheets/ar-partner-with-us-large.jpg
+screenshots/_sheets/ar-partner-with-us-full.jpg
+screenshots/_sheets/ar-privacy-phones.jpg
+screenshots/_sheets/ar-privacy-large.jpg
+screenshots/_sheets/ar-privacy-full.jpg
+screenshots/_sheets/ar-products-phones.jpg
+screenshots/_sheets/ar-products-large.jpg
+screenshots/_sheets/ar-products-full.jpg
+screenshots/_sheets/ar-products-fixture-feed-alpha-phones.jpg
+screenshots/_sheets/ar-products-fixture-feed-alpha-large.jpg
+screenshots/_sheets/ar-products-fixture-feed-alpha-full.jpg
+screenshots/_sheets/ar-solutions-broilers-phones.jpg
+screenshots/_sheets/ar-solutions-broilers-large.jpg
+screenshots/_sheets/ar-solutions-broilers-full.jpg
+screenshots/_sheets/en-home-phones.jpg
+screenshots/_sheets/en-home-large.jpg
+screenshots/_sheets/en-home-middle-footer.jpg
+screenshots/_sheets/en-home-1440-footer.jpg
+screenshots/_sheets/en-home-390-full.jpg
+screenshots/_sheets/en-home-1440-full.jpg
+screenshots/_sheets/en-home-scroll-1440-1.jpg
+screenshots/_sheets/en-home-scroll-1440-2.jpg
+screenshots/_sheets/en-home-scroll-1440-3.jpg
+screenshots/_sheets/overlays-mobile.jpg
+screenshots/_sheets/overlays-desktop.jpg
+
+| capture | white | warm/light grey | black | vermilion | amber | photo/other |
+|---|---|---|---|---|---|---|
+| `screenshots/ar/about/1440-full.png` | 41.3 | 18.0 | 28.7 | 0.3 | 0.0 | 11.7 |
+| `screenshots/ar/about/390-full.png` | 35.0 | 15.6 | 31.0 | 0.6 | 0.0 | 17.8 |
+| `screenshots/ar/contact/1440-full.png` | 38.9 | 35.7 | 18.9 | 0.7 | 0.0 | 5.8 |
+| `screenshots/ar/contact/390-full.png` | 38.0 | 26.4 | 24.2 | 1.0 | 0.0 | 10.4 |
+| `screenshots/ar/home/1440-full.png` | 23.3 | 26.7 | 26.4 | 8.1 | 0.2 | 15.3 |
+| `screenshots/ar/home/390-full.png` | 21.4 | 19.5 | 26.7 | 8.3 | 0.1 | 24.1 |
+| `screenshots/ar/how-we-work/1440-full.png` | 57.5 | 17.3 | 19.6 | 0.7 | 0.0 | 4.9 |
+| `screenshots/ar/how-we-work/390-full.png` | 44.7 | 17.2 | 24.6 | 2.2 | 0.0 | 11.3 |
+| `screenshots/ar/knowledge/1440-full.png` | 23.3 | 41.2 | 19.8 | 0.8 | 0.1 | 14.8 |
+| `screenshots/ar/knowledge/390-full.png` | 19.0 | 29.4 | 33.3 | 1.4 | 0.0 | 16.9 |
+| `screenshots/ar/missing-page/1440-full.png` | 50.5 | 1.3 | 42.0 | 1.0 | 0.0 | 5.2 |
+| `screenshots/ar/missing-page/390-full.png` | 28.2 | 2.1 | 57.8 | 2.3 | 0.0 | 9.6 |
+| `screenshots/ar/partner-with-us/1440-full.png` | 42.1 | 25.8 | 25.0 | 0.6 | 0.1 | 6.4 |
+| `screenshots/ar/partner-with-us/390-full.png` | 38.4 | 19.7 | 26.4 | 1.4 | 0.2 | 13.9 |
+| `screenshots/ar/privacy/1440-full.png` | 76.5 | 5.0 | 11.5 | 0.3 | 0.0 | 6.8 |
+| `screenshots/ar/privacy/390-full.png` | 55.8 | 9.2 | 18.1 | 0.4 | 0.0 | 16.4 |
+| `screenshots/ar/products-fixture-feed-alpha/1440-full.png` | 38.6 | 2.0 | 44.9 | 1.3 | 0.0 | 13.0 |
+| `screenshots/ar/products-fixture-feed-alpha/390-full.png` | 29.0 | 2.6 | 50.1 | 2.5 | 0.1 | 15.7 |
+| `screenshots/ar/products/1440-full.png` | 50.8 | 3.8 | 33.1 | 0.5 | 0.1 | 11.8 |
+| `screenshots/ar/products/390-full.png` | 33.7 | 6.2 | 38.0 | 0.7 | 0.1 | 21.2 |
+| `screenshots/ar/solutions-broilers/1440-full.png` | 31.3 | 30.2 | 26.8 | 0.4 | 0.0 | 11.3 |
+| `screenshots/ar/solutions-broilers/390-full.png` | 20.2 | 32.3 | 26.7 | 0.9 | 0.1 | 19.9 |
+| `screenshots/en/home/1440-full.png` | 23.6 | 27.5 | 25.5 | 8.4 | 0.2 | 14.8 |
+| `screenshots/en/home/390-full.png` | 20.9 | 20.6 | 26.2 | 9.1 | 0.1 | 23.1 |

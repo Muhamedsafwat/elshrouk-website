@@ -10,12 +10,13 @@
 | PostgreSQL 15–17 | Managed Postgres (Neon, Supabase, RDS, Cloud SQL, DigitalOcean) | **Database encoding must be UTF8** (Arabic content). A WIN1252 database fails with `character … has no equivalent in encoding "WIN1252"` (verified, docs/evidence/database-verification.md). |
 | Object storage for CMS uploads | S3-compatible bucket (AWS S3, Cloudflare R2, DigitalOcean Spaces, MinIO) | Enabled automatically when `S3_BUCKET` is set (`@payloadcms/storage-s3`). |
 | SMTP (optional) | Transactional provider (SES, Postmark, Mailgun, company SMTP) | Only for "new inquiry" notifications (no PII in the mail). Without it, inquiries are still stored in the CMS. |
-| Domain + TLS | Client-owned domain | HSTS is sent in production; serve over HTTPS only. |
+| Domain + TLS | Client-owned domain | Serve over HTTPS only. Production builds send HSTS, and the CSP adds `upgrade-insecure-requests` when `SITE_URL` is https (an http `SITE_URL` omits it, so Safari can still load assets on a plain-HTTP staging server). |
 
 ## 2. Environment variables (see `.env.example`)
 
 Required: `DATABASE_URL` (postgres://… UTF8 DB), `PAYLOAD_SECRET` (≥ 32 random chars), `SITE_URL` + `NEXT_PUBLIC_SITE_URL` (the public https origin, identical), `NEXT_PUBLIC_SITE_ENV=production` (only at real launch; staging should use `staging`).
-Optional: `S3_*`, `SMTP_*`, `INQUIRY_NOTIFY_EMAIL`, `NEXT_PUBLIC_ANALYTICS_PROVIDER` (keep unset until a provider and consent strategy are approved).
+Required for abuse protection: `INQUIRY_IP_HEADER` — the client-IP header set by YOUR proxy/CDN (e.g. `x-real-ip` behind nginx, `cf-connecting-ip` only behind Cloudflare); without it a global fail-safe cap applies.
+Optional: `S3_*`, `SMTP_*`, `INQUIRY_NOTIFY_EMAIL`, `NEXT_PUBLIC_ANALYTICS_PROVIDER` (keep unset until a provider and consent strategy are approved), `INTERNAL_SITE_ORIGIN` (loopback origin such as `http://127.0.0.1:3000` for the proxy's slug-existence check; defaults to `SITE_URL`, never to the request's Host header).
 
 `NEXT_PUBLIC_*` values are inlined at **build** time — build with the production values. `SITE_URL` is read at runtime by the server.
 

@@ -1,0 +1,117 @@
+{
+  "route": "/ar/poultry-solutions",
+  "url": "http://localhost:3200/ar/poultry-solutions",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "desktop",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:48:15.114Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 19,
+      "nodes": [
+        {
+          "target": [
+            "a[data-rail-link=\"broilers\"] > .text-caption.num.font-semibold"
+          ],
+          "html": "<span class=\"num text-caption font-semibold\">01</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[data-rail-link=\"layers\"] > .text-caption.num.font-semibold"
+          ],
+          "html": "<span class=\"num text-caption font-semibold\">02</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[data-rail-link=\"breeders\"] > .text-small.font-semibold"
+          ],
+          "html": "<span class=\"text-small font-semibold\">الأمهات</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[data-rail-link=\"breeders\"] > .text-caption.num.font-semibold"
+          ],
+          "html": "<span class=\"num text-caption font-semibold\">03</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "#broilers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .lg\\:pe-\\[clamp\\(4\\.5rem\\,7vw\\,7\\.5rem\\)\\].justify-end.flex > .text-\\[clamp\\(7rem\\,2\\.5rem\\+15vw\\,18rem\\)\\].leading-\\[0\\.78\\].tracking-\\[-0\\.04em\\]"
+          ],
+          "html": "<p data-chapter-numeral=\"true\" class=\"num text-[clamp(7rem...\" style=\"translate: none; rot...\">",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "#broilers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .max-w-\\[44rem\\].lg\\:max-w-\\[46\\%\\] > .items-baseline[data-reveal=\"up\"][data-revealed=\"\"] > .text-white\\/70.font-medium[lang=\"en\"]"
+          ],
+          "html": "<span lang=\"en\" class=\"text-small font-medium text-white/70\">Broilers</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#layers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .lg\\:pe-\\[clamp\\(4\\.5rem\\,7vw\\,7\\.5rem\\)\\].justify-end.flex > .text-\\[clamp\\(7rem\\,2\\.5rem\\+15vw\\,18rem\\)\\].leading-\\[0\\.78\\].tracking-\\[-0\\.04em\\]"
+          ],
+          "html": "<p data-chapter-numeral=\"true\" class=\"num text-[clamp(7rem...\" style=\"translate: none; rot...\">",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "#layers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .max-w-\\[44rem\\].lg\\:max-w-\\[46\\%\\] > .items-baseline[data-reveal=\"up\"][data-revealed=\"\"] > .text-white\\/70.font-medium[lang=\"en\"]"
+          ],
+          "html": "<span lang=\"en\" class=\"text-small font-medium text-white/70\">Layers</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#breeders > .pt-14.lg\\:pt-24.lg\\:pb-24 > .lg\\:pe-\\[clamp\\(4\\.5rem\\,7vw\\,7\\.5rem\\)\\].justify-end.flex > .text-\\[clamp\\(7rem\\,2\\.5rem\\+15vw\\,18rem\\)\\].leading-\\[0\\.78\\].tracking-\\[-0\\.04em\\]"
+          ],
+          "html": "<p data-chapter-numeral=\"true\" class=\"num text-[clamp(7rem...\" style=\"translate: none; rot...\">",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "#breeders > .pt-14.lg\\:pt-24.lg\\:pb-24 > .max-w-\\[44rem\\].lg\\:max-w-\\[46\\%\\] > .items-baseline[data-reveal=\"up\"][data-revealed=\"\"] > .eyebrow.text-fg-soft"
+          ],
+          "html": "<span class=\"eyebrow text-fg-soft\">الأمهات</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#breeders > .pt-14.lg\\:pt-24.lg\\:pb-24 > .max-w-\\[44rem\\].lg\\:max-w-\\[46\\%\\] > .items-baseline[data-reveal=\"up\"][data-revealed=\"\"] > .text-white\\/70.font-medium[lang=\"en\"]"
+          ],
+          "html": "<span lang=\"en\" class=\"text-small font-medium text-white/70\">Breeders</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#breeders > .pt-14.lg\\:pt-24.lg\\:pb-24 > .max-w-\\[44rem\\].lg\\:max-w-\\[46\\%\\] > .max-w-\\[52ch\\].text-lead[data-reveal-delay=\"0.08\"]"
+          ],
+          "html": "<p data-reveal=\"up\" data-reveal-delay=\"0.08\" class=\"mt-6 max-w-[52ch] text-lead text-fg-soft\" style=\"\" data-revealed=\"\">تنتج قطعان الأمهات بيض التفريخ الذي تبدأ منه دورات التسمين والبياض. نعمل على توف",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    }
+  ],
+  "passes": 28
+}

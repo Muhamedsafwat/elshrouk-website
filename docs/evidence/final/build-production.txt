@@ -1,0 +1,67 @@
+
+> alshorouk-web@1.0.0 build D:\ويبسايت الشروق
+> cross-env NODE_OPTIONS="--no-deprecation --max-old-space-size=8000" next build
+
+▲ Next.js 16.3.8 (Turbopack)
+- Environments: .env
+✓ Running next.config.ts took 92ms
+- Experiments (use with caution):
+  · serverActions
+  ⨯ turbopackServerFastRefresh
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 10.3s
+  Running TypeScript ...
+  Finished TypeScript in 9.8s ...
+  Collecting page data using 15 workers ...
+  Generating static pages using 15 workers (0/29) ...
+  Generating static pages using 15 workers (7/29) 
+  Generating static pages using 15 workers (14/29) 
+  Generating static pages using 15 workers (21/29) 
+✓ Generating static pages using 15 workers (29/29) in 2.3s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /_not-found
+├   /[locale]
+│ ├ ● /ar
+│ └ ● /en
+├ ƒ /[locale]/[...rest]
+├   /[locale]/about
+│ ├ ● /ar/about
+│ └ ● /en/about
+├ ƒ /[locale]/contact
+├   /[locale]/how-we-work
+│ ├ ● /ar/how-we-work
+│ └ ● /en/how-we-work
+├ ƒ /[locale]/knowledge
+├ ƒ /[locale]/knowledge/[slug]
+├ ƒ /[locale]/page-not-found
+├   /[locale]/partner-with-us
+│ ├ ● /ar/partner-with-us
+│ └ ● /en/partner-with-us
+├   /[locale]/poultry-solutions
+│ ├ ● /ar/poultry-solutions
+│ └ ● /en/poultry-solutions
+├   /[locale]/privacy
+│ ├ ● /ar/privacy
+│ └ ● /en/privacy
+├ ƒ /[locale]/products
+├ ƒ /[locale]/products/[slug]
+├   /[locale]/solutions/[segment]
+│ ├ ● /ar/solutions/broilers
+│ ├ ● /ar/solutions/layers
+│ ├ ● /ar/solutions/breeders
+│ └ ● [+3 more paths]
+├ ƒ /admin/[[...segments]]
+├ ƒ /api/[...slug]
+├ ○ /robots.txt
+└ ƒ /sitemap.xml
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

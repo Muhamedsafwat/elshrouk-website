@@ -1,0 +1,2234 @@
+[
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n300",
+  "ctx": "ريك متخصص لمزارع التسمين والبياض والأمهات، يوفر حلول الإمداد من الأعلاف ومكملاتها إلى الأدوية واللقاحات البيطرية. استكشف حلولنا تواصل معنا حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية "
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n15\nمليون",
+  "ctx": "فر حلول الإمداد من الأعلاف ومكملاتها إلى الأدوية واللقاحات البيطرية. استكشف حلولنا تواصل معنا حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية مرّر لاكتشاف المزيد تسمين"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n150",
+  "ctx": "بيطرية. استكشف حلولنا تواصل معنا حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية مرّر لاكتشاف المزيد تسمين · بياض · أمهات الشروق بالأرقام علاقات عمل قائمة مع مزارع ا"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 300",
+  "ctx": " تسمين · بياض · أمهات الشروق بالأرقام علاقات عمل قائمة مع مزارع التسمين والبياض والأمهات. الأرقام تقريبية وتعكس نطاق تعاملاتنا الحالي. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزا"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n300",
+  "ctx": " عمل قائمة مع مزارع التسمين والبياض والأمهات. الأرقام تقريبية وتعكس نطاق تعاملاتنا الحالي. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها. حوالي 15 مليون طائر ضمن الطاق"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 15 مليون",
+  "ctx": "الأرقام تقريبية وتعكس نطاق تعاملاتنا الحالي. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها. حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتج"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n15\nمليون",
+  "ctx": "واجن نتعامل معها بشكل مستمر. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها. حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية. حوالي 150 منتجًا نوزع"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 150",
+  "ctx": "ا بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها. حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية. حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية كل مزرعة لها احتياج مختلف. وكل"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n150",
+  "ctx": "للمزارع التي نخدمها. حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية. حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية كل مزرعة لها احتياج مختلف. وكل مرحلة تستحق دعمًا متخصصًا. لذلك نبدأ بفهم مزرعتك قبل "
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 300",
+  "ctx": "لميدان علاقات تُبنى دورة بعد دورة نقيس عملنا بعلاقات طويلة الأمد، لا بصفقات منفردة. واليوم نلخص نطاق هذه العلاقات في ثلاثة أرقام تقريبية: حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر، وحوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها، وحوالي 150 منتجًا نوزعه من الأد"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 15 مليون",
+  "ctx": "بعلاقات طويلة الأمد، لا بصفقات منفردة. واليوم نلخص نطاق هذه العلاقات في ثلاثة أرقام تقريبية: حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر، وحوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها، وحوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية. وتتوزع هذه المزارع بين "
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 150",
+  "ctx": "لاقات في ثلاثة أرقام تقريبية: حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر، وحوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها، وحوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية. وتتوزع هذه المزارع بين التسمين والبياض والأمهات، ولكل قطاع منها إيقاعه واحتياجاته الخا"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 300",
+  "ctx": "إجابات واضحة قبل أن تبدأ اسأل فريقنا هل تتعامل الشروق مع مزارع التسمين والبياض والأمهات؟ نعم. نعمل مع القطاعات الثلاثة، وتضم قائمة عملائنا حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر. ويمكنك التعرف على طريقة عملنا مع كل قطاع في صفحة حلول الدواجن. كيف أستفسر عن توافر منتج؟ إذا"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 300",
+  "ctx": "املاتنا الحالي: مزارع الدواجن التي نتعامل معها بشكل مستمر، والطاقة الإنتاجية للمزارع التي نخدمها، وما نوزعه من الأدوية واللقاحات البيطرية. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوي"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 15 مليون",
+  "ctx": " بشكل مستمر، والطاقة الإنتاجية للمزارع التي نخدمها، وما نوزعه من الأدوية واللقاحات البيطرية. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية الأرقام تقريبية وتعكس نط"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 150",
+  "ctx": "من الأدوية واللقاحات البيطرية. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية الأرقام تقريبية وتعكس نطاق تعاملاتنا الحالي. 05 أربع قيم نعمل بها قيم تحكم طريقة تعا"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/poultry-solutions",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": "ers نؤكد توافر المنتجات داخل كل فئة عند كل طلب، والمعلومات المعروضة تجارية ولا تُعد توصية علاجية. تُستخدم المنتجات البيطرية وفقًا للإرشادات المعتمدة وتحت إشراف الطبيب البيطري. التس"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/poultry-solutions",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": "هات نؤكد توافر المنتجات داخل كل فئة عند كل طلب، والمعلومات المعروضة تجارية ولا تُعد توصية علاجية. تُستخدم المنتجات البيطرية وفقًا للإرشادات المعتمدة وتحت إشراف الطبيب البيطري. 05 ث"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/broilers",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا عل"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على ف"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على فهم "
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/layers",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا عل"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على ف"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على فهم "
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/breeders",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا عل"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على ف"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على فهم "
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/products",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/products",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا عل"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/products",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على ف"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/products",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على فهم "
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/how-we-work",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا عل"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على ف"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على فهم "
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/knowledge",
+  "rule": "medical",
+  "field": "allText",
+  "match": "جرعات",
+  "ctx": "أعلاف معلومات عامة تعرّف بفئات مكملات الأعلاف وكيفية قراءة بياناتها، دون تقديم تركيبات أو جرعات. 03 التعامل مع المنتجات البيطرية معلومات عامة حول استلام المنتجات البيطرية وحفظها، ي"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تف"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصي"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=farm",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تف"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصي"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=product",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: عدد العبوات أو الوزن التقريبي اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة،"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: عدد العبوات أو الوزن التقريبي اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ون"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: عدد العبوات أو الوزن التقريبي اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع "
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=partner",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": "ات المقترح تفاصيل طلبك صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=partner",
+  "rule": "contact",
+  "field": "attrs",
+  "match": "name@example.com",
+  "ctx": "القائمة القائمة الرئيسية مسار التصفح مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك وتسجيل"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ish إغلاق القائمة القائمة الرئيسية مسار التصفح مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتج"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": " إغلاق القائمة القائمة الرئيسية مسار التصفح مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "لاق القائمة القائمة الرئيسية مسار التصفح مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك وت"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/partner-with-us",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": "ات المقترح تفاصيل طلبك صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/partner-with-us",
+  "rule": "contact",
+  "field": "attrs",
+  "match": "name@example.com",
+  "ctx": "لرئيسية مسار التصفح ابدأ النقاش معنا مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك وتسجيل"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": " القائمة الرئيسية مسار التصفح ابدأ النقاش معنا مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتج"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "قائمة الرئيسية مسار التصفح ابدأ النقاش معنا مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك"
+ },
+ {
+  "server": "dev",
+  "locale": "ar",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "مة الرئيسية مسار التصفح ابدأ النقاش معنا مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك وت"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "r and breeder farms, from poultry feed and feed supplements to veterinary medicines and vaccines. Explore our solutions Contact us Approx. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 Vet"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "15\nmillion",
+  "ctx": "ents to veterinary medicines and vaccines. Explore our solutions Contact us Approx. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 Veterinary medicine and vaccine products we distribute Scr"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "150",
+  "ctx": "pprox. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 Veterinary medicine and vaccine products we distribute Scroll to explore Broilers · Layers · Breeders Alshorouk in numbers Ongoing wo"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "relationships with broiler, layer and breeder farms. Figures are approximate and reflect the current scope of our business. Approximately 300 poultry farms we serve on an ongoing basis. Approx. 300 Poultry farms we serve on an ongoing basis Approximately 15 million birds wit"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "ures are approximate and reflect the current scope of our business. Approximately 300 poultry farms we serve on an ongoing basis. Approx. 300 Poultry farms we serve on an ongoing basis Approximately 15 million birds within the production capacity of the farms we serve. Appro"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "15 million",
+  "ctx": "ess. Approximately 300 poultry farms we serve on an ongoing basis. Approx. 300 Poultry farms we serve on an ongoing basis Approximately 15 million birds within the production capacity of the farms we serve. Approx. 15 million Birds within the production capacity of the farm"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "15\nmillion",
+  "ctx": " Poultry farms we serve on an ongoing basis Approximately 15 million birds within the production capacity of the farms we serve. Approx. 15 million Birds within the production capacity of the farms we serve Approximately 150 veterinary medicine and vaccine products we distri"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "150",
+  "ctx": "e production capacity of the farms we serve. Approx. 15 million Birds within the production capacity of the farms we serve Approximately 150 veterinary medicine and vaccine products we distribute. Approx. 150 Veterinary medicine and vaccine products we distribute Every farm"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "150",
+  "ctx": "ds within the production capacity of the farms we serve Approximately 150 veterinary medicine and vaccine products we distribute. Approx. 150 Veterinary medicine and vaccine products we distribute Every farm has different needs. And every stage deserves specialised support. "
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "after cycle We measure our work in long-term relationships, not one-off deals. Today, three approximate figures sum up their scope: around 300 poultry farms we serve on an ongoing basis, around 15 million birds within the production capacity of the farms we serve, and around 150"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "15 million",
+  "ctx": "hips, not one-off deals. Today, three approximate figures sum up their scope: around 300 poultry farms we serve on an ongoing basis, around 15 million birds within the production capacity of the farms we serve, and around 150 veterinary medicine and vaccine products we distribute"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "150",
+  "ctx": "nd 300 poultry farms we serve on an ongoing basis, around 15 million birds within the production capacity of the farms we serve, and around 150 veterinary medicine and vaccine products we distribute. These farms span broilers, layers and breeders, and each segment has its own rhy"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "our team Does Alshorouk work with broiler, layer and breeder farms? Yes. We work with all three segments, and our customers include around 300 poultry farms we serve on an ongoing basis. You can see how we work with each segment on our Poultry solutions page. How do I check whe"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "rms we serve on an ongoing basis, the production capacity of those farms, and the veterinary medicines and vaccines we distribute. Approx. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 V"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "15 million",
+  "ctx": "y of those farms, and the veterinary medicines and vaccines we distribute. Approx. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 Veterinary medicine and vaccine products we distribute F"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "150",
+  "ctx": "rox. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 Veterinary medicine and vaccine products we distribute Figures are approximate and reflect the current scope of our business. 05 Four "
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/poultry-solutions",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": " category is confirmed with every request, and the information shown is commercial, not a treatment recommendation. Veterinary products should be used in line with approved guideli"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/poultry-solutions",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": " category is confirmed with every request, and the information shown is commercial, not a treatment recommendation. Veterinary products should be used in line with approved guideli"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/broilers",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else "
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else tha"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else that h"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/layers",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else "
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else tha"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else that h"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/breeders",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else "
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else tha"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else that h"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/products",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/products",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else "
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/products",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else tha"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/products",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else that h"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/how-we-work",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else "
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else tha"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else that h"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/knowledge",
+  "rule": "medical",
+  "field": "allText",
+  "match": "dosage",
+  "ctx": "feed supplement categories and how to read their product details, without formulations or dosages. 03 Handling veterinary products General information on receiving and storing vete"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type "
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type and"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type and an"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=farm",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type "
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type and"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type and an"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=product",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. number of packs or approximate weight Tell us what you need: products or ca"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. number of packs or approximate weight Tell us what you need: products or categ"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. number of packs or approximate weight Tell us what you need: products or categori"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=partner",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "t line Request details Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=partner",
+  "rule": "contact",
+  "field": "attrs",
+  "match": "name@example.com",
+  "ctx": "gation Breadcrumb For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry Tell us "
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": " Main navigation Breadcrumb For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultr"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "in navigation Breadcrumb For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry T"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "navigation Breadcrumb For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry Tell"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/partner-with-us",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "t line Request details Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/partner-with-us",
+  "rule": "contact",
+  "field": "attrs",
+  "match": "name@example.com",
+  "ctx": " the conversation For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry Tell us "
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "rumb Start the conversation For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultr"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "b Start the conversation For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry T"
+ },
+ {
+  "server": "dev",
+  "locale": "en",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "tart the conversation For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry Tell"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n300",
+  "ctx": "ريك متخصص لمزارع التسمين والبياض والأمهات، يوفر حلول الإمداد من الأعلاف ومكملاتها إلى الأدوية واللقاحات البيطرية. استكشف حلولنا تواصل معنا حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية "
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n15\nمليون",
+  "ctx": "فر حلول الإمداد من الأعلاف ومكملاتها إلى الأدوية واللقاحات البيطرية. استكشف حلولنا تواصل معنا حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية مرّر لاكتشاف المزيد تسمين"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n150",
+  "ctx": "بيطرية. استكشف حلولنا تواصل معنا حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية مرّر لاكتشاف المزيد تسمين · بياض · أمهات الشروق بالأرقام علاقات عمل قائمة مع مزارع ا"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 300",
+  "ctx": " تسمين · بياض · أمهات الشروق بالأرقام علاقات عمل قائمة مع مزارع التسمين والبياض والأمهات. الأرقام تقريبية وتعكس نطاق تعاملاتنا الحالي. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزا"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n300",
+  "ctx": " عمل قائمة مع مزارع التسمين والبياض والأمهات. الأرقام تقريبية وتعكس نطاق تعاملاتنا الحالي. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها. حوالي 15 مليون طائر ضمن الطاق"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 15 مليون",
+  "ctx": "الأرقام تقريبية وتعكس نطاق تعاملاتنا الحالي. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها. حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتج"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n15\nمليون",
+  "ctx": "واجن نتعامل معها بشكل مستمر. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها. حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية. حوالي 150 منتجًا نوزع"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 150",
+  "ctx": "ا بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها. حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية. حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية كل مزرعة لها احتياج مختلف. وكل"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي\n150",
+  "ctx": "للمزارع التي نخدمها. حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية. حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية كل مزرعة لها احتياج مختلف. وكل مرحلة تستحق دعمًا متخصصًا. لذلك نبدأ بفهم مزرعتك قبل "
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 300",
+  "ctx": "لميدان علاقات تُبنى دورة بعد دورة نقيس عملنا بعلاقات طويلة الأمد، لا بصفقات منفردة. واليوم نلخص نطاق هذه العلاقات في ثلاثة أرقام تقريبية: حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر، وحوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها، وحوالي 150 منتجًا نوزعه من الأد"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 15 مليون",
+  "ctx": "بعلاقات طويلة الأمد، لا بصفقات منفردة. واليوم نلخص نطاق هذه العلاقات في ثلاثة أرقام تقريبية: حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر، وحوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها، وحوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية. وتتوزع هذه المزارع بين "
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 150",
+  "ctx": "لاقات في ثلاثة أرقام تقريبية: حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر، وحوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها، وحوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية. وتتوزع هذه المزارع بين التسمين والبياض والأمهات، ولكل قطاع منها إيقاعه واحتياجاته الخا"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 300",
+  "ctx": "إجابات واضحة قبل أن تبدأ اسأل فريقنا هل تتعامل الشروق مع مزارع التسمين والبياض والأمهات؟ نعم. نعمل مع القطاعات الثلاثة، وتضم قائمة عملائنا حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر. ويمكنك التعرف على طريقة عملنا مع كل قطاع في صفحة حلول الدواجن. كيف أستفسر عن توافر منتج؟ إذا"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 300",
+  "ctx": "املاتنا الحالي: مزارع الدواجن التي نتعامل معها بشكل مستمر، والطاقة الإنتاجية للمزارع التي نخدمها، وما نوزعه من الأدوية واللقاحات البيطرية. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوي"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 15 مليون",
+  "ctx": " بشكل مستمر، والطاقة الإنتاجية للمزارع التي نخدمها، وما نوزعه من الأدوية واللقاحات البيطرية. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية الأرقام تقريبية وتعكس نط"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "حوالي 150",
+  "ctx": "من الأدوية واللقاحات البيطرية. حوالي 300 مزرعة دواجن نتعامل معها بشكل مستمر حوالي 15 مليون طائر ضمن الطاقة الإنتاجية للمزارع التي نخدمها حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية الأرقام تقريبية وتعكس نطاق تعاملاتنا الحالي. 05 أربع قيم نعمل بها قيم تحكم طريقة تعا"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/poultry-solutions",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": "ers نؤكد توافر المنتجات داخل كل فئة عند كل طلب، والمعلومات المعروضة تجارية ولا تُعد توصية علاجية. تُستخدم المنتجات البيطرية وفقًا للإرشادات المعتمدة وتحت إشراف الطبيب البيطري. التس"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/poultry-solutions",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": "هات نؤكد توافر المنتجات داخل كل فئة عند كل طلب، والمعلومات المعروضة تجارية ولا تُعد توصية علاجية. تُستخدم المنتجات البيطرية وفقًا للإرشادات المعتمدة وتحت إشراف الطبيب البيطري. 05 ث"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/broilers",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا عل"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على ف"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على فهم "
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/layers",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا عل"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على ف"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على فهم "
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/breeders",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا عل"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على ف"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على فهم "
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/how-we-work",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا عل"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على ف"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصيل تساعدنا على فهم "
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/knowledge",
+  "rule": "medical",
+  "field": "allText",
+  "match": "جرعات",
+  "ctx": "أعلاف معلومات عامة تعرّف بفئات مكملات الأعلاف وكيفية قراءة بياناتها، دون تقديم تركيبات أو جرعات. 03 التعامل مع المنتجات البيطرية معلومات عامة حول استلام المنتجات البيطرية وحفظها، ي"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تف"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصي"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=farm",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تف"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: 20 ألف طائر اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع المزرعة، وأي تفاصي"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=product",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": " تفاصيل طلبك (اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "English قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: عدد العبوات أو الوزن التقريبي اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة،"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "lish قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: عدد العبوات أو الوزن التقريبي اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ون"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "h قائمة التنقل الرئيسية اللغة: English إغلاق القائمة القائمة الرئيسية مسار التصفح 01xxxxxxxxx مثال: عدد العبوات أو الوزن التقريبي اكتب ما تحتاجه: المنتجات أو الفئات المطلوبة، ونوع "
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=partner",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": "ات المقترح تفاصيل طلبك صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=partner",
+  "rule": "contact",
+  "field": "attrs",
+  "match": "name@example.com",
+  "ctx": "القائمة القائمة الرئيسية مسار التصفح مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك وتسجيل"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ish إغلاق القائمة القائمة الرئيسية مسار التصفح مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتج"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": " إغلاق القائمة القائمة الرئيسية مسار التصفح مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "لاق القائمة القائمة الرئيسية مسار التصفح مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك وت"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/partner-with-us",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": "ات المقترح تفاصيل طلبك صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذ"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/partner-with-us",
+  "rule": "contact",
+  "field": "attrs",
+  "match": "name@example.com",
+  "ctx": "لرئيسية مسار التصفح ابدأ النقاش معنا مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك وتسجيل"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": " القائمة الرئيسية مسار التصفح ابدأ النقاش معنا مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتج"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "قائمة الرئيسية مسار التصفح ابدأ النقاش معنا مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "مة الرئيسية مسار التصفح ابدأ النقاش معنا مثال: مدير التصدير أو مدير تطوير الأعمال 01xxxxxxxxx name@example.com مثال: مكملات أعلاف أو لقاحات بيطرية للدواجن عرّفنا بشركتك ومنتجاتك وت"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/products/fixture-feed-alpha",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": "وافر التوافر عند الاستفسار تُعرض بيانات المنتج لأغراض تجارية وتعريفية فقط، ولا تُعد توصية علاجية أو إرشادًا للاستخدام أو الجرعات. وصف المنتج سجل اختبار آلي — ليس منتجًا حقيقيًا. اس"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/products/fixture-feed-alpha",
+  "rule": "medical",
+  "field": "allText",
+  "match": "جرعات",
+  "ctx": "بيانات المنتج لأغراض تجارية وتعريفية فقط، ولا تُعد توصية علاجية أو إرشادًا للاستخدام أو الجرعات. وصف المنتج سجل اختبار آلي — ليس منتجًا حقيقيًا. استفسر عن هذا المنتج أرسل استفسارك،"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/products/fixture-supplement-beta",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": "وتحت إشراف الطبيب البيطري. تُعرض بيانات المنتج لأغراض تجارية وتعريفية فقط، ولا تُعد توصية علاجية أو إرشادًا للاستخدام أو الجرعات. وصف المنتج سجل اختبار آلي — ليس منتجًا حقيقيًا. اس"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/products/fixture-supplement-beta",
+  "rule": "medical",
+  "field": "allText",
+  "match": "جرعات",
+  "ctx": "بيانات المنتج لأغراض تجارية وتعريفية فقط، ولا تُعد توصية علاجية أو إرشادًا للاستخدام أو الجرعات. وصف المنتج سجل اختبار آلي — ليس منتجًا حقيقيًا. استفسر عن هذا المنتج أرسل استفسارك،"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/products/fixture-medicine-gamma",
+  "rule": "medical",
+  "field": "allText",
+  "match": "علاج",
+  "ctx": "وتحت إشراف الطبيب البيطري. تُعرض بيانات المنتج لأغراض تجارية وتعريفية فقط، ولا تُعد توصية علاجية أو إرشادًا للاستخدام أو الجرعات. وصف المنتج سجل اختبار آلي — ليس منتجًا حقيقيًا. اس"
+ },
+ {
+  "server": "fixture",
+  "locale": "ar",
+  "route": "/products/fixture-medicine-gamma",
+  "rule": "medical",
+  "field": "allText",
+  "match": "جرعات",
+  "ctx": "بيانات المنتج لأغراض تجارية وتعريفية فقط، ولا تُعد توصية علاجية أو إرشادًا للاستخدام أو الجرعات. وصف المنتج سجل اختبار آلي — ليس منتجًا حقيقيًا. استفسر عن هذا المنتج أرسل استفسارك،"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "r and breeder farms, from poultry feed and feed supplements to veterinary medicines and vaccines. Explore our solutions Contact us Approx. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 Vet"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "15\nmillion",
+  "ctx": "ents to veterinary medicines and vaccines. Explore our solutions Contact us Approx. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 Veterinary medicine and vaccine products we distribute Scr"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "150",
+  "ctx": "pprox. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 Veterinary medicine and vaccine products we distribute Scroll to explore Broilers · Layers · Breeders Alshorouk in numbers Ongoing wo"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "relationships with broiler, layer and breeder farms. Figures are approximate and reflect the current scope of our business. Approximately 300 poultry farms we serve on an ongoing basis. Approx. 300 Poultry farms we serve on an ongoing basis Approximately 15 million birds wit"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "ures are approximate and reflect the current scope of our business. Approximately 300 poultry farms we serve on an ongoing basis. Approx. 300 Poultry farms we serve on an ongoing basis Approximately 15 million birds within the production capacity of the farms we serve. Appro"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "15 million",
+  "ctx": "ess. Approximately 300 poultry farms we serve on an ongoing basis. Approx. 300 Poultry farms we serve on an ongoing basis Approximately 15 million birds within the production capacity of the farms we serve. Approx. 15 million Birds within the production capacity of the farm"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "15\nmillion",
+  "ctx": " Poultry farms we serve on an ongoing basis Approximately 15 million birds within the production capacity of the farms we serve. Approx. 15 million Birds within the production capacity of the farms we serve Approximately 150 veterinary medicine and vaccine products we distri"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "150",
+  "ctx": "e production capacity of the farms we serve. Approx. 15 million Birds within the production capacity of the farms we serve Approximately 150 veterinary medicine and vaccine products we distribute. Approx. 150 Veterinary medicine and vaccine products we distribute Every farm"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "150",
+  "ctx": "ds within the production capacity of the farms we serve Approximately 150 veterinary medicine and vaccine products we distribute. Approx. 150 Veterinary medicine and vaccine products we distribute Every farm has different needs. And every stage deserves specialised support. "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "after cycle We measure our work in long-term relationships, not one-off deals. Today, three approximate figures sum up their scope: around 300 poultry farms we serve on an ongoing basis, around 15 million birds within the production capacity of the farms we serve, and around 150"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "15 million",
+  "ctx": "hips, not one-off deals. Today, three approximate figures sum up their scope: around 300 poultry farms we serve on an ongoing basis, around 15 million birds within the production capacity of the farms we serve, and around 150 veterinary medicine and vaccine products we distribute"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "150",
+  "ctx": "nd 300 poultry farms we serve on an ongoing basis, around 15 million birds within the production capacity of the farms we serve, and around 150 veterinary medicine and vaccine products we distribute. These farms span broilers, layers and breeders, and each segment has its own rhy"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "our team Does Alshorouk work with broiler, layer and breeder farms? Yes. We work with all three segments, and our customers include around 300 poultry farms we serve on an ongoing basis. You can see how we work with each segment on our Poultry solutions page. How do I check whe"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "300",
+  "ctx": "rms we serve on an ongoing basis, the production capacity of those farms, and the veterinary medicines and vaccines we distribute. Approx. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 V"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "15 million",
+  "ctx": "y of those farms, and the veterinary medicines and vaccines we distribute. Approx. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 Veterinary medicine and vaccine products we distribute F"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/about",
+  "rule": "metric",
+  "field": "body",
+  "match": "150",
+  "ctx": "rox. 300 Poultry farms we serve on an ongoing basis Approx. 15 million Birds within the production capacity of the farms we serve Approx. 150 Veterinary medicine and vaccine products we distribute Figures are approximate and reflect the current scope of our business. 05 Four "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/poultry-solutions",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": " category is confirmed with every request, and the information shown is commercial, not a treatment recommendation. Veterinary products should be used in line with approved guideli"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/poultry-solutions",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": " category is confirmed with every request, and the information shown is commercial, not a treatment recommendation. Veterinary products should be used in line with approved guideli"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/broilers",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else tha"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/broilers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else that h"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/layers",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else tha"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/layers",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else that h"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/breeders",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else tha"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/solutions/breeders",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else that h"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/how-we-work",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else tha"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/how-we-work",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx Tell us what you need: products or categories, your farm type and anything else that h"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/knowledge",
+  "rule": "medical",
+  "field": "allText",
+  "match": "dosage",
+  "ctx": "feed supplement categories and how to read their product details, without formulations or dosages. 03 Handling veterinary products General information on receiving and storing vete"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type and"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type and an"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=farm",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type and"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=farm",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. 20,000 birds Tell us what you need: products or categories, your farm type and an"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=product",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "est details (optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "e: العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. number of packs or approximate weight Tell us what you need: products or ca"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "العربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. number of packs or approximate weight Tell us what you need: products or categ"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=product",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "ربية Navigation menu Home Language: العربية Close menu Main navigation Breadcrumb 01xxxxxxxxx e.g. number of packs or approximate weight Tell us what you need: products or categori"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=partner",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "t line Request details Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=partner",
+  "rule": "contact",
+  "field": "attrs",
+  "match": "name@example.com",
+  "ctx": "gation Breadcrumb For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry Tell us "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": " Main navigation Breadcrumb For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultr"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "in navigation Breadcrumb For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry T"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/contact?type=partner",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "navigation Breadcrumb For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry Tell"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/partner-with-us",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "t line Request details Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may stor"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/partner-with-us",
+  "rule": "contact",
+  "field": "attrs",
+  "match": "name@example.com",
+  "ctx": " the conversation For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry Tell us "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "rumb Start the conversation For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultr"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "b Start the conversation For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry T"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/partner-with-us",
+  "rule": "placeholder",
+  "field": "attrs",
+  "match": "xxx",
+  "ctx": "tart the conversation For example: export manager or business development manager 01xxxxxxxxx name@example.com For example: feed supplements or veterinary vaccines for poultry Tell"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/products/fixture-feed-alpha",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": "ity on inquiry Product information is provided for commercial reference only. It is not a treatment recommendation or guidance on use or dosage. Product description سجل اختبار آلي "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/products/fixture-feed-alpha",
+  "rule": "medical",
+  "field": "allText",
+  "match": "dosage",
+  "ctx": "for commercial reference only. It is not a treatment recommendation or guidance on use or dosage. Product description سجل اختبار آلي — ليس منتجًا حقيقيًا. Inquire about this produc"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/products/fixture-supplement-beta",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": " veterinarian. Product information is provided for commercial reference only. It is not a treatment recommendation or guidance on use or dosage. Product description سجل اختبار آلي "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/products/fixture-supplement-beta",
+  "rule": "medical",
+  "field": "allText",
+  "match": "dosage",
+  "ctx": "for commercial reference only. It is not a treatment recommendation or guidance on use or dosage. Product description سجل اختبار آلي — ليس منتجًا حقيقيًا. Inquire about this produc"
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/products/fixture-medicine-gamma",
+  "rule": "medical",
+  "field": "allText",
+  "match": "treatment",
+  "ctx": " veterinarian. Product information is provided for commercial reference only. It is not a treatment recommendation or guidance on use or dosage. Product description سجل اختبار آلي "
+ },
+ {
+  "server": "fixture",
+  "locale": "en",
+  "route": "/products/fixture-medicine-gamma",
+  "rule": "medical",
+  "field": "allText",
+  "match": "dosage",
+  "ctx": "for commercial reference only. It is not a treatment recommendation or guidance on use or dosage. Product description سجل اختبار آلي — ليس منتجًا حقيقيًا. Inquire about this produc"
+ }
+]

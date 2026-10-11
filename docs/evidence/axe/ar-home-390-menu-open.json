@@ -1,0 +1,117 @@
+{
+  "route": "/ar",
+  "url": "http://localhost:3200/ar",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "state": "menu-open",
+  "scope": "document",
+  "project": "mobile",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:54:24.826Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 12,
+      "nodes": [
+        {
+          "target": [
+            ".border-white\\/25.hover\\:bg-paper.hover\\:text-ink:nth-child(1)"
+          ],
+          "html": "<a href=\"/en\" hreflang=\"en\" lang=\"en\" aria-label=\"EN — English\" class=\"inline-flex h-11 min-w-11 items-center justify-center rounded-full border px-3 text-sm font-semibold transition-colors hover:bord",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".py-2\\.5.text-\\[clamp\\(1\\.75rem\\,7\\.5vw\\,2\\.75rem\\)\\][aria-current=\"page\"] > .w-8.text-stone-400.text-sm"
+          ],
+          "html": "<span class=\"num w-8 shrink-0 text-sm font-semibold text-stone-400\">01</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".py-2\\.5.text-\\[clamp\\(1\\.75rem\\,7\\.5vw\\,2\\.75rem\\)\\][href$=\"about\"]"
+          ],
+          "html": "<a class=\"group flex items-baseline gap-4 py-2.5 text-[clamp(1.75rem,7.5vw,2.75rem)] leading-[1.25] font-bold text-paper transition-colors hover:text-vermilion aria-[current=page]:text-vermilion\" href",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".py-2\\.5.text-\\[clamp\\(1\\.75rem\\,7\\.5vw\\,2\\.75rem\\)\\][href$=\"about\"] > .w-8.text-stone-400.text-sm"
+          ],
+          "html": "<span class=\"num w-8 shrink-0 text-sm font-semibold text-stone-400\">02</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".py-2\\.5.text-\\[clamp\\(1\\.75rem\\,7\\.5vw\\,2\\.75rem\\)\\][href$=\"poultry-solutions\"]"
+          ],
+          "html": "<a class=\"group flex items-baseline gap-4 py-2.5 text-[clamp(1.75rem,7.5vw,2.75rem)] leading-[1.25] font-bold text-paper transition-colors hover:text-vermilion aria-[current=page]:text-vermilion\" href",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".py-2\\.5.text-\\[clamp\\(1\\.75rem\\,7\\.5vw\\,2\\.75rem\\)\\][href$=\"poultry-solutions\"] > .w-8.text-stone-400.text-sm"
+          ],
+          "html": "<span class=\"num w-8 shrink-0 text-sm font-semibold text-stone-400\">03</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "li:nth-child(1) > .min-h-11.text-stone-300.underline-offset-8"
+          ],
+          "html": "<a class=\"inline-flex min-h-11 items-center text-base font-medium text-stone-300 underline-offset-8 hover:text-paper hover:underline aria-[current=page]:text-paper\" href=\"/ar/poultry-solutions\">نظرة ع",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "li:nth-child(4) > .min-h-11.text-stone-300.underline-offset-8"
+          ],
+          "html": "<a class=\"inline-flex min-h-11 items-center text-base font-medium text-stone-300 underline-offset-8 hover:text-paper hover:underline aria-[current=page]:text-paper\" href=\"/ar/solutions/breeders\">الأمه",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".border-white\\/12.py-1.border-b:nth-child(4) > .mask-line > span[data-menu-line=\"true\"] > .py-2\\.5.text-\\[clamp\\(1\\.75rem\\,7\\.5vw\\,2\\.75rem\\)\\].leading-\\[1\\.25\\] > .w-8.text-stone-400.text-sm"
+          ],
+          "html": "<span class=\"num w-8 shrink-0 text-sm font-semibold text-stone-400\">04</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".py-2\\.5.text-\\[clamp\\(1\\.75rem\\,7\\.5vw\\,2\\.75rem\\)\\][href$=\"how-we-work\"] > .w-8.text-stone-400.text-sm"
+          ],
+          "html": "<span class=\"num w-8 shrink-0 text-sm font-semibold text-stone-400\">05</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".py-2\\.5.text-\\[clamp\\(1\\.75rem\\,7\\.5vw\\,2\\.75rem\\)\\][href$=\"knowledge\"]"
+          ],
+          "html": "<a class=\"group flex items-baseline gap-4 py-2.5 text-[clamp(1.75rem,7.5vw,2.75rem)] leading-[1.25] font-bold text-paper transition-colors hover:text-vermilion aria-[current=page]:text-vermilion\" href",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".py-2\\.5.text-\\[clamp\\(1\\.75rem\\,7\\.5vw\\,2\\.75rem\\)\\][href$=\"knowledge\"] > .w-8.text-stone-400.text-sm"
+          ],
+          "html": "<span class=\"num w-8 shrink-0 text-sm font-semibold text-stone-400\">06</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    }
+  ],
+  "passes": 19
+}

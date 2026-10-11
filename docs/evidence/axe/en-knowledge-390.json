@@ -1,0 +1,117 @@
+{
+  "route": "/en/knowledge",
+  "url": "http://localhost:3200/en/knowledge",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "mobile",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:53:53.751Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 28,
+      "nodes": [
+        {
+          "target": [
+            ".text-fg-muted.link-sweep[href=\"/en\"]"
+          ],
+          "html": "<a class=\"link-sweep text-fg-muted hover:text-fg\" href=\"/en\">Home</a>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".w-\\[78\\%\\].snap-start.sm\\:w-auto:nth-child(2) > h3"
+          ],
+          "html": "<h3 class=\"mt-4 text-title font-bold text-balance text-fg\">Understanding feed supplements</h3>",
+          "reason": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "target": [
+            ".w-\\[78\\%\\].snap-start.sm\\:w-auto:nth-child(2) > .mt-3"
+          ],
+          "html": "<p class=\"mt-3 text-small text-fg-soft\">General information on feed supplement categories and how to read their product details, without formulations or dosages.</p>",
+          "reason": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "target": [
+            ".w-\\[78\\%\\].snap-start.sm\\:w-auto:nth-child(3) > .border-t.pt-4.border-line-strong > .num.text-small.font-semibold"
+          ],
+          "html": "<span class=\"num text-small font-semibold text-fg\">03</span>",
+          "reason": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "target": [
+            ".w-\\[78\\%\\].snap-start.sm\\:w-auto:nth-child(3) > h3"
+          ],
+          "html": "<h3 class=\"mt-4 text-title font-bold text-balance text-fg\">Handling veterinary products</h3>",
+          "reason": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "target": [
+            ".w-\\[78\\%\\].snap-start.sm\\:w-auto:nth-child(3) > .mt-3"
+          ],
+          "html": "<p class=\"mt-3 text-small text-fg-soft\">General information on receiving and storing veterinary products, reviewed by a qualified professional before publication and never a substitute for a veterinar",
+          "reason": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "target": [
+            ".min-h-8"
+          ],
+          "html": "<span class=\"inline-flex min-h-8 items-center rounded-full px-3 text-caption font-semibold border mt-4 w-fit gap-1.5 border-line-strong py-1 text-fg\">",
+          "reason": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "target": [
+            ".w-\\[78\\%\\].snap-start.sm\\:w-auto:nth-child(4) > .border-t.pt-4.border-line-strong > .num.text-small.font-semibold"
+          ],
+          "html": "<span class=\"num text-small font-semibold text-fg\">04</span>",
+          "reason": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "target": [
+            ".w-\\[78\\%\\].snap-start.sm\\:w-auto:nth-child(4) > h3"
+          ],
+          "html": "<h3 class=\"mt-4 text-title font-bold text-balance text-fg\">Alshorouk news</h3>",
+          "reason": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "target": [
+            ".w-\\[78\\%\\].snap-start.sm\\:w-auto:nth-child(4) > .mt-3"
+          ],
+          "html": "<p class=\"mt-3 text-small text-fg-soft\">Company updates and official announcements about our work with poultry farms.</p>",
+          "reason": "Element's background color could not be determined because it's partially obscured by another element"
+        },
+        {
+          "target": [
+            "a[href=\"/en/contact?type=general\"] > span"
+          ],
+          "html": "<span>Contact our team</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".pb-0\\.5"
+          ],
+          "html": "<span class=\"link-sweep pb-0.5\">Browse products</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 27
+}

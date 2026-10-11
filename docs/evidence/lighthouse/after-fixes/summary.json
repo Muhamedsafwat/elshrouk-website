@@ -1,0 +1,1115 @@
+{
+  "generated": "2026-10-11T03:04:30.906Z",
+  "base": "http://localhost:3200",
+  "invalidRuns": [
+    "ar-contact-desktop-r3.json: NO_NAVSTART"
+  ],
+  "results": [
+    {
+      "key": "ar-mobile",
+      "runs": 3,
+      "representative": "ar-mobile-r1.json",
+      "median": {
+        "performance": 75,
+        "lcpMs": 4102,
+        "fcpMs": 1421,
+        "tbtMs": 445,
+        "cls": 0
+      },
+      "range": {
+        "performance": [
+          74,
+          79
+        ],
+        "lcpMs": [
+          4099,
+          4103
+        ],
+        "tbtMs": [
+          310,
+          480
+        ]
+      },
+      "representativeRun": {
+        "performance": 75,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 69,
+        "fcpMs": 1421,
+        "lcpMs": 4102,
+        "cls": 0,
+        "tbtMs": 445,
+        "lcpElement": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت … [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+        "lcpPhases": [
+          {
+            "phase": "timeToFirstByte",
+            "ms": 27
+          },
+          {
+            "phase": "resourceLoadDelay",
+            "ms": 26
+          },
+          {
+            "phase": "resourceLoadDuration",
+            "ms": 28
+          },
+          {
+            "phase": "elementRenderDelay",
+            "ms": 287
+          }
+        ],
+        "jsTransferKB": 228,
+        "jsRequests": 12,
+        "benchmarkIndex": 1853,
+        "lighthouse": "12.8.2",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+      },
+      "allRuns": [
+        {
+          "file": "ar-mobile-r1.json",
+          "performance": 75,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1421,
+          "lcpMs": 4102,
+          "cls": 0,
+          "tbtMs": 445,
+          "lcpElement": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت … [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 228,
+          "jsRequests": 12,
+          "benchmarkIndex": 1853,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-mobile-r2.json",
+          "performance": 74,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1425,
+          "lcpMs": 4103,
+          "cls": 0,
+          "tbtMs": 480,
+          "lcpElement": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت … [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 228,
+          "jsRequests": 12,
+          "benchmarkIndex": 1858,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-mobile-r3.json",
+          "performance": 79,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1418,
+          "lcpMs": 4099,
+          "cls": 0,
+          "tbtMs": 310,
+          "lcpElement": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت … [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 228,
+          "jsRequests": 12,
+          "benchmarkIndex": 1861.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        }
+      ]
+    },
+    {
+      "key": "ar-desktop",
+      "runs": 3,
+      "representative": "ar-desktop-r1.json",
+      "median": {
+        "performance": 99,
+        "lcpMs": 815,
+        "fcpMs": 321,
+        "tbtMs": 46,
+        "cls": 0
+      },
+      "range": {
+        "performance": [
+          99,
+          99
+        ],
+        "lcpMs": [
+          809,
+          908
+        ],
+        "tbtMs": [
+          46,
+          46
+        ]
+      },
+      "representativeRun": {
+        "performance": 99,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 69,
+        "fcpMs": 400,
+        "lcpMs": 908,
+        "cls": 0,
+        "tbtMs": 46,
+        "lcpElement": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت … [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+        "lcpPhases": [
+          {
+            "phase": "timeToFirstByte",
+            "ms": 31
+          },
+          {
+            "phase": "resourceLoadDelay",
+            "ms": 18
+          },
+          {
+            "phase": "resourceLoadDuration",
+            "ms": 46
+          },
+          {
+            "phase": "elementRenderDelay",
+            "ms": 338
+          }
+        ],
+        "jsTransferKB": 346,
+        "jsRequests": 17,
+        "benchmarkIndex": 1853,
+        "lighthouse": "12.8.2",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+      },
+      "allRuns": [
+        {
+          "file": "ar-desktop-r1.json",
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 400,
+          "lcpMs": 908,
+          "cls": 0,
+          "tbtMs": 46,
+          "lcpElement": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت … [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 346,
+          "jsRequests": 17,
+          "benchmarkIndex": 1853,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-desktop-r2.json",
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 321,
+          "lcpMs": 809,
+          "cls": 0,
+          "tbtMs": 46,
+          "lcpElement": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت … [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 346,
+          "jsRequests": 17,
+          "benchmarkIndex": 1851,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-desktop-r3.json",
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 321,
+          "lcpMs": 815,
+          "cls": 0,
+          "tbtMs": 46,
+          "lcpElement": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت … [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 346,
+          "jsRequests": 17,
+          "benchmarkIndex": 1864.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        }
+      ]
+    },
+    {
+      "key": "ar-products-mobile",
+      "runs": 3,
+      "representative": "ar-products-mobile-r2.json",
+      "median": {
+        "performance": 88,
+        "lcpMs": 3138,
+        "fcpMs": 1092,
+        "tbtMs": 275,
+        "cls": 0
+      },
+      "range": {
+        "performance": [
+          85,
+          90
+        ],
+        "lcpMs": [
+          2873,
+          3495
+        ],
+        "tbtMs": [
+          267,
+          290
+        ]
+      },
+      "representativeRun": {
+        "performance": 88,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 69,
+        "fcpMs": 1092,
+        "lcpMs": 3138,
+        "cls": 0,
+        "tbtMs": 275,
+        "lcpElement": "بيئة تجريبية: البيانات المعروضة هنا بيانات اختبار، وليست منتجات حقيقية. [body#top > section.relative > div.container-site > p.flex]",
+        "lcpPhases": [
+          {
+            "phase": "timeToFirstByte",
+            "ms": 154
+          },
+          {
+            "phase": "elementRenderDelay",
+            "ms": 176
+          }
+        ],
+        "jsTransferKB": 347,
+        "jsRequests": 16,
+        "benchmarkIndex": 1856.5,
+        "lighthouse": "12.8.2",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+      },
+      "allRuns": [
+        {
+          "file": "ar-products-mobile-r1.json",
+          "performance": 90,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1091,
+          "lcpMs": 2873,
+          "cls": 0,
+          "tbtMs": 267,
+          "lcpElement": "بيئة تجريبية: البيانات المعروضة هنا بيانات اختبار، وليست منتجات حقيقية. [body#top > section.relative > div.container-site > p.flex]",
+          "jsTransferKB": 347,
+          "jsRequests": 16,
+          "benchmarkIndex": 1927.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-products-mobile-r2.json",
+          "performance": 88,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1092,
+          "lcpMs": 3138,
+          "cls": 0,
+          "tbtMs": 275,
+          "lcpElement": "بيئة تجريبية: البيانات المعروضة هنا بيانات اختبار، وليست منتجات حقيقية. [body#top > section.relative > div.container-site > p.flex]",
+          "jsTransferKB": 347,
+          "jsRequests": 16,
+          "benchmarkIndex": 1856.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-products-mobile-r3.json",
+          "performance": 85,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1106,
+          "lcpMs": 3495,
+          "cls": 0,
+          "tbtMs": 290,
+          "lcpElement": "بيئة تجريبية: البيانات المعروضة هنا بيانات اختبار، وليست منتجات حقيقية. [body#top > section.relative > div.container-site > p.flex]",
+          "jsTransferKB": 347,
+          "jsRequests": 16,
+          "benchmarkIndex": 1857,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        }
+      ]
+    },
+    {
+      "key": "ar-products-desktop",
+      "runs": 3,
+      "representative": "ar-products-desktop-r1.json",
+      "median": {
+        "performance": 100,
+        "lcpMs": 728,
+        "fcpMs": 308,
+        "tbtMs": 3,
+        "cls": 0
+      },
+      "range": {
+        "performance": [
+          100,
+          100
+        ],
+        "lcpMs": [
+          718,
+          766
+        ],
+        "tbtMs": [
+          2,
+          4
+        ]
+      },
+      "representativeRun": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 69,
+        "fcpMs": 309,
+        "lcpMs": 728,
+        "cls": 0,
+        "tbtMs": 4,
+        "lcpElement": "شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات البيط… [div.container-site > a.-m-1 > span.hidden > img.block]",
+        "lcpPhases": [
+          {
+            "phase": "timeToFirstByte",
+            "ms": 151
+          },
+          {
+            "phase": "resourceLoadDelay",
+            "ms": 15
+          },
+          {
+            "phase": "resourceLoadDuration",
+            "ms": 19
+          },
+          {
+            "phase": "elementRenderDelay",
+            "ms": 178
+          }
+        ],
+        "jsTransferKB": 356,
+        "jsRequests": 18,
+        "benchmarkIndex": 1868,
+        "lighthouse": "12.8.2",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+      },
+      "allRuns": [
+        {
+          "file": "ar-products-desktop-r1.json",
+          "performance": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 309,
+          "lcpMs": 728,
+          "cls": 0,
+          "tbtMs": 4,
+          "lcpElement": "شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات البيط… [div.container-site > a.-m-1 > span.hidden > img.block]",
+          "jsTransferKB": 356,
+          "jsRequests": 18,
+          "benchmarkIndex": 1868,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-products-desktop-r2.json",
+          "performance": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 308,
+          "lcpMs": 766,
+          "cls": 0,
+          "tbtMs": 3,
+          "lcpElement": "شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات البيط… [div.container-site > a.-m-1 > span.hidden > img.block]",
+          "jsTransferKB": 356,
+          "jsRequests": 18,
+          "benchmarkIndex": 1859,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-products-desktop-r3.json",
+          "performance": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 305,
+          "lcpMs": 718,
+          "cls": 0,
+          "tbtMs": 2,
+          "lcpElement": "شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات البيط… [div.container-site > a.-m-1 > span.hidden > img.block]",
+          "jsTransferKB": 356,
+          "jsRequests": 18,
+          "benchmarkIndex": 1857.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        }
+      ]
+    },
+    {
+      "key": "ar-solutions-broilers-mobile",
+      "runs": 3,
+      "representative": "ar-solutions-broilers-mobile-r1.json",
+      "median": {
+        "performance": 81,
+        "lcpMs": 4363,
+        "fcpMs": 1072,
+        "tbtMs": 211,
+        "cls": 0
+      },
+      "range": {
+        "performance": [
+          81,
+          82
+        ],
+        "lcpMs": [
+          4361,
+          4371
+        ],
+        "tbtMs": [
+          206,
+          212
+        ]
+      },
+      "representativeRun": {
+        "performance": 81,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 69,
+        "fcpMs": 1075,
+        "lcpMs": 4371,
+        "cls": 0,
+        "tbtMs": 211,
+        "lcpElement": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية. [div.absolute > div.intro-zoom > div.isolate > img.object-cover]",
+        "lcpPhases": [
+          {
+            "phase": "timeToFirstByte",
+            "ms": 27
+          },
+          {
+            "phase": "resourceLoadDelay",
+            "ms": 28
+          },
+          {
+            "phase": "resourceLoadDuration",
+            "ms": 30
+          },
+          {
+            "phase": "elementRenderDelay",
+            "ms": 277
+          }
+        ],
+        "jsTransferKB": 340,
+        "jsRequests": 15,
+        "benchmarkIndex": 1837,
+        "lighthouse": "12.8.2",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+      },
+      "allRuns": [
+        {
+          "file": "ar-solutions-broilers-mobile-r1.json",
+          "performance": 81,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1075,
+          "lcpMs": 4371,
+          "cls": 0,
+          "tbtMs": 211,
+          "lcpElement": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية. [div.absolute > div.intro-zoom > div.isolate > img.object-cover]",
+          "jsTransferKB": 340,
+          "jsRequests": 15,
+          "benchmarkIndex": 1837,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-solutions-broilers-mobile-r2.json",
+          "performance": 82,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1072,
+          "lcpMs": 4363,
+          "cls": 0,
+          "tbtMs": 206,
+          "lcpElement": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية. [div.absolute > div.intro-zoom > div.isolate > img.object-cover]",
+          "jsTransferKB": 340,
+          "jsRequests": 15,
+          "benchmarkIndex": 1854.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-solutions-broilers-mobile-r3.json",
+          "performance": 81,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1071,
+          "lcpMs": 4361,
+          "cls": 0,
+          "tbtMs": 212,
+          "lcpElement": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية. [div.absolute > div.intro-zoom > div.isolate > img.object-cover]",
+          "jsTransferKB": 340,
+          "jsRequests": 15,
+          "benchmarkIndex": 1889.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        }
+      ]
+    },
+    {
+      "key": "ar-solutions-broilers-desktop",
+      "runs": 3,
+      "representative": "ar-solutions-broilers-desktop-r1.json",
+      "median": {
+        "performance": 99,
+        "lcpMs": 961,
+        "fcpMs": 304,
+        "tbtMs": 0,
+        "cls": 0
+      },
+      "range": {
+        "performance": [
+          99,
+          99
+        ],
+        "lcpMs": [
+          960,
+          966
+        ],
+        "tbtMs": [
+          0,
+          1
+        ]
+      },
+      "representativeRun": {
+        "performance": 99,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 69,
+        "fcpMs": 304,
+        "lcpMs": 961,
+        "cls": 0,
+        "tbtMs": 0,
+        "lcpElement": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية. [div.absolute > div.intro-zoom > div.isolate > img.object-cover]",
+        "lcpPhases": [
+          {
+            "phase": "timeToFirstByte",
+            "ms": 24
+          },
+          {
+            "phase": "resourceLoadDelay",
+            "ms": 18
+          },
+          {
+            "phase": "resourceLoadDuration",
+            "ms": 22
+          },
+          {
+            "phase": "elementRenderDelay",
+            "ms": 283
+          }
+        ],
+        "jsTransferKB": 361,
+        "jsRequests": 19,
+        "benchmarkIndex": 1849,
+        "lighthouse": "12.8.2",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+      },
+      "allRuns": [
+        {
+          "file": "ar-solutions-broilers-desktop-r1.json",
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 304,
+          "lcpMs": 961,
+          "cls": 0,
+          "tbtMs": 0,
+          "lcpElement": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية. [div.absolute > div.intro-zoom > div.isolate > img.object-cover]",
+          "jsTransferKB": 361,
+          "jsRequests": 19,
+          "benchmarkIndex": 1849,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-solutions-broilers-desktop-r2.json",
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 307,
+          "lcpMs": 966,
+          "cls": 0,
+          "tbtMs": 1,
+          "lcpElement": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية. [div.absolute > div.intro-zoom > div.isolate > img.object-cover]",
+          "jsTransferKB": 361,
+          "jsRequests": 19,
+          "benchmarkIndex": 1862.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-solutions-broilers-desktop-r3.json",
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 304,
+          "lcpMs": 960,
+          "cls": 0,
+          "tbtMs": 0,
+          "lcpElement": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية. [div.absolute > div.intro-zoom > div.isolate > img.object-cover]",
+          "jsTransferKB": 361,
+          "jsRequests": 19,
+          "benchmarkIndex": 1897,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        }
+      ]
+    },
+    {
+      "key": "ar-contact-mobile",
+      "runs": 3,
+      "representative": "ar-contact-mobile-r1.json",
+      "median": {
+        "performance": 87,
+        "lcpMs": 2707,
+        "fcpMs": 1085,
+        "tbtMs": 340,
+        "cls": 0
+      },
+      "range": {
+        "performance": [
+          87,
+          88
+        ],
+        "lcpMs": [
+          2704,
+          3298
+        ],
+        "tbtMs": [
+          261,
+          387
+        ]
+      },
+      "representativeRun": {
+        "performance": 87,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 69,
+        "fcpMs": 1087,
+        "lcpMs": 2704,
+        "cls": 0,
+        "tbtMs": 387,
+        "lcpElement": "اختر نوع استفسارك واترك بياناتك، ويتواصل معك فريقنا لمناقشة طلبك، سواء كان احتي… [section.bg-surface > div.container-site > div.grid-site > p.col-span-4]",
+        "lcpPhases": [
+          {
+            "phase": "timeToFirstByte",
+            "ms": 75
+          },
+          {
+            "phase": "elementRenderDelay",
+            "ms": 162
+          }
+        ],
+        "jsTransferKB": 327,
+        "jsRequests": 14,
+        "benchmarkIndex": 1877.5,
+        "lighthouse": "12.8.2",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+      },
+      "allRuns": [
+        {
+          "file": "ar-contact-mobile-r1.json",
+          "performance": 87,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1087,
+          "lcpMs": 2704,
+          "cls": 0,
+          "tbtMs": 387,
+          "lcpElement": "اختر نوع استفسارك واترك بياناتك، ويتواصل معك فريقنا لمناقشة طلبك، سواء كان احتي… [section.bg-surface > div.container-site > div.grid-site > p.col-span-4]",
+          "jsTransferKB": 327,
+          "jsRequests": 14,
+          "benchmarkIndex": 1877.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-contact-mobile-r2.json",
+          "performance": 87,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1065,
+          "lcpMs": 3298,
+          "cls": 0,
+          "tbtMs": 261,
+          "lcpElement": "اختر نوع استفسارك واترك بياناتك، ويتواصل معك فريقنا لمناقشة طلبك، سواء كان احتي… [section.bg-surface > div.container-site > div.grid-site > p.col-span-4]",
+          "jsTransferKB": 327,
+          "jsRequests": 14,
+          "benchmarkIndex": 1858.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-contact-mobile-r3.json",
+          "performance": 88,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1085,
+          "lcpMs": 2707,
+          "cls": 0,
+          "tbtMs": 340,
+          "lcpElement": "اختر نوع استفسارك واترك بياناتك، ويتواصل معك فريقنا لمناقشة طلبك، سواء كان احتي… [section.bg-surface > div.container-site > div.grid-site > p.col-span-4]",
+          "jsTransferKB": 327,
+          "jsRequests": 14,
+          "benchmarkIndex": 1853,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        }
+      ]
+    },
+    {
+      "key": "ar-contact-desktop",
+      "runs": 3,
+      "representative": "ar-contact-desktop-r1.json",
+      "median": {
+        "performance": 100,
+        "lcpMs": 758,
+        "fcpMs": 307,
+        "tbtMs": 2,
+        "cls": 0
+      },
+      "range": {
+        "performance": [
+          100,
+          100
+        ],
+        "lcpMs": [
+          743,
+          785
+        ],
+        "tbtMs": [
+          2,
+          2
+        ]
+      },
+      "representativeRun": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 69,
+        "fcpMs": 306,
+        "lcpMs": 743,
+        "cls": 0,
+        "tbtMs": 2,
+        "lcpElement": "تحدث مع فريق الشروق [div.col-span-4 > h1.mt-6 > span.mask-line > span]",
+        "lcpPhases": [
+          {
+            "phase": "timeToFirstByte",
+            "ms": 68
+          },
+          {
+            "phase": "elementRenderDelay",
+            "ms": 182
+          }
+        ],
+        "jsTransferKB": 348,
+        "jsRequests": 18,
+        "benchmarkIndex": 1842,
+        "lighthouse": "12.8.2",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+      },
+      "allRuns": [
+        {
+          "file": "ar-contact-desktop-r1.json",
+          "performance": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 306,
+          "lcpMs": 743,
+          "cls": 0,
+          "tbtMs": 2,
+          "lcpElement": "تحدث مع فريق الشروق [div.col-span-4 > h1.mt-6 > span.mask-line > span]",
+          "jsTransferKB": 348,
+          "jsRequests": 18,
+          "benchmarkIndex": 1842,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-contact-desktop-r2.json",
+          "performance": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 318,
+          "lcpMs": 758,
+          "cls": 0,
+          "tbtMs": 2,
+          "lcpElement": "تحدث مع فريق الشروق [div.col-span-4 > h1.mt-6 > span.mask-line > span]",
+          "jsTransferKB": 348,
+          "jsRequests": 18,
+          "benchmarkIndex": 1893,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "ar-contact-desktop-r4.json",
+          "performance": 100,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 307,
+          "lcpMs": 785,
+          "cls": 0,
+          "tbtMs": 2,
+          "lcpElement": "تحدث مع فريق الشروق [div.col-span-4 > h1.mt-6 > span.mask-line > span]",
+          "jsTransferKB": 348,
+          "jsRequests": 18,
+          "benchmarkIndex": 1864,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        }
+      ]
+    },
+    {
+      "key": "en-mobile",
+      "runs": 3,
+      "representative": "en-mobile-r3.json",
+      "median": {
+        "performance": 77,
+        "lcpMs": 3868,
+        "fcpMs": 1082,
+        "tbtMs": 454,
+        "cls": 0
+      },
+      "range": {
+        "performance": [
+          75,
+          82
+        ],
+        "lcpMs": [
+          3725,
+          3971
+        ],
+        "tbtMs": [
+          317,
+          492
+        ]
+      },
+      "representativeRun": {
+        "performance": 77,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 69,
+        "fcpMs": 1217,
+        "lcpMs": 3868,
+        "cls": 0,
+        "tbtMs": 454,
+        "lcpElement": "A large flock of white hens and roosters inside a commercial poultry house, wit… [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+        "lcpPhases": [
+          {
+            "phase": "timeToFirstByte",
+            "ms": 28
+          },
+          {
+            "phase": "resourceLoadDelay",
+            "ms": 27
+          },
+          {
+            "phase": "resourceLoadDuration",
+            "ms": 22
+          },
+          {
+            "phase": "elementRenderDelay",
+            "ms": 254
+          }
+        ],
+        "jsTransferKB": 228,
+        "jsRequests": 12,
+        "benchmarkIndex": 1853.5,
+        "lighthouse": "12.8.2",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+      },
+      "allRuns": [
+        {
+          "file": "en-mobile-r1.json",
+          "performance": 82,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1082,
+          "lcpMs": 3725,
+          "cls": 0,
+          "tbtMs": 317,
+          "lcpElement": "A large flock of white hens and roosters inside a commercial poultry house, wit… [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 228,
+          "jsRequests": 12,
+          "benchmarkIndex": 1967,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "en-mobile-r2.json",
+          "performance": 75,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1073,
+          "lcpMs": 3971,
+          "cls": 0,
+          "tbtMs": 492,
+          "lcpElement": "A large flock of white hens and roosters inside a commercial poultry house, wit… [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 228,
+          "jsRequests": 12,
+          "benchmarkIndex": 1885.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "en-mobile-r3.json",
+          "performance": 77,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 1217,
+          "lcpMs": 3868,
+          "cls": 0,
+          "tbtMs": 454,
+          "lcpElement": "A large flock of white hens and roosters inside a commercial poultry house, wit… [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 228,
+          "jsRequests": 12,
+          "benchmarkIndex": 1853.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        }
+      ]
+    },
+    {
+      "key": "en-desktop",
+      "runs": 3,
+      "representative": "en-desktop-r1.json",
+      "median": {
+        "performance": 99,
+        "lcpMs": 855,
+        "fcpMs": 345,
+        "tbtMs": 58,
+        "cls": 0
+      },
+      "range": {
+        "performance": [
+          99,
+          99
+        ],
+        "lcpMs": [
+          851,
+          856
+        ],
+        "tbtMs": [
+          49,
+          62
+        ]
+      },
+      "representativeRun": {
+        "performance": 99,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 69,
+        "fcpMs": 343,
+        "lcpMs": 856,
+        "cls": 0,
+        "tbtMs": 62,
+        "lcpElement": "A large flock of white hens and roosters inside a commercial poultry house, wit… [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+        "lcpPhases": [
+          {
+            "phase": "timeToFirstByte",
+            "ms": 28
+          },
+          {
+            "phase": "resourceLoadDelay",
+            "ms": 19
+          },
+          {
+            "phase": "resourceLoadDuration",
+            "ms": 26
+          },
+          {
+            "phase": "elementRenderDelay",
+            "ms": 325
+          }
+        ],
+        "jsTransferKB": 346,
+        "jsRequests": 17,
+        "benchmarkIndex": 1873,
+        "lighthouse": "12.8.2",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+      },
+      "allRuns": [
+        {
+          "file": "en-desktop-r1.json",
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 343,
+          "lcpMs": 856,
+          "cls": 0,
+          "tbtMs": 62,
+          "lcpElement": "A large flock of white hens and roosters inside a commercial poultry house, wit… [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 346,
+          "jsRequests": 17,
+          "benchmarkIndex": 1873,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "en-desktop-r2.json",
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 347,
+          "lcpMs": 851,
+          "cls": 0,
+          "tbtMs": 49,
+          "lcpElement": "A large flock of white hens and roosters inside a commercial poultry house, wit… [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 346,
+          "jsRequests": 17,
+          "benchmarkIndex": 1893,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        },
+        {
+          "file": "en-desktop-r3.json",
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 69,
+          "fcpMs": 345,
+          "lcpMs": 855,
+          "cls": 0,
+          "tbtMs": 58,
+          "lcpElement": "A large flock of white hens and roosters inside a commercial poultry house, wit… [div.intro-zoom > div.absolute > div.isolate > img.object-cover]",
+          "jsTransferKB": 346,
+          "jsRequests": 17,
+          "benchmarkIndex": 1851.5,
+          "lighthouse": "12.8.2",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+        }
+      ]
+    }
+  ]
+}

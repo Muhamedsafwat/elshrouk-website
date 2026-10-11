@@ -1,0 +1,1361 @@
+[
+ {
+  "shot": "screenshots/ar/about/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [
+   "img [x -36..1060 / 1024] clipped-by <div class=\"isolate overflow-hidden bg-stone-200 absolute inset-0\">"
+  ],
+  "orphans": [
+   "h2 \"ثلاثة قطاعات، ولكل منها احتياجه\" → last line \"احتياجه\" (3 lines)",
+   "h2 \"نطاق عملنا بالأرقام\" → last line \"بالأرقام\" (2 lines)",
+   "h2 \"بفهم احتياج مزرعتك.\" → last line \"مزرعتك.\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/about/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [
+   "img [x -45..1325 / 1280] clipped-by <div class=\"isolate overflow-hidden bg-stone-200 absolute inset-0\">"
+  ],
+  "orphans": [
+   "h2 \"نطاق عملنا بالأرقام\" → last line \"بالأرقام\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/about/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [
+   "img [x -50..1490 / 1440] clipped-by <div class=\"isolate overflow-hidden bg-stone-200 absolute inset-0\">"
+  ],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 10013
+ },
+ {
+  "shot": "screenshots/ar/about/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [
+   "img [x -50..1490 / 1440] clipped-by <div class=\"isolate overflow-hidden bg-stone-200 absolute inset-0\">"
+  ],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/about/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [
+   "img [x -67..1987 / 1920] clipped-by <div class=\"isolate overflow-hidden bg-stone-200 absolute inset-0\">"
+  ],
+  "orphans": [
+   "h2 \"نطاق عملنا بالأرقام\" → last line \"بالأرقام\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/about/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"في دورة الإنتاج.\" → last line \"الإنتاج.\" (2 lines)",
+   "h2 \"نطاق عملنا بالأرقام\" → last line \"بالأرقام\" (2 lines)",
+   "p \"حوالي 150 منتجًا نوزعه من الأدوية واللقاحات البيطرية\" → last line \"البيطرية\" (4 lines)",
+   "h2 \"بفهم احتياج مزرعتك.\" → last line \"مزرعتك.\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/about/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"في دورة الإنتاج.\" → last line \"الإنتاج.\" (2 lines)",
+   "h2 \"بفهم احتياج مزرعتك.\" → last line \"مزرعتك.\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/about/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h2 \"بفهم احتياج مزرعتك.\" → last line \"مزرعتك.\" (2 lines)"
+  ],
+  "consoleErrors": [],
+  "pageHeight": 10081
+ },
+ {
+  "shot": "screenshots/ar/about/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h2 \"بفهم احتياج مزرعتك.\" → last line \"مزرعتك.\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/about/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/about/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/contact/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/contact/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/contact/1440-form.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "firstFieldCoveredBy": []
+ },
+ {
+  "shot": "screenshots/ar/contact/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 3177
+ },
+ {
+  "shot": "screenshots/ar/contact/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/contact/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/contact/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/contact/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/contact/390-form.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "firstFieldCoveredBy": []
+ },
+ {
+  "shot": "screenshots/ar/contact/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 5554
+ },
+ {
+  "shot": "screenshots/ar/contact/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/contact/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/contact/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/home/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"تحديد المنتجات المناسبة\" → last line \"المناسبة\" (2 lines)",
+   "h3 \"[اختبار] منتج بيطري تجريبي\" → last line \"تجريبي\" (3 lines)",
+   "h3 \"[اختبار] مكمل أعلاف تجريبي\" → last line \"تجريبي\" (3 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/home/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/home/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 15539
+ },
+ {
+  "shot": "screenshots/ar/home/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/home/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/home/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"تحديد المنتجات المناسبة\" → last line \"المناسبة\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/home/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/home/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 19261
+ },
+ {
+  "shot": "screenshots/ar/home/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/home/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/home/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/home/scroll-1440/23.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/home/scroll-390/31.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/how-we-work/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"فهم احتياج المزرعة\" → last line \"المزرعة\" (2 lines)",
+   "h3 \"تحديد المنتجات المناسبة\" → last line \"المناسبة\" (2 lines)",
+   "h3 \"تأكيد الطلب والتوافر\" → last line \"والتوافر\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/how-we-work/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"تحديد المنتجات المناسبة\" → last line \"المناسبة\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/how-we-work/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"تحديد المنتجات المناسبة\" → last line \"المناسبة\" (2 lines)"
+  ],
+  "consoleErrors": [],
+  "pageHeight": 5920
+ },
+ {
+  "shot": "screenshots/ar/how-we-work/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"تحديد المنتجات المناسبة\" → last line \"المناسبة\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/how-we-work/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"تحديد المنتجات المناسبة\" → last line \"المناسبة\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/how-we-work/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"من احتياج المزرعة\" → last line \"المزرعة\" (2 lines)",
+   "h3 \"فهم احتياج المزرعة\" → last line \"المزرعة\" (2 lines)",
+   "h3 \"تحديد المنتجات المناسبة\" → last line \"المناسبة\" (2 lines)",
+   "h3 \"تأكيد الطلب والتوافر\" → last line \"والتوافر\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/how-we-work/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"تحديد المنتجات المناسبة\" → last line \"المناسبة\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/how-we-work/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"تحديد المنتجات المناسبة\" → last line \"المناسبة\" (2 lines)"
+  ],
+  "consoleErrors": [],
+  "pageHeight": 7605
+ },
+ {
+  "shot": "screenshots/ar/how-we-work/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"تحديد المنتجات المناسبة\" → last line \"المناسبة\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/how-we-work/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/how-we-work/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/knowledge/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"أعمال مزارع الدواجن\" → last line \"الدواجن\" (2 lines)",
+   "h3 \"التوعية بمكملات الأعلاف\" → last line \"الأعلاف\" (2 lines)",
+   "h3 \"التعامل مع المنتجات البيطرية\" → last line \"البيطرية\" (3 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/knowledge/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"التوعية بمكملات الأعلاف\" → last line \"الأعلاف\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/knowledge/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"التوعية بمكملات الأعلاف\" → last line \"الأعلاف\" (2 lines)"
+  ],
+  "consoleErrors": [],
+  "pageHeight": 3088
+ },
+ {
+  "shot": "screenshots/ar/knowledge/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"التوعية بمكملات الأعلاف\" → last line \"الأعلاف\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/knowledge/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"التوعية بمكملات الأعلاف\" → last line \"الأعلاف\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/knowledge/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [
+   "h3 \"التوعية بمكملات الأعلاف\" [x -153..66 / 320] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"معلومات عامة تعرّف بفئات مكملات الأعلاف وكيفية قراءة بياناته\" [x -153..66 / 320] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "h3 \"التعامل مع المنتجات البيطرية\" [x -387..-169 / 320] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"معلومات عامة حول استلام المنتجات البيطرية وحفظها، يراجعها مخ\" [x -387..-169 / 320] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "h3 \"أخبار الشروق\" [x -622..-403 / 320] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"مستجدات الشركة وإعلاناتها الرسمية المتعلقة بعملنا مع مزارع ا\" [x -622..-403 / 320] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">"
+  ],
+  "orphans": [
+   "h3 \"التوعية بمكملات الأعلاف\" → last line \"الأعلاف\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/knowledge/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [
+   "h3 \"التوعية بمكملات الأعلاف\" [x -172..75 / 360] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"معلومات عامة تعرّف بفئات مكملات الأعلاف وكيفية قراءة بياناته\" [x -172..75 / 360] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "h3 \"التعامل مع المنتجات البيطرية\" [x -435..-188 / 360] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"معلومات عامة حول استلام المنتجات البيطرية وحفظها، يراجعها مخ\" [x -435..-188 / 360] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "h3 \"أخبار الشروق\" [x -698..-451 / 360] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"مستجدات الشركة وإعلاناتها الرسمية المتعلقة بعملنا مع مزارع ا\" [x -698..-451 / 360] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">"
+  ],
+  "orphans": [
+   "h3 \"التوعية بمكملات الأعلاف\" → last line \"الأعلاف\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/knowledge/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [
+   "h3 \"التوعية بمكملات الأعلاف\" [x -185..83 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"معلومات عامة تعرّف بفئات مكملات الأعلاف وكيفية قراءة بياناته\" [x -185..83 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "h3 \"التعامل مع المنتجات البيطرية\" [x -468..-201 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"معلومات عامة حول استلام المنتجات البيطرية وحفظها، يراجعها مخ\" [x -468..-201 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "h3 \"أخبار الشروق\" [x -752..-484 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"مستجدات الشركة وإعلاناتها الرسمية المتعلقة بعملنا مع مزارع ا\" [x -752..-484 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">"
+  ],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 4166
+ },
+ {
+  "shot": "screenshots/ar/knowledge/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [
+   "h3 \"التوعية بمكملات الأعلاف\" [x -185..83 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"معلومات عامة تعرّف بفئات مكملات الأعلاف وكيفية قراءة بياناته\" [x -185..83 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "h3 \"التعامل مع المنتجات البيطرية\" [x -468..-201 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"معلومات عامة حول استلام المنتجات البيطرية وحفظها، يراجعها مخ\" [x -468..-201 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "h3 \"أخبار الشروق\" [x -752..-484 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"مستجدات الشركة وإعلاناتها الرسمية المتعلقة بعملنا مع مزارع ا\" [x -752..-484 / 390] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">"
+  ],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/knowledge/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [
+   "h3 \"التوعية بمكملات الأعلاف\" [x -202..93 / 430] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"معلومات عامة تعرّف بفئات مكملات الأعلاف وكيفية قراءة بياناته\" [x -202..93 / 430] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "h3 \"التعامل مع المنتجات البيطرية\" [x -513..-218 / 430] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"معلومات عامة حول استلام المنتجات البيطرية وحفظها، يراجعها مخ\" [x -513..-218 / 430] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "h3 \"أخبار الشروق\" [x -824..-529 / 430] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">",
+   "p \"مستجدات الشركة وإعلاناتها الرسمية المتعلقة بعملنا مع مزارع ا\" [x -824..-529 / 430] clipped-by <ul class=\"mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 \">"
+  ],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/knowledge/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/missing-page/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/missing-page/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/missing-page/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 1449
+ },
+ {
+  "shot": "screenshots/ar/missing-page/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/missing-page/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/missing-page/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/missing-page/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/missing-page/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 2546
+ },
+ {
+  "shot": "screenshots/ar/missing-page/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/missing-page/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/missing-page/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/mobile-menu/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/nav-dropdown/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/partner-with-us/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/partner-with-us/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/partner-with-us/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 5784
+ },
+ {
+  "shot": "screenshots/ar/partner-with-us/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/partner-with-us/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/partner-with-us/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"لنناقش توزيع منتجاتك\" → last line \"منتجاتك\" (2 lines)",
+   "h2 \"مجالات نرحب بمناقشتها\" → last line \"بمناقشتها\" (2 lines)",
+   "h2 \"ابدأ النقاش معنا\" → last line \"معنا\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/partner-with-us/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"لنناقش توزيع منتجاتك\" → last line \"منتجاتك\" (2 lines)",
+   "h2 \"مجالات نرحب بمناقشتها\" → last line \"بمناقشتها\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/partner-with-us/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"لنناقش توزيع منتجاتك\" → last line \"منتجاتك\" (2 lines)"
+  ],
+  "consoleErrors": [],
+  "pageHeight": 7606
+ },
+ {
+  "shot": "screenshots/ar/partner-with-us/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"لنناقش توزيع منتجاتك\" → last line \"منتجاتك\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/partner-with-us/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"لنناقش توزيع منتجاتك\" → last line \"منتجاتك\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/partner-with-us/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/privacy/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/privacy/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/privacy/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 5173
+ },
+ {
+  "shot": "screenshots/ar/privacy/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/privacy/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/privacy/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"سياسة الخصوصية\" → last line \"الخصوصية\" (2 lines)",
+   "h2 \"أساس المعالجة والموافقة\" → last line \"والموافقة\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/privacy/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"سياسة الخصوصية\" → last line \"الخصوصية\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/privacy/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 7299
+ },
+ {
+  "shot": "screenshots/ar/privacy/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/privacy/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/privacy/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products-fixture-feed-alpha/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products-fixture-feed-alpha/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products-fixture-feed-alpha/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 2741
+ },
+ {
+  "shot": "screenshots/ar/products-fixture-feed-alpha/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products-fixture-feed-alpha/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products-fixture-feed-alpha/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products-fixture-feed-alpha/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products-fixture-feed-alpha/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 4162
+ },
+ {
+  "shot": "screenshots/ar/products-fixture-feed-alpha/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products-fixture-feed-alpha/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products-fixture-feed-alpha/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 3608
+ },
+ {
+  "shot": "screenshots/ar/products/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 5105
+ },
+ {
+  "shot": "screenshots/ar/products/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/products/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/solutions-broilers/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h2 \"احتياجات الإمداد في مزارع التسمين\" → last line \"التسمين\" (4 lines)",
+   "h3 \"أعلاف الدواجن\" → last line \"الدواجن\" (2 lines)",
+   "h3 \"مكملات الأعلاف\" → last line \"الأعلاف\" (2 lines)",
+   "h3 \"الأدوية البيطرية\" → last line \"البيطرية\" (2 lines)",
+   "h3 \"اللقاحات البيطرية\" → last line \"البيطرية\" (2 lines)",
+   "h3 \"[اختبار] منتج بيطري تجريبي\" → last line \"تجريبي\" (3 lines)",
+   "span \"انتقل إلى حلول البياض\" → last line \"البياض\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/solutions-broilers/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"اللقاحات البيطرية\" → last line \"البيطرية\" (2 lines)",
+   "span \"انتقل إلى حلول البياض\" → last line \"البياض\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/solutions-broilers/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "span \"انتقل إلى حلول البياض\" → last line \"البياض\" (2 lines)"
+  ],
+  "consoleErrors": [],
+  "pageHeight": 8694
+ },
+ {
+  "shot": "screenshots/ar/solutions-broilers/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "span \"انتقل إلى حلول البياض\" → last line \"البياض\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/solutions-broilers/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "span \"انتقل إلى حلول البياض\" → last line \"البياض\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/solutions-broilers/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"كل دورة تسمين\" → last line \"تسمين\" (2 lines)",
+   "span \"انتقل إلى حلول البياض\" → last line \"البياض\" (3 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/solutions-broilers/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "span \"انتقل إلى حلول البياض\" → last line \"البياض\" (3 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/solutions-broilers/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": [],
+  "pageHeight": 12082
+ },
+ {
+  "shot": "screenshots/ar/solutions-broilers/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/solutions-broilers/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "div \"تصفح الفئات التي نعمل على إتاحتها لمزارع التسمين، وأرسل استفسارًا عن أ\" → last line \"البيطري.\" (5 lines)",
+   "span \"انتقل إلى حلول البياض\" → last line \"البياض\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/ar/solutions-broilers/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "span \"انتقل إلى حلول البياض\" → last line \"البياض\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/home/1024.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"Feed supplements\" → last line \"supplements\" (2 lines)",
+   "h3 \"Veterinary medicines\" → last line \"medicines\" (2 lines)",
+   "p \"Your farm\" → last line \"farm\" (2 lines)",
+   "h3 \"[TEST] Fixture veterinary item\" → last line \"item\" (4 lines)",
+   "h3 \"[TEST] Fixture supplement item\" → last line \"item\" (4 lines)",
+   "h2 \"Poultry solutions\" → last line \"solutions\" (2 lines)",
+   "h2 \"Product categories\" → last line \"categories\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/home/1280.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"Veterinary medicines\" → last line \"medicines\" (2 lines)",
+   "p \"Your farm\" → last line \"farm\" (2 lines)",
+   "h3 \"[TEST] Fixture supplement item\" → last line \"item\" (3 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/home/1440-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"Veterinary medicines\" → last line \"medicines\" (2 lines)",
+   "p \"Your farm\" → last line \"farm\" (2 lines)",
+   "div \"They shape how we present products, how we handle requests and how we \" → last line \"farm.\" (4 lines)"
+  ],
+  "consoleErrors": [],
+  "pageHeight": 16482
+ },
+ {
+  "shot": "screenshots/en/home/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"Veterinary medicines\" → last line \"medicines\" (2 lines)",
+   "p \"Your farm\" → last line \"farm\" (2 lines)",
+   "div \"They shape how we present products, how we handle requests and how we \" → last line \"farm.\" (4 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/home/1920.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"Veterinary medicines\" → last line \"medicines\" (2 lines)",
+   "p \"Your farm\" → last line \"farm\" (2 lines)",
+   "div \"They shape how we present products, how we handle requests and how we \" → last line \"farm.\" (4 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/home/320.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"Rooted in the poultry industry,\" → last line \"industry,\" (3 lines)",
+   "h3 \"Feed supplements\" → last line \"supplements\" (2 lines)",
+   "h3 \"Veterinary medicines\" → last line \"medicines\" (2 lines)",
+   "h3 \"Veterinary vaccines\" → last line \"vaccines\" (2 lines)",
+   "div \"They shape how we present products, how we handle requests and how we \" → last line \"farm.\" (5 lines)",
+   "h2 \"Selected products\" → last line \"products\" (2 lines)",
+   "div \"A selection of approved products from our catalogue. Browse the catalo\" → last line \"directly.\" (5 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/home/360.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h1 \"Rooted in the poultry industry,\" → last line \"industry,\" (3 lines)",
+   "h3 \"Veterinary medicines\" → last line \"medicines\" (2 lines)",
+   "h3 \"Veterinary vaccines\" → last line \"vaccines\" (2 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/home/390-full.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "div \"They shape how we present products, how we handle requests and how we \" → last line \"farm.\" (4 lines)"
+  ],
+  "consoleErrors": [],
+  "pageHeight": 20708
+ },
+ {
+  "shot": "screenshots/en/home/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "div \"They shape how we present products, how we handle requests and how we \" → last line \"farm.\" (4 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/home/430.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/home/768.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/home/scroll-1440/25.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"Veterinary medicines\" → last line \"medicines\" (2 lines)",
+   "p \"Your farm\" → last line \"farm\" (2 lines)",
+   "div \"They shape how we present products, how we handle requests and how we \" → last line \"farm.\" (4 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/mobile-menu/390.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "div \"They shape how we present products, how we handle requests and how we \" → last line \"farm.\" (4 lines)"
+  ],
+  "consoleErrors": []
+ },
+ {
+  "shot": "screenshots/en/nav-dropdown/1440.png",
+  "overflowX": 0,
+  "brokenImages": [],
+  "offViewport": [],
+  "orphans": [
+   "h3 \"Veterinary medicines\" → last line \"medicines\" (2 lines)",
+   "p \"Your farm\" → last line \"farm\" (2 lines)",
+   "div \"They shape how we present products, how we handle requests and how we \" → last line \"farm.\" (4 lines)"
+  ],
+  "consoleErrors": []
+ }
+]

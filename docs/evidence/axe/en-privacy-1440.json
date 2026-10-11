@@ -1,0 +1,117 @@
+{
+  "route": "/en/privacy",
+  "url": "http://localhost:3200/en/privacy",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "desktop",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:49:07.986Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 19,
+      "nodes": [
+        {
+          "target": [
+            ".lg\\:inline-flex > span"
+          ],
+          "html": "<span>Talk to our team</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".link-sweep.text-fg-muted[href=\"/en\"]"
+          ],
+          "html": "<a class=\"link-sweep text-fg-muted hover:text-fg\" href=\"/en\">Home</a>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[href=\"/en/contact?type=general\"] > span"
+          ],
+          "html": "<span>Go to the contact form</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".min-h-10.text-fg-soft[href=\"/en\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Home</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.text-fg-soft[href$=\"about\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">About</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.text-fg-soft[href$=\"how-we-work\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">How we work</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.text-fg-soft[href$=\"knowledge\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Knowledge</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[href$=\"partner-with-us\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Partner with us</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.text-fg-soft[href$=\"contact\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Contact</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.text-fg-soft[href$=\"poultry-solutions\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Overview</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.text-fg-soft[href$=\"broilers\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Broilers</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.text-fg-soft[href$=\"layers\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Layers</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 26
+}

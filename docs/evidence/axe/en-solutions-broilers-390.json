@@ -1,0 +1,117 @@
+{
+  "route": "/en/solutions/broilers",
+  "url": "http://localhost:3200/en/solutions/broilers",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "mobile",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:53:21.422Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 33,
+      "nodes": [
+        {
+          "target": [
+            ".text-stone-200.hover\\:text-paper[href=\"/en\"]"
+          ],
+          "html": "<a class=\"link-sweep text-stone-200 hover:text-paper\" href=\"/en\">Home</a>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".text-stone-200.hover\\:text-paper[href$=\"poultry-solutions\"]"
+          ],
+          "html": "<a class=\"link-sweep text-stone-200 hover:text-paper\" href=\"/en/poultry-solutions\">Poultry solutions</a>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".text-paper.font-medium[aria-current=\"page\"]"
+          ],
+          "html": "<span aria-current=\"page\" class=\"font-medium text-paper\">Broilers</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".eyebrow.intro-fade.gap-3"
+          ],
+          "html": "<p class=\"eyebrow intro-fade flex items-center gap-3 text-fg-soft\" style=\"--i:0\">",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".intro-line.mask-line:nth-child(1) > span"
+          ],
+          "html": "<span>Every broiler cycle starts</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".intro-line.mask-line:nth-child(2) > span"
+          ],
+          "html": "<span>with clear supply planning.</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".intro-fade.max-w-\\[44ch\\].text-lead"
+          ],
+          "html": "<p class=\"intro-fade max-w-[44ch] text-lead text-fg-soft\" style=\"--i:2\">We work with broiler farms to supply poultry feed, feed supplements, veterinary medicines and vaccines, coordinated around the r",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".sm\\:w-auto > span"
+          ],
+          "html": "<span>Request a product consultation</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "a[href=\"/en/products?segment=broilers\"] > .pb-0\\.5.link-sweep"
+          ],
+          "html": "<span class=\"link-sweep pb-0.5\">View all</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "li:nth-child(1) > article > .aspect-\\[4\\/3\\].bg-stone-100.overflow-hidden > .py-1\\.5.start-4.top-4"
+          ],
+          "html": "<span class=\"absolute start-4 top-4 inline-flex items-center gap-2 rounded-full bg-paper/95 px-3 py-1.5 text-caption font-semibold text-ink\">",
+          "reason": "Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "li:nth-child(2) > article > .aspect-\\[4\\/3\\].bg-stone-100.overflow-hidden > .py-1\\.5.start-4.top-4"
+          ],
+          "html": "<span class=\"absolute start-4 top-4 inline-flex items-center gap-2 rounded-full bg-paper/95 px-3 py-1.5 text-caption font-semibold text-ink\">",
+          "reason": "Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".p-8 > .group\\/link.hover\\:text-accent.focus-visible\\:text-accent > .pb-0\\.5.link-sweep"
+          ],
+          "html": "<span class=\"link-sweep pb-0.5\">Contact us</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 30
+}

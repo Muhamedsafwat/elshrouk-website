@@ -1,0 +1,117 @@
+{
+  "route": "/en/products/fixture-feed-alpha",
+  "url": "http://localhost:3200/en/products/fixture-feed-alpha",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "desktop",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:48:48.452Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 24,
+      "nodes": [
+        {
+          "target": [
+            ".lg\\:inline-flex > span"
+          ],
+          "html": "<span>Talk to our team</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".link-sweep.text-fg-muted[href=\"/en\"]"
+          ],
+          "html": "<a class=\"link-sweep text-fg-muted hover:text-fg\" href=\"/en\">Home</a>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".link-sweep.text-fg-muted[href$=\"products\"]"
+          ],
+          "html": "<a class=\"link-sweep text-fg-muted hover:text-fg\" href=\"/en/products\">Products</a>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".sm\\:w-auto > span"
+          ],
+          "html": "<span>Inquire about this product</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".link-sweep[href=\"/en/products?category=feed\"]"
+          ],
+          "html": "<a class=\"link-sweep\" href=\"/en/products?category=feed\">Poultry feed</a>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[href=\"/en/products?segment=broilers\"]"
+          ],
+          "html": "<a class=\"link-sweep\" href=\"/en/products?segment=broilers\">Broilers</a>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".mt-10[data-reveal=\"up\"][data-revealed=\"\"] > .h-15.px-8[aria-haspopup=\"dialog\"] > span"
+          ],
+          "html": "<span>Inquire about this product</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".border-\\[1\\.5px\\] > span"
+          ],
+          "html": "<span>Back to catalogue</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href=\"/en\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Home</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"about\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">About</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"how-we-work\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">How we work</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"knowledge\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Knowledge</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 28
+}

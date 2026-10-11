@@ -1,0 +1,40 @@
+{
+  "route": "/en/products",
+  "url": "http://localhost:3200/en/products",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "state": "filters-open",
+  "scope": "document",
+  "project": "mobile",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:54:32.799Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 1,
+      "nodes": [
+        {
+          "target": [
+            ".focus-visible\\:text-ink > span"
+          ],
+          "html": "<span>Show results · 3 products</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        }
+      ]
+    }
+  ],
+  "passes": 16
+}

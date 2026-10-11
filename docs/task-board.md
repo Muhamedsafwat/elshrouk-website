@@ -1,158 +1,157 @@
 # Task board — Alshorouk website
 
-Phases 0–8 follow spec §15; gates are defined in `docs/quality-gates.md`; human inputs live in `docs/open-items.md` (OI-xx); roles and execution model in `docs/agent-operating-model.md`.
+Phases 0–8 follow spec §15; gates are defined in `docs/quality-gates.md`; human inputs live in `docs/open-items.md` (OI-xx); roles and execution model in `docs/agent-operating-model.md`. Test results and the defect log are in `docs/test-report.md`.
 
-_Last updated: 2026-10-09 (PM / technical-architect subagent). Maintained by the Orchestrator — subagents propose status changes in their reports; only the Orchestrator edits this board._
+_Last updated: 2026-10-11 by the Orchestrator (final handoff). Replaces the 2026-10-09 opening snapshot._
 
-**Status values:** `done` (finished and evidenced) · `in_progress` (actively being worked or delivered and awaiting orchestrator review) · `pending` (not started) · `blocked` (cannot proceed without an external input — cites an OI).
-**Owner roles** are the spec §13 roles; each is executed by a Claude Code workflow subagent or by the Orchestrator itself (Claude Code main session).
+**Status values:** `done` (finished and evidenced) · `done*` (finished with a stated deviation from the planned method) · `pending` (not started) · `blocked` (cannot proceed without an external input — cites an OI).
 
-## Snapshot (2026-10-09)
+## Snapshot (2026-10-11)
 
-| Phase | done | in_progress | pending | blocked | Gate |
+| Phase | done | done* | pending | blocked | Gate |
 |---|---|---|---|---|---|
-| 0 Environment reconnaissance | 5 | 2 | 1 | 0 | G0 in review |
-| 1 Research & blueprint | 0 | 4 | 3 | 0 | — |
-| 2 Design + motion plan | 0 | 1 | 5 | 0 | — |
-| 3 Foundation | 0 | 2 | 7 | 2 | — |
-| 4 Hero + signature homepage | 0 | 0 | 13 | 0 | — |
-| 5 Interior pages + conversion | 0 | 0 | 12 | 0 | — |
-| 6 Content, SEO, a11y, performance | 0 | 0 | 9 | 0 | — |
-| 7 Browser testing & iteration | 0 | 0 | 8 | 0 | — |
-| 8 Release handoff | 0 | 0 | 7 | 1 | — |
+| 0 Environment reconnaissance | 8 | 0 | 0 | 0 | G0 passed |
+| 1 Research & blueprint | 7 | 0 | 0 | 0 | G1 passed |
+| 2 Design + motion plan | 4 | 2 | 0 | 0 | G2 passed with deviations (P2-04, P2-06) |
+| 3 Foundation | 10 | 0 | 0 | 1 | G3 passed (Thmanyah font blocked, OI-01) |
+| 4 Hero + signature homepage | 12 | 1 | 0 | 0 | G4 passed with one deviation (frames instead of video) |
+| 5 Interior pages + conversion | 12 | 0 | 0 | 0 | G5 passed |
+| 6 Content, SEO, a11y, performance | 9 | 0 | 0 | 0 | G6 passed; mobile LCP budget missed and documented |
+| 7 Browser testing & iteration | 8 | 0 | 0 | 0 | G7 passed (0 open P0/P1) |
+| 8 Release handoff | 7 | 0 | 0 | 1 | Deployment blocked (OI-12, OI-16, permission) |
 
-**Now:** discovery workflow (reference audit, photography, brand audit, skills, copy) · app scaffolding · art-direction brief v1 (`docs/art-direction.md`) issued for build agents.
-**Next:** Gate 0 review → site map + architecture docs → Gate 1 → motion storyboard → Gate 2.
-**Blocked:** licensed Thmanyah integration (OI-01) · PostgreSQL migration verification (OI-12) · deployment (OI-12, OI-16).
+**Not deployed.** Nothing was published, pushed or purchased. The build runs locally (see `README.md`); deployment waits for hosting, credentials and explicit permission (OI-12, OI-16).
 
 ---
 
 ## Phase 0 — Environment reconnaissance
 
-| ID | Task | Owner role | Status | Depends on | Output / evidence |
-|---|---|---|---|---|---|
-| P0-01 | Read the full master spec (1,087 lines) | Orchestrator | done | — | spec §0–21 read; referenced throughout `AGENTS.md` |
-| P0-02 | Read the brand PDF — all 21 pages as images and text | Orchestrator / Brand Guardian | done | — | page renders + text in the session scratchpad (not in repo) |
-| P0-03 | Environment check: Node 22, pnpm 9, Python 3.13 (PyMuPDF, Pillow), Playwright 1.64 + Chromium, Chrome, Edge; no Docker, no PostgreSQL; Antigravity not used | Orchestrator | done | — | `docs/agent-operating-model.md` § Environment |
-| P0-04 | Extract logo vectors from the PDF (p.3 full colour; p.9 white, black) and pixel-verify | Brand Guardian | done | P0-02 | `public/brand/*.svg`, `public/brand/extraction-meta.json` |
-| P0-05 | Write `AGENTS.md` (+ `CLAUDE.md` import for Claude Code) | Orchestrator | done | P0-01, P0-02 | `AGENTS.md`, `CLAUDE.md` |
-| P0-06 | 13 project skills in `.agents/skills/<name>/SKILL.md` | Orchestrator (PM/architect subagent) | in_progress | P0-01, P0-02, P0-05 | 13 files delivered; structure check 13/13 OK; awaiting orchestrator review |
-| P0-07 | Process docs: task board, open items, quality gates, agent operating model | Orchestrator (PM/architect subagent) | in_progress | P0-01, P0-03 | `docs/task-board.md`, `docs/open-items.md`, `docs/quality-gates.md`, `docs/agent-operating-model.md` delivered; awaiting review |
-| P0-08 | Gate 0 review | Orchestrator | pending | P0-06, P0-07 | `docs/quality-gates.md` G0.1–G0.9, `docs/evidence/gate-0/` |
+| ID | Task | Status | Output / evidence |
+|---|---|---|---|
+| P0-01 | Read the full master spec | done | referenced throughout `AGENTS.md` and the docs |
+| P0-02 | Read the brand PDF (21 pages, images and text) | done | `docs/brand-audit.md` |
+| P0-03 | Environment check (Node 22, pnpm 9, Python, Playwright + Chromium; no Docker/PostgreSQL) | done | `docs/agent-operating-model.md` § Environment |
+| P0-04 | Extract logo vectors from the PDF and pixel-verify | done | `public/brand/*.svg`, `public/brand/extraction-meta.json` |
+| P0-05 | `AGENTS.md` (+ `CLAUDE.md` import) | done | 11.9 KB, under the 24 KB cap |
+| P0-06 | 13 project skills (`.agents/skills/<name>/SKILL.md`) | done | structure check 13/13: `docs/evidence/gates/g0.7-skills-check.txt` |
+| P0-07 | Process docs (task board, open items, quality gates, operating model) | done | the four files |
+| P0-08 | Gate 0 review | done | `docs/quality-gates.md` § Final status |
 
 ## Phase 1 — Research & blueprint
 
-| ID | Task | Owner role | Status | Depends on | Output / evidence |
-|---|---|---|---|---|---|
-| P1-01 | Reference audit: 4 sites × desktop + mobile, ≥ 6 motion ideas, do-not-transfer list | Research Analyst | in_progress | P0-03 | `docs/reference-audit.md`, `.reference/` (internal) |
-| P1-02 | Brand audit: tokens, logo provenance + hashes, contrast matrix, banned PDF content, gaps | Brand Guardian | in_progress | P0-02, P0-04 | `docs/brand-audit.md` (delivered; awaiting orchestrator review) |
-| P1-03 | Photography: licensed poultry stock, segment-correct, provenance recorded | Visual Designer + Brand Guardian | in_progress | P0-02 | `docs/image-provenance.md`, `src/content/photos.ts` |
-| P1-04 | Arabic-first copy, English draft, glossary, claims matrix + approval register | Arabic Copywriter & Localizer | in_progress | P0-01 | `src/i18n/dictionaries/{ar,en}/*`, `docs/copy-glossary.md`, `content/approval-register.md` |
-| P1-05 | Site map, route list, navigation, mobile nav plan, 3 customer journeys (≤ 3 actions to contact) | UX / Information Architect | pending | P0-01, P1-04 | `docs/site-map.md` |
-| P1-06 | Architecture + CMS contract: versions, SQLite-dev/PostgreSQL-prod, collections, access model, deployment needs and costs | Frontend Architect + CMS Engineer | pending | P3-01 | `docs/architecture.md` |
-| P1-07 | Gate 1 review (incl. content scans clean) | Orchestrator | pending | P1-01 … P1-06 | G1.1–G1.8 evidence |
+| ID | Task | Status | Output / evidence |
+|---|---|---|---|
+| P1-01 | Reference audit (4 sites, desktop + mobile, motion ideas, do-not-transfer list) | done | `docs/reference-audit.md` |
+| P1-02 | Brand audit (tokens, logo provenance, contrast, banned content, gaps) | done | `docs/brand-audit.md` |
+| P1-03 | Photography: licensed poultry stock, segment-correct, provenance | done | `docs/image-provenance.md`, `src/content/photos.ts` (commissioned photography: OI-08) |
+| P1-04 | Arabic-first copy, English draft, glossary, claims register | done | `src/i18n/dictionaries/{ar,en}/*`, `docs/copy-glossary.md`, `content/approval-register.md` |
+| P1-05 | Site map, navigation, journeys | done | `docs/site-map.md` |
+| P1-06 | Architecture + CMS contract | done | `docs/architecture.md` |
+| P1-07 | Gate 1 review incl. content scans | done | `docs/evidence/content-integrity.md` (source scans clean) |
 
 ## Phase 2 — High-fidelity design + motion plan
 
-| ID | Task | Owner role | Status | Depends on | Output / evidence |
-|---|---|---|---|---|---|
-| P2-01 | Art direction per scene and page family; motif map; CTA/contrast treatments | Visual Product Designer / Orchestrator | in_progress | P1-01, P1-02, P1-03 | `docs/art-direction.md` v1 brief exists (binding for build agents); confirm at Gate 2 |
-| P2-02 | Homepage coded prototype at 1440 and 390 with real copy and licensed imagery | Visual Designer + Frontend Architect | pending | P2-01, P3-05 | screenshots `screenshots/<date>/ar/home/*` |
-| P2-03 | Interior page families: about, segment, catalogue + detail, contact | Visual Designer | pending | P2-01 | screenshots |
-| P2-04 | Motion storyboard: scenes 0–11 + six signature moments with reduced-motion plans | Motion Director | pending | P2-01, P1-01 | `docs/motion-storyboard.md` |
-| P2-05 | Major states: empty catalogue, filtered-empty, loading, error, form states, 404 | Visual Designer | pending | P2-01 | screenshots `…/states/*` |
-| P2-06 | Gate 2 review: token sign-off before global CSS changes; storyboard approval | Orchestrator | pending | P2-01 … P2-05 | G2.1–G2.7 |
+| ID | Task | Status | Output / evidence |
+|---|---|---|---|
+| P2-01 | Art direction per scene and page family | done | `docs/art-direction.md` |
+| P2-02 | Homepage at 1440 and 390 with real copy and licensed imagery | done | built directly as production code; `screenshots/ar/home/*`, `screenshots/en/home/*` |
+| P2-03 | Interior page families | done | `screenshots/ar/<page>/*` |
+| P2-04 | Motion storyboard: scenes 0–11 + six signature moments | done* | `docs/motion-storyboard.md`. **Deviation:** written as an as-built record from the code (extracted and adversarially verified against the source), not as a plan approved before the scenes were coded. |
+| P2-05 | Major states: empty catalogue, filtered-empty, loading, error, form states, 404 | done | `screenshots/dev-empty/*`, `screenshots/_sheets/dev-empty-states.jpg`, form-state tests in `tests/e2e/forms.spec.ts` |
+| P2-06 | Gate 2 review | done* | **Deviation:** no separate client design sign-off; tokens follow the brand audit, and the client approvals that remain are listed in `docs/open-items.md` (OI-15, OI-19). |
 
 ## Phase 3 — Foundation
 
-| ID | Task | Owner role | Status | Depends on | Output / evidence |
-|---|---|---|---|---|---|
-| P3-01 | Scaffold Next.js 16 + React 19 + TS strict + Tailwind 4 + Payload 3.90 (SQLite dev, PostgreSQL by `DATABASE_URL`), tooling scripts | Orchestrator | in_progress | P0-03 | `package.json`, `src/payload.config.ts`, `src/app/(payload)/*` (started in parallel with discovery) |
-| P3-02 | Payload schema: collections, globals, approval guard, RBAC (admin/editor/sales + `canApprove`), revalidation hooks | Orchestrator + CMS Engineer | in_progress | P3-01 | `src/payload/**` |
-| P3-03 | Tokens (`@theme`), fonts (Montserrat + staging Arabic fallback), `<Logo>` — sign-off against the brand audit | Brand Guardian + Frontend Architect | pending | P1-02, P3-01 | `src/styles/*`, `src/components/brand/Logo.tsx`, review note |
-| P3-04 | Licensed Thmanyah integration (`next/font/local`) + full AR re-test | Frontend Architect | blocked | OI-01 | — |
-| P3-05 | i18n routing (`/ar`, `/en`), typed dictionaries, `html[lang][dir]`, locale switcher, metadata infrastructure | Frontend Architect | pending | P3-01 | `src/i18n/*`, `[locale]/layout.tsx` |
-| P3-06 | Global layout: Header, MobileMenu (focus trap), Footer, Breadcrumbs, skip link, MotionRuntime + html.js gating | Frontend Architect | pending | P3-03, P3-05 | components + screenshots |
-| P3-07 | Route skeletons with real layouts for all spec §4.2 routes, 404 and error pages | Frontend Architect | pending | P1-05, P3-06 | route health log |
-| P3-08 | RBAC + publication-guard integration tests; fixture DB isolation (`seed:fixtures` on throwaway SQLite) | CMS / Backend Engineer | pending | P3-02 | `docs/evidence/gate-3/rbac.txt` |
-| P3-09 | Test harness: Vitest, Playwright projects (e2e, screenshots), axe | QA / Browser Testing | pending | P3-01 | configs + first green run |
-| P3-10 | PostgreSQL migrations generated and verified (`src/migrations/postgres`) | CMS Engineer + Release Engineer | blocked | OI-12 | — |
-| P3-11 | Gate 3 review | Orchestrator | pending | P3-03, P3-05 … P3-09 | G3.1–G3.9 |
+| ID | Task | Status | Output / evidence |
+|---|---|---|---|
+| P3-01 | Scaffold: Next.js 16.3.8, React 19.2, TS strict, Tailwind 4, Payload 3.90 (SQLite dev / PostgreSQL by `DATABASE_URL`) | done | `package.json`, `src/payload.config.ts` |
+| P3-02 | Payload schema, approval guard, RBAC (admin/editor/sales + `canApprove`), revalidation hooks | done | `src/payload/**`; unit `tests/unit/publication-guard.test.ts` |
+| P3-03 | Tokens, fonts (Montserrat + Alexandria staging stand-in), `<Logo>` | done | `src/styles/*`, `src/components/brand/Logo.tsx` |
+| P3-04 | Licensed Thmanyah integration + full Arabic re-test | blocked | OI-01 (swap procedure in `src/styles/fonts.ts`) |
+| P3-05 | i18n routing (`/ar`, `/en`), dictionaries, `html[lang][dir]`, locale switcher, metadata | done | `src/i18n/*`, `src/proxy.ts` |
+| P3-06 | Global layout: header, mobile menu (focus trap), footer, breadcrumbs, skip link, motion runtime | done | `tests/e2e/navigation.spec.ts`, `tests/e2e/keyboard-motion.spec.ts` |
+| P3-07 | All spec §4.2 routes, 404 and error pages | done | route matrix in `docs/test-report.md`; 404s server-rendered since CI-03 |
+| P3-08 | RBAC + publication-guard tests; isolated fixture DB | done | `tests/e2e/cms.spec.ts`, `data/e2e.db` via `pnpm seed:e2e` |
+| P3-09 | Test harness: Vitest, Playwright projects, axe | done | `vitest.config.ts`, `playwright.config.ts` |
+| P3-10 | PostgreSQL migrations generated and verified | done | `src/migrations/postgres/*`, `docs/evidence/database-verification.md` (embedded PostgreSQL 17) |
+| P3-11 | Gate 3 review | done | typecheck, lint and builds green (see test report) |
 
 ## Phase 4 — Hero + signature homepage
 
-| ID | Task | Owner role | Status | Depends on | Output / evidence |
-|---|---|---|---|---|---|
-| P4-01 | Scene 1 hero + Sunrise Line Reveal (moment 1), preloaded LCP image | Frontend + Motion Director | pending | P2-04, P3-06 | video + frames |
-| P4-02 | Scene 2 proof band 300 / 15m / 150 (moment 2) with qualifiers + SR labels | Frontend + Motion Director | pending | P2-04, P3-02 | unit test + video |
-| P4-03 | Scene 3 statement transition | Frontend | pending | P2-04 | screenshots |
-| P4-04 | Scene 4 segment chapters, CSS-sticky media (moment 3) + mobile stack | Frontend + Motion Director | pending | P2-04, P1-03 | video |
-| P4-05 | Scene 5 product pillars (moment 5) | Frontend + Motion Director | pending | P2-04 | video |
-| P4-06 | Scene 6 distribution journey (moment 4) | Frontend + Motion Director | pending | P2-04 | video |
-| P4-07 | Scene 7 values Veterinary Grid + mobile accordion | Frontend | pending | P2-04 | screenshots |
-| P4-08 | Scene 8 approved-only product preview / polished empty state | Frontend + CMS Engineer | pending | P3-02 | screenshots |
-| P4-09 | Scene 9 partner proof without testimonials | Frontend | pending | P1-03 | screenshots |
-| P4-10 | Scene 10 FAQ accordion (business/process only) | Frontend | pending | P1-04 | screenshots + keyboard check |
-| P4-11 | Scene 11 closing CTA (moment 6) + real footer (verified contacts only) | Frontend + Motion Director | pending | P2-04 | video |
-| P4-12 | Reduced-motion, no-JS and mobile fallbacks for every scene | Frontend + Motion Director | pending | P4-01 … P4-11 | screenshots |
-| P4-13 | Gate 4 review (recordings, CLS, overflow, console) | Orchestrator + QA | pending | P4-01 … P4-12 | G4.1–G4.9 |
+| ID | Task | Status | Output / evidence |
+|---|---|---|---|
+| P4-01 | Scene 1 hero + Sunrise Line Reveal, prioritised LCP image | done | `docs/motion-storyboard.md`; PERF-1 fix |
+| P4-02 | Scene 2 proof band 300 / 15m / 150 with qualifiers + SR labels | done | `tests/unit/metrics-copy.test.ts`; content-integrity checks |
+| P4-03 | Scene 3 statement transition | done | scroll frames `screenshots/ar/home/scroll-1440/*` |
+| P4-04 | Scene 4 segment chapters, CSS-sticky media + mobile stack | done | scroll frames; storyboard |
+| P4-05 | Scene 5 product pillars | done | storyboard; screenshots |
+| P4-06 | Scene 6 distribution journey | done | storyboard; screenshots |
+| P4-07 | Scene 7 values / Veterinary Grid + mobile treatment | done | screenshots |
+| P4-08 | Scene 8 approved-only product preview / empty state | done | `screenshots/_sheets/dev-empty-states.jpg` (no fake cards) |
+| P4-09 | Scene 9 partner proof without testimonials | done | screenshots |
+| P4-10 | Scene 10 FAQ accordion (business/process only) | done | keyboard test in `tests/e2e/keyboard-motion.spec.ts` |
+| P4-11 | Scene 11 closing CTA + real footer (verified contacts only) | done | screenshots; no contact data shown until verified (OI-05) |
+| P4-12 | Reduced-motion, no-JS and mobile fallbacks | done | reduced-motion axe scans and reveal checks; no-JS 404 test (CI-03) |
+| P4-13 | Gate 4 review (recordings, CLS, overflow, console) | done* | **Deviation:** scroll film strips (sequential frames) instead of video recordings. CLS 0 in every Lighthouse run; 0 px overflow; 0 console errors in the screenshot runs. |
 
 ## Phase 5 — Interior pages + conversion
 
-| ID | Task | Owner role | Status | Depends on | Output / evidence |
-|---|---|---|---|---|---|
-| P5-01 | About page | Frontend + Copywriter | pending | P3-07 | screenshots |
-| P5-02 | Poultry solutions overview + broilers / layers / breeders pages (segment-prefilled forms) | Frontend + Copywriter | pending | P3-07, P5-06 | screenshots |
-| P5-03 | How we work (process as review_required until OI-09) + small form | Frontend + Copywriter | pending | P3-07, P5-06 | screenshots |
-| P5-04 | Catalogue: Arabic search, facets, pagination, URL state, loading/error/empty states | CMS Engineer + Frontend | pending | P3-02 | unit + e2e |
-| P5-05 | Product detail: approved-only, 404 otherwise, safety text, JSON-LD without offers | CMS Engineer + Frontend | pending | P5-04 | e2e |
-| P5-06 | Lead forms: shared Zod schema, phone normalisation, honeypot, rate limit, idempotency, Local API persistence | CMS Engineer + Frontend | pending | P3-02 | unit + integration |
-| P5-07 | Sales workflow in admin (status transitions, product context); notifications behind SMTP config | CMS Engineer | pending | P5-06 | admin screenshot |
-| P5-08 | Knowledge hub + article template (empty state or gated nav) | Frontend + CMS Engineer | pending | P3-02 | screenshots |
-| P5-09 | Contact, partnership, privacy (draft pending legal), 404/error | Frontend + Copywriter | pending | P5-06 | screenshots |
-| P5-10 | E2E journeys 1, 2, 6, 8 | QA | pending | P5-04 … P5-09 | Playwright report |
-| P5-11 | CTA / internal link audit | QA | pending | P5-01 … P5-09 | link crawl log |
-| P5-12 | Gate 5 review | Orchestrator | pending | P5-10, P5-11 | G5.1–G5.10 |
+| ID | Task | Status | Output / evidence |
+|---|---|---|---|
+| P5-01 | About page | done | screenshots, axe |
+| P5-02 | Poultry solutions overview + broilers / layers / breeders | done | screenshots, axe, journey 1 |
+| P5-03 | How we work (process marked for client review, OI-09) | done | screenshots |
+| P5-04 | Catalogue: Arabic search, facets, pagination, URL state, loading/error/empty states | done | `tests/unit/catalog-params.test.ts`, `search-normalize.test.ts`, journey 2 |
+| P5-05 | Product detail: approved-only, 404 otherwise, safety text, JSON-LD without offers | done | journey 7, content-integrity CI-02/CI-03 |
+| P5-06 | Lead forms: shared Zod schema, phone normalisation, honeypot, rate limit, idempotency | done | `tests/unit/inquiries*.test.ts`, `tests/e2e/forms.spec.ts` |
+| P5-07 | Sales workflow in admin (status lifecycle, product context); notifications behind SMTP config | done | `tests/e2e/cms.spec.ts`; SMTP not configured (OI-13) |
+| P5-08 | Knowledge hub + article template (designed empty state) | done | screenshots (OI-17 for content) |
+| P5-09 | Contact, partnership, privacy (draft, legal review pending), 404/error | done | screenshots; OI-10 |
+| P5-10 | E2E journeys 1, 2, 6, 7, 8 | done | `tests/e2e/journeys.spec.ts` |
+| P5-11 | CTA / internal link audit | done | `tests/e2e/links.spec.ts` (every internal link from every route, both locales) |
+| P5-12 | Gate 5 review | done | `docs/test-report.md` |
 
 ## Phase 6 — Content, SEO, accessibility, performance
 
-| ID | Task | Owner role | Status | Depends on | Output / evidence |
-|---|---|---|---|---|---|
-| P6-01 | Populate approved copy/metrics/records; block fabricated data; scans clean | Copywriter + Orchestrator | pending | P5-12 | scan log, approval register |
-| P6-02 | Bilingual QA (Arabic line breaks, digits, EN layout, `/en` noindex) | Copywriter + QA | pending | P6-01 | screenshots |
-| P6-03 | Accessibility: axe sweep, manual keyboard pass, contrast, reflow | SEO & Accessibility | pending | P5-12 | axe log, test-report section |
-| P6-04 | Metadata, canonical/hreflang policy, sitemap, robots, JSON-LD | SEO & Accessibility | pending | P5-12 | SEO log |
-| P6-05 | Analytics adapter verification (no-op until OI-14) + consent component | SEO & Accessibility | pending | P5-12 | unit test |
-| P6-06 | Performance: images, fonts, bundle split, lazy motion; Lighthouse baseline on a production build | Release Engineer | pending | P5-12 | `docs/performance-report.md` |
-| P6-07 | Security review: secrets, RBAC, uploads, headers/CSP plan, dependency audit | Release Engineer | pending | P5-12 | `docs/security-review.md` |
-| P6-08 | CMS editor guide + content approval queue | CMS Engineer + Copywriter | pending | P5-07 | `docs/cms-editor-guide.md` |
-| P6-09 | Gate 6 review | Orchestrator | pending | P6-01 … P6-08 | G6.1–G6.9 |
+| ID | Task | Status | Output / evidence |
+|---|---|---|---|
+| P6-01 | Approved copy/metrics; fabricated data blocked; scans clean | done | `docs/evidence/content-integrity.md`, `content/approval-register.md` |
+| P6-02 | Bilingual QA (Arabic line breaks, digits, EN layout, `/en` noindex) | done | visual QA + content-integrity tests |
+| P6-03 | Accessibility: axe sweep, keyboard pass, contrast, reflow | done | `tests/e2e/a11y.spec.ts`, `docs/evidence/accessibility.md`, `docs/evidence/axe/*` |
+| P6-04 | Metadata, canonical/hreflang policy, sitemap, robots, JSON-LD | done | route matrix; `tests/e2e/security.spec.ts`, content-integrity |
+| P6-05 | Analytics adapter (no-op until OI-14) | done | `tests/unit/analytics.test.ts` |
+| P6-06 | Performance: Lighthouse on a production build | done | `docs/performance-report.md` (mobile LCP budget missed; documented) |
+| P6-07 | Security review | done | `docs/evidence/security-review.md` (+ final addendum) |
+| P6-08 | CMS editor guide + approval queue | done | `docs/cms-editor-guide.md` |
+| P6-09 | Gate 6 review | done | `docs/quality-gates.md` § Final status |
 
 ## Phase 7 — Real browser testing & iteration
 
-| ID | Task | Owner role | Status | Depends on | Output / evidence |
-|---|---|---|---|---|---|
-| P7-01 | Full unit + E2E suites (journeys 1–8) green | QA | pending | P6-09 | logs + Playwright report |
-| P7-02 | Screenshot matrix: 9 viewports × AR/EN (home) + 390/1440 key pages, inspected | QA | pending | P6-09 | `screenshots/<date>/…` |
-| P7-03 | Automated page checks (overflow, console, images, links, placeholders) | QA | pending | P7-02 | checks log |
-| P7-04 | Polish round 1 (fixes + before/after) | Frontend + Visual Designer | pending | P7-02, P7-03 | test-report |
-| P7-05 | Polish round 2 (fixes + before/after) | Frontend + Visual Designer | pending | P7-04 | test-report |
-| P7-06 | Edge conditions: auth, publishing, empty states, reduced motion, slow network, validation errors | QA | pending | P7-04 | test-report |
-| P7-07 | `docs/test-report.md` complete; verified local preview recorded | QA | pending | P7-05, P7-06 | `docs/test-report.md` |
-| P7-08 | Gate 7 review | Orchestrator | pending | P7-07 | G7.1–G7.8 |
+| ID | Task | Status | Output / evidence |
+|---|---|---|---|
+| P7-01 | Full unit + E2E suites green | done | `docs/evidence/final/e2e-run.txt`, test report |
+| P7-02 | Screenshot matrix: 9 viewports × AR/EN (home) + 390/1440 key pages, inspected | done | `screenshots/**`, `screenshots/_sheets/*` |
+| P7-03 | Automated page checks (overflow, console, images, links, placeholders) | done | screenshot spec soft checks; `tests/e2e/links.spec.ts` |
+| P7-04 | Polish round 1: 4-agent QA → 30 findings fixed by 2 fix agents | done | test report § Polish rounds |
+| P7-05 | Polish round 2: orchestrator follow-ups, CI-03/CI-06 fix, landmark, dependency updates | done | test report § Polish rounds |
+| P7-06 | Edge conditions: auth, publishing, empty states, reduced motion, slow network, validation, no JS, forced 500 | done | test report § Edge conditions |
+| P7-07 | `docs/test-report.md` complete; local preview recorded | done | `docs/test-report.md` |
+| P7-08 | Gate 7 review | done | 0 open P0/P1; deferred P2/P3 listed in `docs/open-items.md` |
 
 ## Phase 8 — Release handoff
 
-| ID | Task | Owner role | Status | Depends on | Output / evidence |
-|---|---|---|---|---|---|
-| P8-01 | `.env.example` with explanations; README with exact commands and architecture | Release Engineer | pending | P7-08 | files |
-| P8-02 | `docs/deployment.md` (PostgreSQL, migrations, S3 storage, SMTP, first admin, backups, rollback) | Release Engineer | pending | P7-08 | file |
-| P8-03 | Clean-checkout run (`pnpm install --frozen-lockfile`, build, start) + secret scan | Release Engineer | pending | P8-01 | `docs/evidence/gate-8/clean-run.txt` |
-| P8-04 | Final docs pack (editor guide, test, performance, security reports, open items, screenshots) | Orchestrator | pending | P7-08 | files |
-| P8-05 | Delivery matrix (spec §18) + self-audit (spec §21) with evidence | Orchestrator | pending | P8-01 … P8-04 | final report |
-| P8-06 | Deployment to an approved destination and live verification | Release Engineer | blocked | OI-12, OI-16 + explicit user permission (OI-13 recommended, not blocking) | `docs/deployment.md` — label READY / BLOCKED until then |
-| P8-07 | Gate 8 review and final handoff report | Orchestrator | pending | P8-05 | G8.1–G8.8 |
-| P8-08 | Handoff of open approvals to the client (prioritised OI list) | Orchestrator | pending | P8-05 | `docs/open-items.md` |
+| ID | Task | Status | Output / evidence |
+|---|---|---|---|
+| P8-01 | `.env.example` with explanations; README with exact commands and architecture | done | `.env.example`, `README.md` |
+| P8-02 | `docs/deployment.md` (PostgreSQL, migrations, S3, SMTP, first admin, backups) | done | file |
+| P8-03 | Clean-checkout run (`pnpm install --frozen-lockfile`, build) + secret scan | done | `docs/evidence/final/clean-checkout.txt`. The first attempt found Photo.tsx missing from git (FR-11), fixed in 78d9a02; the second attempt passed. |
+| P8-04 | Final docs pack | done | `docs/*` |
+| P8-05 | Delivery matrix + self-audit | done | final handoff report (conversation) + `docs/test-report.md` |
+| P8-06 | Deployment to an approved destination and live verification | blocked | OI-12, OI-16 and explicit permission |
+| P8-07 | Gate 8 review and final handoff | done | `docs/quality-gates.md` § Final status |
+| P8-08 | Handoff of open approvals to the client (prioritised OI list) | done | `docs/open-items.md` |
 
 ## Change log
-- 2026-10-09 — Board created. Phase 0 core done (spec, PDF, environment, logo vectors, AGENTS.md); skills and process docs delivered for review; discovery and scaffolding in progress; three items marked blocked on external inputs.
+- 2026-10-09 — Board created (Phase 0 core done; discovery and scaffolding in progress).
+- 2026-10-10 — Build workflow: all pages and scenes built by 7 parallel builders; integration fixes; isolated e2e build.
+- 2026-10-11 — QA round (4 agents, 4 evidence docs), fix round (30 findings), orchestrator follow-ups, CI-03 server-rendered 404s, final verification. Board rewritten to the delivered state.

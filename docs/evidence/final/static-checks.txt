@@ -1,0 +1,21 @@
+# Static checks (final code) — 2026-10-11T05:44:36+03:00
+## pnpm exec tsc --noEmit --incremental false
+exit=0
+## pnpm exec eslint .
+exit=0
+## pnpm exec vitest run
+exit=0
+total 140 passed 140 failed 0
+  analytics.test.ts 3 passed
+  catalog-params.test.ts 6 passed
+  catalog-ui.test.ts 7 passed
+  inquiries-action.test.ts 4 passed
+  inquiries-lifecycle.test.ts 5 passed
+  inquiries-rate-limit.test.ts 14 passed
+  inquiries.test.ts 52 passed
+  logo.test.tsx 4 passed
+  metrics-copy.test.ts 4 passed
+  proxy.test.ts 9 passed
+  publication-guard.test.ts 19 passed
+  route-table.test.ts 6 passed
+  search-normalize.test.ts 7 passed

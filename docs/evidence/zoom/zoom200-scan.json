@@ -1,0 +1,16 @@
+[
+  {
+    "route": "/ar",
+    "cssViewport": "640x400 @2x (=1280x800 at 200%)",
+    "overflowX": 0,
+    "docHeight": 19590,
+    "issues": []
+  },
+  {
+    "route": "/ar/contact",
+    "cssViewport": "640x400 @2x (=1280x800 at 200%)",
+    "overflowX": 0,
+    "docHeight": 5078,
+    "issues": []
+  }
+]

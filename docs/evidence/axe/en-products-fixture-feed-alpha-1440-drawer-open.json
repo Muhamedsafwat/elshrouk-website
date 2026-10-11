@@ -1,0 +1,24 @@
+{
+  "route": "/en/products/fixture-feed-alpha",
+  "url": "http://localhost:3200/en/products/fixture-feed-alpha",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "state": "drawer-open",
+  "scope": "document",
+  "project": "desktop",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:50:42.966Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [],
+  "passes": 21
+}

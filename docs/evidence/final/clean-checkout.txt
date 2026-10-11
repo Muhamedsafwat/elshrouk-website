@@ -1,0 +1,74 @@
+# Clean-checkout evidence (gate G8.1), 2026-10-11
+
+Method: `git clone` of the local repository into an empty folder, then the README steps:
+`pnpm install --frozen-lockfile`, `cp .env.example .env` (random PAYLOAD_SECRET, SITE_URL=http://localhost:3400),
+`pnpm typecheck`, `pnpm lint`, `pnpm test:unit`, `pnpm seed`, `pnpm build`, `next start --port 3400`, route probe.
+
+## Attempt 1: commit 25e4975 (FAILED, fixed in 78d9a02)
+- pnpm install --frozen-lockfile: OK (1 m 25 s)
+- pnpm typecheck: FAILED: TS2307 for the image imports (next-env.d.ts is generated, not committed, so a fresh clone has no image module types).
+- pnpm build: FAILED: "Module not found: Can't resolve '@/components/media/Photo'" (16 errors).
+- Cause: the unanchored `media/` rule in .gitignore (meant for CMS uploads at the repo root) also matched
+  src/components/media/, so Photo.tsx had never been committed. Four evidence .log files were hidden by `*.log` as well.
+- Fix (78d9a02): rules anchored (/media/, /data/), evidence logs re-included, Photo.tsx committed;
+  `pnpm typecheck` now runs `next typegen` first. After the fix, no file under src, tests, scripts, public, content,
+  docs or .agents is ignored.
+
+## Attempt 2: commit 78d9a02 (PASSED)
+commit: 78d9a02 Track the Photo component; anchor root-only ignore rules
+## pnpm install --frozen-lockfile
+
+Done in 39s
+exit=0
+## cp .env.example .env (+ random PAYLOAD_SECRET, SITE_URL=http://localhost:3400)
+## pnpm typecheck
+Generating route types...
+✓ Types generated successfully
+exit=0
+## pnpm lint
+> cross-env NODE_OPTIONS=--no-deprecation eslint .
+
+exit=0
+## pnpm test:unit
+exit=1
+## pnpm seed
+[✓] Pulling schema from database...
+[06:32:16] INFO: ✓ taxonomy: 4 categories, 3 segments
+[06:32:16] INFO: ✓ metrics: 3 approved statements (ar/en)
+[06:32:16] INFO: ✓ homepage copy (ar/en) — high-visibility lines remain pending client approval
+[06:32:16] INFO: ✓ faqs: 4 business/process answers
+[06:32:16] INFO: ✓ site settings: staging (noindex), knowledge hub on, English pending approval, no contact channels
+[06:32:16] INFO: ✓ approval register: 12 records
+[06:32:16] INFO: Seed complete.
+exit=0
+## pnpm build
+✓ Compiled successfully in 32.9s
+  Finished TypeScript in 24.2s ...
+✓ Generating static pages using 15 workers (29/29) in 2.6s
+exit=0
+
+Note on `pnpm test:unit` (exit=1 above): Vitest could not start inside the temp folder. pnpm's Vitest path there is
+about 290 characters, over Windows' 260-character limit, and Node then cannot read the package's `imports` map
+(ERR_PACKAGE_IMPORT_NOT_DEFINED for "#module-evaluator", before any test loads). Mapping a drive letter did not help,
+because Node resolves the real path. The clone's own sources were then run with the main checkout's installed modules
+(directory junction, removed afterwards):
+  Test Files  13 passed (13) / Tests  140 passed (140) / exit=0
+The repository itself lives at a short path (D:\ويبسايت الشروق), where the same suite runs normally.
+
+## next start --port 3400 (clean clone) — route probe
+/ar                                200 h1=1
+/en                                200 h1=1
+/ar/about                          200 h1=1
+/ar/solutions/broilers             200 h1=1
+/ar/products                       200 h1=1
+/ar/contact                        200 h1=1
+/ar/this-page-does-not-exist       404 h1=1
+/ar/products/no-such-product       404 h1=1
+/admin                             200 h1=0
+/robots.txt                        200 h1=0
+/sitemap.xml                       200 h1=0
+/                                  307 h1=0
+
+## Secret scan (same day, files to be committed)
+- The values of PAYLOAD_SECRET and SEED_ADMIN_PASSWORD from the local .env: found in 0 committable files.
+- Only .env.example among env files; no AWS key, OpenAI-style key or private-key block patterns.

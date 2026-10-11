@@ -1,0 +1,10 @@
+admin: logged in → /admin (html dir=rtl)
+  /admin → 200 | body mentions products: true
+  /admin/collections/products → 200 | rows: 4
+  product edit view → /admin/collections/products/4
+  /admin/collections/inquiries → 200 | heading: الطلبات والاستفسارات
+  /admin/collections/content-approvals → 200 | rows: 10
+sales: logged in → /admin (html dir=rtl)
+  /admin → 200 
+  /admin/collections/inquiries → 200 
+console errors: none

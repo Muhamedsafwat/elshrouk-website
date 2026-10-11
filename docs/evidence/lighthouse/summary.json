@@ -1,0 +1,3213 @@
+{
+  "generated": "2026-10-10T22:14:26.362Z",
+  "invalidRuns": [
+    "ar-desktop-r2.json: NO_NAVSTART",
+    "ar-desktop-r3.json: NO_NAVSTART",
+    "ar-desktop-r4.json: NO_NAVSTART",
+    "ar-mobile-r3.json: NO_NAVSTART",
+    "ar-mobile-r4.json: NO_NAVSTART",
+    "ar-products-mobile-r1.json: NO_NAVSTART",
+    "ar-products-mobile-r2.json: NO_NAVSTART",
+    "ar-solutions-broilers-desktop-r2.json: NO_NAVSTART",
+    "ar-solutions-broilers-desktop-r3.json: NO_NAVSTART",
+    "ar-solutions-broilers-mobile-r1.json: NO_NAVSTART",
+    "en-desktop-r2.json: NO_NAVSTART",
+    "en-desktop-r4.json: NO_NAVSTART",
+    "en-mobile-r1.json: NO_NAVSTART"
+  ],
+  "results": [
+    {
+      "key": "ar-contact-desktop",
+      "runs": 3,
+      "representative": "ar-contact-desktop-r2.json",
+      "median": {
+        "performance": 100,
+        "lcpMs": 704,
+        "cls": 0,
+        "tbtMs": 0,
+        "fcpMs": 317
+      },
+      "range": {
+        "performance": [
+          100,
+          100
+        ],
+        "lcpMs": [
+          686,
+          782
+        ],
+        "tbtMs": [
+          0,
+          1
+        ]
+      },
+      "rep": {
+        "file": "ar-contact-desktop-r2.json",
+        "page": "/ar/contact",
+        "key": "ar-contact-desktop",
+        "preset": "desktop",
+        "run": 2,
+        "url": "http://localhost:3200/ar/contact",
+        "lighthouse": "12.8.2",
+        "benchmarkIndex": 1832,
+        "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 69
+        },
+        "fcpMs": 329,
+        "lcpMs": 704,
+        "cls": 0,
+        "tbtMs": 0,
+        "siMs": 647,
+        "ttiMs": 798,
+        "ttfbMs": 30,
+        "lcpElement": {
+          "selector": "div.col-span-4 > h1.mt-6 > span.mask-line > span",
+          "label": "تحدث مع فريق الشروق",
+          "snippet": "<span style=\"\">"
+        },
+        "lcpPhases": [
+          "TTFB 136ms",
+          "Load Delay 0ms",
+          "Load Time 0ms",
+          "Render Delay 568ms"
+        ],
+        "jsTransferKB": 349.4,
+        "jsRequests": 18,
+        "totalTransferKB": 550.6,
+        "imageKB": 25,
+        "fontKB": 69.7,
+        "cssKB": 20.9,
+        "unusedJsKB": 99,
+        "mainThreadMs": 1216,
+        "bootupMs": 483,
+        "domSize": 508,
+        "failing": {
+          "performance": [
+            "largest-contentful-paint (0.99)"
+          ],
+          "accessibility": [],
+          "best-practices": [
+            "inspector-issues (0)"
+          ],
+          "seo": [
+            "is-crawlable (0)"
+          ]
+        }
+      }
+    },
+    {
+      "key": "ar-contact-mobile",
+      "runs": 3,
+      "representative": "ar-contact-mobile-r1.json",
+      "median": {
+        "performance": 86,
+        "lcpMs": 3189,
+        "cls": 0,
+        "tbtMs": 314,
+        "fcpMs": 1070
+      },
+      "range": {
+        "performance": [
+          86,
+          87
+        ],
+        "lcpMs": [
+          3177,
+          3251
+        ],
+        "tbtMs": [
+          278,
+          316
+        ]
+      },
+      "rep": {
+        "file": "ar-contact-mobile-r1.json",
+        "page": "/ar/contact",
+        "key": "ar-contact-mobile",
+        "preset": "mobile",
+        "run": 1,
+        "url": "http://localhost:3200/ar/contact",
+        "lighthouse": "12.8.2",
+        "benchmarkIndex": 1687.5,
+        "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+        "scores": {
+          "performance": 86,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 69
+        },
+        "fcpMs": 1079,
+        "lcpMs": 3189,
+        "cls": 0,
+        "tbtMs": 314,
+        "siMs": 2115,
+        "ttiMs": 4177,
+        "ttfbMs": 29,
+        "lcpElement": {
+          "selector": "section.bg-surface > div.container-site > div.grid-site > p.col-span-4",
+          "label": "اختر نوع استفسارك واترك بياناتك، ويتواصل معك فريقنا لمناقشة طلبك، سواء كان احتي…",
+          "snippet": "<p class=\"col-span-4 text-lead text-fg-soft md:col-span-6 lg:col-span-4\" data-reveal=\"up\" data-revealed=\"\" style=\"\">"
+        },
+        "lcpPhases": [
+          "TTFB 460ms",
+          "Load Delay 0ms",
+          "Load Time 0ms",
+          "Render Delay 2729ms"
+        ],
+        "jsTransferKB": 328.6,
+        "jsRequests": 14,
+        "totalTransferKB": 489.4,
+        "imageKB": 14.3,
+        "fontKB": 69.7,
+        "cssKB": 20.9,
+        "unusedJsKB": 119,
+        "mainThreadMs": 3859,
+        "bootupMs": 1702,
+        "domSize": 508,
+        "failing": {
+          "performance": [
+            "first-contentful-paint (0.99)",
+            "largest-contentful-paint (0.73)",
+            "total-blocking-time (0.77)",
+            "speed-index (0.99)"
+          ],
+          "accessibility": [],
+          "best-practices": [
+            "inspector-issues (0)"
+          ],
+          "seo": [
+            "is-crawlable (0)"
+          ]
+        }
+      }
+    },
+    {
+      "key": "ar-desktop",
+      "runs": 3,
+      "representative": "ar-desktop-r5.json",
+      "median": {
+        "performance": 99,
+        "lcpMs": 872,
+        "cls": 0,
+        "tbtMs": 80,
+        "fcpMs": 359
+      },
+      "range": {
+        "performance": [
+          98,
+          99
+        ],
+        "lcpMs": [
+          857,
+          875
+        ],
+        "tbtMs": [
+          62,
+          84
+        ]
+      },
+      "rep": {
+        "file": "ar-desktop-r5.json",
+        "page": "/ar",
+        "key": "ar-desktop",
+        "preset": "desktop",
+        "run": 5,
+        "url": "http://localhost:3200/ar",
+        "lighthouse": "12.8.2",
+        "benchmarkIndex": 1796.5,
+        "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+        "scores": {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "fcpMs": 423,
+        "lcpMs": 872,
+        "cls": 0,
+        "tbtMs": 62,
+        "siMs": 961,
+        "ttiMs": 1117,
+        "ttfbMs": 65,
+        "lcpElement": {
+          "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+          "label": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت …",
+          "snippet": "<img alt=\"قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+        },
+        "lcpPhases": [
+          "TTFB 148ms",
+          "Load Delay 128ms",
+          "Load Time 43ms",
+          "Render Delay 553ms"
+        ],
+        "jsTransferKB": 347.2,
+        "jsRequests": 17,
+        "totalTransferKB": 734.9,
+        "imageKB": 159.3,
+        "fontKB": 69.7,
+        "cssKB": 20.9,
+        "unusedJsKB": 115,
+        "mainThreadMs": 2029,
+        "bootupMs": 562,
+        "domSize": 1057,
+        "failing": {
+          "performance": [
+            "largest-contentful-paint (0.97)",
+            "speed-index (0.98)"
+          ],
+          "accessibility": [],
+          "best-practices": [],
+          "seo": [
+            "is-crawlable (0)"
+          ]
+        }
+      }
+    },
+    {
+      "key": "ar-mobile",
+      "runs": 3,
+      "representative": "ar-mobile-r1.json",
+      "median": {
+        "performance": 77,
+        "lcpMs": 3888,
+        "cls": 0,
+        "tbtMs": 434,
+        "fcpMs": 1425
+      },
+      "range": {
+        "performance": [
+          76,
+          80
+        ],
+        "lcpMs": [
+          3499,
+          3933
+        ],
+        "tbtMs": [
+          428,
+          448
+        ]
+      },
+      "rep": {
+        "file": "ar-mobile-r1.json",
+        "page": "/ar",
+        "key": "ar-mobile",
+        "preset": "mobile",
+        "run": 1,
+        "url": "http://localhost:3200/ar",
+        "lighthouse": "12.8.2",
+        "benchmarkIndex": 1868.5,
+        "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+        "scores": {
+          "performance": 77,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "fcpMs": 1425,
+        "lcpMs": 3888,
+        "cls": 0,
+        "tbtMs": 434,
+        "siMs": 2610,
+        "ttiMs": 4688,
+        "ttfbMs": 9,
+        "lcpElement": {
+          "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+          "label": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت …",
+          "snippet": "<img alt=\"قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+        },
+        "lcpPhases": [
+          "TTFB 457ms",
+          "Load Delay 241ms",
+          "Load Time 151ms",
+          "Render Delay 3039ms"
+        ],
+        "jsTransferKB": 229.8,
+        "jsRequests": 12,
+        "totalTransferKB": 496.1,
+        "imageKB": 92.3,
+        "fontKB": 69.7,
+        "cssKB": 20.9,
+        "unusedJsKB": 26,
+        "mainThreadMs": 5626,
+        "bootupMs": 1389,
+        "domSize": 1057,
+        "failing": {
+          "performance": [
+            "first-contentful-paint (0.97)",
+            "largest-contentful-paint (0.53)",
+            "total-blocking-time (0.64)",
+            "speed-index (0.97)"
+          ],
+          "accessibility": [],
+          "best-practices": [],
+          "seo": [
+            "is-crawlable (0)"
+          ]
+        }
+      }
+    },
+    {
+      "key": "ar-products-desktop",
+      "runs": 3,
+      "representative": "ar-products-desktop-r2.json",
+      "median": {
+        "performance": 99,
+        "lcpMs": 857,
+        "cls": 0,
+        "tbtMs": 19,
+        "fcpMs": 325
+      },
+      "range": {
+        "performance": [
+          99,
+          99
+        ],
+        "lcpMs": [
+          829,
+          893
+        ],
+        "tbtMs": [
+          5,
+          19
+        ]
+      },
+      "rep": {
+        "file": "ar-products-desktop-r2.json",
+        "page": "/ar/products",
+        "key": "ar-products-desktop",
+        "preset": "desktop",
+        "run": 2,
+        "url": "http://localhost:3200/ar/products",
+        "lighthouse": "12.8.2",
+        "benchmarkIndex": 1738.5,
+        "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+        "scores": {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 69
+        },
+        "fcpMs": 325,
+        "lcpMs": 857,
+        "cls": 0,
+        "tbtMs": 19,
+        "siMs": 787,
+        "ttiMs": 861,
+        "ttfbMs": 74,
+        "lcpElement": {
+          "selector": "div.container-site > a.-m-1 > span.hidden > img.block",
+          "label": "شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات البيط…",
+          "snippet": "<img src=\"/brand/alshorouk-logo-full-color.svg\" alt=\"شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات …\" width=\"140\" height=\"130\" decoding=\"async\" fetchpriority=\"high\" loading=\"eager\" draggable=\""
+        },
+        "lcpPhases": [
+          "TTFB 158ms",
+          "Load Delay 189ms",
+          "Load Time 25ms",
+          "Render Delay 485ms"
+        ],
+        "jsTransferKB": 357.3,
+        "jsRequests": 18,
+        "totalTransferKB": 595.8,
+        "imageKB": 44.8,
+        "fontKB": 69.7,
+        "cssKB": 20.9,
+        "unusedJsKB": 103,
+        "mainThreadMs": 1063,
+        "bootupMs": 427,
+        "domSize": 675,
+        "failing": {
+          "performance": [
+            "largest-contentful-paint (0.97)",
+            "speed-index (0.99)"
+          ],
+          "accessibility": [],
+          "best-practices": [
+            "inspector-issues (0)"
+          ],
+          "seo": [
+            "is-crawlable (0)"
+          ]
+        }
+      }
+    },
+    {
+      "key": "ar-products-mobile",
+      "runs": 3,
+      "representative": "ar-products-mobile-r3.json",
+      "median": {
+        "performance": 84,
+        "lcpMs": 3473,
+        "cls": 0,
+        "tbtMs": 336,
+        "fcpMs": 1100
+      },
+      "range": {
+        "performance": [
+          82,
+          85
+        ],
+        "lcpMs": [
+          3175,
+          3522
+        ],
+        "tbtMs": [
+          303,
+          351
+        ]
+      },
+      "rep": {
+        "file": "ar-products-mobile-r3.json",
+        "page": "/ar/products",
+        "key": "ar-products-mobile",
+        "preset": "mobile",
+        "run": 3,
+        "url": "http://localhost:3200/ar/products",
+        "lighthouse": "12.8.2",
+        "benchmarkIndex": 1819,
+        "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+        "scores": {
+          "performance": 84,
+          "accessibility": 98,
+          "best-practices": 96,
+          "seo": 69
+        },
+        "fcpMs": 1073,
+        "lcpMs": 3473,
+        "cls": 0,
+        "tbtMs": 303,
+        "siMs": 2334,
+        "ttiMs": 4524,
+        "ttfbMs": 75,
+        "lcpElement": {
+          "selector": "body#top > div.relative > div.container-site > p.flex",
+          "label": "بيئة تجريبية: البيانات المعروضة هنا بيانات اختبار، وليست منتجات حقيقية.",
+          "snippet": "<p class=\"flex items-center gap-2 text-fg-soft\">"
+        },
+        "lcpPhases": [
+          "TTFB 458ms",
+          "Load Delay 0ms",
+          "Load Time 0ms",
+          "Render Delay 3016ms"
+        ],
+        "jsTransferKB": 348.6,
+        "jsRequests": 16,
+        "totalTransferKB": 589.2,
+        "imageKB": 85.6,
+        "fontKB": 69.7,
+        "cssKB": 20.9,
+        "unusedJsKB": 124,
+        "mainThreadMs": 3631,
+        "bootupMs": 1503,
+        "domSize": 675,
+        "failing": {
+          "performance": [
+            "first-contentful-paint (0.99)",
+            "largest-contentful-paint (0.64)",
+            "total-blocking-time (0.78)",
+            "speed-index (0.98)"
+          ],
+          "accessibility": [
+            "heading-order (0)"
+          ],
+          "best-practices": [
+            "inspector-issues (0)"
+          ],
+          "seo": [
+            "is-crawlable (0)"
+          ]
+        }
+      }
+    },
+    {
+      "key": "ar-solutions-broilers-desktop",
+      "runs": 3,
+      "representative": "ar-solutions-broilers-desktop-r4.json",
+      "median": {
+        "performance": 99,
+        "lcpMs": 941,
+        "cls": 0,
+        "tbtMs": 0,
+        "fcpMs": 315
+      },
+      "range": {
+        "performance": [
+          98,
+          99
+        ],
+        "lcpMs": [
+          929,
+          1115
+        ],
+        "tbtMs": [
+          0,
+          6
+        ]
+      },
+      "rep": {
+        "file": "ar-solutions-broilers-desktop-r4.json",
+        "page": "/ar/solutions/broilers",
+        "key": "ar-solutions-broilers-desktop",
+        "preset": "desktop",
+        "run": 4,
+        "url": "http://localhost:3200/ar/solutions/broilers",
+        "lighthouse": "12.8.2",
+        "benchmarkIndex": 1500.5,
+        "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+        "scores": {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 69
+        },
+        "fcpMs": 309,
+        "lcpMs": 929,
+        "cls": 0,
+        "tbtMs": 0,
+        "siMs": 601,
+        "ttiMs": 940,
+        "ttfbMs": 6,
+        "lcpElement": {
+          "selector": "div.absolute > div.intro-zoom > div.isolate > img.object-cover",
+          "label": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية.",
+          "snippet": "<img alt=\"دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب ج…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"100v"
+        },
+        "lcpPhases": [
+          "TTFB 130ms",
+          "Load Delay 27ms",
+          "Load Time 31ms",
+          "Render Delay 741ms"
+        ],
+        "jsTransferKB": 362.4,
+        "jsRequests": 19,
+        "totalTransferKB": 749.9,
+        "imageKB": 186.6,
+        "fontKB": 69.7,
+        "cssKB": 20.9,
+        "unusedJsKB": 119,
+        "mainThreadMs": 1107,
+        "bootupMs": 359,
+        "domSize": 727,
+        "failing": {
+          "performance": [
+            "largest-contentful-paint (0.96)"
+          ],
+          "accessibility": [],
+          "best-practices": [
+            "inspector-issues (0)"
+          ],
+          "seo": [
+            "is-crawlable (0)"
+          ]
+        }
+      }
+    },
+    {
+      "key": "ar-solutions-broilers-mobile",
+      "runs": 3,
+      "representative": "ar-solutions-broilers-mobile-r3.json",
+      "median": {
+        "performance": 82,
+        "lcpMs": 4305,
+        "cls": 0,
+        "tbtMs": 212,
+        "fcpMs": 1082
+      },
+      "range": {
+        "performance": [
+          73,
+          84
+        ],
+        "lcpMs": [
+          4242,
+          4462
+        ],
+        "tbtMs": [
+          150,
+          446
+        ]
+      },
+      "rep": {
+        "file": "ar-solutions-broilers-mobile-r3.json",
+        "page": "/ar/solutions/broilers",
+        "key": "ar-solutions-broilers-mobile",
+        "preset": "mobile",
+        "run": 3,
+        "url": "http://localhost:3200/ar/solutions/broilers",
+        "lighthouse": "12.8.2",
+        "benchmarkIndex": 1834,
+        "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+        "scores": {
+          "performance": 82,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 69
+        },
+        "fcpMs": 1082,
+        "lcpMs": 4305,
+        "cls": 0,
+        "tbtMs": 212,
+        "siMs": 2283,
+        "ttiMs": 4392,
+        "ttfbMs": 22,
+        "lcpElement": {
+          "selector": "div.absolute > div.intro-zoom > div.isolate > img.object-cover",
+          "label": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية.",
+          "snippet": "<img alt=\"دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب ج…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"100v"
+        },
+        "lcpPhases": [
+          "TTFB 461ms",
+          "Load Delay 1549ms",
+          "Load Time 112ms",
+          "Render Delay 2184ms"
+        ],
+        "jsTransferKB": 341.5,
+        "jsRequests": 15,
+        "totalTransferKB": 623.2,
+        "imageKB": 128,
+        "fontKB": 69.7,
+        "cssKB": 20.9,
+        "unusedJsKB": 119,
+        "mainThreadMs": 4528,
+        "bootupMs": 1396,
+        "domSize": 727,
+        "failing": {
+          "performance": [
+            "first-contentful-paint (0.99)",
+            "largest-contentful-paint (0.42)",
+            "total-blocking-time (0.88)",
+            "speed-index (0.99)"
+          ],
+          "accessibility": [],
+          "best-practices": [
+            "inspector-issues (0)"
+          ],
+          "seo": [
+            "is-crawlable (0)"
+          ]
+        }
+      }
+    },
+    {
+      "key": "en-desktop",
+      "runs": 3,
+      "representative": "en-desktop-r5.json",
+      "median": {
+        "performance": 99,
+        "lcpMs": 911,
+        "cls": 0,
+        "tbtMs": 72,
+        "fcpMs": 352
+      },
+      "range": {
+        "performance": [
+          97,
+          99
+        ],
+        "lcpMs": [
+          856,
+          958
+        ],
+        "tbtMs": [
+          63,
+          121
+        ]
+      },
+      "rep": {
+        "file": "en-desktop-r5.json",
+        "page": "/en",
+        "key": "en-desktop",
+        "preset": "desktop",
+        "run": 5,
+        "url": "http://localhost:3200/en",
+        "lighthouse": "12.8.2",
+        "benchmarkIndex": 1864,
+        "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+        "scores": {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "fcpMs": 352,
+        "lcpMs": 856,
+        "cls": 0,
+        "tbtMs": 63,
+        "siMs": 839,
+        "ttiMs": 1069,
+        "ttfbMs": 11,
+        "lcpElement": {
+          "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+          "label": "A large flock of white hens and roosters inside a commercial poultry house, wit…",
+          "snippet": "<img alt=\"A large flock of white hens and roosters inside a commercial poultry house…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+        },
+        "lcpPhases": [
+          "TTFB 132ms",
+          "Load Delay 0ms",
+          "Load Time 20ms",
+          "Render Delay 703ms"
+        ],
+        "jsTransferKB": 347.2,
+        "jsRequests": 17,
+        "totalTransferKB": 729.1,
+        "imageKB": 159.3,
+        "fontKB": 69.7,
+        "cssKB": 20.9,
+        "unusedJsKB": 115,
+        "mainThreadMs": 1666,
+        "bootupMs": 438,
+        "domSize": 1049,
+        "failing": {
+          "performance": [
+            "largest-contentful-paint (0.97)",
+            "speed-index (0.99)"
+          ],
+          "accessibility": [],
+          "best-practices": [],
+          "seo": [
+            "is-crawlable (0)"
+          ]
+        }
+      }
+    },
+    {
+      "key": "en-mobile",
+      "runs": 3,
+      "representative": "en-mobile-r4.json",
+      "median": {
+        "performance": 77,
+        "lcpMs": 3664,
+        "cls": 0,
+        "tbtMs": 495,
+        "fcpMs": 1128
+      },
+      "range": {
+        "performance": [
+          69,
+          82
+        ],
+        "lcpMs": [
+          3514,
+          3772
+        ],
+        "tbtMs": [
+          358,
+          850
+        ]
+      },
+      "rep": {
+        "file": "en-mobile-r4.json",
+        "page": "/en",
+        "key": "en-mobile",
+        "preset": "mobile",
+        "run": 4,
+        "url": "http://localhost:3200/en",
+        "lighthouse": "12.8.2",
+        "benchmarkIndex": 1833,
+        "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+        "scores": {
+          "performance": 77,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "fcpMs": 1238,
+        "lcpMs": 3664,
+        "cls": 0,
+        "tbtMs": 495,
+        "siMs": 2449,
+        "ttiMs": 4641,
+        "ttfbMs": 10,
+        "lcpElement": {
+          "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+          "label": "A large flock of white hens and roosters inside a commercial poultry house, wit…",
+          "snippet": "<img alt=\"A large flock of white hens and roosters inside a commercial poultry house…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+        },
+        "lcpPhases": [
+          "TTFB 457ms",
+          "Load Delay 224ms",
+          "Load Time 257ms",
+          "Render Delay 2725ms"
+        ],
+        "jsTransferKB": 229.8,
+        "jsRequests": 12,
+        "totalTransferKB": 459.4,
+        "imageKB": 58.1,
+        "fontKB": 69.7,
+        "cssKB": 20.9,
+        "unusedJsKB": 26,
+        "mainThreadMs": 6104,
+        "bootupMs": 1550,
+        "domSize": 1049,
+        "failing": {
+          "performance": [
+            "first-contentful-paint (0.99)",
+            "largest-contentful-paint (0.59)",
+            "total-blocking-time (0.58)",
+            "speed-index (0.98)"
+          ],
+          "accessibility": [],
+          "best-practices": [],
+          "seo": [
+            "is-crawlable (0)"
+          ]
+        }
+      }
+    }
+  ],
+  "allRuns": [
+    {
+      "file": "ar-contact-desktop-r1.json",
+      "page": "/ar/contact",
+      "key": "ar-contact-desktop",
+      "preset": "desktop",
+      "run": 1,
+      "url": "http://localhost:3200/ar/contact",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1748.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 317,
+      "lcpMs": 686,
+      "cls": 0,
+      "tbtMs": 1,
+      "siMs": 644,
+      "ttiMs": 799,
+      "ttfbMs": 30,
+      "lcpElement": {
+        "selector": "div.col-span-4 > h1.mt-6 > span.mask-line > span",
+        "label": "تحدث مع فريق الشروق",
+        "snippet": "<span style=\"\">"
+      },
+      "lcpPhases": [
+        "TTFB 132ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 554ms"
+      ],
+      "jsTransferKB": 349.4,
+      "jsRequests": 18,
+      "totalTransferKB": 548.7,
+      "imageKB": 25,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 99,
+      "mainThreadMs": 1208,
+      "bootupMs": 491,
+      "domSize": 508,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-contact-desktop-r2.json",
+      "page": "/ar/contact",
+      "key": "ar-contact-desktop",
+      "preset": "desktop",
+      "run": 2,
+      "url": "http://localhost:3200/ar/contact",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1832,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 329,
+      "lcpMs": 704,
+      "cls": 0,
+      "tbtMs": 0,
+      "siMs": 647,
+      "ttiMs": 798,
+      "ttfbMs": 30,
+      "lcpElement": {
+        "selector": "div.col-span-4 > h1.mt-6 > span.mask-line > span",
+        "label": "تحدث مع فريق الشروق",
+        "snippet": "<span style=\"\">"
+      },
+      "lcpPhases": [
+        "TTFB 136ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 568ms"
+      ],
+      "jsTransferKB": 349.4,
+      "jsRequests": 18,
+      "totalTransferKB": 550.6,
+      "imageKB": 25,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 99,
+      "mainThreadMs": 1216,
+      "bootupMs": 483,
+      "domSize": 508,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-contact-desktop-r3.json",
+      "page": "/ar/contact",
+      "key": "ar-contact-desktop",
+      "preset": "desktop",
+      "run": 3,
+      "url": "http://localhost:3200/ar/contact",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1805.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 305,
+      "lcpMs": 782,
+      "cls": 0,
+      "tbtMs": 0,
+      "siMs": 616,
+      "ttiMs": 782,
+      "ttfbMs": 25,
+      "lcpElement": {
+        "selector": "div.col-span-4 > h1.mt-6 > span.mask-line > span",
+        "label": "تحدث مع فريق الشروق",
+        "snippet": "<span style=\"\">"
+      },
+      "lcpPhases": [
+        "TTFB 128ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 653ms"
+      ],
+      "jsTransferKB": 349.4,
+      "jsRequests": 18,
+      "totalTransferKB": 550.3,
+      "imageKB": 25,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 99,
+      "mainThreadMs": 1210,
+      "bootupMs": 416,
+      "domSize": 508,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.98)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-contact-mobile-r1.json",
+      "page": "/ar/contact",
+      "key": "ar-contact-mobile",
+      "preset": "mobile",
+      "run": 1,
+      "url": "http://localhost:3200/ar/contact",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1687.5,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 86,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 1079,
+      "lcpMs": 3189,
+      "cls": 0,
+      "tbtMs": 314,
+      "siMs": 2115,
+      "ttiMs": 4177,
+      "ttfbMs": 29,
+      "lcpElement": {
+        "selector": "section.bg-surface > div.container-site > div.grid-site > p.col-span-4",
+        "label": "اختر نوع استفسارك واترك بياناتك، ويتواصل معك فريقنا لمناقشة طلبك، سواء كان احتي…",
+        "snippet": "<p class=\"col-span-4 text-lead text-fg-soft md:col-span-6 lg:col-span-4\" data-reveal=\"up\" data-revealed=\"\" style=\"\">"
+      },
+      "lcpPhases": [
+        "TTFB 460ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 2729ms"
+      ],
+      "jsTransferKB": 328.6,
+      "jsRequests": 14,
+      "totalTransferKB": 489.4,
+      "imageKB": 14.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 119,
+      "mainThreadMs": 3859,
+      "bootupMs": 1702,
+      "domSize": 508,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.73)",
+          "total-blocking-time (0.77)",
+          "speed-index (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-contact-mobile-r2.json",
+      "page": "/ar/contact",
+      "key": "ar-contact-mobile",
+      "preset": "mobile",
+      "run": 2,
+      "url": "http://localhost:3200/ar/contact",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1804,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 87,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 1069,
+      "lcpMs": 3251,
+      "cls": 0,
+      "tbtMs": 278,
+      "siMs": 2135,
+      "ttiMs": 4112,
+      "ttfbMs": 35,
+      "lcpElement": {
+        "selector": "section.bg-surface > div.container-site > div.grid-site > p.col-span-4",
+        "label": "اختر نوع استفسارك واترك بياناتك، ويتواصل معك فريقنا لمناقشة طلبك، سواء كان احتي…",
+        "snippet": "<p class=\"col-span-4 text-lead text-fg-soft md:col-span-6 lg:col-span-4\" data-reveal=\"up\" data-revealed=\"\" style=\"\">"
+      },
+      "lcpPhases": [
+        "TTFB 456ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 2794ms"
+      ],
+      "jsTransferKB": 328.6,
+      "jsRequests": 14,
+      "totalTransferKB": 489.4,
+      "imageKB": 14.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 119,
+      "mainThreadMs": 3868,
+      "bootupMs": 1578,
+      "domSize": 508,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.71)",
+          "total-blocking-time (0.81)",
+          "speed-index (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-contact-mobile-r3.json",
+      "page": "/ar/contact",
+      "key": "ar-contact-mobile",
+      "preset": "mobile",
+      "run": 3,
+      "url": "http://localhost:3200/ar/contact",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1760,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 86,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 1070,
+      "lcpMs": 3177,
+      "cls": 0,
+      "tbtMs": 316,
+      "siMs": 2177,
+      "ttiMs": 4100,
+      "ttfbMs": 24,
+      "lcpElement": {
+        "selector": "section.bg-surface > div.container-site > div.grid-site > p.col-span-4",
+        "label": "اختر نوع استفسارك واترك بياناتك، ويتواصل معك فريقنا لمناقشة طلبك، سواء كان احتي…",
+        "snippet": "<p class=\"col-span-4 text-lead text-fg-soft md:col-span-6 lg:col-span-4\" data-reveal=\"up\" data-revealed=\"\" style=\"\">"
+      },
+      "lcpPhases": [
+        "TTFB 457ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 2720ms"
+      ],
+      "jsTransferKB": 328.6,
+      "jsRequests": 14,
+      "totalTransferKB": 488.4,
+      "imageKB": 14.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 119,
+      "mainThreadMs": 4044,
+      "bootupMs": 1498,
+      "domSize": 508,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.73)",
+          "total-blocking-time (0.77)",
+          "speed-index (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-desktop-r1.json",
+      "page": "/ar",
+      "key": "ar-desktop",
+      "preset": "desktop",
+      "run": 1,
+      "url": "http://localhost:3200/ar",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1871,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 359,
+      "lcpMs": 875,
+      "cls": 0,
+      "tbtMs": 80,
+      "siMs": 835,
+      "ttiMs": 1074,
+      "ttfbMs": 10,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت …",
+        "snippet": "<img alt=\"قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 133ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 743ms"
+      ],
+      "jsTransferKB": 347.2,
+      "jsRequests": 17,
+      "totalTransferKB": 734,
+      "imageKB": 159.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 115,
+      "mainThreadMs": 1879,
+      "bootupMs": 458,
+      "domSize": 1057,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.97)",
+          "total-blocking-time (0.99)",
+          "speed-index (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-desktop-r2.json",
+      "page": "/ar",
+      "key": "ar-desktop",
+      "preset": "desktop",
+      "run": 2,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/ar",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1806,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 12,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 347.2,
+      "jsRequests": 17,
+      "totalTransferKB": 734.6,
+      "imageKB": 159.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 1057,
+      "failing": {
+        "performance": [],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-desktop-r3.json",
+      "page": "/ar",
+      "key": "ar-desktop",
+      "preset": "desktop",
+      "run": 3,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/ar",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1740,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 11,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 347.2,
+      "jsRequests": 17,
+      "totalTransferKB": 732.4,
+      "imageKB": 159.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 1057,
+      "failing": {
+        "performance": [],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-desktop-r4.json",
+      "page": "/ar",
+      "key": "ar-desktop",
+      "preset": "desktop",
+      "run": 4,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/ar",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1614.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 13,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 347.2,
+      "jsRequests": 17,
+      "totalTransferKB": 734.3,
+      "imageKB": 159.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 1057,
+      "failing": {
+        "performance": [],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-desktop-r5.json",
+      "page": "/ar",
+      "key": "ar-desktop",
+      "preset": "desktop",
+      "run": 5,
+      "url": "http://localhost:3200/ar",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1796.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 423,
+      "lcpMs": 872,
+      "cls": 0,
+      "tbtMs": 62,
+      "siMs": 961,
+      "ttiMs": 1117,
+      "ttfbMs": 65,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت …",
+        "snippet": "<img alt=\"قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 148ms",
+        "Load Delay 128ms",
+        "Load Time 43ms",
+        "Render Delay 553ms"
+      ],
+      "jsTransferKB": 347.2,
+      "jsRequests": 17,
+      "totalTransferKB": 734.9,
+      "imageKB": 159.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 115,
+      "mainThreadMs": 2029,
+      "bootupMs": 562,
+      "domSize": 1057,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.97)",
+          "speed-index (0.98)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-desktop-r6.json",
+      "page": "/ar",
+      "key": "ar-desktop",
+      "preset": "desktop",
+      "run": 6,
+      "url": "http://localhost:3200/ar",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1853.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 351,
+      "lcpMs": 857,
+      "cls": 0,
+      "tbtMs": 84,
+      "siMs": 883,
+      "ttiMs": 1078,
+      "ttfbMs": 10,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت …",
+        "snippet": "<img alt=\"قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 130ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 727ms"
+      ],
+      "jsTransferKB": 347.2,
+      "jsRequests": 17,
+      "totalTransferKB": 732.7,
+      "imageKB": 159.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 115,
+      "mainThreadMs": 2078,
+      "bootupMs": 538,
+      "domSize": 1057,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.97)",
+          "total-blocking-time (0.98)",
+          "speed-index (0.98)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-mobile-r1.json",
+      "page": "/ar",
+      "key": "ar-mobile",
+      "preset": "mobile",
+      "run": 1,
+      "url": "http://localhost:3200/ar",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1868.5,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 77,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 1425,
+      "lcpMs": 3888,
+      "cls": 0,
+      "tbtMs": 434,
+      "siMs": 2610,
+      "ttiMs": 4688,
+      "ttfbMs": 9,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت …",
+        "snippet": "<img alt=\"قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 457ms",
+        "Load Delay 241ms",
+        "Load Time 151ms",
+        "Render Delay 3039ms"
+      ],
+      "jsTransferKB": 229.8,
+      "jsRequests": 12,
+      "totalTransferKB": 496.1,
+      "imageKB": 92.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 26,
+      "mainThreadMs": 5626,
+      "bootupMs": 1389,
+      "domSize": 1057,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.97)",
+          "largest-contentful-paint (0.53)",
+          "total-blocking-time (0.64)",
+          "speed-index (0.97)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-mobile-r2.json",
+      "page": "/ar",
+      "key": "ar-mobile",
+      "preset": "mobile",
+      "run": 2,
+      "url": "http://localhost:3200/ar",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1873.5,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 76,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 1413,
+      "lcpMs": 3933,
+      "cls": 0,
+      "tbtMs": 448,
+      "siMs": 2370,
+      "ttiMs": 4922,
+      "ttfbMs": 11,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت …",
+        "snippet": "<img alt=\"قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 457ms",
+        "Load Delay 261ms",
+        "Load Time 330ms",
+        "Render Delay 2885ms"
+      ],
+      "jsTransferKB": 229.8,
+      "jsRequests": 12,
+      "totalTransferKB": 497.6,
+      "imageKB": 92.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 26,
+      "mainThreadMs": 6115,
+      "bootupMs": 1523,
+      "domSize": 1057,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.97)",
+          "largest-contentful-paint (0.51)",
+          "total-blocking-time (0.63)",
+          "speed-index (0.98)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-mobile-r3.json",
+      "page": "/ar",
+      "key": "ar-mobile",
+      "preset": "mobile",
+      "run": 3,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/ar",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1821.5,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 19,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 229.8,
+      "jsRequests": 12,
+      "totalTransferKB": 497.1,
+      "imageKB": 92.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 1057,
+      "failing": {
+        "performance": [],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-mobile-r4.json",
+      "page": "/ar",
+      "key": "ar-mobile",
+      "preset": "mobile",
+      "run": 4,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/ar",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1804.5,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 11,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 229.8,
+      "jsRequests": 12,
+      "totalTransferKB": 494.7,
+      "imageKB": 92.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 1057,
+      "failing": {
+        "performance": [],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-mobile-r5.json",
+      "page": "/ar",
+      "key": "ar-mobile",
+      "preset": "mobile",
+      "run": 5,
+      "url": "http://localhost:3200/ar",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1822,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 80,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 1460,
+      "lcpMs": 3499,
+      "cls": 0,
+      "tbtMs": 428,
+      "siMs": 2270,
+      "ttiMs": 4746,
+      "ttfbMs": 11,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف تحت …",
+        "snippet": "<img alt=\"قطيع كبير من الدجاجات والديوك البيضاء داخل عنبر دواجن تجاري، مع خطوط معالف…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 461ms",
+        "Load Delay 304ms",
+        "Load Time 225ms",
+        "Render Delay 2509ms"
+      ],
+      "jsTransferKB": 229.8,
+      "jsRequests": 12,
+      "totalTransferKB": 496.1,
+      "imageKB": 92.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 26,
+      "mainThreadMs": 6593,
+      "bootupMs": 1643,
+      "domSize": 1057,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.96)",
+          "largest-contentful-paint (0.64)",
+          "total-blocking-time (0.65)",
+          "speed-index (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-products-desktop-r1.json",
+      "page": "/ar/products",
+      "key": "ar-products-desktop",
+      "preset": "desktop",
+      "run": 1,
+      "url": "http://localhost:3200/ar/products",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1866,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 306,
+      "lcpMs": 829,
+      "cls": 0,
+      "tbtMs": 5,
+      "siMs": 724,
+      "ttiMs": 833,
+      "ttfbMs": 64,
+      "lcpElement": {
+        "selector": "div.container-site > a.-m-1 > span.hidden > img.block",
+        "label": "شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات البيط…",
+        "snippet": "<img src=\"/brand/alshorouk-logo-full-color.svg\" alt=\"شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات …\" width=\"140\" height=\"130\" decoding=\"async\" fetchpriority=\"high\" loading=\"eager\" draggable=\""
+      },
+      "lcpPhases": [
+        "TTFB 138ms",
+        "Load Delay 203ms",
+        "Load Time 27ms",
+        "Render Delay 462ms"
+      ],
+      "jsTransferKB": 357.3,
+      "jsRequests": 18,
+      "totalTransferKB": 593.9,
+      "imageKB": 44.8,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 103,
+      "mainThreadMs": 848,
+      "bootupMs": 297,
+      "domSize": 675,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.97)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-products-desktop-r2.json",
+      "page": "/ar/products",
+      "key": "ar-products-desktop",
+      "preset": "desktop",
+      "run": 2,
+      "url": "http://localhost:3200/ar/products",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1738.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 325,
+      "lcpMs": 857,
+      "cls": 0,
+      "tbtMs": 19,
+      "siMs": 787,
+      "ttiMs": 861,
+      "ttfbMs": 74,
+      "lcpElement": {
+        "selector": "div.container-site > a.-m-1 > span.hidden > img.block",
+        "label": "شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات البيط…",
+        "snippet": "<img src=\"/brand/alshorouk-logo-full-color.svg\" alt=\"شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات …\" width=\"140\" height=\"130\" decoding=\"async\" fetchpriority=\"high\" loading=\"eager\" draggable=\""
+      },
+      "lcpPhases": [
+        "TTFB 158ms",
+        "Load Delay 189ms",
+        "Load Time 25ms",
+        "Render Delay 485ms"
+      ],
+      "jsTransferKB": 357.3,
+      "jsRequests": 18,
+      "totalTransferKB": 595.8,
+      "imageKB": 44.8,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 103,
+      "mainThreadMs": 1063,
+      "bootupMs": 427,
+      "domSize": 675,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.97)",
+          "speed-index (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-products-desktop-r3.json",
+      "page": "/ar/products",
+      "key": "ar-products-desktop",
+      "preset": "desktop",
+      "run": 3,
+      "url": "http://localhost:3200/ar/products",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1784.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 333,
+      "lcpMs": 893,
+      "cls": 0,
+      "tbtMs": 19,
+      "siMs": 814,
+      "ttiMs": 897,
+      "ttfbMs": 75,
+      "lcpElement": {
+        "selector": "div.container-site > a.-m-1 > span.hidden > img.block",
+        "label": "شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات البيط…",
+        "snippet": "<img src=\"/brand/alshorouk-logo-full-color.svg\" alt=\"شعار الشروق: رأس ديك فوق اسم «الشروق»، مع عبارة «لتوزيع الأدوية واللقاحات …\" width=\"140\" height=\"130\" decoding=\"async\" fetchpriority=\"high\" loading=\"eager\" draggable=\""
+      },
+      "lcpPhases": [
+        "TTFB 167ms",
+        "Load Delay 202ms",
+        "Load Time 50ms",
+        "Render Delay 474ms"
+      ],
+      "jsTransferKB": 357.3,
+      "jsRequests": 18,
+      "totalTransferKB": 596.7,
+      "imageKB": 44.8,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 103,
+      "mainThreadMs": 1013,
+      "bootupMs": 427,
+      "domSize": 675,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.96)",
+          "speed-index (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-products-mobile-r1.json",
+      "page": "/ar/products",
+      "key": "ar-products-mobile",
+      "preset": "mobile",
+      "run": 1,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/ar/products",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1858,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": null,
+        "accessibility": 98,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 72,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 348.6,
+      "jsRequests": 16,
+      "totalTransferKB": 589.1,
+      "imageKB": 85.6,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 675,
+      "failing": {
+        "performance": [],
+        "accessibility": [
+          "heading-order (0)"
+        ],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-products-mobile-r2.json",
+      "page": "/ar/products",
+      "key": "ar-products-mobile",
+      "preset": "mobile",
+      "run": 2,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/ar/products",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1838.5,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": null,
+        "accessibility": 98,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 61,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 348.6,
+      "jsRequests": 16,
+      "totalTransferKB": 589.2,
+      "imageKB": 85.6,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 675,
+      "failing": {
+        "performance": [],
+        "accessibility": [
+          "heading-order (0)"
+        ],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-products-mobile-r3.json",
+      "page": "/ar/products",
+      "key": "ar-products-mobile",
+      "preset": "mobile",
+      "run": 3,
+      "url": "http://localhost:3200/ar/products",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1819,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 84,
+        "accessibility": 98,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 1073,
+      "lcpMs": 3473,
+      "cls": 0,
+      "tbtMs": 303,
+      "siMs": 2334,
+      "ttiMs": 4524,
+      "ttfbMs": 75,
+      "lcpElement": {
+        "selector": "body#top > div.relative > div.container-site > p.flex",
+        "label": "بيئة تجريبية: البيانات المعروضة هنا بيانات اختبار، وليست منتجات حقيقية.",
+        "snippet": "<p class=\"flex items-center gap-2 text-fg-soft\">"
+      },
+      "lcpPhases": [
+        "TTFB 458ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 3016ms"
+      ],
+      "jsTransferKB": 348.6,
+      "jsRequests": 16,
+      "totalTransferKB": 589.2,
+      "imageKB": 85.6,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 124,
+      "mainThreadMs": 3631,
+      "bootupMs": 1503,
+      "domSize": 675,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.64)",
+          "total-blocking-time (0.78)",
+          "speed-index (0.98)"
+        ],
+        "accessibility": [
+          "heading-order (0)"
+        ],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-products-mobile-r4.json",
+      "page": "/ar/products",
+      "key": "ar-products-mobile",
+      "preset": "mobile",
+      "run": 4,
+      "url": "http://localhost:3200/ar/products",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1793.5,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 85,
+        "accessibility": 98,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 1100,
+      "lcpMs": 3175,
+      "cls": 0,
+      "tbtMs": 336,
+      "siMs": 2513,
+      "ttiMs": 4641,
+      "ttfbMs": 76,
+      "lcpElement": {
+        "selector": "body#top > div.relative > div.container-site > p.flex",
+        "label": "بيئة تجريبية: البيانات المعروضة هنا بيانات اختبار، وليست منتجات حقيقية.",
+        "snippet": "<p class=\"flex items-center gap-2 text-fg-soft\">"
+      },
+      "lcpPhases": [
+        "TTFB 456ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 2719ms"
+      ],
+      "jsTransferKB": 348.6,
+      "jsRequests": 16,
+      "totalTransferKB": 589.2,
+      "imageKB": 85.6,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 124,
+      "mainThreadMs": 3688,
+      "bootupMs": 1496,
+      "domSize": 675,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.73)",
+          "total-blocking-time (0.75)",
+          "speed-index (0.98)"
+        ],
+        "accessibility": [
+          "heading-order (0)"
+        ],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-products-mobile-r5.json",
+      "page": "/ar/products",
+      "key": "ar-products-mobile",
+      "preset": "mobile",
+      "run": 5,
+      "url": "http://localhost:3200/ar/products",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1759,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 82,
+        "accessibility": 98,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 1100,
+      "lcpMs": 3522,
+      "cls": 0,
+      "tbtMs": 351,
+      "siMs": 2724,
+      "ttiMs": 4621,
+      "ttfbMs": 100,
+      "lcpElement": {
+        "selector": "body#top > div.relative > div.container-site > p.flex",
+        "label": "بيئة تجريبية: البيانات المعروضة هنا بيانات اختبار، وليست منتجات حقيقية.",
+        "snippet": "<p class=\"flex items-center gap-2 text-fg-soft\">"
+      },
+      "lcpPhases": [
+        "TTFB 459ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 3063ms"
+      ],
+      "jsTransferKB": 348.6,
+      "jsRequests": 16,
+      "totalTransferKB": 589.2,
+      "imageKB": 85.6,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 124,
+      "mainThreadMs": 3939,
+      "bootupMs": 1567,
+      "domSize": 675,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.63)",
+          "total-blocking-time (0.73)",
+          "speed-index (0.96)"
+        ],
+        "accessibility": [
+          "heading-order (0)"
+        ],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-solutions-broilers-desktop-r1.json",
+      "page": "/ar/solutions/broilers",
+      "key": "ar-solutions-broilers-desktop",
+      "preset": "desktop",
+      "run": 1,
+      "url": "http://localhost:3200/ar/solutions/broilers",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1682.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 489,
+      "lcpMs": 1115,
+      "cls": 0,
+      "tbtMs": 6,
+      "siMs": 1018,
+      "ttiMs": 1148,
+      "ttfbMs": 36,
+      "lcpElement": {
+        "selector": "div.absolute > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية.",
+        "snippet": "<img alt=\"دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب ج…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"100v"
+      },
+      "lcpPhases": [
+        "TTFB 190ms",
+        "Load Delay 30ms",
+        "Load Time 184ms",
+        "Render Delay 712ms"
+      ],
+      "jsTransferKB": 362.4,
+      "jsRequests": 19,
+      "totalTransferKB": 778.1,
+      "imageKB": 186.6,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 118,
+      "mainThreadMs": 2128,
+      "bootupMs": 946,
+      "domSize": 727,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.92)",
+          "speed-index (0.97)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-solutions-broilers-desktop-r2.json",
+      "page": "/ar/solutions/broilers",
+      "key": "ar-solutions-broilers-desktop",
+      "preset": "desktop",
+      "run": 2,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/ar/solutions/broilers",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1752,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 5,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 362.4,
+      "jsRequests": 19,
+      "totalTransferKB": 750.6,
+      "imageKB": 186.6,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 727,
+      "failing": {
+        "performance": [],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-solutions-broilers-desktop-r3.json",
+      "page": "/ar/solutions/broilers",
+      "key": "ar-solutions-broilers-desktop",
+      "preset": "desktop",
+      "run": 3,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/ar/solutions/broilers",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1841,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 11,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 362.4,
+      "jsRequests": 19,
+      "totalTransferKB": 781.9,
+      "imageKB": 186.6,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 727,
+      "failing": {
+        "performance": [],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-solutions-broilers-desktop-r4.json",
+      "page": "/ar/solutions/broilers",
+      "key": "ar-solutions-broilers-desktop",
+      "preset": "desktop",
+      "run": 4,
+      "url": "http://localhost:3200/ar/solutions/broilers",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1500.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 309,
+      "lcpMs": 929,
+      "cls": 0,
+      "tbtMs": 0,
+      "siMs": 601,
+      "ttiMs": 940,
+      "ttfbMs": 6,
+      "lcpElement": {
+        "selector": "div.absolute > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية.",
+        "snippet": "<img alt=\"دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب ج…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"100v"
+      },
+      "lcpPhases": [
+        "TTFB 130ms",
+        "Load Delay 27ms",
+        "Load Time 31ms",
+        "Render Delay 741ms"
+      ],
+      "jsTransferKB": 362.4,
+      "jsRequests": 19,
+      "totalTransferKB": 749.9,
+      "imageKB": 186.6,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 119,
+      "mainThreadMs": 1107,
+      "bootupMs": 359,
+      "domSize": 727,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.96)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-solutions-broilers-desktop-r5.json",
+      "page": "/ar/solutions/broilers",
+      "key": "ar-solutions-broilers-desktop",
+      "preset": "desktop",
+      "run": 5,
+      "url": "http://localhost:3200/ar/solutions/broilers",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1908,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 315,
+      "lcpMs": 941,
+      "cls": 0,
+      "tbtMs": 0,
+      "siMs": 578,
+      "ttiMs": 952,
+      "ttfbMs": 5,
+      "lcpElement": {
+        "selector": "div.absolute > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية.",
+        "snippet": "<img alt=\"دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب ج…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"100v"
+      },
+      "lcpPhases": [
+        "TTFB 132ms",
+        "Load Delay 21ms",
+        "Load Time 44ms",
+        "Render Delay 744ms"
+      ],
+      "jsTransferKB": 362.4,
+      "jsRequests": 19,
+      "totalTransferKB": 746.9,
+      "imageKB": 186.6,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 119,
+      "mainThreadMs": 1122,
+      "bootupMs": 349,
+      "domSize": 727,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.96)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-solutions-broilers-mobile-r1.json",
+      "page": "/ar/solutions/broilers",
+      "key": "ar-solutions-broilers-mobile",
+      "preset": "mobile",
+      "run": 1,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/ar/solutions/broilers",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1885,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 19,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 341.5,
+      "jsRequests": 15,
+      "totalTransferKB": 653.2,
+      "imageKB": 128,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 727,
+      "failing": {
+        "performance": [],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-solutions-broilers-mobile-r2.json",
+      "page": "/ar/solutions/broilers",
+      "key": "ar-solutions-broilers-mobile",
+      "preset": "mobile",
+      "run": 2,
+      "url": "http://localhost:3200/ar/solutions/broilers",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1801.5,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 73,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 1253,
+      "lcpMs": 4462,
+      "cls": 0,
+      "tbtMs": 446,
+      "siMs": 2543,
+      "ttiMs": 5151,
+      "ttfbMs": 30,
+      "lcpElement": {
+        "selector": "div.absolute > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية.",
+        "snippet": "<img alt=\"دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب ج…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"100v"
+      },
+      "lcpPhases": [
+        "TTFB 460ms",
+        "Load Delay 729ms",
+        "Load Time 253ms",
+        "Render Delay 3020ms"
+      ],
+      "jsTransferKB": 341.5,
+      "jsRequests": 15,
+      "totalTransferKB": 654,
+      "imageKB": 128,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 119,
+      "mainThreadMs": 5120,
+      "bootupMs": 1696,
+      "domSize": 727,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.38)",
+          "total-blocking-time (0.63)",
+          "speed-index (0.97)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-solutions-broilers-mobile-r3.json",
+      "page": "/ar/solutions/broilers",
+      "key": "ar-solutions-broilers-mobile",
+      "preset": "mobile",
+      "run": 3,
+      "url": "http://localhost:3200/ar/solutions/broilers",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1834,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 82,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 1082,
+      "lcpMs": 4305,
+      "cls": 0,
+      "tbtMs": 212,
+      "siMs": 2283,
+      "ttiMs": 4392,
+      "ttfbMs": 22,
+      "lcpElement": {
+        "selector": "div.absolute > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية.",
+        "snippet": "<img alt=\"دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب ج…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"100v"
+      },
+      "lcpPhases": [
+        "TTFB 461ms",
+        "Load Delay 1549ms",
+        "Load Time 112ms",
+        "Render Delay 2184ms"
+      ],
+      "jsTransferKB": 341.5,
+      "jsRequests": 15,
+      "totalTransferKB": 623.2,
+      "imageKB": 128,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 119,
+      "mainThreadMs": 4528,
+      "bootupMs": 1396,
+      "domSize": 727,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.42)",
+          "total-blocking-time (0.88)",
+          "speed-index (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "ar-solutions-broilers-mobile-r4.json",
+      "page": "/ar/solutions/broilers",
+      "key": "ar-solutions-broilers-mobile",
+      "preset": "mobile",
+      "run": 4,
+      "url": "http://localhost:3200/ar/solutions/broilers",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1946,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 84,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 69
+      },
+      "fcpMs": 1073,
+      "lcpMs": 4242,
+      "cls": 0,
+      "tbtMs": 150,
+      "siMs": 1958,
+      "ttiMs": 4382,
+      "ttfbMs": 5,
+      "lcpElement": {
+        "selector": "div.absolute > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب جرسية.",
+        "snippet": "<img alt=\"دجاج تسمين أبيض على الفرشة داخل عنبر دواجن به معالف أنبوبية معلقة ومشارب ج…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"100v"
+      },
+      "lcpPhases": [
+        "TTFB 458ms",
+        "Load Delay 329ms",
+        "Load Time 194ms",
+        "Render Delay 3262ms"
+      ],
+      "jsTransferKB": 341.5,
+      "jsRequests": 15,
+      "totalTransferKB": 622.2,
+      "imageKB": 128,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 119,
+      "mainThreadMs": 4077,
+      "bootupMs": 1273,
+      "domSize": 727,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.43)",
+          "total-blocking-time (0.94)",
+          "speed-index (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [
+          "inspector-issues (0)"
+        ],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "en-desktop-r1.json",
+      "page": "/en",
+      "key": "en-desktop",
+      "preset": "desktop",
+      "run": 1,
+      "url": "http://localhost:3200/en",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1784.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 384,
+      "lcpMs": 911,
+      "cls": 0,
+      "tbtMs": 72,
+      "siMs": 899,
+      "ttiMs": 1151,
+      "ttfbMs": 11,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "A large flock of white hens and roosters inside a commercial poultry house, wit…",
+        "snippet": "<img alt=\"A large flock of white hens and roosters inside a commercial poultry house…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 143ms",
+        "Load Delay 0ms",
+        "Load Time 61ms",
+        "Render Delay 707ms"
+      ],
+      "jsTransferKB": 347.2,
+      "jsRequests": 17,
+      "totalTransferKB": 730.6,
+      "imageKB": 159.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 115,
+      "mainThreadMs": 2056,
+      "bootupMs": 533,
+      "domSize": 1049,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.96)",
+          "total-blocking-time (0.99)",
+          "speed-index (0.98)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "en-desktop-r2.json",
+      "page": "/en",
+      "key": "en-desktop",
+      "preset": "desktop",
+      "run": 2,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/en",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1818.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 69,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 347.2,
+      "jsRequests": 17,
+      "totalTransferKB": 729,
+      "imageKB": 159.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 1049,
+      "failing": {
+        "performance": [],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "en-desktop-r3.json",
+      "page": "/en",
+      "key": "en-desktop",
+      "preset": "desktop",
+      "run": 3,
+      "url": "http://localhost:3200/en",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1809.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 316,
+      "lcpMs": 958,
+      "cls": 0,
+      "tbtMs": 121,
+      "siMs": 910,
+      "ttiMs": 1094,
+      "ttfbMs": 10,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "A large flock of white hens and roosters inside a commercial poultry house, wit…",
+        "snippet": "<img alt=\"A large flock of white hens and roosters inside a commercial poultry house…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 131ms",
+        "Load Delay 0ms",
+        "Load Time 0ms",
+        "Render Delay 827ms"
+      ],
+      "jsTransferKB": 347.2,
+      "jsRequests": 17,
+      "totalTransferKB": 729,
+      "imageKB": 159.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 115,
+      "mainThreadMs": 2067,
+      "bootupMs": 505,
+      "domSize": 1049,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.95)",
+          "total-blocking-time (0.94)",
+          "speed-index (0.98)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "en-desktop-r4.json",
+      "page": "/en",
+      "key": "en-desktop",
+      "preset": "desktop",
+      "run": 4,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/en",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1929.5,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 10,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 347.2,
+      "jsRequests": 17,
+      "totalTransferKB": 726.7,
+      "imageKB": 159.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 1049,
+      "failing": {
+        "performance": [],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "en-desktop-r5.json",
+      "page": "/en",
+      "key": "en-desktop",
+      "preset": "desktop",
+      "run": 5,
+      "url": "http://localhost:3200/en",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1864,
+      "throttling": "simulate {\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1}",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 352,
+      "lcpMs": 856,
+      "cls": 0,
+      "tbtMs": 63,
+      "siMs": 839,
+      "ttiMs": 1069,
+      "ttfbMs": 11,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "A large flock of white hens and roosters inside a commercial poultry house, wit…",
+        "snippet": "<img alt=\"A large flock of white hens and roosters inside a commercial poultry house…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 132ms",
+        "Load Delay 0ms",
+        "Load Time 20ms",
+        "Render Delay 703ms"
+      ],
+      "jsTransferKB": 347.2,
+      "jsRequests": 17,
+      "totalTransferKB": 729.1,
+      "imageKB": 159.3,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 115,
+      "mainThreadMs": 1666,
+      "bootupMs": 438,
+      "domSize": 1049,
+      "failing": {
+        "performance": [
+          "largest-contentful-paint (0.97)",
+          "speed-index (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "en-mobile-r1.json",
+      "page": "/en",
+      "key": "en-mobile",
+      "preset": "mobile",
+      "run": 1,
+      "invalid": "NO_NAVSTART",
+      "url": "http://localhost:3200/en",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1837.5,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": null,
+        "accessibility": 100,
+        "best-practices": null,
+        "seo": 69
+      },
+      "fcpMs": null,
+      "lcpMs": null,
+      "cls": null,
+      "tbtMs": null,
+      "siMs": null,
+      "ttiMs": null,
+      "ttfbMs": 12,
+      "lcpElement": null,
+      "lcpPhases": [],
+      "jsTransferKB": 229.8,
+      "jsRequests": 12,
+      "totalTransferKB": 458.2,
+      "imageKB": 58.1,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 0,
+      "mainThreadMs": null,
+      "bootupMs": null,
+      "domSize": 1049,
+      "failing": {
+        "performance": [],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "en-mobile-r2.json",
+      "page": "/en",
+      "key": "en-mobile",
+      "preset": "mobile",
+      "run": 2,
+      "url": "http://localhost:3200/en",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1796.5,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 82,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 1108,
+      "lcpMs": 3514,
+      "cls": 0,
+      "tbtMs": 358,
+      "siMs": 2122,
+      "ttiMs": 4387,
+      "ttfbMs": 6,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "A large flock of white hens and roosters inside a commercial poultry house, wit…",
+        "snippet": "<img alt=\"A large flock of white hens and roosters inside a commercial poultry house…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 457ms",
+        "Load Delay 244ms",
+        "Load Time 176ms",
+        "Render Delay 2637ms"
+      ],
+      "jsTransferKB": 229.8,
+      "jsRequests": 12,
+      "totalTransferKB": 416.5,
+      "imageKB": 58.1,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 26,
+      "mainThreadMs": 6134,
+      "bootupMs": 1657,
+      "domSize": 1049,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.63)",
+          "total-blocking-time (0.72)",
+          "speed-index (0.99)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "en-mobile-r3.json",
+      "page": "/en",
+      "key": "en-mobile",
+      "preset": "mobile",
+      "run": 3,
+      "url": "http://localhost:3200/en",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1743,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 69,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 1128,
+      "lcpMs": 3772,
+      "cls": 0,
+      "tbtMs": 850,
+      "siMs": 2579,
+      "ttiMs": 4709,
+      "ttfbMs": 12,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "A large flock of white hens and roosters inside a commercial poultry house, wit…",
+        "snippet": "<img alt=\"A large flock of white hens and roosters inside a commercial poultry house…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 458ms",
+        "Load Delay 82ms",
+        "Load Time 202ms",
+        "Render Delay 3029ms"
+      ],
+      "jsTransferKB": 229.8,
+      "jsRequests": 12,
+      "totalTransferKB": 459.2,
+      "imageKB": 58.1,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 26,
+      "mainThreadMs": 7320,
+      "bootupMs": 1747,
+      "domSize": 1049,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.56)",
+          "total-blocking-time (0.34)",
+          "speed-index (0.97)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    },
+    {
+      "file": "en-mobile-r4.json",
+      "page": "/en",
+      "key": "en-mobile",
+      "preset": "mobile",
+      "run": 4,
+      "url": "http://localhost:3200/en",
+      "lighthouse": "12.8.2",
+      "benchmarkIndex": 1833,
+      "throttling": "simulate {\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4}",
+      "scores": {
+        "performance": 77,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 69
+      },
+      "fcpMs": 1238,
+      "lcpMs": 3664,
+      "cls": 0,
+      "tbtMs": 495,
+      "siMs": 2449,
+      "ttiMs": 4641,
+      "ttfbMs": 10,
+      "lcpElement": {
+        "selector": "div.intro-mask > div.intro-zoom > div.isolate > img.object-cover",
+        "label": "A large flock of white hens and roosters inside a commercial poultry house, wit…",
+        "snippet": "<img alt=\"A large flock of white hens and roosters inside a commercial poultry house…\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover\" style=\"position: absolute; height: 100%; width: 100%; inset: 0px;\" sizes=\"(min"
+      },
+      "lcpPhases": [
+        "TTFB 457ms",
+        "Load Delay 224ms",
+        "Load Time 257ms",
+        "Render Delay 2725ms"
+      ],
+      "jsTransferKB": 229.8,
+      "jsRequests": 12,
+      "totalTransferKB": 459.4,
+      "imageKB": 58.1,
+      "fontKB": 69.7,
+      "cssKB": 20.9,
+      "unusedJsKB": 26,
+      "mainThreadMs": 6104,
+      "bootupMs": 1550,
+      "domSize": 1049,
+      "failing": {
+        "performance": [
+          "first-contentful-paint (0.99)",
+          "largest-contentful-paint (0.59)",
+          "total-blocking-time (0.58)",
+          "speed-index (0.98)"
+        ],
+        "accessibility": [],
+        "best-practices": [],
+        "seo": [
+          "is-crawlable (0)"
+        ]
+      }
+    }
+  ]
+}

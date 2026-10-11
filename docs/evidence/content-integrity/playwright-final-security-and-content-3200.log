@@ -1,0 +1,165 @@
+Running 25 tests using 2 workers
+  ok  2 [desktop] › tests\e2e\security.spec.ts:122:3 › response headers › HTML, API, admin and static assets all carry the security headers (357ms)
+  ok  3 [desktop] › tests\e2e\security.spec.ts:135:3 › response headers › cross-origin API reads are not granted by CORS (35ms)
+  ok  4 [desktop] › tests\e2e\security.spec.ts:143:3 › CMS / API surface › admin is noindex and staging robots.txt disallows everything (69ms)
+  ok  5 [desktop] › tests\e2e\security.spec.ts:149:3 › CMS / API surface › GraphQL is disabled (49ms)
+  ok  6 [desktop] › tests\e2e\security.spec.ts:155:3 › CMS / API surface › anonymous REST cannot read leads, staff, approvals or version history (88ms)
+  ok  7 [desktop] › tests\e2e\security.spec.ts:162:3 › CMS / API surface › anonymous REST never returns unapproved products or staff-only fields (909ms)
+  ok  8 [desktop] › tests\e2e\security.spec.ts:194:3 › CMS / API surface › unverified contact channels are not exposed by the public settings API (27ms)
+  ok  9 [desktop] › tests\e2e\security.spec.ts:215:3 › inquiry server action abuse › script tags are stored as inert text and only the reference is echoed back (4.5s)
+  ok 10 [desktop] › tests\e2e\security.spec.ts:261:3 › inquiry server action abuse › a filled honeypot is refused with a recoverable error and nothing is stored (2.5s)
+  ok 11 [desktop] › tests\e2e\security.spec.ts:274:3 › inquiry server action abuse › a foreign Origin on the action POST is rejected by the framework (CSRF) (2.9s)
+  ok 12 [desktop] › tests\e2e\security.spec.ts:291:5 › inquiry server action abuse › oversized body above the app bound (20 KB) → app refuses; never a fake success (2.4s)
+  ok 13 [desktop] › tests\e2e\security.spec.ts:291:5 › inquiry server action abuse › oversized body above the 64 KB framework limit (70 KB) → framework refuses; never a fake success (2.3s)
+  ok  1 [desktop] › tests\e2e\content-integrity.spec.ts:134:5 › content integrity /ar › every page: scope, claims, digits, placeholders, banners, metrics (19.4s)
+  ok 15 [desktop] › tests\e2e\content-integrity.spec.ts:185:5 › content integrity /ar › the three approved metric statements render verbatim with their qualifiers (home, about) (1.2s)
+  ok 14 [desktop] › tests\e2e\security.spec.ts:307:3 › staff authentication › five failed logins lock a (throwaway) account; other staff are unaffected (4.6s)
+  ok 17 [desktop] › tests\e2e\security.spec.ts:333:3 › staff authentication › only an admin can create staff accounts (730ms)
+  ok 16 [desktop] › tests\e2e\content-integrity.spec.ts:193:5 › content integrity /ar › veterinary pages carry the exact safety sentence (7.7s)
+  x  18 [desktop] › tests\e2e\content-integrity.spec.ts:201:5 › content integrity /ar › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence (963ms)
+  x  19 [desktop] › tests\e2e\content-integrity.spec.ts:208:5 › content integrity /ar › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) (15.5s)
+  ok 20 [desktop] › tests\e2e\content-integrity.spec.ts:134:5 › content integrity /en › every page: scope, claims, digits, placeholders, banners, metrics (13.9s)
+  ok 21 [desktop] › tests\e2e\content-integrity.spec.ts:185:5 › content integrity /en › the three approved metric statements render verbatim with their qualifiers (home, about) (1.3s)
+  ok 22 [desktop] › tests\e2e\content-integrity.spec.ts:193:5 › content integrity /en › veterinary pages carry the exact safety sentence (8.7s)
+  x  23 [desktop] › tests\e2e\content-integrity.spec.ts:201:5 › content integrity /en › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence (942ms)
+  x  24 [desktop] › tests\e2e\content-integrity.spec.ts:208:5 › content integrity /en › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) (15.5s)
+  x  25 [desktop] › tests\e2e\content-integrity.spec.ts:224:7 › content integrity /en › CI-01: Arabic text on English pages is always marked lang="ar" (12.5s)
+  1) [desktop] › tests\e2e\content-integrity.spec.ts:201:5 › content integrity /ar › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence 
+    Error: ar/products?category=medicines
+    expect(received).toContain(expected) // indexOf
+    Expected substring: "تُستخدم المنتجات البيطرية وفقًا للإرشادات المعتمدة وتحت إشراف الطبيب البيطري."
+    Received string:    "الرئيسية المنتجات المنتجات كتالوج منتجات مزارع الدواجن كتالوج تجاري للمنتجات التي نوفرها لمزارع الدواجن، من الأعلاف ومكملاتها إلى الأدوية واللقاحات البيطرية. لا نعرض أسعارًا؛ يؤكد فريقنا السعر والتوافر عند استفسارك عن المنتج. ابحث في الكتالوج في الكتالوج: 3 منتجات بحث تصفية النتائج الفئة الكل أعلاف الدواجن 1 مكملات الأعلاف 1 الأدوية البيطرية 1 اللقاحات البيطرية 0 نوع الإنتاج الكل التسمين 2 البياض 2 الأمهات 1 إعادة ضبط التصفية منتج واحد التصفية الحالية الأدوية البيطرية إعادة ضبط التصفية الأدوية البيطرية [اختبار] منتج بيطري تجريبي [TEST] Fixture veterinary item التسمين البياض التوافر عند الاستفسار عرض التفاصيل استفسر عن المنتج : [اختبار] منتج بيطري تجريبي لم تجد المنتج الذي تبحث عنه؟ أخبرنا باسم المنتج أو الفئة التي تحتاجها مزرعتك، ويتابع فريقنا استفسارك معك مباشرة. أرسل استفسارًا"
+      202 |       for (const category of ['medicines', 'vaccines']) {
+      203 |         await page.goto(`/${locale}/products?category=${category}`)
+    > 204 |         expect((await extract(page)).main, `${locale}/products?category=${category}`).toContain(SAFETY[locale])
+          |                                                                                       ^
+      205 |       }
+      206 |     })
+      207 |
+        at D:\ويبسايت الشروق\tests\e2e\content-integrity.spec.ts:204:87
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--9625f-carries-the-safety-sentence-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--9625f-carries-the-safety-sentence-desktop\error-context.md
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--9625f-carries-the-safety-sentence-desktop\trace.zip
+    Usage:
+        pnpm exec playwright show-trace C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--9625f-carries-the-safety-sentence-desktop\trace.zip
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+  2) [desktop] › tests\e2e\content-integrity.spec.ts:208:5 › content integrity /ar › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) 
+    Error: ar/this-page-does-not-exist h1 without JS
+    expect(locator).toHaveCount(expected) failed
+    Locator:  locator('h1')
+    Expected: 1
+    Received: 0
+    Timeout:  15000ms
+    Call log:
+      - ar/this-page-does-not-exist h1 without JS locator('h1') with timeout 15000ms
+      - waiting for locator('h1')
+        33 × locator resolved to 0 elements
+           - unexpected value "0"
+      213 |         const res = await page.goto(`/${locale}${route}`)
+      214 |         expect(res?.status(), route).toBe(404)
+    > 215 |         await expect(page.locator('h1'), `${locale}${route} h1 without JS`).toHaveCount(1)
+          |                                                                             ^
+      216 |         await expect(page.locator('header').first()).toBeAttached()
+      217 |         const banners = await page.locator('[role="note"]').allInnerTexts()
+      218 |         if (env.fixturesVisible) expect(banners.join(' '), `${locale}${route} demo banner`).toContain(DEMO_BANNER[locale])
+        at D:\ويبسايت الشروق\tests\e2e\content-integrity.spec.ts:215:77
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--a63bc-pt-with-the-status-ribbons--desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--a63bc-pt-with-the-status-ribbons--desktop\error-context.md
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--a63bc-pt-with-the-status-ribbons--desktop\trace.zip
+    Usage:
+        pnpm exec playwright show-trace C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--a63bc-pt-with-the-status-ribbons--desktop\trace.zip
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+  3) [desktop] › tests\e2e\content-integrity.spec.ts:201:5 › content integrity /en › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence 
+    Error: en/products?category=medicines
+    expect(received).toContain(expected) // indexOf
+    Expected substring: "Veterinary products should be used in line with approved guidelines and under the supervision of a veterinarian."
+    Received string:    "Home Products Products The poultry farm product catalogue A B2B catalogue of what we supply to poultry farms: feed, feed supplements, veterinary medicines and vaccines. Prices aren’t listed; our team confirms price and availability when you inquire. Search the catalogue In the catalogue: 3 products Search Filter results Category All Poultry feed 1 Feed supplements 1 Veterinary medicines 1 Veterinary vaccines 0 Production type All Broilers 2 Layers 2 Breeders 1 Reset filters 1 product Active filters Veterinary medicines Reset filters Veterinary medicines [TEST] Fixture veterinary item [اختبار] منتج بيطري تجريبي Broilers Layers Availability on inquiry View details Inquire about this product : [TEST] Fixture veterinary item Can’t find the product you need? Tell us which product or category your farm needs, and our team will follow up with you directly. Send an inquiry"
+      202 |       for (const category of ['medicines', 'vaccines']) {
+      203 |         await page.goto(`/${locale}/products?category=${category}`)
+    > 204 |         expect((await extract(page)).main, `${locale}/products?category=${category}`).toContain(SAFETY[locale])
+          |                                                                                       ^
+      205 |       }
+      206 |     })
+      207 |
+        at D:\ويبسايت الشروق\tests\e2e\content-integrity.spec.ts:204:87
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--c1c13-carries-the-safety-sentence-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--c1c13-carries-the-safety-sentence-desktop\error-context.md
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--c1c13-carries-the-safety-sentence-desktop\trace.zip
+    Usage:
+        pnpm exec playwright show-trace C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--c1c13-carries-the-safety-sentence-desktop\trace.zip
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+  4) [desktop] › tests\e2e\content-integrity.spec.ts:208:5 › content integrity /en › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) 
+    Error: en/this-page-does-not-exist h1 without JS
+    expect(locator).toHaveCount(expected) failed
+    Locator:  locator('h1')
+    Expected: 1
+    Received: 0
+    Timeout:  15000ms
+    Call log:
+      - en/this-page-does-not-exist h1 without JS locator('h1') with timeout 15000ms
+      - waiting for locator('h1')
+        33 × locator resolved to 0 elements
+           - unexpected value "0"
+      213 |         const res = await page.goto(`/${locale}${route}`)
+      214 |         expect(res?.status(), route).toBe(404)
+    > 215 |         await expect(page.locator('h1'), `${locale}${route} h1 without JS`).toHaveCount(1)
+          |                                                                             ^
+      216 |         await expect(page.locator('header').first()).toBeAttached()
+      217 |         const banners = await page.locator('[role="note"]').allInnerTexts()
+      218 |         if (env.fixturesVisible) expect(banners.join(' '), `${locale}${route} demo banner`).toContain(DEMO_BANNER[locale])
+        at D:\ويبسايت الشروق\tests\e2e\content-integrity.spec.ts:215:77
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--75f94-pt-with-the-status-ribbons--desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--75f94-pt-with-the-status-ribbons--desktop\error-context.md
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--75f94-pt-with-the-status-ribbons--desktop\trace.zip
+    Usage:
+        pnpm exec playwright show-trace C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--75f94-pt-with-the-status-ribbons--desktop\trace.zip
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+  5) [desktop] › tests\e2e\content-integrity.spec.ts:224:7 › content integrity /en › CI-01: Arabic text on English pages is always marked lang="ar" 
+    Error: /en/products/fixture-supplement-beta: «سجل اختبار آلي — ليس منتجًا حقيقيًا.»
+    /en/products/fixture-feed-alpha: «سجل اختبار آلي — ليس منتجًا حقيقيًا.»
+    /en/products/fixture-medicine-gamma: «سجل اختبار آلي — ليس منتجًا حقيقيًا.»
+    expect(received).toEqual(expected) // deep equality
+    - Expected  - 1
+    + Received  + 5
+    - Array []
+    + Array [
+    +   "/en/products/fixture-supplement-beta: «سجل اختبار آلي — ليس منتجًا حقيقيًا.»",
+    +   "/en/products/fixture-feed-alpha: «سجل اختبار آلي — ليس منتجًا حقيقيًا.»",
+    +   "/en/products/fixture-medicine-gamma: «سجل اختبار آلي — ليس منتجًا حقيقيًا.»",
+    + ]
+      229 |           for (const t of await arabicOutsideLangAr(page)) problems.push(`/en${route}: «${t}»`)
+      230 |         }
+    > 231 |         expect(problems, problems.join('\n')).toEqual([])
+          |                                               ^
+      232 |       })
+      233 |     }
+      234 |   })
+        at D:\ويبسايت الشروق\tests\e2e\content-integrity.spec.ts:231:47
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--e7406-s-is-always-marked-lang-ar--desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--e7406-s-is-always-marked-lang-ar--desktop\error-context.md
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--e7406-s-is-always-marked-lang-ar--desktop\trace.zip
+    Usage:
+        pnpm exec playwright show-trace C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-final\content-integrity-content--e7406-s-is-always-marked-lang-ar--desktop\trace.zip
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+  5 failed
+    [desktop] › tests\e2e\content-integrity.spec.ts:201:5 › content integrity /ar › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence 
+    [desktop] › tests\e2e\content-integrity.spec.ts:208:5 › content integrity /ar › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) 
+    [desktop] › tests\e2e\content-integrity.spec.ts:201:5 › content integrity /en › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence 
+    [desktop] › tests\e2e\content-integrity.spec.ts:208:5 › content integrity /en › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) 
+    [desktop] › tests\e2e\content-integrity.spec.ts:224:7 › content integrity /en › CI-01: Arabic text on English pages is always marked lang="ar" 
+  20 passed (1.8m)

@@ -1,0 +1,117 @@
+{
+  "route": "/en/products?q=zzzz-no-match",
+  "url": "http://localhost:3200/en/products?q=zzzz-no-match",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "desktop",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:48:43.048Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 21,
+      "nodes": [
+        {
+          "target": [
+            ".lg\\:inline-flex > span"
+          ],
+          "html": "<span>Talk to our team</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".link-sweep.hover\\:text-fg[href=\"/en\"]"
+          ],
+          "html": "<a class=\"link-sweep text-fg-muted hover:text-fg\" href=\"/en\">Home</a>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".mt-8.flex-wrap.gap-3 > .focus-visible\\:text-ink.before\\:bg-vermilion.h-13 > span"
+          ],
+          "html": "<span>Reset filters</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".border-current > span"
+          ],
+          "html": "<span>Send an inquiry</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".h-15.px-8[href=\"/en/contact?type=product\"] > span"
+          ],
+          "html": "<span>Send an inquiry</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href=\"/en\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Home</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"about\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">About</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"how-we-work\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">How we work</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"knowledge\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Knowledge</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[href$=\"partner-with-us\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Partner with us</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"contact\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Contact</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"poultry-solutions\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Overview</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 29
+}

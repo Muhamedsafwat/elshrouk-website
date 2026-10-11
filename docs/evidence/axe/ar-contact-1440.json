@@ -1,0 +1,75 @@
+{
+  "route": "/ar/contact",
+  "url": "http://localhost:3200/ar/contact",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "desktop",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:49:00.137Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 6,
+      "nodes": [
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"about\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">عن الشروق</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"knowledge\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">المعرفة</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"poultry-solutions\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">نظرة عامة</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"breeders\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">الأمهات</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[href=\"/ar/products?category=feed\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">أعلاف الدواجن</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".space-y-0 > li:nth-child(2) > .min-h-10.hover\\:text-fg.text-fg-soft > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">مكملات الأعلاف</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 30
+}

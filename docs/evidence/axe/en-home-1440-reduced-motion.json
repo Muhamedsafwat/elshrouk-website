@@ -1,0 +1,117 @@
+{
+  "route": "/en",
+  "url": "http://localhost:3200/en",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "state": "reduced-motion",
+  "scope": "document",
+  "project": "desktop",
+  "reducedMotion": true,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:50:38.105Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 55,
+      "nodes": [
+        {
+          "target": [
+            ".lg\\:max-xl\\:px-5 > span"
+          ],
+          "html": "<span>Talk to our team</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "a[href$=\"#farm-types\"] > span"
+          ],
+          "html": "<span>Explore our solutions</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".border-\\[1\\.5px\\].border-current[href=\"/en/contact?type=farm\"] > span"
+          ],
+          "html": "<span>Contact us</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "article[aria-labelledby=\"farm-broilers-title\"] > div[data-reveal=\"up\"][data-revealed=\"\"] > .mt-9.group\\/link.focus-visible\\:text-accent > .pb-0\\.5.link-sweep"
+          ],
+          "html": "<span class=\"link-sweep pb-0.5\">Explore broiler solutions</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "article[aria-labelledby=\"farm-layers-title\"] > div[data-reveal=\"up\"][data-revealed=\"\"] > .mt-9.group\\/link.focus-visible\\:text-accent > .pb-0\\.5.link-sweep"
+          ],
+          "html": "<span class=\"link-sweep pb-0.5\">Explore layer solutions</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "article[aria-labelledby=\"farm-breeders-title\"] > div[data-reveal=\"up\"][data-revealed=\"\"] > .mt-9.group\\/link.focus-visible\\:text-accent > .pb-0\\.5.link-sweep"
+          ],
+          "html": "<span class=\"link-sweep pb-0.5\">Explore breeder solutions</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".text-\\[clamp\\(3\\.25rem\\,1\\.5rem\\+3vw\\,5rem\\)\\].leading-\\[0\\.9\\][data-ft-index=\"\"]:nth-child(3)"
+          ],
+          "html": "<span data-ft-index=\"\" class=\"num col-start-1 row-start-1 text-[clamp(3.25rem,1.5rem+3vw,5rem)] leading-[0.9] font-extrabold tracking-tight\" style=\"opacity: 1; visibility: inherit; translate: none; ro",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".mb-1"
+          ],
+          "html": "<span class=\"num col-start-1 row-start-1 mb-1 self-start justify-self-start text-caption font-semibold text-white/75\">/ <!-- -->03</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".self-end.leading-tight[data-ft-name=\"\"]:nth-child(4)"
+          ],
+          "html": "<span data-ft-name=\"\" class=\"col-start-1 row-start-1 self-end pt-6 text-title leading-tight font-bold whitespace-nowrap\" style=\"opacity: 1; visibility: inherit; translate: none; rotate: none; scale: n",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".lg\\:col-start-8.md\\:col-span-6.md\\:col-start-3 > .sm\\:w-auto.h-15.before\\:bg-ink > span"
+          ],
+          "html": "<span>Browse the product catalogue</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "a[aria-labelledby=\"pu-feed-name\"] > .xl\\:p-8.p-5.sm\\:p-6 > .tracking-\\[0\\.2em\\].text-white.num"
+          ],
+          "html": "<span class=\"num text-small font-semibold tracking-[0.2em] text-white\">01</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "#pu-feed-name"
+          ],
+          "html": "<h3 id=\"pu-feed-name\" class=\"text-display-md font-bold text-white\">Poultry feed</h3>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 28
+}

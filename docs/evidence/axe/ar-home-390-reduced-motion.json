@@ -1,0 +1,117 @@
+{
+  "route": "/ar",
+  "url": "http://localhost:3200/ar",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "state": "reduced-motion",
+  "scope": "document",
+  "project": "desktop",
+  "reducedMotion": true,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:50:40.627Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 21,
+      "nodes": [
+        {
+          "target": [
+            ".intro-line.mask-line:nth-child(1) > span"
+          ],
+          "html": "<span>من قلب صناعة <span class=\"text-vermilion\">الدواجن</span>،</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "a[href$=\"#farm-types\"] > span"
+          ],
+          "html": "<span>استكشف حلولنا</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".lg\\:col-start-8.md\\:col-span-6.md\\:col-start-3 > .sm\\:w-auto.h-15.before\\:bg-ink > span"
+          ],
+          "html": "<span>تصفح كتالوج المنتجات</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "a[aria-labelledby=\"pu-feed-name\"] > .xl\\:p-8.p-5.sm\\:p-6 > .tracking-\\[0\\.2em\\].text-white.num"
+          ],
+          "html": "<span class=\"num text-small font-semibold tracking-[0.2em] text-white\">01</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[aria-labelledby=\"pu-supplements-name\"] > .xl\\:p-8.p-5.sm\\:p-6 > .tracking-\\[0\\.2em\\].text-white.num"
+          ],
+          "html": "<span class=\"num text-small font-semibold tracking-[0.2em] text-white\">02</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[aria-labelledby=\"pu-medicines-name\"] > .xl\\:p-8.p-5.sm\\:p-6 > .tracking-\\[0\\.2em\\].text-white.num"
+          ],
+          "html": "<span class=\"num text-small font-semibold tracking-[0.2em] text-white\">03</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[aria-labelledby=\"pu-vaccines-name\"] > .xl\\:p-8.p-5.sm\\:p-6 > .tracking-\\[0\\.2em\\].text-white.num"
+          ],
+          "html": "<span class=\"num text-small font-semibold tracking-[0.2em] text-white\">04</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "li[data-reveal-delay=\"0.08\"] > .transition-shadow.hover\\:shadow-\\[0_24px_60px_-36px_rgb\\(0_0_0\\/0\\.45\\)\\].has-\\[h3_a\\:focus-visible\\]\\:outline-3 > .bg-stone-100.aspect-\\[4\\/3\\].overflow-hidden > .py-1\\.5.start-4.top-4"
+          ],
+          "html": "<span class=\"absolute start-4 top-4 inline-flex items-center gap-2 rounded-full bg-paper/95 px-3 py-1.5 text-caption font-semibold text-ink\">",
+          "reason": "Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "li[data-reveal-delay=\"0.16\"] > .transition-shadow.hover\\:shadow-\\[0_24px_60px_-36px_rgb\\(0_0_0\\/0\\.45\\)\\].has-\\[h3_a\\:focus-visible\\]\\:outline-3 > .bg-stone-100.aspect-\\[4\\/3\\].overflow-hidden > .py-1\\.5.start-4.top-4"
+          ],
+          "html": "<span class=\"absolute start-4 top-4 inline-flex items-center gap-2 rounded-full bg-paper/95 px-3 py-1.5 text-caption font-semibold text-ink\">",
+          "reason": "Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "strong:nth-child(1)"
+          ],
+          "html": "<strong data-pp-statement=\"\" class=\"font-bold text-fg bg-[linear-gradient(var(--color-vermilion),var(--color-vermilion))] bg-no-repeat [background-size:100%_0.09em] [background-position:100%_100%] ltr",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "strong:nth-child(1) > .num"
+          ],
+          "html": "<span class=\"num\">300</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "strong:nth-child(2) > .num"
+          ],
+          "html": "<span class=\"num\">15</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 28
+}

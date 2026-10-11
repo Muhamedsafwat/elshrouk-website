@@ -3,7 +3,7 @@
 The queue of decisions, assets, facts and credentials that only people (client, legal, brand, IT) can provide — spec §19.
 Development continues without them (spec §19: "do not block unnecessarily"): each item has a working, honest fallback, and nothing unapproved is published.
 
-_Last updated: 2026-10-09 (PM / technical-architect subagent). Maintained by the Orchestrator. All items raised 2026-10-09 and currently **open**._
+_Last updated: 2026-10-11 (Orchestrator, final handoff). Items were raised 2026-10-09. All remain **open** except where a row says otherwise: OI-07 is partly answered and OI-12 is partly closed (PostgreSQL verified locally)._
 
 **Priority:** **Critical** — blocks public launch (not development) · **High** — needed before launch; launching without it visibly degrades credibility or quality · **Medium** — completeness; can follow launch · **Low** — optional.
 **Owners:** client (business/commercial) · legal (compliance, privacy) · brand (identity owner / designer) · IT (hosting, credentials).
@@ -19,12 +19,12 @@ _Last updated: 2026-10-09 (PM / technical-architect subagent). Maintained by the
 | OI-04 | Favicon / app icon from the emblem — approval [O4] | brand | Medium | Browser and admin icons |
 | OI-05 | Verified contact & identity data (phone, WhatsApp, email, address, legal entity, domain, social) | client | Critical | Contact shortcuts, footer, Organization schema |
 | OI-06 | Real product list (names, SKUs, categories, pack sizes, labels, manufacturers, registrations) | client + legal | Critical | Public catalogue content, product pages |
-| OI-07 | Confirm feed / supplement lines and the scope of "~150" | client | High | Category copy depth, catalogue coverage |
+| OI-07 | Confirm feed / supplement lines and the scope of "~150" — **partly answered** (business lines confirmed) | client | High | Category copy depth, catalogue coverage |
 | OI-08 | Commissioned / approved photography (current: licensed stock) [O11] | client / brand | High | Authenticity of imagery |
 | OI-09 | Confirm the 5-step commercial process and any service claims [O12] | client | High | "How we work" copy, Scene 6 wording |
 | OI-10 | Legal / compliance sign-off: veterinary copy, label downloads, privacy policy, consent, retention | legal | Critical | Public launch, label PDFs, privacy page |
 | OI-11 | CMS ownership: production admin owner, approvers, sales users | client | High | Production accounts and approval workflow |
-| OI-12 | PostgreSQL (staging/production) + object storage credentials; PostgreSQL verification environment | IT / client | Critical | Production DB migrations, media storage, deployment |
+| OI-12 | PostgreSQL (staging/production) + object storage credentials — **local PostgreSQL verification done** | IT / client | Critical | Production database, media storage, deployment |
 | OI-13 | SMTP / notification channel and recipient inbox for inquiries | IT / client | High | E-mail notifications (leads still stored) |
 | OI-14 | Analytics provider IDs + consent strategy | client + legal | Medium | Analytics (adapter is a no-op) |
 | OI-15 | Approval of taglines, hero headline, metric footnote, poultry-only vision/mission/values copy and English copy [O9] | client / brand | High | Publishing high-visibility copy; English indexing |
@@ -82,7 +82,8 @@ _Last updated: 2026-10-09 (PM / technical-architect subagent). Maintained by the
 
 ### OI-07 — Feed / supplement lines and the scope of "~150"
 - **Why needed:** the client named poultry feed and feed supplements as business lines; the approved "~150" covers veterinary medicines and vaccines only; catalogue coverage is undefined.
-- **Questions:** which feed and feed-supplement lines are offered (supply/distribution — is any of it own manufacturing?); is "~150" still accurate and still medicines + vaccines only; should the online catalogue list every item or a selection?
+- **Answered (2026-10-09 build instruction):** the company focuses on poultry feed, feed supplements and related poultry veterinary supply, so supplier wording (نوفر / نوزع) is used for feed and supplements (`content/approval-register.md` C-01). The approved metric stays exactly as given: about 150 distributed products, stated as veterinary medicines and vaccines and never attached to feed or supplements (M-03).
+- **Still open:** which feed and feed-supplement lines are offered (and whether any of it is own manufacturing); whether "~150" is still accurate and still covers medicines + vaccines only; whether the online catalogue should list every item or a selection.
 - **Blocked / degraded meanwhile:** feed and supplement pages stay high-level (no formulas, brands or claims).
 - **Current fallback:** distributor wording (نوفر / نوزع / نعمل على إتاحة) and the metric statement verbatim.
 - **Owner / priority:** client · High.
@@ -115,9 +116,10 @@ _Last updated: 2026-10-09 (PM / technical-architect subagent). Maintained by the
 - **Owner / priority:** client · High.
 
 ### OI-12 — Production database, object storage and a PostgreSQL verification environment
-- **Why needed:** production uses PostgreSQL (`postgres://` `DATABASE_URL`, schema push disabled, migrations in `src/migrations/postgres`) and S3-compatible storage for media. This environment has no PostgreSQL server and no Docker, so Postgres migrations cannot be generated or verified here.
-- **What we need:** PostgreSQL connection details for staging and production (or permission to use a temporary approved instance / install PostgreSQL locally), an S3-compatible bucket with region/endpoint and access keys, and a backup policy.
-- **Blocked meanwhile:** P3-10 (Postgres migrations), P8-06 (deployment); quality-gate G8.4.
+- **Why needed:** production uses PostgreSQL (`postgres://` `DATABASE_URL`, schema push disabled, migrations in `src/migrations/postgres`) and S3-compatible storage for media.
+- **Done locally (2026-10-09/10):** with no PostgreSQL server or Docker on this machine, a real PostgreSQL 17 binary was run from a scratch folder (`embedded-postgres`, not a project dependency). The initial migration was generated (`src/migrations/postgres/20261009_183146_initial.ts`), applied, seeded and queried with the same results as SQLite. A WIN1252 database fails on Arabic text, so the production database must be UTF8. Evidence: `docs/evidence/database-verification.md`.
+- **What we still need:** PostgreSQL connection details for staging and production, an S3-compatible bucket with region/endpoint and access keys, and a backup policy.
+- **Blocked meanwhile:** P8-06 (deployment). P3-10 and gate G8.4 are done with local evidence.
 - **Current fallback:** SQLite (`data/alshorouk.db`) and local `media/` uploads for development and tests only.
 - **Owner / priority:** IT / client · Critical.
 
@@ -178,10 +180,28 @@ _Last updated: 2026-10-09 (PM / technical-architect subagent). Maintained by the
 2. The orchestrator records the evidence (approval register row, `docs/brand-audit.md`, or the relevant doc), updates dependent tasks on `docs/task-board.md`, and marks the item **closed** here with the date.
 3. Anything that changes public content is re-checked with the poultry-content-integrity scans and the relevant browser QA before it is published.
 
-## Added after the build (engineering decisions needed before production)
+## Added after the build — engineering items for deployment and later rounds
+
+Deployment settings (decide when the host is chosen; documented in `docs/deployment.md` and `.env.example`):
 
 | Item | Why needed | Blocked/degraded meanwhile | Current fallback | Owner | Priority |
 |---|---|---|---|---|---|
+| Trusted client-IP header per host (`INQUIRY_IP_HEADER`) | Rate limiting keys on the client IP. Only the hosting proxy knows which header visitors cannot forge (e.g. `x-real-ip` behind nginx, `cf-connecting-ip` only behind Cloudflare). | With it unset in production, client headers are not trusted and a global fail-safe cap applies (30 inquiries / 10 min across all visitors), so heavy legitimate traffic could be throttled. | Implemented: pinned header when set, otherwise the global cap and one warning in the log (SEC-01, unit-tested). | IT / hosting | High (at deployment) |
 | Shared rate-limit store for inquiries (Redis/DB) | The limiter is in-memory per process (5 / 10 min and 20 / 24 h per hashed IP). Multi-instance or serverless hosting needs a shared store behind the `RateLimitStore` interface (`src/lib/inquiries/rate-limit.ts`). | Nothing on a single Node instance; limits become per-instance on scaled hosting. | In-memory store (documented). | IT / hosting | High (at deployment) |
-| Trusted client-IP header per host (`INQUIRY_IP_HEADER`) | Rate limiting keys on the client IP; which proxy header is trustworthy depends on the hosting platform (e.g. `x-forwarded-for` behind a known proxy). | Spoofable header choice could weaken rate limiting. | Conservative default documented in the action. | IT / hosting | High (at deployment) |
+| `INTERNAL_SITE_ORIGIN` (optional) | The proxy asks the public API whether a product/article slug exists, so missing slugs get a server-rendered 404 (CI-03). A loopback origin keeps that check on the machine. | Without it the check uses `SITE_URL` (works, one extra hop through the public address); the request's Host header is never used (SSRF). If the check fails, the page still returns 404, rendered in the browser. | Request origin. | IT / hosting | Medium |
 | Commissioned dawn/sunrise farm photograph | The About hero uses a daylight aerial (licensed stock) with a monochrome→colour treatment to evoke dawn. | None functionally. | `farmExterior` stock image. | Client brand | Medium |
+
+Deferred findings from the QA rounds (all P2/P3, none blocks launch; details in `docs/test-report.md` § Defect log):
+
+| ID | Sev | Item | Why deferred / what it needs |
+|---|---|---|---|
+| PERF-2 | P2 | zod (≈ 97 KB transferred) ships in the client bundle of every page with an inquiry form | Needs `zod/mini` or a server-only validation split: a refactor of the shared form schema, best done with the form owner. |
+| — | P2 | Mobile LCP above the 2.5 s lab budget on key pages (simulated 4× CPU) | The time is render delay from main-thread work, not image loading; next steps are in `docs/performance-report.md`. |
+| SEC-06 | P3 | CSP allows `'unsafe-inline'` scripts (no nonce/hash) | A nonce-based CSP forces dynamic rendering of every page; decide together with hosting/CDN caching. |
+| SEC-07 | P3 | Staff login lockout reveals whether an account exists and lets anyone lock out a known address | Payload default behaviour; options are a generic error plus IP-based throttling at the proxy/WAF, or SSO/MFA (OI-11). |
+| SEC-10 | P3 | `Critical-CH`/`Accept-CH` headers added by `withPayload` cost an extra round trip on first visits in Chromium | Upstream (Payload) behaviour; strip at the proxy or CDN once the host is known. |
+| PERF-3 | P3 | GSAP ScrollTrigger keeps a ~60 Hz `requestAnimationFrame` keep-alive on every page, even under reduced motion | Register ScrollTrigger lazily, only when motion is on and the page has scroll scenes. |
+| VQA-07 | P3 | Some display headings still end on a single word at 320–430 px | Copy/typography polish; best done after the licensed Thmanyah font (OI-01) changes the line breaks. |
+| VQA-12 | P3 | Vermilion share on inner pages (0.3–2.3 % of pixels) is far below the brand guideline's 15 % | Brand / art-direction decision (OI-19), not a defect. |
+| VQA-13 | P3 | A small licensed photo library is reused across pages | Needs commissioned or approved photography (OI-08). |
+| — | — | nodemailer 9.1.1 (via `@payloadcms/email-nodemailer`) has address-parser advisories fixed only in 10.x | Not reachable here: mail is sent only when SMTP is configured, to the configured inbox, and contains no visitor input. Upgrade when Payload's adapter supports nodemailer 10. |

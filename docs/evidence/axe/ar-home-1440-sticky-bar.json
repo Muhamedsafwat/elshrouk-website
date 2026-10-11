@@ -1,0 +1,24 @@
+{
+  "route": "/ar",
+  "url": "http://localhost:3200/ar",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "state": "sticky-bar",
+  "scope": "div.fixed[data-theme=\"light\"][aria-hidden=\"false\"]",
+  "project": "desktop",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:50:28.752Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [],
+  "passes": 15
+}

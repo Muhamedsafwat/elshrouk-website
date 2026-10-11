@@ -1,0 +1,120 @@
+Running 11 tests using 1 worker
+  ok  1 [desktop] › tests\e2e\content-integrity.spec.ts:134:5 › content integrity /ar › every page: scope, claims, digits, placeholders, banners, metrics (42.0s)
+  ok  2 [desktop] › tests\e2e\content-integrity.spec.ts:184:5 › content integrity /ar › the three approved metric statements render verbatim with their qualifiers (home, about) (3.9s)
+  ok  3 [desktop] › tests\e2e\content-integrity.spec.ts:192:5 › content integrity /ar › veterinary pages carry the exact safety sentence (19.7s)
+  x   4 [desktop] › tests\e2e\content-integrity.spec.ts:200:5 › content integrity /ar › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence (2.9s)
+  x   5 [desktop] › tests\e2e\content-integrity.spec.ts:207:5 › content integrity /ar › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) (16.4s)
+  ok  6 [desktop] › tests\e2e\content-integrity.spec.ts:134:5 › content integrity /en › every page: scope, claims, digits, placeholders, banners, metrics (25.7s)
+  ok  7 [desktop] › tests\e2e\content-integrity.spec.ts:184:5 › content integrity /en › the three approved metric statements render verbatim with their qualifiers (home, about) (3.5s)
+  ok  8 [desktop] › tests\e2e\content-integrity.spec.ts:192:5 › content integrity /en › veterinary pages carry the exact safety sentence (18.7s)
+  x   9 [desktop] › tests\e2e\content-integrity.spec.ts:200:5 › content integrity /en › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence (3.1s)
+  x  10 [desktop] › tests\e2e\content-integrity.spec.ts:207:5 › content integrity /en › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) (16.3s)
+  ok 11 [desktop] › tests\e2e\content-integrity.spec.ts:223:7 › content integrity /en › CI-01: Arabic text on English pages is always marked lang="ar" (20.1s)
+  1) [desktop] › tests\e2e\content-integrity.spec.ts:200:5 › content integrity /ar › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence 
+    Error: ar/products?category=medicines
+    expect(received).toContain(expected) // indexOf
+    Expected substring: "تُستخدم المنتجات البيطرية وفقًا للإرشادات المعتمدة وتحت إشراف الطبيب البيطري."
+    Received string:    "الرئيسية المنتجات المنتجات كتالوج منتجات مزارع الدواجن كتالوج تجاري للمنتجات التي نوفرها لمزارع الدواجن، من الأعلاف ومكملاتها إلى الأدوية واللقاحات البيطرية. لا نعرض أسعارًا؛ يؤكد فريقنا السعر والتوافر عند استفسارك عن المنتج. نضيف المنتجات إلى الكتالوج الرقمي تظهر المنتجات هنا تباعًا بعد مراجعة بياناتها واعتمادها. وحتى ذلك الحين، يمكنك طلب قائمة المنتجات الحالية من خلال النموذج. اطلب قائمة المنتجات تصفح حسب الفئة نوفر منتجات مزارع الدواجن ضمن أربع فئات رئيسية. اختر الفئة التي تحتاجها مزرعتك وأرسل استفسارك عنها، ويتابع فريقنا معك مباشرة. 01 أعلاف الدواجن أعلاف للدواجن نوفرها وننسق توريدها وفق احتياج كل مزرعة. استفسر عن هذه الفئة : أعلاف الدواجن 02 مكملات الأعلاف مكملات لأعلاف الدواجن نوفرها مع المعلومات الواردة في ملصقاتها المعتمدة. استفسر عن هذه الفئة : مكملات الأعلاف 03 الأدوية البيطرية أدوية بيطرية للدواجن نوزعها لتُستخدم تحت إشراف الطبيب البيطري. استفسر عن هذه الفئة : الأدوية البيطرية 04 اللقاحات البيطرية لقاحات بيطرية للدواجن نوزعها لتُستخدم وفق برنامج يحدده الطبيب البيطري. استفسر عن هذه الفئة : اللقاحات البيطرية اطلب قائمة المنتجات أرسل بيانات التواصل والفئة التي تحتاجها مزرعتك، ويتابع فريقنا طلبك معك مباشرة. الفئة المختارة الأدوية البيطرية نوع الاستفسار احتياجات المزرعة استفسار عن منتج شراكة وتوريد استفسار عام للسؤال عن منتج أو فئة منتجات محددة، وتأكيد التوافر والسعر. 01 بيانات التواصل الاسم بالكامل رقم الهاتف رقم مصري، أو رقم دولي يبدأ برمز الدولة. 02 تفاصيل الطلب فئة المنتج(اختياري) اختر الفئة أعلاف الدواجن مكملات الأعلاف الأدوية البيطرية اللقاحات البيطرية غير محدد بعد تفاصيل طلبك(اختياري) صف احتياجك التجاري فقط؛ لا نقدّم عبر هذا النموذج تشخيصًا أو توصيات علاجية. اترك هذا الحقل فارغًا أوافق على أن تحفظ الشروق البيانات التي أرسلها عبر هذا النموذج وتستخدمها للرد على طلبي ومتابعته. اقرأ سياسة الخصوصية (تُفتح في علامة تبويب جديدة) أرسل طلبك"
+      201 |       for (const category of ['medicines', 'vaccines']) {
+      202 |         await page.goto(`/${locale}/products?category=${category}`)
+    > 203 |         expect((await extract(page)).main, `${locale}/products?category=${category}`).toContain(SAFETY[locale])
+          |                                                                                       ^
+      204 |       }
+      205 |     })
+      206 |
+        at D:\ويبسايت الشروق\tests\e2e\content-integrity.spec.ts:203:87
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--9625f-carries-the-safety-sentence-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--9625f-carries-the-safety-sentence-desktop\error-context.md
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--9625f-carries-the-safety-sentence-desktop\trace.zip
+    Usage:
+        pnpm exec playwright show-trace C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--9625f-carries-the-safety-sentence-desktop\trace.zip
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+  2) [desktop] › tests\e2e\content-integrity.spec.ts:207:5 › content integrity /ar › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) 
+    Error: ar/this-page-does-not-exist h1 without JS
+    expect(locator).toHaveCount(expected) failed
+    Locator:  locator('h1')
+    Expected: 1
+    Received: 0
+    Timeout:  15000ms
+    Call log:
+      - ar/this-page-does-not-exist h1 without JS locator('h1') with timeout 15000ms
+      - waiting for locator('h1')
+        33 × locator resolved to 0 elements
+           - unexpected value "0"
+      212 |         const res = await page.goto(`/${locale}${route}`)
+      213 |         expect(res?.status(), route).toBe(404)
+    > 214 |         await expect(page.locator('h1'), `${locale}${route} h1 without JS`).toHaveCount(1)
+          |                                                                             ^
+      215 |         await expect(page.locator('header').first()).toBeAttached()
+      216 |         const banners = await page.locator('[role="note"]').allInnerTexts()
+      217 |         if (env.fixturesVisible) expect(banners.join(' '), `${locale}${route} demo banner`).toContain(DEMO_BANNER[locale])
+        at D:\ويبسايت الشروق\tests\e2e\content-integrity.spec.ts:214:77
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--a63bc-pt-with-the-status-ribbons--desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--a63bc-pt-with-the-status-ribbons--desktop\error-context.md
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--a63bc-pt-with-the-status-ribbons--desktop\trace.zip
+    Usage:
+        pnpm exec playwright show-trace C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--a63bc-pt-with-the-status-ribbons--desktop\trace.zip
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+  3) [desktop] › tests\e2e\content-integrity.spec.ts:200:5 › content integrity /en › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence 
+    Error: en/products?category=medicines
+    expect(received).toContain(expected) // indexOf
+    Expected substring: "Veterinary products should be used in line with approved guidelines and under the supervision of a veterinarian."
+    Received string:    "Home Products Products The poultry farm product catalogue A B2B catalogue of what we supply to poultry farms: feed, feed supplements, veterinary medicines and vaccines. Prices aren’t listed; our team confirms price and availability when you inquire. We’re adding products to the digital catalogue Products will appear here as their details are reviewed and approved. In the meantime, you can request the current product list using the form. Request the product list Browse by category We supply poultry farm products across four main categories. Choose the one your farm needs and send us an inquiry about it — our team will follow up with you directly. 01 Poultry feed Poultry feed we supply, coordinated around each farm’s requirements. Ask about this category : Poultry feed 02 Feed supplements Poultry feed supplements we supply with their approved label information. Ask about this category : Feed supplements 03 Veterinary medicines Poultry veterinary medicines we distribute for use under veterinary supervision. Ask about this category : Veterinary medicines 04 Veterinary vaccines Poultry veterinary vaccines we distribute for use in programmes set by a veterinarian. Ask about this category : Veterinary vaccines Request the product list Share your contact details and the category your farm needs, and our team will follow up on your request with you directly. Selected category Veterinary medicines Inquiry type Farm needs Product inquiry Partnership and supply General inquiry Ask about a specific product or product category and confirm availability and price. 01 Your contact details Full name Phone number An Egyptian number, or an international number starting with the country code. 02 Request details Product category(optional) Select a category Poultry feed Feed supplements Veterinary medicines Veterinary vaccines Not sure yet Request details(optional) Describe your commercial need only; we do not provide diagnosis or treatment advice through this form. Leave this field empty I agree that Alshorouk may store the information I submit through this form and use it to respond to and follow up on my request. Read our privacy policy (opens in a new tab) Send your request"
+      201 |       for (const category of ['medicines', 'vaccines']) {
+      202 |         await page.goto(`/${locale}/products?category=${category}`)
+    > 203 |         expect((await extract(page)).main, `${locale}/products?category=${category}`).toContain(SAFETY[locale])
+          |                                                                                       ^
+      204 |       }
+      205 |     })
+      206 |
+        at D:\ويبسايت الشروق\tests\e2e\content-integrity.spec.ts:203:87
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--c1c13-carries-the-safety-sentence-desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--c1c13-carries-the-safety-sentence-desktop\error-context.md
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--c1c13-carries-the-safety-sentence-desktop\trace.zip
+    Usage:
+        pnpm exec playwright show-trace C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--c1c13-carries-the-safety-sentence-desktop\trace.zip
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+  4) [desktop] › tests\e2e\content-integrity.spec.ts:207:5 › content integrity /en › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) 
+    Error: en/this-page-does-not-exist h1 without JS
+    expect(locator).toHaveCount(expected) failed
+    Locator:  locator('h1')
+    Expected: 1
+    Received: 0
+    Timeout:  15000ms
+    Call log:
+      - en/this-page-does-not-exist h1 without JS locator('h1') with timeout 15000ms
+      - waiting for locator('h1')
+        33 × locator resolved to 0 elements
+           - unexpected value "0"
+      212 |         const res = await page.goto(`/${locale}${route}`)
+      213 |         expect(res?.status(), route).toBe(404)
+    > 214 |         await expect(page.locator('h1'), `${locale}${route} h1 without JS`).toHaveCount(1)
+          |                                                                             ^
+      215 |         await expect(page.locator('header').first()).toBeAttached()
+      216 |         const banners = await page.locator('[role="note"]').allInnerTexts()
+      217 |         if (env.fixturesVisible) expect(banners.join(' '), `${locale}${route} demo banner`).toContain(DEMO_BANNER[locale])
+        at D:\ويبسايت الشروق\tests\e2e\content-integrity.spec.ts:214:77
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--75f94-pt-with-the-status-ribbons--desktop\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--75f94-pt-with-the-status-ribbons--desktop\error-context.md
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--75f94-pt-with-the-status-ribbons--desktop\trace.zip
+    Usage:
+        pnpm exec playwright show-trace C:\Users\IBRAHI~1\AppData\Local\Temp\claude\d----------------\9b3843a2-f17b-45cd-9b12-e91250a4f089\scratchpad\pw-ci-3100\content-integrity-content--75f94-pt-with-the-status-ribbons--desktop\trace.zip
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+  4 failed
+    [desktop] › tests\e2e\content-integrity.spec.ts:200:5 › content integrity /ar › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence 
+    [desktop] › tests\e2e\content-integrity.spec.ts:207:5 › content integrity /ar › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) 
+    [desktop] › tests\e2e\content-integrity.spec.ts:200:5 › content integrity /en › CI-02: a catalogue filtered to veterinary medicines/vaccines carries the safety sentence 
+    [desktop] › tests\e2e\content-integrity.spec.ts:207:5 › content integrity /en › CI-03: the 404 page is server-rendered (readable without JavaScript, with the status ribbons) 
+  7 passed (3.1m)

@@ -1,0 +1,49 @@
+{
+ "note": "Anonymous GET /api/access on :3200 (2026-10-11) — field read permissions relevant to SEC-04",
+ "products": {
+  "manufacturer": {
+   "read": true
+  },
+  "manufacturerVerified": {
+   "read": true
+  },
+  "labelPdf": {
+   "read": true
+  },
+  "labelPdfApproved": {
+   "read": true
+  },
+  "searchText": {
+   "read": true
+  }
+ },
+ "articles": {
+  "author": {
+   "read": true
+  },
+  "authorVerified": {
+   "read": true
+  }
+ },
+ "collections": {
+  "products": {
+   "read": true
+  },
+  "product-categories": {
+   "read": true
+  },
+  "poultry-segments": {
+   "read": true
+  },
+  "articles": {
+   "read": true
+  },
+  "faqs": {
+   "read": true
+  },
+  "media": {
+   "read": true
+  },
+  "users": {}
+ }
+}

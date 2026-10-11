@@ -1,0 +1,117 @@
+{
+  "route": "/en/this-page-does-not-exist",
+  "url": "http://localhost:3200/en/this-page-does-not-exist",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "mobile",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:54:08.152Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 18,
+      "nodes": [
+        {
+          "target": [
+            ".mt-10 > .h-15.px-8.before\\:bg-ink > span"
+          ],
+          "html": "<span>Back to home</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".border-\\[1\\.5px\\] > span"
+          ],
+          "html": "<span>Browse products</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href=\"/en\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Home</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"about\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">About</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"how-we-work\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">How we work</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"knowledge\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Knowledge</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[href$=\"partner-with-us\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Partner with us</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"contact\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Contact</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"poultry-solutions\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Overview</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"broilers\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Broilers</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"layers\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Layers</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"breeders\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">Breeders</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 26
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "route": "/ar",
+    "reducedMotion": "no-preference",
+    "run": 1,
+    "ttfb": 201,
+    "fcp": 3560,
+    "lcp": 3560,
+    "lcpEl": "img.object-cover",
+    "candidates": [
+      {
+        "t": 3560,
+        "size": 82154,
+        "el": "img.object-cover"
+      }
+    ]
+  },
+  {
+    "route": "/ar",
+    "reducedMotion": "no-preference",
+    "run": 2,
+    "ttfb": 191,
+    "fcp": 3572,
+    "lcp": 3572,
+    "lcpEl": "img.object-cover",
+    "candidates": [
+      {
+        "t": 3572,
+        "size": 82154,
+        "el": "img.object-cover"
+      }
+    ]
+  },
+  {
+    "route": "/ar",
+    "reducedMotion": "reduce",
+    "run": 1,
+    "ttfb": 188,
+    "fcp": 3600,
+    "lcp": 3600,
+    "lcpEl": "img.object-cover",
+    "candidates": [
+      {
+        "t": 3600,
+        "size": 82026,
+        "el": "img.object-cover"
+      }
+    ]
+  },
+  {
+    "route": "/ar",
+    "reducedMotion": "reduce",
+    "run": 2,
+    "ttfb": 192,
+    "fcp": 3888,
+    "lcp": 3888,
+    "lcpEl": "img.object-cover",
+    "candidates": [
+      {
+        "t": 3888,
+        "size": 82026,
+        "el": "img.object-cover"
+      }
+    ]
+  },
+  {
+    "route": "/ar/contact",
+    "reducedMotion": "no-preference",
+    "run": 1,
+    "ttfb": 208,
+    "fcp": 2348,
+    "lcp": 2348,
+    "lcpEl": "p.col-span-4.text-lead.text-fg-soft",
+    "candidates": [
+      {
+        "t": 2348,
+        "size": 30260,
+        "el": "p.col-span-4.text-lead.text-fg-soft"
+      }
+    ]
+  },
+  {
+    "route": "/ar/contact",
+    "reducedMotion": "no-preference",
+    "run": 2,
+    "ttfb": 212,
+    "fcp": 2316,
+    "lcp": 2316,
+    "lcpEl": "p.col-span-4.text-lead.text-fg-soft",
+    "candidates": [
+      {
+        "t": 2316,
+        "size": 30260,
+        "el": "p.col-span-4.text-lead.text-fg-soft"
+      }
+    ]
+  },
+  {
+    "route": "/ar/contact",
+    "reducedMotion": "reduce",
+    "run": 1,
+    "ttfb": 200,
+    "fcp": 2400,
+    "lcp": 2400,
+    "lcpEl": "p.col-span-4.text-lead.text-fg-soft",
+    "candidates": [
+      {
+        "t": 2400,
+        "size": 30260,
+        "el": "p.col-span-4.text-lead.text-fg-soft"
+      }
+    ]
+  },
+  {
+    "route": "/ar/contact",
+    "reducedMotion": "reduce",
+    "run": 2,
+    "ttfb": 210,
+    "fcp": 2512,
+    "lcp": 2512,
+    "lcpEl": "p.col-span-4.text-lead.text-fg-soft",
+    "candidates": [
+      {
+        "t": 2512,
+        "size": 30260,
+        "el": "p.col-span-4.text-lead.text-fg-soft"
+      }
+    ]
+  },
+  {
+    "route": "/ar/solutions/broilers",
+    "reducedMotion": "no-preference",
+    "run": 1,
+    "ttfb": 173,
+    "fcp": 3344,
+    "lcp": 3344,
+    "lcpEl": "img.object-cover",
+    "candidates": [
+      {
+        "t": 3344,
+        "size": 259283,
+        "el": "img.object-cover"
+      }
+    ]
+  },
+  {
+    "route": "/ar/solutions/broilers",
+    "reducedMotion": "no-preference",
+    "run": 2,
+    "ttfb": 186,
+    "fcp": 3228,
+    "lcp": 3228,
+    "lcpEl": "img.object-cover",
+    "candidates": [
+      {
+        "t": 3228,
+        "size": 259283,
+        "el": "img.object-cover"
+      }
+    ]
+  },
+  {
+    "route": "/ar/solutions/broilers",
+    "reducedMotion": "reduce",
+    "run": 1,
+    "ttfb": 179,
+    "fcp": 3300,
+    "lcp": 3300,
+    "lcpEl": "img.object-cover",
+    "candidates": [
+      {
+        "t": 3300,
+        "size": 259148,
+        "el": "img.object-cover"
+      }
+    ]
+  },
+  {
+    "route": "/ar/solutions/broilers",
+    "reducedMotion": "reduce",
+    "run": 2,
+    "ttfb": 192,
+    "fcp": 3460,
+    "lcp": 3460,
+    "lcpEl": "img.object-cover",
+    "candidates": [
+      {
+        "t": 3460,
+        "size": 259148,
+        "el": "img.object-cover"
+      }
+    ]
+  }
+]

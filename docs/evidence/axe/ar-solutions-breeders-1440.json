@@ -1,0 +1,117 @@
+{
+  "route": "/ar/solutions/breeders",
+  "url": "http://localhost:3200/ar/solutions/breeders",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "desktop",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:48:36.377Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 13,
+      "nodes": [
+        {
+          "target": [
+            ".text-stone-200.hover\\:text-paper[href$=\"poultry-solutions\"]"
+          ],
+          "html": "<a class=\"link-sweep text-stone-200 hover:text-paper\" href=\"/ar/poultry-solutions\">حلول الدواجن</a>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".text-paper.font-medium[aria-current=\"page\"]"
+          ],
+          "html": "<span aria-current=\"page\" class=\"font-medium text-paper\">الأمهات</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".eyebrow.intro-fade.gap-3"
+          ],
+          "html": "<p class=\"eyebrow intro-fade flex items-center gap-3 text-fg-soft\" style=\"--i:0\">",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[href=\"/ar/products?segment=breeders\"] > .pb-0\\.5.link-sweep"
+          ],
+          "html": "<span class=\"link-sweep pb-0.5\">عرض الكل</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".py-1\\.5"
+          ],
+          "html": "<span class=\"absolute start-4 top-4 inline-flex items-center gap-2 rounded-full bg-paper/95 px-3 py-1.5 text-caption font-semibold text-ink\">",
+          "reason": "Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            ".text-white\\/75"
+          ],
+          "html": "<span aria-hidden=\"true\" class=\"num text-small font-semibold text-white/75\">01</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".text-white\\/70"
+          ],
+          "html": "<span lang=\"en\" class=\"text-small text-white/70\">Broilers</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"about\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">عن الشروق</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"knowledge\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">المعرفة</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"poultry-solutions\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">نظرة عامة</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"breeders\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">الأمهات</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "a[href=\"/ar/products?category=feed\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">أعلاف الدواجن</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 30
+}

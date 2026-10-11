@@ -1,0 +1,96 @@
+{
+  "route": "/ar/products",
+  "url": "http://localhost:3200/ar/products",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "desktop",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:48:36.214Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 9,
+      "nodes": [
+        {
+          "target": [
+            "li[data-reveal=\"up\"][data-revealed=\"\"]:nth-child(1) > article > .aspect-\\[4\\/3\\].bg-stone-100.overflow-hidden > .py-1\\.5.start-4.top-4"
+          ],
+          "html": "<span class=\"absolute start-4 top-4 inline-flex items-center gap-2 rounded-full bg-paper/95 px-3 py-1.5 text-caption font-semibold text-ink\">",
+          "reason": "Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "li[data-reveal=\"up\"][data-revealed=\"\"]:nth-child(2) > article > .aspect-\\[4\\/3\\].bg-stone-100.overflow-hidden > .py-1\\.5.start-4.top-4"
+          ],
+          "html": "<span class=\"absolute start-4 top-4 inline-flex items-center gap-2 rounded-full bg-paper/95 px-3 py-1.5 text-caption font-semibold text-ink\">",
+          "reason": "Element's background color could not be determined because element contains an image node"
+        },
+        {
+          "target": [
+            "a[href=\"/ar/contact?type=product\"] > span"
+          ],
+          "html": "<span>أرسل استفسارًا</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"about\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">عن الشروق</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"knowledge\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">المعرفة</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"poultry-solutions\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">نظرة عامة</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href$=\"breeders\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">الأمهات</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".min-h-10.hover\\:text-fg[href=\"/ar/products?category=feed\"] > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">أعلاف الدواجن</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            ".space-y-0 > li:nth-child(2) > .min-h-10.hover\\:text-fg.text-fg-soft > .link-sweep"
+          ],
+          "html": "<span class=\"link-sweep\">مكملات الأعلاف</span>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
+  "passes": 29
+}

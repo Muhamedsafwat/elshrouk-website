@@ -1,0 +1,81 @@
+{
+  "measured": "2026-10-10T23:03:10.965Z",
+  "method": "document.getAnimations() running after 6 s idle + requestAnimationFrame callbacks/s over 3 s (rAF wrapped via init script); ScrollTrigger _rafBugFix loop identified by stack (chunk 3yfdrc7ljb006.js)",
+  "idle": [
+    {
+      "label": "/ar 1440",
+      "runningCount": 0,
+      "running": [],
+      "rafPerSecond": 64
+    },
+    {
+      "label": "/ar 390",
+      "runningCount": 0,
+      "running": [],
+      "rafPerSecond": 64
+    },
+    {
+      "label": "/ar 1440 reduced",
+      "runningCount": 0,
+      "running": [],
+      "rafPerSecond": 64
+    },
+    {
+      "label": "/ar 1440 after full scroll",
+      "runningCount": 0,
+      "running": [],
+      "rafPerSecond": 64
+    }
+  ],
+  "heroScrollFade": [
+    {
+      "scrollY": 0,
+      "opacity": 1,
+      "top": 276,
+      "bottom": 470,
+      "visiblePx": 194.375
+    },
+    {
+      "scrollY": 150,
+      "opacity": 1,
+      "top": 126,
+      "bottom": 320,
+      "visiblePx": 194.375
+    },
+    {
+      "scrollY": 300,
+      "opacity": 1,
+      "top": -24,
+      "bottom": 170,
+      "visiblePx": 170.390625
+    },
+    {
+      "scrollY": 450,
+      "opacity": 1,
+      "top": -174,
+      "bottom": 20,
+      "visiblePx": 20.390625
+    },
+    {
+      "scrollY": 600,
+      "opacity": 0.9,
+      "top": -328,
+      "bottom": -133,
+      "visiblePx": 0
+    },
+    {
+      "scrollY": 900,
+      "opacity": 0.56,
+      "top": -640,
+      "bottom": -446,
+      "visiblePx": 0
+    },
+    {
+      "scrollY": 1400,
+      "opacity": 0.35,
+      "top": -1148,
+      "bottom": -954,
+      "visiblePx": 0
+    }
+  ]
+}

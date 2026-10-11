@@ -1,0 +1,21 @@
+{"check":"ratelimit_same_key","results":["ok","ok","ok","ok","ok","rateLimited"]}
+{"check":"ratelimit_rotating_cf_connecting_ip","results":["ok","ok","ok","ok","ok","ok"]}
+{"check":"ratelimit_rotating_x_forwarded_for","results":["ok","ok","ok","ok","ok","ok"]}
+{"check":"action_missing_origin","status":200,"ok":true}
+{"check":"action_foreign_origin","status":500,"ok":false,"error":"0:{\"a\":\"$@1\",\"f\":\"\",\"q\":\"\",\"i\":false,\"b\":\"OarIDt0ruBd-iSfx77C21\"}\n1:E{\"digest\":\"487772174@E80\"}\n"}
+{"check":"action_70kb_body","status":500,"ok":false,"error":"0:{\"a\":\"$@1\",\"f\":\"\",\"q\":\"\",\"i\":false,\"b\":\"OarIDt0ruBd-iSfx77C21\"}\n1:E{\"digest\":\"3445658445@E394\"}\n"}
+{"check":"action_20kb_message","status":200,"ok":false,"error":"spam"}
+{"check":"action_control_valid","status":200,"ok":true}
+{"check":"users_list_editor","status":200,"totalDocs":1,"emails":["editor@e2e.test"]}
+{"check":"users_list_sales","status":200,"totalDocs":1,"emails":["sales@e2e.test"]}
+{"check":"sales_patch_immutable_and_history","status":200,"name":"Probe 23","requestDetails":"SECTEST-rl-mv2xctwq honeypot-control","statusHistory":[["closed","2020-01-01T00:00:00.000Z","forged-by-sales"]]}
+{"check":"sales_invalid_transition_new_to_qualified","status":400,"message":"Invalid status change: new → qualified"}
+{"check":"editor_reads_inquiry","status":403}
+{"check":"create_probe_editor","status":201,"id":5}
+{"check":"non_approver_approves_draft","status":403,"message":"Only an admin or an authorised editor can approve content."}
+{"check":"non_approver_edits_approved_published_record","status":200,"stillApproved":"approved","stillPublished":true}
+{"check":"restore_internal_notes","status":200,"restored":true}
+{"check":"forgot_password_known_vs_unknown","known":[200,"{\"message\":\"النجاح\"}"],"unknown":[200,"{\"message\":\"النجاح\"}"]}
+{"check":"login_error_locked_vs_unknown","locked":[401,"تمّ قفل هذا المستخدم نظرًا لوجود عدد كبير من محاولات تسجيل الدّخول الغير ناجحة."],"unknown":[401,"البريد الإلكتروني أو كلمة المرور المقدمة غير صحيحة."]}
+{"check":"delete_probe_editor","status":200}
+{"check":"cleanup_sectest_inquiries","found":19,"deleted":19}

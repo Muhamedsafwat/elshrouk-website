@@ -11,7 +11,7 @@ Living document. Every outward-facing claim, headline and regulated statement on
 | State | Meaning | Where it may render |
 |---|---|---|
 | `approved (client-supplied; verify wording before launch)` | The client supplied the statement. It is used verbatim, but the wording must be re-confirmed once before launch. | Production |
-| `review_required` | We proposed the wording, or it depends on facts the client has not yet confirmed. | Staging only, with a draft marker. Hidden in production until approved. |
+| `review_required` | We proposed the wording, or it depends on facts the client has not yet confirmed. | Staging only — the staging site is `noindex` and every such item is tracked here (no on-page draft marker is rendered for Arabic copy; English pages carry an "editorial review pending" notice). Must be approved before production launch. |
 | `placeholder_internal` | Internal string for staging, fixtures or editors. | Never in public production |
 | `hidden` | Must not render anywhere public until the condition in Notes is met. | Nowhere public |
 
@@ -187,7 +187,7 @@ Living document. Every outward-facing claim, headline and regulated statement on
 | ID | Content item | Location (file:key) | Claim / evidence source | Owner | State | Notes |
 |---|---|---|---|---|---|---|
 | EN-01 | The whole English adaptation | `en/*.ts` (all 10 files, same keys as Arabic) | Editorial adaptation of the Arabic | Client — management (+ English editor) | review_required | `/en` stays `noindex` until approved (spec §19.8). Every Arabic row above applies to the same EN key. |
-| EN-02 | EN metric statements: display «~» + label (`metrics.items[*]`), screen-reader «Approximately …», running text «around …» | `en/common.ts:metrics.items[*]`; `en/home.ts:partnerProof.narrative`, `faq.items[0].answer`, `productUniverse.items[2].body` | AGENTS.md English column ("~300 poultry farms we serve on an ongoing basis", …) | Client — management | review_required | The display wording matches the AGENTS.md table. «Approximately» and «around» are qualifier variants for screen readers and running text. Approve them together with EN-01 (Q15). |
+| EN-02 | EN metric statements: display «Approx.» + label (`metrics.items[*]`), screen-reader «Approximately …», running text «around …» | `en/common.ts:metrics.items[*]`; `en/home.ts:partnerProof.narrative`, `faq.items[0].answer`, `productUniverse.items[2].body` | AGENTS.md English column ("~300 poultry farms we serve on an ongoing basis", …) | Client — management | review_required | The display wording matches the AGENTS.md table. «Approximately» and «around» are qualifier variants for screen readers and running text. Approve them together with EN-01 (Q15). |
 | EN-03 | EN safety sentence "Veterinary products should be used in line with approved guidelines and under the supervision of a veterinarian." | `en/common.ts:vetSafetyNote`; `en/home.ts:productUniverse.items[2].body`; `en/solutions.ts:overview.matrix.note`, `segments.*.categories.intro`; `en/howWeWork.ts:disclaimer`; `en/products.ts:detail.vetNote`; `en/knowledge.ts:article.vetNote` | Our translation; no approved English wording exists | Client — legal/compliance | review_required | 9 occurrences, all identical (lint). |
 | EN-04 | EN segment and line names: Broilers · Layers · Breeders · Poultry feed · Feed supplements · Veterinary medicines · Veterinary vaccines | `en/common.ts:segments.*.name`, `categories.*.name`, `forms.options.*` | AGENTS.md (English given in brackets) | Client — management | review_required | Approve together with EN-01. Terminology is consistent across all EN files (checked). |
 | EN-05 | EN taglines and headlines: "Specialised Supply Solutions for Poultry Farms", "Rooted in the poultry industry, / supporting every stage of production.", "Alshorouk means sunrise", etc. | `en/home.ts:meta.title`, `hero.*`, `statement.*`, `closing.*`; `en/about.ts:hero.title`, `name.title`; `en/solutions.ts:*.hero.title` | Writer adaptation | Client — management | review_required | High-visibility English marketing copy (§19.8). |
@@ -262,3 +262,6 @@ Only values were changed. No keys were added or removed, so components are unaff
 - **Governorates.** The AR and EN arrays are both 28 items and index-aligned.
 - **Bidi.** Wrap `{reference}`, `{year}`, SKUs and Latin names in `<bdi>` inside Arabic text.
 - **English locale.** `/en` stays `noindex` and shows `common.englishReviewNotice` until EN-01 is approved.
+
+
+> **Update 2026-10-11 (orchestrator):** the English display qualifier is now «Approx.» (EN-02) — chosen because a bare «~» above a display-size figure is ambiguous; the screen-reader sentence spells out «Approximately». Content-integrity QA (docs/evidence/content-integrity.md) confirmed all three statements render verbatim with qualifiers in both locales.

@@ -1,0 +1,117 @@
+{
+  "route": "/en/poultry-solutions",
+  "url": "http://localhost:3200/en/poultry-solutions",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "state": "default",
+  "scope": "document",
+  "project": "mobile",
+  "reducedMotion": false,
+  "axe": "4.13.0",
+  "timestamp": "2026-10-11T02:53:12.933Z",
+  "tags": [
+    "wcag2a",
+    "wcag2aa",
+    "wcag21a",
+    "wcag21aa",
+    "wcag22aa"
+  ],
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "count": 34,
+      "nodes": [
+        {
+          "target": [
+            ".link-sweep.hover\\:text-fg[href=\"/en\"]"
+          ],
+          "html": "<a class=\"link-sweep text-fg-muted hover:text-fg\" href=\"/en\">Home</a>",
+          "reason": "Element's background color could not be determined due to a background gradient"
+        },
+        {
+          "target": [
+            "#broilers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .lg\\:pe-\\[clamp\\(4\\.5rem\\,7vw\\,7\\.5rem\\)\\].justify-end.flex > .text-\\[clamp\\(7rem\\,2\\.5rem\\+15vw\\,18rem\\)\\].leading-\\[0\\.78\\].tracking-\\[-0\\.04em\\]"
+          ],
+          "html": "<p data-chapter-numeral=\"true\" class=\"num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] text-transparent select-none [-webkit-text-stroke:1.5px_rgb(255_255_255/",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#broilers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .max-w-\\[44rem\\].lg\\:max-w-\\[46\\%\\] > .items-baseline[data-reveal=\"up\"][data-revealed=\"\"] > .eyebrow.text-fg-soft"
+          ],
+          "html": "<span class=\"eyebrow text-fg-soft\">Broilers</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#chapter-broilers"
+          ],
+          "html": "<h2 id=\"chapter-broilers\" data-reveal=\"up\" class=\"mt-5 text-display-lg font-extrabold text-fg\" style=\"\" data-revealed=\"\">Short cycles that call for organised supply</h2>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#broilers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .max-w-\\[44rem\\].lg\\:max-w-\\[46\\%\\] > .max-w-\\[52ch\\].text-lead[data-reveal-delay=\"0.08\"]"
+          ],
+          "html": "<p data-reveal=\"up\" data-reveal-delay=\"0.08\" class=\"mt-6 max-w-[52ch] text-lead text-fg-soft\" style=\"\" data-revealed=\"\">",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#broilers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .max-w-\\[44rem\\].lg\\:max-w-\\[46\\%\\] > .mt-10[data-reveal-delay=\"0.16\"][data-reveal=\"up\"] > .sm\\:w-auto.h-15.px-8 > span"
+          ],
+          "html": "<span>Explore broiler solutions</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#layers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .lg\\:pe-\\[clamp\\(4\\.5rem\\,7vw\\,7\\.5rem\\)\\].justify-end.flex > .text-\\[clamp\\(7rem\\,2\\.5rem\\+15vw\\,18rem\\)\\].leading-\\[0\\.78\\].tracking-\\[-0\\.04em\\]"
+          ],
+          "html": "<p data-chapter-numeral=\"true\" class=\"num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] text-transparent select-none [-webkit-text-stroke:1.5px_rgb(255_255_255/",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#layers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .max-w-\\[44rem\\].lg\\:max-w-\\[46\\%\\] > .items-baseline[data-reveal=\"up\"][data-revealed=\"\"] > .eyebrow.text-fg-soft"
+          ],
+          "html": "<span class=\"eyebrow text-fg-soft\">Layers</span>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#chapter-layers"
+          ],
+          "html": "<h2 id=\"chapter-layers\" data-reveal=\"up\" class=\"mt-5 text-display-lg font-extrabold text-fg\" style=\"\" data-revealed=\"\">Continuity for the egg-production cycle</h2>",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#layers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .max-w-\\[44rem\\].lg\\:max-w-\\[46\\%\\] > .max-w-\\[52ch\\].text-lead[data-reveal-delay=\"0.08\"]"
+          ],
+          "html": "<p data-reveal=\"up\" data-reveal-delay=\"0.08\" class=\"mt-6 max-w-[52ch] text-lead text-fg-soft\" style=\"\" data-revealed=\"\">Layer farms produce table eggs over a long cycle with steady consumption. We wor",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        },
+        {
+          "target": [
+            "#layers > .pt-14.lg\\:pt-24.lg\\:pb-24 > .max-w-\\[44rem\\].lg\\:max-w-\\[46\\%\\] > .mt-10[data-reveal-delay=\"0.16\"][data-reveal=\"up\"] > .sm\\:w-auto.h-15.px-8 > span"
+          ],
+          "html": "<span>Explore layer solutions</span>",
+          "reason": "Element's background color could not be determined due to a pseudo element"
+        },
+        {
+          "target": [
+            "#breeders > .pt-14.lg\\:pt-24.lg\\:pb-24 > .lg\\:pe-\\[clamp\\(4\\.5rem\\,7vw\\,7\\.5rem\\)\\].justify-end.flex > .text-\\[clamp\\(7rem\\,2\\.5rem\\+15vw\\,18rem\\)\\].leading-\\[0\\.78\\].tracking-\\[-0\\.04em\\]"
+          ],
+          "html": "<p data-chapter-numeral=\"true\" class=\"num text-[clamp(7rem,2.5rem+15vw,18rem)] leading-[0.78] font-extrabold tracking-[-0.04em] text-transparent select-none [-webkit-text-stroke:1.5px_rgb(255_255_255/",
+          "reason": "Element's background color could not be determined because it is overlapped by another element"
+        }
+      ]
+    }
+  ],
+  "passes": 26
+}
