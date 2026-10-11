@@ -19,7 +19,7 @@ export const products: ProductsDictionary = {
     },
     search: {
       label: 'Search the catalogue',
-      placeholder: 'Search by name, manufacturer or product code',
+      placeholder: 'Name, maker or code',
       clear: 'Clear search',
       submit: 'Search',
       inCatalog: 'In the catalogue: {count}',

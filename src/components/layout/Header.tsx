@@ -51,18 +51,19 @@ export function Header({ locale, items, homeItem, labels }: HeaderProps) {
     <>
       {/* ---------- MASTHEAD ---------- */}
       <header className="relative z-30 bg-paper" data-theme="light">
-        <div className="container-site flex items-center justify-between gap-6 py-[clamp(1rem,1.5vw,1.375rem)]">
+        <div className="container-site flex items-center justify-between gap-4 py-[clamp(1rem,1.5vw,1.375rem)] xl:gap-6">
           <Link
             href={href(locale, 'home')}
             aria-label={labels.homeLabel}
             className="-m-1 shrink-0 rounded-sm p-1"
             aria-current={isActiveRoute(pathname, locale, 'home') ? 'page' : undefined}
           >
-            {/* 112px on phones, 140px on large screens (brand min 110px; spec 112–155px). */}
-            <span className="block lg:hidden">
+            {/* 112px up to 1279px (so the one-line nav fits at 1024 in both locales), 140px from xl
+                (brand min 110px; spec 112–155px). */}
+            <span className="block xl:hidden">
               <Logo variant="color" width={112} alt={labels.logoAlt} priority />
             </span>
-            <span className="hidden lg:block">
+            <span className="hidden xl:block">
               <Logo variant="color" width={140} alt={labels.logoAlt} priority />
             </span>
           </Link>
@@ -82,7 +83,7 @@ export function Header({ locale, items, homeItem, labels }: HeaderProps) {
             <ButtonLink
               href={ctaHref}
               variant="primary"
-              className="hidden lg:inline-flex"
+              className="hidden lg:inline-flex lg:max-xl:px-5 lg:max-xl:[&>svg]:hidden"
               onClick={() => trackEvent('contact_open', { location: 'header' })}
             >
               {labels.cta}
@@ -104,11 +105,11 @@ export function Header({ locale, items, homeItem, labels }: HeaderProps) {
         inert={!compact}
       >
         <div className="container-site flex h-16 items-center justify-between gap-4 lg:h-[4.5rem]">
-          <MenuButton label={labels.openMenu} expanded={menuOpen} onOpen={openMenu} className="lg:hidden" />
           <nav aria-label={labels.primaryNav} className="hidden lg:block">
             <DesktopNav locale={locale} items={[homeItem, ...items]} pathname={pathname} compact />
           </nav>
-          <div className="flex items-center gap-3">
+          {/* Same inline-end group as the masthead, so the menu button never changes sides (VQA-10). */}
+          <div className="ms-auto flex items-center gap-3">
             <LocaleSwitcher
               locale={locale}
               short={labels.switchLanguageShort}
@@ -124,6 +125,7 @@ export function Header({ locale, items, homeItem, labels }: HeaderProps) {
             >
               {labels.cta}
             </ButtonLink>
+            <MenuButton label={labels.openMenu} expanded={menuOpen} onOpen={openMenu} className="lg:hidden" />
           </div>
         </div>
       </div>
@@ -180,7 +182,7 @@ function DesktopNav({
   compact?: boolean
 }) {
   return (
-    <ul className={cn('flex items-center', compact ? 'gap-1' : 'gap-1 xl:gap-2')}>
+    <ul className={cn('flex items-center', compact ? 'gap-0 xl:gap-1' : 'gap-0 xl:gap-2')}>
       {items.map((item) =>
         item.children?.length ? (
           <li key={item.key}>
@@ -191,7 +193,7 @@ function DesktopNav({
             <Link
               href={href(locale, item.key)}
               aria-current={isActiveRoute(pathname, locale, item.key) ? 'page' : undefined}
-              className="group relative inline-flex h-11 items-center px-3 text-[0.95rem] font-medium text-fg-soft transition-colors hover:text-fg aria-[current=page]:text-fg"
+              className="group relative inline-flex h-11 items-center px-2 text-[0.875rem] font-medium whitespace-nowrap text-fg-soft transition-colors hover:text-fg aria-[current=page]:text-fg xl:px-3 xl:text-[0.95rem]"
             >
               {item.label}
               <NavUnderline />
@@ -207,7 +209,7 @@ function NavUnderline() {
   return (
     <span
       aria-hidden
-      className="absolute inset-x-3 bottom-1.5 h-0.5 origin-right scale-x-0 rounded-full bg-vermilion transition-transform duration-300 ease-(--ease-sunrise) group-hover:scale-x-100 group-aria-[current=page]:scale-x-100 ltr:origin-left"
+      className="absolute inset-x-2 bottom-1.5 h-0.5 origin-right scale-x-0 rounded-full bg-vermilion transition-transform duration-300 ease-(--ease-sunrise) group-hover:scale-x-100 group-aria-[current=page]:scale-x-100 xl:inset-x-3 ltr:origin-left"
     />
   )
 }
@@ -282,14 +284,14 @@ function NavDropdown({ locale, item, pathname }: { locale: HeaderProps['locale']
           setOpen(!open)
         }}
         data-active={active || undefined}
-        className="group relative inline-flex h-11 items-center gap-1.5 px-3 text-[0.95rem] font-medium text-fg-soft transition-colors hover:text-fg data-[active]:text-fg"
+        className="group relative inline-flex h-11 items-center gap-1 px-2 text-[0.875rem] font-medium whitespace-nowrap text-fg-soft transition-colors hover:text-fg data-[active]:text-fg xl:gap-1.5 xl:px-3 xl:text-[0.95rem]"
       >
         {item.label}
         <ChevronIcon size={16} className={cn('transition-transform duration-300', open && 'rotate-180')} />
         <span
           aria-hidden
           className={cn(
-            'absolute inset-x-3 bottom-1.5 h-0.5 origin-right scale-x-0 rounded-full bg-vermilion transition-transform duration-300 ease-(--ease-sunrise) group-hover:scale-x-100 ltr:origin-left',
+            'absolute inset-x-2 bottom-1.5 h-0.5 origin-right scale-x-0 rounded-full bg-vermilion transition-transform duration-300 ease-(--ease-sunrise) group-hover:scale-x-100 xl:inset-x-3 ltr:origin-left',
             active && 'scale-x-100',
           )}
         />

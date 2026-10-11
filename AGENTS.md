@@ -56,11 +56,12 @@ Follow its source precedence, the brand PDF (`Alshorouk_Brand_Guidelines.pdf`), 
 ## Tech stack (pinned — do not upgrade casually)
 Next.js 16 App Router · React 19 · TypeScript 5.9 strict · Payload CMS 3.90 (admin at `/admin`) · SQLite locally (`@payloadcms/db-sqlite`), PostgreSQL in production (`@payloadcms/db-postgres`, chosen by `DATABASE_URL` scheme) · Tailwind CSS 4 + CSS variables · GSAP 3 + ScrollTrigger (+ `@gsap/react` `useGSAP`) · Zod · Vitest · Playwright. Package manager: **pnpm**.
 
-Commands: `pnpm dev` (http://localhost:3100) · `pnpm build` · `pnpm typecheck` · `pnpm lint` · `pnpm test:unit` · `pnpm test:e2e` · `pnpm seed` · `pnpm screenshots`.
+Commands: `pnpm dev` (http://localhost:3100) · `pnpm build` · `pnpm typecheck` · `pnpm lint` · `pnpm test:unit` · `pnpm test:e2e` (after `pnpm seed:e2e` + `pnpm build:e2e`) · `pnpm test:e2e:engines` · `pnpm seed` · `pnpm screenshots`.
 
 ## Code conventions
 - Server Components by default; `'use client'` only for real interaction/animation. Never import GSAP in a server component.
 - Routes live in `src/app/(frontend)/[locale]/…`; Payload lives in `src/app/(payload)/…` (generated files there must not be hand-edited).
+- 404s are decided in `src/proxy.ts` before rendering (a `notFound()` thrown during render is only client-rendered in Next 16). A new public page must be added to `routes` in `src/i18n/routing.ts` (or as a slug rule in `src/lib/route-table.ts`), or the proxy serves it as a 404; `tests/unit/route-table.test.ts` fails when a page file is missing from the table.
 - i18n: typed dictionaries in `src/i18n/dictionaries/{ar,en}/*.ts`; EN files are typed against the AR shape. Pass strings from server to client components as props. Build links with the helpers in `src/i18n/routing.ts`.
 - RTL-safe styling: use logical utilities (`ms-/me-/ps-/pe-/start-/end-/text-start`) — never physical `left/right/ml/mr/pl/pr` unless the element is intentionally direction-locked (e.g. a numeral). Mirror directional icons/arrows with `rtl:-scale-x-100`.
 - Bidi: wrap Latin/numeric runs inside Arabic text in `<bdi>` or `dir="ltr"` spans where order matters (phone numbers, SKUs, mixed units).

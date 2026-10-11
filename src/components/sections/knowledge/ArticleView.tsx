@@ -138,7 +138,8 @@ export function ArticleView({
                 src={article.cover.url}
                 alt={article.cover.alt}
                 fill
-                priority
+                loading="eager"
+                fetchPriority="high"
                 sizes="(min-width: 1536px) 1360px, 92vw"
                 className="object-cover"
               />

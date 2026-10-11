@@ -31,7 +31,9 @@ export function ProductGallery({
           src={current.url}
           alt={current.alt || name}
           fill
-          priority={active === 0}
+          // First image = the page's LCP: eager + high priority (Next 16 deprecates `priority`; PERF-1).
+          loading={active === 0 ? 'eager' : undefined}
+          fetchPriority={active === 0 ? 'high' : undefined}
           sizes="(min-width: 1024px) 46vw, 100vw"
           className="animate-[als-fade-up_500ms_var(--ease-sunrise)] object-contain p-6 motion-reduce:animate-none sm:p-12"
         />

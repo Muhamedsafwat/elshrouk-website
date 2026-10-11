@@ -335,6 +335,7 @@ export const common: CommonDictionary = {
   },
   demoBanner: 'Staging environment: the data shown here is test data, not real products.',
   englishReviewNotice: 'English version — editorial review pending',
+  statusRibbonLabel: 'Site status',
   readingTime: '{minutes} min read',
   readingTimeOne: '1 min read',
   readingTimeTwo: '2 min read',

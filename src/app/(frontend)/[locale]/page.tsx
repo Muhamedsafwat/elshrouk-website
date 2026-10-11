@@ -24,8 +24,12 @@ type Props = { params: Promise<{ locale: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   if (!isLocale(locale)) return {}
-  const t = getDictionary(locale).home
-  return buildMetadata({ locale, title: t.meta.title, description: t.meta.description, path: '' })
+  const dict = getDictionary(locale)
+  const t = dict.home
+  const metadata = await buildMetadata({ locale, title: t.meta.title, description: t.meta.description, path: '' })
+  // The layout's "%s | brand" template does not apply to a page in the same segment, so the home title
+  // carries the brand explicitly (CI-04).
+  return { ...metadata, title: { absolute: `${t.meta.title} | ${dict.common.brand.name}` } }
 }
 
 /** Homepage — 11 sequenced scenes (spec §5; docs/art-direction.md §5). CMS copy overrides dictionary defaults. */

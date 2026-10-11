@@ -20,7 +20,8 @@ export function Breadcrumbs({ items, label, className, tone = 'default' }: { ite
                     href={item.href}
                     className={cn(
                       'link-sweep',
-                      tone === 'onDark' ? 'text-stone-300 hover:text-paper' : 'text-fg-muted hover:text-fg',
+                      // stone-200 keeps ≥ 4.5:1 over the darkened hero photos (A11Y-7; stone-300 measured 4.46:1).
+                      tone === 'onDark' ? 'text-stone-200 hover:text-paper' : 'text-fg-muted hover:text-fg',
                     )}
                   >
                     {item.label}

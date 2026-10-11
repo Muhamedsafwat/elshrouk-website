@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { CSSProperties, ReactNode } from 'react'
+import { fallbackLangProps } from '@/components/content/fallbackLang'
 import { InquiryForm } from '@/components/forms/InquiryForm'
 import { Photo } from '@/components/media/Photo'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -48,6 +49,8 @@ export function ProductDetailView({
   const CategoryIcon = category ? CATEGORY_ICONS[category.key] : null
   const isVeterinary = category?.key === 'medicines' || category?.key === 'vaccines' || category?.key === 'supplements'
   const safetyText = product.safetyText || (isVeterinary ? dict.common.vetSafetyNote : undefined)
+  // Localized CMS fields fall back to Arabic on /en when untranslated (CI-01): mark them for AT and bidi.
+  const langOf = (text: string | null | undefined) => fallbackLangProps(text, locale)
   const listSeparator = locale === 'ar' ? '، ' : ', '
   const contactHref = href(locale, 'contact', { type: 'product' })
 
@@ -77,8 +80,8 @@ export function ProductDetailView({
   }
   facts.push({ label: t.targetSpecies, value: t.targetSpeciesValue })
   if (product.manufacturer) facts.push({ label: t.manufacturer, value: product.manufacturer })
-  if (product.form) facts.push({ label: t.form, value: product.form })
-  if (product.packSize) facts.push({ label: t.packSize, value: product.packSize })
+  if (product.form) facts.push({ label: t.form, value: <span {...langOf(product.form)}>{product.form}</span> })
+  if (product.packSize) facts.push({ label: t.packSize, value: <span {...langOf(product.packSize)}>{product.packSize}</span> })
   if (product.sku) facts.push({ label: t.sku, value: <bdi className="num">{product.sku}</bdi> })
   facts.push({ label: t.availabilityLabel, value: c.availability[product.availability] })
 
@@ -159,7 +162,7 @@ export function ProductDetailView({
               ]}
             />
 
-            <div className="grid-site mt-10 gap-y-10 lg:mt-14 lg:grid-rows-[auto_1fr]">
+            <div className="grid-site mt-10 gap-y-10 lg:mt-14 lg:grid-rows-[auto_auto_1fr]">
               <header className="col-span-full lg:col-span-5 lg:col-start-1 lg:row-start-1">
                 {category ? (
                   <p className="intro-fade inline-flex items-center gap-2 rounded-full border border-line px-3 py-1.5 text-caption font-semibold text-fg" style={order(0)}>
@@ -169,7 +172,7 @@ export function ProductDetailView({
                 ) : null}
                 <h1 className="mt-5 text-display-lg font-bold text-balance">
                   <span className="mask-line intro-line" style={order(0)}>
-                    <span>{product.name}</span>
+                    <span {...langOf(product.name)}>{product.name}</span>
                   </span>
                 </h1>
                 {product.nameAlt ? (
@@ -179,7 +182,25 @@ export function ProductDetailView({
                 ) : null}
               </header>
 
-              <div className="col-span-full lg:col-span-6 lg:col-start-7 lg:row-span-2 lg:row-start-1">
+              {/* Actions right under the title: on phones the inquire button is in the first viewport (VQA-11). */}
+              <div className="col-span-full lg:col-span-5 lg:col-start-1 lg:row-start-2">
+                <div className="intro-fade flex flex-col gap-3 sm:flex-row sm:flex-wrap" style={order(2)}>
+                  {trigger('lg', 'w-full sm:w-auto')}
+                  {product.labelPdf ? (
+                    <a
+                      href={product.labelPdf.url}
+                      download={product.labelPdf.filename || true}
+                      type="application/pdf"
+                      className="inline-flex h-15 items-center justify-center gap-3 rounded-xs border-[1.5px] border-current px-8 font-semibold text-fg transition-colors hover:bg-fg hover:text-surface"
+                    >
+                      <DownloadIcon size={20} />
+                      {t.downloadLabel}
+                    </a>
+                  ) : null}
+                </div>
+              </div>
+
+              <div className="col-span-full lg:col-span-6 lg:col-start-7 lg:row-span-3 lg:row-start-1">
                 <div className="lg:sticky lg:top-28">
                   {product.gallery.length > 0 ? (
                     <ProductGallery
@@ -207,24 +228,9 @@ export function ProductDetailView({
                 </div>
               </div>
 
-              <div className="col-span-full lg:col-span-5 lg:col-start-1 lg:row-start-2">
-                <div className="intro-fade flex flex-col gap-3 sm:flex-row sm:flex-wrap" style={order(2)}>
-                  {trigger('lg', 'w-full sm:w-auto')}
-                  {product.labelPdf ? (
-                    <a
-                      href={product.labelPdf.url}
-                      download={product.labelPdf.filename || true}
-                      type="application/pdf"
-                      className="inline-flex h-15 items-center justify-center gap-3 rounded-xs border-[1.5px] border-current px-8 font-semibold text-fg transition-colors hover:bg-fg hover:text-surface"
-                    >
-                      <DownloadIcon size={20} />
-                      {t.downloadLabel}
-                    </a>
-                  ) : null}
-                </div>
-
+              <div className="col-span-full lg:col-span-5 lg:col-start-1 lg:row-start-3">
                 <h2 className="sr-only">{t.factsTitle}</h2>
-                <dl className="mt-10 border-t border-line">
+                <dl className="border-t border-line">
                   {facts.map((fact) => (
                     <div key={fact.label} className="grid grid-cols-[minmax(7.5rem,38%)_1fr] gap-4 border-b border-line py-4">
                       <dt className="text-small text-fg-muted">{fact.label}</dt>
@@ -238,7 +244,9 @@ export function ProductDetailView({
                     <AlertIcon size={22} className="mt-0.5 shrink-0 text-fg" />
                     <div>
                       <p className="font-bold text-fg">{t.safetyTitle}</p>
-                      <p className="mt-1 text-small text-fg-soft whitespace-pre-line">{safetyText}</p>
+                      <p className="mt-1 text-small text-fg-soft whitespace-pre-line" {...langOf(safetyText)}>
+                        {safetyText}
+                      </p>
                     </div>
                   </div>
                 ) : null}
@@ -255,7 +263,10 @@ export function ProductDetailView({
                 {product.description ? (
                   <div className="grid-site gap-y-4" data-reveal="up" suppressHydrationWarning>
                     <h2 className="col-span-full text-title font-bold lg:col-span-4">{t.description}</h2>
-                    <p className="measure col-span-full text-lead text-fg-soft whitespace-pre-line lg:col-span-7 lg:col-start-6">
+                    <p
+                      className="measure col-span-full text-lead text-fg-soft whitespace-pre-line lg:col-span-7 lg:col-start-6"
+                      {...langOf(product.description)}
+                    >
                       {product.description}
                     </p>
                   </div>
@@ -263,7 +274,10 @@ export function ProductDetailView({
                 {product.warnings ? (
                   <div className="grid-site gap-y-4" data-reveal="up" suppressHydrationWarning>
                     <h2 className="col-span-full text-title font-bold lg:col-span-4">{t.warnings}</h2>
-                    <p className="measure col-span-full border-s-2 border-vermilion ps-6 text-fg-soft whitespace-pre-line lg:col-span-7 lg:col-start-6">
+                    <p
+                      className="measure col-span-full border-s-2 border-vermilion ps-6 text-fg-soft whitespace-pre-line lg:col-span-7 lg:col-start-6"
+                      {...langOf(product.warnings)}
+                    >
                       {product.warnings}
                     </p>
                   </div>

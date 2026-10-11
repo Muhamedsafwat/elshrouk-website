@@ -37,7 +37,9 @@ export function ScrollProgress({ targetId }: { targetId?: string }) {
 
   return (
     <div aria-hidden className="pointer-events-none fixed inset-x-0 top-0 z-50 h-[3px] motion-reduce:hidden">
-      <div ref={bar} className="h-full origin-right scale-x-0 bg-vermilion ltr:origin-left" />
+      {/* Start width is set as an inline transform, not with `scale-x-0`: Tailwind 4 compiles that to the CSS
+          `scale` property, which multiplies with the transform written above and kept the bar at 0 px. */}
+      <div ref={bar} className="h-full origin-right bg-vermilion ltr:origin-left" style={{ transform: 'scaleX(0)' }} />
     </div>
   )
 }

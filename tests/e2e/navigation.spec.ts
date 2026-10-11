@@ -72,18 +72,24 @@ test.describe('header & locale switching', () => {
     await expect(page).toHaveURL(/\/ar\/products\?category=vaccines$/)
   })
 
-  test('skip link moves focus to the main content', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name === 'mobile', 'keyboard test runs on desktop')
+  test('skip link moves focus to the main content', async ({ page, browserName }, testInfo) => {
+    test.skip(!!testInfo.project.use.isMobile, 'keyboard test runs on desktop')
     await page.goto('/ar')
-    await page.keyboard.press('Tab')
     const skip = page.locator('a[href="#main"]')
+    if (browserName === 'webkit') {
+      // WebKit's default keyboard model (Safari with "Press Tab to highlight each item" off) tabs only to buttons and
+      // form fields, and Playwright's WebKit has no Option+Tab equivalent, so the link is focused directly there.
+      await skip.focus()
+    } else {
+      await page.keyboard.press('Tab')
+    }
     await expect(skip).toBeFocused()
     await page.keyboard.press('Enter')
     await expect(page).toHaveURL(/#main$/)
   })
 
   test('desktop solutions dropdown is keyboard operable', async ({ page }, testInfo) => {
-    test.skip(testInfo.project.name === 'mobile', 'desktop navigation only')
+    test.skip(!!testInfo.project.use.isMobile, 'desktop navigation only')
     await page.goto('/ar')
     const trigger = page.locator('header').getByRole('button', { name: /حلول الدواجن/ })
     await trigger.focus()
@@ -129,12 +135,17 @@ test.describe('mobile menu', () => {
     await expect(page).toHaveURL(/\/ar\/about$/)
   })
 
-  test('no horizontal overflow on key pages at 320px', async ({ page }) => {
-    await page.setViewportSize({ width: 320, height: 720 })
-    for (const path of ['/ar', '/ar/products', '/ar/contact', '/en']) {
-      await page.goto(path)
-      const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
-      expect(overflow, path).toBeLessThanOrEqual(0)
-    }
+  test.describe('at 320px', () => {
+    // A context created at 320px, not page.setViewportSize: resizing a live window hangs in Playwright's Firefox
+    // driver on Windows (90 s timeout before any navigation), while a 320px context works in every engine.
+    test.use({ viewport: { width: 320, height: 720 } })
+
+    test('no horizontal overflow on key pages at 320px', async ({ page }) => {
+      for (const path of ['/ar', '/ar/products', '/ar/contact', '/en']) {
+        await page.goto(path)
+        const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)
+        expect(overflow, path).toBeLessThanOrEqual(0)
+      }
+    })
   })
 })

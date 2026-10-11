@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from 'react'
+import { isMostlyArabic } from '@/components/content/fallbackLang'
 import { Button, ButtonLink, type ButtonSize, type ButtonVariant } from '@/components/ui/Button'
 import { Drawer } from '@/components/ui/Drawer'
 import { interpolate } from '@/i18n/format'
@@ -92,7 +93,13 @@ export function ProductInquiryTrigger({
   const content = (
     <>
       {label}
-      {srContext ? <span className="sr-only">: {srContext}</span> : null}
+      {srContext ? (
+        <span className="sr-only">
+          {': '}
+          {/* An untranslated (Arabic) product name on /en is voiced with the Arabic voice (CI-01). */}
+          <span {...(isMostlyArabic(srContext) ? { lang: 'ar', dir: 'rtl' } : {})}>{srContext}</span>
+        </span>
+      ) : null}
     </>
   )
   if (!hydrated || !inquiry) {

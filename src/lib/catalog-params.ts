@@ -1,6 +1,9 @@
 import { z } from 'zod'
 import type { Locale } from '@/i18n/config'
 
+// No eval-based JIT probe (CSP-safe); harmless if schema.ts already set it.
+z.config({ jitless: true })
+
 /** Pure + unit-tested: parses untrusted catalogue query strings (spec §6.4, §9.3). */
 export const CATEGORY_KEYS = ['feed', 'supplements', 'medicines', 'vaccines'] as const
 export const SEGMENT_KEYS = ['broilers', 'layers', 'breeders'] as const

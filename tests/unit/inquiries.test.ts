@@ -1,7 +1,16 @@
 import { describe, expect, it } from 'vitest'
+import { z } from 'zod'
 import { formDataToInput, isHoneypotFilled, isWithinPayloadLimits } from '@/lib/inquiries/form-data'
 import { generateReference, REFERENCE_ALPHABET, REFERENCE_PATTERN } from '@/lib/inquiries/reference'
-import { fieldErrors, inquirySchema, isValidPhone, normalizePhone, toE164 } from '@/lib/inquiries/schema'
+import {
+  fieldErrors,
+  inquirySchema,
+  isValidPhone,
+  kindRequirements,
+  normalizePhone,
+  toE164,
+  validateInquiry,
+} from '@/lib/inquiries/schema'
 
 // Synthetic numbers only — never shown in the UI or seeded as contacts.
 const base = {
@@ -75,9 +84,11 @@ describe('inquirySchema — malformed payloads', () => {
     })
   })
 
-  it('requires a message for general inquiries and some context for product inquiries', () => {
+  it('requires a message for general inquiries; product inquiries need only name, phone and consent', () => {
     expect(errorsOf({ ...base, type: 'general' })).toMatchObject({ message: 'required' })
-    expect(errorsOf({ ...base, type: 'product' })).toMatchObject({ message: 'required' })
+    expect(errorsOf({ ...base, type: 'general', message: '   ' })).toMatchObject({ message: 'required' })
+    // The form labels product, category, quantity and message «اختياري» — the schema must agree (E2E-F2).
+    expect(errorsOf({ ...base, type: 'product' })).toEqual({})
     expect(errorsOf({ ...base, type: 'product', productCategory: 'vaccines' })).toEqual({})
   })
 
@@ -98,6 +109,62 @@ describe('inquirySchema — malformed payloads', () => {
     expect(errorsOf({ ...base, type: 'general', message: 'm', sourcePath: '//evil.example/' })).toHaveProperty('sourcePath')
     expect(errorsOf({ ...base, type: 'general', message: 'm', idempotencyKey: 'abc' })).toHaveProperty('idempotencyKey')
     expect(errorsOf({ ...base, type: 'general', message: 'm', locale: 'fr' })).toHaveProperty('locale')
+  })
+})
+
+// Only the hidden context the form always sends — what an empty submit carries (E2E-F1).
+const context = { locale: 'ar', sourcePath: '/ar/contact', idempotencyKey: base.idempotencyKey } as const
+
+describe('required fields per kind are reported together with base errors (E2E-F1)', () => {
+  it('kindRequirements lists the missing kind fields regardless of base validity', () => {
+    expect(kindRequirements('farm', {})).toEqual({ segment: 'required' })
+    expect(kindRequirements('partner', {})).toEqual({
+      organization: 'required',
+      role: 'required',
+      productLine: 'required',
+      message: 'required',
+    })
+    expect(kindRequirements('general', {})).toEqual({ message: 'required' })
+    expect(kindRequirements('product', {})).toEqual({})
+  })
+
+  it('treats whitespace as missing and leaves the validity of present values to the schema', () => {
+    expect(kindRequirements('general', { message: ' \t\n ' })).toEqual({ message: 'required' })
+    expect(kindRequirements('farm', { segment: 'ducks' })).toEqual({})
+    expect(errorsOf({ ...base, type: 'farm', segment: 'ducks' })).toHaveProperty('segment')
+  })
+
+  it.each([
+    ['farm', ['name', 'phone', 'segment', 'consent']],
+    ['partner', ['organization', 'role', 'name', 'phone', 'productLine', 'message', 'consent']],
+    ['general', ['name', 'phone', 'message', 'consent']],
+    ['product', ['name', 'phone', 'consent']],
+  ] as const)('an empty %s submission lists every required field', (type, required) => {
+    const result = validateInquiry({ ...context, type })
+    expect(result.success).toBe(false)
+    if (result.success) return
+    expect(Object.keys(result.errors).sort()).toEqual([...required].sort())
+    expect(result.errors.consent).toBe('consentRequired')
+  })
+
+  it('still reports the kind fields when a base field fails (Zod 4 skips superRefine then)', () => {
+    // e.g. the old client parse without an idempotency key: the production type must not vanish.
+    const raw = { type: 'farm', name: 'محمد علي', phone: '01012345678', consent: true, locale: 'ar', sourcePath: '/ar/contact' }
+    expect(inquirySchema.safeParse(raw).success).toBe(false)
+    const result = validateInquiry(raw)
+    expect(result.success ? {} : result.errors).toEqual({ segment: 'required', idempotencyKey: 'invalid' })
+  })
+
+  it('keeps field-level codes ahead of the kind requirement and succeeds once complete', () => {
+    const tooLong = validateInquiry({ ...base, type: 'general', message: 'x'.repeat(2001) })
+    expect(tooLong.success ? {} : tooLong.errors).toEqual({ message: 'tooLong' })
+    const ok = validateInquiry({ ...base, type: 'farm', segment: 'layers' })
+    expect(ok.success).toBe(true)
+    if (ok.success) expect(ok.data.phone).toBe('+201012345678')
+  })
+
+  it('runs zod without its eval-based JIT (no CSP violation from the probe, BP-1)', () => {
+    expect(z.config().jitless).toBe(true)
   })
 })
 

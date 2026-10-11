@@ -23,9 +23,8 @@ import {
   FIELD_LIMITS,
   PRODUCT_CATEGORY_OPTIONS,
   PRODUCTION_TYPES,
-  fieldErrors,
-  inquirySchema,
   isInquiryKind,
+  validateInquiry,
   type ErrorCode,
   type InquiryKind,
   type InquiryResult,
@@ -172,11 +171,21 @@ function InquirySession({
     return out
   }
 
+  /**
+   * Visible errors for `formData`, exactly as the server would report them: the session's idempotency key is set
+   * first (a missing key would fail the base parse), and the kind's required fields are merged with the field
+   * errors, so cross-field errors (production type, company, message…) never vanish on blur.
+   */
+  function errorsFor(formData: FormData): Errors {
+    keyRef.current ??= newIdempotencyKey()
+    formData.set('idempotencyKey', keyRef.current)
+    const result = validateInquiry(formDataToInput(formData))
+    return result.success ? {} : pick(result.errors)
+  }
+
   function currentErrors(): Errors {
     const form = formRef.current
-    if (!form) return {}
-    const parsed = inquirySchema.safeParse(formDataToInput(new FormData(form)))
-    return parsed.success ? {} : pick(fieldErrors(parsed.error))
+    return form ? errorsFor(new FormData(form)) : {}
   }
 
   // After the first attempt: fixing a field clears its error while typing; leaving a field re-checks everything.
@@ -198,11 +207,7 @@ function InquirySession({
     if (inFlight.current) return // double click / double Enter: one request per session at a time
     attempted.current = true
     const formData = new FormData(event.currentTarget)
-    keyRef.current ??= newIdempotencyKey()
-    formData.set('idempotencyKey', keyRef.current)
-
-    const parsed = inquirySchema.safeParse(formDataToInput(formData))
-    const clientErrors = parsed.success ? {} : pick(fieldErrors(parsed.error))
+    const clientErrors = errorsFor(formData) // also stamps the session's idempotency key on formData
     if (Object.keys(clientErrors).length > 0) {
       setErrors(clientErrors)
       setResult(null)
@@ -417,7 +422,7 @@ function InquirySession({
           role="group"
           aria-labelledby={fid('summary-title')}
           aria-describedby={fid('summary-list')}
-          className="border-s-4 border-vermilion-deep bg-stone-50 p-5 focus:outline-none focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-vermilion @lg:p-6"
+          className="border-s-4 border-vermilion-deep bg-stone-50 p-5 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-vermilion @lg:p-6"
         >
           <p id={fid('summary-title')} className="flex items-center gap-2 font-bold text-ink">
             <AlertIcon size={20} className="shrink-0 text-vermilion-deep" />

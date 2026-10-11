@@ -96,7 +96,7 @@ export function CatalogSearch({
             if (timer.current) clearTimeout(timer.current)
             timer.current = setTimeout(() => commit(next), DEBOUNCE_MS)
           }}
-          className="h-16 min-w-0 flex-1 bg-transparent ps-14 pe-3 text-base text-fg outline-none placeholder:text-fg-muted sm:h-20 sm:ps-16 sm:text-lead [&::-webkit-search-cancel-button]:appearance-none"
+          className="h-16 min-w-0 flex-1 bg-transparent ps-13 pe-2 text-base text-fg outline-none placeholder:text-fg-muted sm:h-20 sm:ps-16 sm:text-lead [&::-webkit-search-cancel-button]:appearance-none"
         />
         {value ? (
           <button
@@ -114,7 +114,7 @@ export function CatalogSearch({
         ) : null}
         <button
           type="submit"
-          className="m-1.5 inline-flex shrink-0 items-center justify-center rounded-xs bg-ink px-5 text-[0.95rem] font-semibold text-paper transition-colors hover:bg-vermilion hover:text-ink sm:px-8"
+          className="m-1.5 inline-flex shrink-0 items-center justify-center rounded-xs bg-ink px-4 text-[0.95rem] font-semibold text-paper transition-colors hover:bg-vermilion hover:text-ink sm:px-8"
         >
           {labels.submit}
         </button>

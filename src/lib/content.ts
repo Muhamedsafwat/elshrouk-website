@@ -6,6 +6,7 @@ import { getDictionary } from '@/i18n/dictionaries'
 import type { Article, Media } from '@/payload-types'
 import { publicContentWhere } from '@/payload/access'
 import { getPayload } from './payload'
+import { SLUG_PATTERN } from './route-table'
 
 /**
  * Editorial content access. CMS values override the versioned dictionary copy when present; when the
@@ -177,7 +178,7 @@ export async function getArticles(locale: Locale, category?: string, limit = 24)
 }
 
 export async function getArticleBySlug(locale: Locale, slug: string, preview = false) {
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) return null
+  if (!SLUG_PATTERN.test(slug)) return null
   const payload = await getPayload()
   const res = await payload.find({
     collection: 'articles',

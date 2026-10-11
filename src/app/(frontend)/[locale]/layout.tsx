@@ -1,7 +1,6 @@
 import '@/styles/globals.css'
 
 import type { Metadata, Viewport } from 'next'
-import Script from 'next/script'
 import { notFound } from 'next/navigation'
 import type { ReactNode } from 'react'
 import { Footer } from '@/components/layout/Footer'
@@ -50,7 +49,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
 }
 
-/** Runs before paint: enables reveal states only when JS runs; fail-safe shows everything if motion never boots. */
+/**
+ * Marks `html.js` before first paint (for styles that must know JS is running from the first frame, e.g. the About
+ * hero's monochrome layer) and arms the fail-safe that shows everything if motion never boots. A plain inline script
+ * at the top of <head> runs while the HTML is parsed; `next/script` beforeInteractive would run at bootstrap, after
+ * first paint. The reveal states themselves are switched on later by MotionRuntime (`html.reveal`), after it has
+ * marked first-screen content as revealed, so nothing on the first screen is ever hidden.
+ */
 const bootScript = `(function(){var d=document.documentElement;d.classList.add('js');setTimeout(function(){if(!window.__alsMotion){d.classList.add('motion-off')}},3500)})();`
 
 export default async function LocaleLayout({ children, params }: { children: ReactNode; params: Promise<{ locale: string }> }) {
@@ -78,7 +83,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   return (
     <html lang={locale} dir={localeDirection(locale)} className={`${arabicFont.variable} ${latinFont.variable}`} suppressHydrationWarning>
       <head>
-        <Script id="als-boot" strategy="beforeInteractive">{bootScript}</Script>
+        <script dangerouslySetInnerHTML={{ __html: bootScript }} />
         <JsonLd data={await organizationJsonLd(locale)} />
       </head>
       <body id="top">

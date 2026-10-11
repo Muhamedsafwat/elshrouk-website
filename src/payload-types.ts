@@ -196,7 +196,7 @@ export interface Product {
    */
   slug: string;
   /**
-   * Visitors only see records that are Approved AND Published. Approval requires an admin or an authorised editor.
+   * Visitors only see records that are Approved AND Published. Approving and publishing require an admin or an authorised editor; any edit by anyone else to approved content returns it to Review required and unpublishes it.
    */
   approvalStatus: 'approved' | 'review_required' | 'placeholder_internal' | 'hidden';
   isPublished?: boolean | null;
@@ -335,7 +335,7 @@ export interface Article {
   publishedAt?: string | null;
   slug: string;
   /**
-   * Visitors only see records that are Approved AND Published. Approval requires an admin or an authorised editor.
+   * Visitors only see records that are Approved AND Published. Approving and publishing require an admin or an authorised editor; any edit by anyone else to approved content returns it to Review required and unpublishes it.
    */
   approvalStatus: 'approved' | 'review_required' | 'placeholder_internal' | 'hidden';
   isPublished?: boolean | null;
@@ -362,7 +362,7 @@ export interface Faq {
   placement?: ('home' | 'products' | 'contact')[] | null;
   order?: number | null;
   /**
-   * Visitors only see records that are Approved AND Published. Approval requires an admin or an authorised editor.
+   * Visitors only see records that are Approved AND Published. Approving and publishing require an admin or an authorised editor; any edit by anyone else to approved content returns it to Review required and unpublishes it.
    */
   approvalStatus: 'approved' | 'review_required' | 'placeholder_internal' | 'hidden';
   isPublished?: boolean | null;

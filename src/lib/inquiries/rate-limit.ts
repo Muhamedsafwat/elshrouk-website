@@ -9,6 +9,7 @@ import { createHmac, randomBytes } from 'node:crypto'
  *   a single Node instance ONLY. Multi-instance / serverless deployments must implement `RateLimitStore`
  *   on a shared store (Postgres table, Redis, platform KV) — otherwise each instance counts separately.
  *   Tracked in docs/open-items.md by the orchestrator.
+ * - Which client-IP header to trust is a deployment decision (INQUIRY_IP_HEADER); see clientIpFrom.
  */
 
 export type RateLimitRule = { limit: number; windowMs: number }
@@ -24,6 +25,15 @@ export const INQUIRY_RATE_RULES: readonly RateLimitRule[] = [
   { limit: 5, windowMs: 10 * 60_000 },
   { limit: 20, windowMs: 24 * 60 * 60_000 },
 ]
+
+/** Visitors without any client-IP header share one bucket: generous instead of blocking every lead. */
+export const UNKNOWN_CLIENT_RATE_RULES: readonly RateLimitRule[] = [{ limit: 60, windowMs: 10 * 60_000 }]
+
+/**
+ * Fail-safe across ALL clients (SEC-01). Applies in production while INQUIRY_IP_HEADER is unset: the per-client
+ * key then comes from headers a client can forge, so rotating them must not buy unlimited submissions.
+ */
+export const GLOBAL_INQUIRY_RATE_RULES: readonly RateLimitRule[] = [{ limit: 30, windowMs: 10 * 60_000 }]
 
 export class MemoryRateLimitStore implements RateLimitStore {
   private readonly hits = new Map<string, number[]>()
@@ -91,18 +101,78 @@ export function hashClientKey(ip: string, secret: string = process.env.PAYLOAD_S
 }
 
 /**
- * Client IP from proxy headers. Which header is trustworthy depends on the host:
- *   - Vercel / Netlify / Fly / most PaaS: `x-forwarded-for` first hop is written by the platform edge.
- *   - Cloudflare in front: `cf-connecting-ip`.  nginx: configure `proxy_set_header X-Real-IP $remote_addr`.
- * Set INQUIRY_IP_HEADER to pin the header for the deployment (documented deployment open item). Unknown →
- * 'unknown' (one shared bucket; the action applies a more generous limit to it rather than blocking everyone).
+ * Client IP from proxy headers (SEC-01). Which header is trustworthy depends on the host, so the deployment pins
+ * it with INQUIRY_IP_HEADER (e.g. `x-real-ip` behind nginx, `cf-connecting-ip` behind Cloudflare, `x-forwarded-for`
+ * on Vercel / Netlify / Fly) and then ONLY that header is read.
+ *
+ * Unset, the best guess is `x-real-ip`, then `x-forwarded-for`; both can be forged by a client that reaches the
+ * app directly, which is why production adds a global bucket (see createInquiryRateLimiter). `cf-connecting-ip` is
+ * never trusted unless pinned: without Cloudflare in front, any client can send it.
+ *
+ * `x-forwarded-for` yields its RIGHT-most entry: the address the nearest proxy appended. Entries to its left
+ * arrive from the client. Behind a CDN plus a load balancer, pin the CDN's client header instead.
+ * No usable header → 'unknown' (one shared, more generous bucket).
  */
-export function clientIpFrom(headers: { get(name: string): string | null }): string {
-  const pinned = process.env.INQUIRY_IP_HEADER?.toLowerCase()
-  const candidates = pinned ? [pinned] : ['cf-connecting-ip', 'x-real-ip', 'x-forwarded-for']
+export function clientIpFrom(
+  headers: { get(name: string): string | null },
+  pinnedHeader: string | undefined = process.env.INQUIRY_IP_HEADER,
+): string {
+  const pinned = pinnedHeader?.trim().toLowerCase()
+  const candidates = pinned ? [pinned] : ['x-real-ip', 'x-forwarded-for']
   for (const name of candidates) {
-    const value = headers.get(name)?.split(',')[0]?.trim()
+    const entries = headers.get(name)?.split(',') ?? []
+    const value = (name === 'x-forwarded-for' ? entries[entries.length - 1] : entries[0])?.trim()
     if (value && value.length <= 64) return value
   }
   return 'unknown'
+}
+
+export type InquiryRateLimiter = { check(headers: { get(name: string): string | null }): RateLimitDecision }
+
+const UNKNOWN_CLIENT_KEY = 'client:unknown'
+const GLOBAL_KEY = 'global'
+
+/**
+ * The inquiry limiter: a per-client sliding window (hashed IP, or one shared bucket when no IP is known) and, in
+ * production without INQUIRY_IP_HEADER, the global fail-safe on top. The per-client window is checked first, so a
+ * client that is already over its own limit never spends global slots. Logs ONE warning per instance when the
+ * fail-safe is active (never an IP).
+ */
+export function createInquiryRateLimiter({
+  store = new MemoryRateLimitStore(),
+  globalStore = new MemoryRateLimitStore(16),
+  env = process.env,
+  now = Date.now,
+  warn = (message: string) => console.warn(message),
+}: {
+  store?: RateLimitStore
+  globalStore?: RateLimitStore
+  env?: { INQUIRY_IP_HEADER?: string; NODE_ENV?: string }
+  now?: () => number
+  warn?: (message: string) => void
+} = {}): InquiryRateLimiter {
+  let warned = false
+  return {
+    check(headers) {
+      const pinned = env.INQUIRY_IP_HEADER?.trim() ?? ''
+      const t = now()
+      const ip = clientIpFrom(headers, pinned) // '' (never undefined): the injected env wins over process.env
+      const decision =
+        ip === 'unknown'
+          ? store.hit(UNKNOWN_CLIENT_KEY, UNKNOWN_CLIENT_RATE_RULES, t)
+          : store.hit(hashClientKey(ip), INQUIRY_RATE_RULES, t)
+      if (!decision.ok || pinned || env.NODE_ENV !== 'production') return decision
+
+      if (!warned) {
+        warned = true
+        warn(
+          '[inquiry] INQUIRY_IP_HEADER is unset: client IPs come from headers a client can forge, so a global limit of ' +
+            `${GLOBAL_INQUIRY_RATE_RULES.map((r) => `${r.limit} per ${r.windowMs / 60_000} min`).join(', ')} across all visitors ` +
+            'is enforced. Set INQUIRY_IP_HEADER to the client-IP header your proxy or platform writes (e.g. x-real-ip).',
+        )
+      }
+      const global = globalStore.hit(GLOBAL_KEY, GLOBAL_INQUIRY_RATE_RULES, t)
+      return global.ok ? decision : global
+    },
+  }
 }

@@ -5,14 +5,15 @@ import { headers } from 'next/headers'
 import { formDataToInput, isHoneypotFilled, isWithinPayloadLimits } from './form-data'
 import { persistInquiry } from './persist'
 import { getPublicProductContext } from './product-context'
-import { clientIpFrom, createRateLimiter, hashClientKey, INQUIRY_RATE_RULES, MemoryRateLimitStore } from './rate-limit'
-import { fieldErrors, inquirySchema, isInquiryKind, type InquiryResult } from './schema'
+import { createInquiryRateLimiter, type InquiryRateLimiter } from './rate-limit'
+import { isInquiryKind, validateInquiry, type InquiryResult } from './schema'
 
 /**
  * The ONE server action behind every inquiry form (spec §4.3, §10.3, §11).
  *
- * Order: size bound → honeypot → per-client rate limit → schema (authoritative re-validation) → public
- * product check → idempotent persistence → `{ ok: true, reference }` only after the record is stored.
+ * Order: size bound → honeypot → schema + per-kind required fields (authoritative re-validation, every error at
+ * once) → rate limit (only a VALID submission spends a slot, SEC-08) → public product check → idempotent
+ * persistence → `{ ok: true, reference }` only after the record is stored.
  *
  * CSRF: Next.js Server Actions only accept POSTs whose Origin matches the Host (or x-forwarded-host /
  * `serverActions.allowedOrigins`), so no extra origin check is duplicated here. NEXT_PUBLIC_SITE_URL is
@@ -22,18 +23,11 @@ import { fieldErrors, inquirySchema, isInquiryKind, type InquiryResult } from '.
  * Logging: reference, type, locale and outcome only — never names, phones, e-mails, messages or IPs.
  */
 
-type LimiterGlobal = typeof globalThis & {
-  __inquiryLimiter?: ReturnType<typeof createRateLimiter>
-  __inquiryLimiterUnknownIp?: ReturnType<typeof createRateLimiter>
-}
+type LimiterGlobal = typeof globalThis & { __inquiryRateLimiter?: InquiryRateLimiter }
 const g = globalThis as LimiterGlobal
 // globalThis keeps the in-memory windows across dev HMR reloads (single-instance store — see rate-limit.ts).
-const limiter = (g.__inquiryLimiter ??= createRateLimiter({ rules: INQUIRY_RATE_RULES, store: new MemoryRateLimitStore() }))
-// When no client IP header exists every visitor shares one bucket: be generous instead of blocking all leads.
-const unknownIpLimiter = (g.__inquiryLimiterUnknownIp ??= createRateLimiter({
-  rules: [{ limit: 60, windowMs: 10 * 60_000 }],
-  store: new MemoryRateLimitStore(),
-}))
+// Per-client windows, the shared "unknown client" bucket and (production without INQUIRY_IP_HEADER) a global cap.
+const limiter = (g.__inquiryRateLimiter ??= createInquiryRateLimiter())
 
 const log = (outcome: string, meta: { type?: string; locale?: string; reference?: string } = {}) => {
   const parts = [`outcome=${outcome}`]
@@ -60,22 +54,23 @@ export async function submitInquiry(_previous: InquiryResult | null, formData: F
       return { ok: false, error: 'spam' }
     }
 
-    const ip = clientIpFrom(await headers())
-    const decision = (ip === 'unknown' ? unknownIpLimiter : limiter).check(hashClientKey(ip))
+    const input = formDataToInput(formData)
+    // No-JS submissions cannot mint a key in the browser; the duplicate window still protects them.
+    if (!input.idempotencyKey) input.idempotencyKey = randomUUID()
+    // Every problem at once: field errors AND the kind's required fields (Zod alone stops at the first layer).
+    const validation = validateInquiry(input)
+    if (!validation.success) {
+      log('invalid', { type, locale })
+      return { ok: false, error: 'validation', fields: validation.errors }
+    }
+
+    // Only a submission that would be stored spends a rate-limit slot, so mistakes never lock a visitor out.
+    const decision = limiter.check(await headers())
     if (!decision.ok) {
       log('rate_limited', { type, locale })
       return { ok: false, error: 'rateLimited' }
     }
-
-    const input = formDataToInput(formData)
-    // No-JS submissions cannot mint a key in the browser; the duplicate window still protects them.
-    if (!input.idempotencyKey) input.idempotencyKey = randomUUID()
-    const parsed = inquirySchema.safeParse(input)
-    if (!parsed.success) {
-      log('invalid', { type, locale })
-      return { ok: false, error: 'validation', fields: fieldErrors(parsed.error) }
-    }
-    const data = parsed.data
+    const data = validation.data
 
     // Trusted product context: only a PUBLIC product keeps its relation; otherwise the label stays plain text.
     let productRef: number | undefined

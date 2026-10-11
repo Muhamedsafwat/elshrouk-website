@@ -1,6 +1,6 @@
 import { InquiryForm } from '@/components/forms/InquiryForm'
 import { ButtonLink } from '@/components/ui/Button'
-import { CATEGORY_ICONS, CloseIcon, SEGMENT_ICONS } from '@/components/ui/icons'
+import { AlertIcon, CATEGORY_ICONS, CloseIcon, SEGMENT_ICONS } from '@/components/ui/icons'
 import { EmptyState } from '@/components/ui/States'
 import type { Locale } from '@/i18n/config'
 import type { getDictionary } from '@/i18n/dictionaries'
@@ -8,6 +8,7 @@ import { interpolate } from '@/i18n/format'
 import { href } from '@/i18n/routing'
 import type { Facets, ProductCard as ProductCardData } from '@/lib/catalog'
 import { catalogHref, type CatalogParams, type CategoryKey, type SegmentKey } from '@/lib/catalog-params'
+import { cn } from '@/lib/cn'
 import { CatalogFilters, type FilterOption } from './CatalogFilters'
 import { CatalogHero } from './CatalogHero'
 import { CatalogLink, CatalogNavProvider, CatalogPending, RESULTS_ID } from './CatalogNav'
@@ -96,6 +97,10 @@ export function CatalogLiveView({
       : null,
   ].filter((chip): chip is { key: string; label: string; href: string } => chip !== null)
   const activeFilterCount = [query.category, query.segment, query.manufacturer].filter(Boolean).length
+  // Veterinary views always carry the approved safety sentence (CI-02): a medicines/vaccines filter (even
+  // with zero results) or any medicine/vaccine card on the current page.
+  const showVetNote =
+    isVetCategory(query.category) || result.items.some((product) => isVetCategory(product.category?.key))
 
   // One server-rendered form per visible product, keyed by the trusted CMS id; the drawer shows the active one.
   const forms = Object.fromEntries(
@@ -147,6 +152,8 @@ export function CatalogLiveView({
               </MobileFilters>
 
               <div id={RESULTS_ID} className="scroll-mt-28 pt-8 lg:pt-0">
+                {/* Keeps the outline H1 → H2 → H3 (cards) on mobile, where the filter heading lives in the drawer (A11Y-6). */}
+                <h2 className="sr-only">{c.results.regionLabel}</h2>
                 <p aria-live="polite" aria-atomic="true" className="text-display-md font-bold">
                   {countText}
                 </p>
@@ -173,6 +180,8 @@ export function CatalogLiveView({
                     </CatalogLink>
                   </div>
                 ) : null}
+
+                {showVetNote ? <VetSafetyNote text={dict.common.vetSafetyNote} className="mt-6" /> : null}
 
                 <CatalogPending className="mt-10">
                   {result.items.length > 0 ? (
@@ -265,5 +274,18 @@ export function CatalogLiveView({
         }
       />
     </CatalogNavProvider>
+  )
+}
+
+const VET_CATEGORIES: ReadonlySet<string> = new Set<CategoryKey>(['medicines', 'vaccines'])
+const isVetCategory = (key: string | undefined | null) => Boolean(key && VET_CATEGORIES.has(key))
+
+/** The exact `common.vetSafetyNote` sentence, as a note (CI-02). */
+function VetSafetyNote({ text, className }: { text: string; className?: string }) {
+  return (
+    <p role="note" className={cn('flex max-w-3xl items-start gap-3 rounded-md bg-stone-100 p-4 text-small text-fg-soft', className)}>
+      <AlertIcon size={18} className="mt-0.5 shrink-0 text-fg" />
+      <span>{text}</span>
+    </p>
   )
 }

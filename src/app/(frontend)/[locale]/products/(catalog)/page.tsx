@@ -101,6 +101,7 @@ export default async function ProductsPage({ params, searchParams }: Props) {
             selectedLabel: c.categoryBrowser.selected,
             formTitle: c.states.emptyCatalogCta,
             formIntro: c.states.emptyCatalogFormIntro,
+            vetNote: dict.common.vetSafetyNote,
           }}
           form={
             <InquiryForm

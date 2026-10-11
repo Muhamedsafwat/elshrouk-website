@@ -46,7 +46,8 @@ export function FieldShell({ id, label, marker, help, error, children, className
 const control =
   'w-full rounded-xs border-[1.5px] border-stone-300 bg-paper px-4 text-base text-ink placeholder:text-stone-500 ' +
   'transition-[border-color,box-shadow] duration-200 hover:border-stone-500 ' +
-  'focus:border-ink focus:outline-none focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-vermilion ' +
+  // No `focus:outline-none` here: it would zero --tw-outline-style and hide the 3px ring below (A11Y-4).
+  'focus:border-ink focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-vermilion ' +
   'aria-[invalid=true]:border-vermilion-deep disabled:bg-stone-100 disabled:text-stone-500'
 
 const describedBy = (id: string, help?: string, error?: string) =>

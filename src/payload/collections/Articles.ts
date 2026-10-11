@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 import { isAdmin, isAdminOrEditor, isStaffField, readPublishedOrStaff } from '../access'
 import { approvalFields, seoGroup, slugField } from '../fields'
 import { approvalGuard } from '../hooks/approval-guard'
+import { restrictHiddenFieldQueries, revealWhen } from '../hooks/public-visibility'
 import { revalidateAfterChange, revalidateAfterDelete } from '../hooks/revalidate'
 
 export const ARTICLE_CATEGORIES = ['farm-business', 'feed-supplements', 'vet-product-handling', 'company-news'] as const
@@ -19,7 +20,10 @@ export const Articles: CollectionConfig = {
   defaultSort: '-publishedAt',
   versions: { maxPerDoc: 25 },
   access: { read: readPublishedOrStaff, create: isAdminOrEditor, update: isAdminOrEditor, delete: isAdmin },
+  // The flag the public-visibility hook reads must be present even when a query selects only a few fields.
+  forceSelect: { authorVerified: true },
   hooks: {
+    beforeOperation: [restrictHiddenFieldQueries({ author: 'authorVerified' })],
     beforeChange: [approvalGuard],
     afterChange: [revalidateAfterChange],
     afterDelete: [revalidateAfterDelete],
@@ -54,7 +58,13 @@ export const Articles: CollectionConfig = {
     {
       type: 'row',
       fields: [
-        { name: 'author', type: 'text', label: { ar: 'الكاتب', en: 'Author' } },
+        {
+          name: 'author',
+          type: 'text',
+          label: { ar: 'الكاتب', en: 'Author' },
+          // Public API: null until the attribution is approved (staff always see it).
+          hooks: { afterRead: [revealWhen('authorVerified')] },
+        },
         {
           name: 'authorVerified',
           type: 'checkbox',

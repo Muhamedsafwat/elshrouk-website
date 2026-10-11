@@ -42,11 +42,12 @@ export function Logo({ variant = 'color', width, alt, className, priority = fals
       width={w}
       height={h}
       decoding="async"
-      fetchPriority={priority ? 'high' : undefined}
+      // Eager but NOT fetchpriority=high: the small SVG must not compete with the page's LCP photo (PERF-1).
       loading={priority ? 'eager' : 'lazy'}
       draggable={false}
       className={cn('block h-auto max-w-none select-none', !withClearSpace && className)}
-      style={{ width: w }}
+      // Inline size wins over any utility class a caller passes, so the artwork can never be stretched.
+      style={{ width: w, height: 'auto' }}
     />
   )
   if (!withClearSpace) return img

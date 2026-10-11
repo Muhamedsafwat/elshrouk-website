@@ -40,3 +40,9 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 .next-e2e/
+
+# raw screenshot captures: regenerate with `pnpm screenshots` (e2e server on :3200). The reviewed contact sheets
+# (screenshots/_sheets/, screenshots/_sheets-qa-before/) and the empty-state captures (screenshots/dev-empty/) are committed.
+screenshots/ar/
+screenshots/en/
+screenshots/dev/fe-fixes/

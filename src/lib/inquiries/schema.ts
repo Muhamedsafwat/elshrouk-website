@@ -1,6 +1,10 @@
 import { z } from 'zod'
 import { toWesternDigits } from '@/lib/search/normalize'
 
+// No JIT (BP-1): zod 4 otherwise probes `new Function('')` while building object schemas, which the production CSP
+// (no 'unsafe-eval') blocks and reports. Must run before any schema below is constructed.
+z.config({ jitless: true })
+
 /**
  * Shared inquiry contract (spec §4.3, §11) — the SAME schema validates on the client (UX) and on the
  * server (authoritative). Error messages are codes; the UI maps them to localized copy
@@ -117,21 +121,37 @@ export const inquirySchema = z
     website: z.string().max(0).optional(),
   })
   .superRefine((data, ctx) => {
-    const requireField = (field: string) => ctx.addIssue({ code: 'custom', path: [field], message: 'required' })
-    if (data.type === 'farm' && !data.segment) requireField('segment')
-    if (data.type === 'partner') {
-      if (!data.organization) requireField('organization')
-      if (!data.role) requireField('role')
-      if (!data.productLine) requireField('productLine')
+    for (const field of Object.keys(kindRequirements(data.type, data))) {
+      ctx.addIssue({ code: 'custom', path: [field], message: 'required' })
     }
-    if (data.type === 'product' && !data.productId && !data.productLabel && !data.productCategory && !data.message) {
-      requireField('message')
-    }
-    if ((data.type === 'general' || data.type === 'partner') && !data.message) requireField('message')
   })
 
 export type InquiryInput = z.input<typeof inquirySchema>
 export type InquiryData = z.output<typeof inquirySchema>
+
+/**
+ * Fields each kind needs on top of the base contract (name, phone, consent). Product inquiries need nothing
+ * more: the product, category and message are all optional (the form labels them «اختياري»).
+ */
+export const KIND_REQUIRED_FIELDS: Record<InquiryKind, readonly string[]> = {
+  farm: ['segment'],
+  product: [],
+  partner: ['organization', 'role', 'productLine', 'message'],
+  general: ['message'],
+}
+
+const isFilled = (value: unknown) => (typeof value === 'string' ? value.trim() !== '' : value !== undefined && value !== null)
+
+/**
+ * The kind's required fields that are missing from `raw`, as { field: 'required' }. Pure and independent of
+ * base validity: Zod 4 skips `superRefine` once any base field fails, so on its own the schema would never list
+ * e.g. the production type next to an empty name. Validity of a present value stays the schema's job.
+ */
+export function kindRequirements(kind: InquiryKind, raw: Record<string, unknown>): Record<string, ErrorCode> {
+  const out: Record<string, ErrorCode> = {}
+  for (const field of KIND_REQUIRED_FIELDS[kind]) if (!isFilled(raw[field])) out[field] = 'required'
+  return out
+}
 
 /** Flattens Zod issues into { field: errorCode } for the UI. */
 export function fieldErrors(error: z.ZodError): Record<string, ErrorCode> {
@@ -141,6 +161,19 @@ export function fieldErrors(error: z.ZodError): Record<string, ErrorCode> {
     if (!out[key]) out[key] = (issue.message as ErrorCode) || 'required'
   }
   return out
+}
+
+export type InquiryValidation = { success: true; data: InquiryData } | { success: false; errors: Record<string, ErrorCode> }
+
+/**
+ * Complete validation shared by the client (UX) and the server action (authoritative): Zod field errors merged
+ * with the kind's required fields, so a single attempt reports EVERY problem (spec §11.1–11.3).
+ */
+export function validateInquiry(raw: Record<string, unknown>): InquiryValidation {
+  const parsed = inquirySchema.safeParse(raw)
+  if (parsed.success) return { success: true, data: parsed.data }
+  const kindErrors = isInquiryKind(raw.type) ? kindRequirements(raw.type, raw) : {}
+  return { success: false, errors: { ...kindErrors, ...fieldErrors(parsed.error) } }
 }
 
 /** Result returned by the server action — success ONLY after the record is persisted. */

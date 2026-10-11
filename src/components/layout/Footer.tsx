@@ -6,6 +6,7 @@ import type { Locale } from '@/i18n/config'
 import type { CommonDict } from '@/i18n/dictionaries'
 import { interpolate } from '@/i18n/format'
 import { href, type RouteKey } from '@/i18n/routing'
+import { cn } from '@/lib/cn'
 import type { SiteSettingsView } from '@/lib/cms'
 import { LocaleSwitcher } from './LocaleSwitcher'
 
@@ -38,8 +39,9 @@ export function Footer({ locale, t, settings }: Props) {
   return (
     <footer data-theme="dark" className="relative overflow-hidden">
       <div className="container-site pt-[clamp(4rem,8vw,7rem)] pb-10">
-        <div className="grid gap-12 border-b border-line pb-14 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-4">
+        {/* Below lg the link groups sit two per row (VQA-09) instead of one ~2-screen column. */}
+        <div className="grid grid-cols-2 gap-x-6 gap-y-12 border-b border-line pb-14 sm:gap-x-10 lg:grid-cols-12 lg:gap-8">
+          <div className="col-span-2 lg:col-span-4">
             <Link href={href(locale, 'home')} aria-label={t.nav.home} className="inline-block rounded-sm">
               <Logo variant="white" width={140} alt={t.brand.logoAlt} />
             </Link>
@@ -62,7 +64,12 @@ export function Footer({ locale, t, settings }: Props) {
             ))}
           </FooterColumn>
 
-          <FooterColumn title={t.footer.categoriesTitle} className="lg:col-span-2">
+          {/* Phones: full row with the four links in a 2×2 grid; sm/md: half row beside the contact block. */}
+          <FooterColumn
+            title={t.footer.categoriesTitle}
+            className="col-span-2 sm:col-span-1 lg:col-span-2"
+            listClassName="grid grid-cols-2 gap-x-6 gap-y-1 space-y-0 sm:block sm:space-y-1"
+          >
             {categoryKeys.map((key) => (
               <FooterLink key={key} href={href(locale, 'products', { category: key })}>
                 {t.categories[key].name}
@@ -70,7 +77,7 @@ export function Footer({ locale, t, settings }: Props) {
             ))}
           </FooterColumn>
 
-          <div className="lg:col-span-2">
+          <div className="col-span-2 sm:col-span-1 lg:col-span-2">
             <h2 className="text-small font-semibold text-fg-muted">{t.footer.contactTitle}</h2>
             {channels.phone || channels.email || channels.whatsapp || channels.address ? (
               <ul className="mt-5 space-y-3 text-fg-soft">
@@ -141,11 +148,21 @@ export function Footer({ locale, t, settings }: Props) {
   )
 }
 
-function FooterColumn({ title, className, children }: { title: string; className?: string; children: React.ReactNode }) {
+function FooterColumn({
+  title,
+  className,
+  listClassName,
+  children,
+}: {
+  title: string
+  className?: string
+  listClassName?: string
+  children: React.ReactNode
+}) {
   return (
     <div className={className}>
       <h2 className="text-small font-semibold text-fg-muted">{title}</h2>
-      <ul className="mt-5 space-y-1">{children}</ul>
+      <ul className={cn('mt-5 space-y-1', listClassName)}>{children}</ul>
     </div>
   )
 }

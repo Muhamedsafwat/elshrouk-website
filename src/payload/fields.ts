@@ -1,5 +1,6 @@
 import type { Field } from 'payload'
 import { isAdminOrEditorField, isStaffField } from './access'
+import { resetOnDuplicate } from './hooks/approval-guard'
 
 export const APPROVAL_STATES = ['approved', 'review_required', 'placeholder_internal', 'hidden'] as const
 export type ApprovalState = (typeof APPROVAL_STATES)[number]
@@ -20,11 +21,12 @@ export const approvalFields = (): Field[] => [
       { label: { ar: 'مخفي', en: 'Hidden' }, value: 'hidden' },
     ],
     access: { update: isAdminOrEditorField },
+    hooks: { beforeDuplicate: [resetOnDuplicate('review_required')] },
     admin: {
       position: 'sidebar',
       description: {
-        ar: 'لا يظهر المحتوى للزوار إلا إذا كان «معتمدًا» و«منشورًا». الاعتماد متاح للمدير أو المحرر المخوَّل.',
-        en: 'Visitors only see records that are Approved AND Published. Approval requires an admin or an authorised editor.',
+        ar: 'لا يظهر المحتوى للزوار إلا إذا كان «معتمدًا» و«منشورًا». الاعتماد والنشر متاحان للمدير أو المحرر المخوَّل، وأي تعديل من غيرهما على محتوى معتمد يعيده إلى «يحتاج مراجعة» ويوقف نشره.',
+        en: 'Visitors only see records that are Approved AND Published. Approving and publishing require an admin or an authorised editor; any edit by anyone else to approved content returns it to Review required and unpublishes it.',
       },
     },
   },
@@ -35,6 +37,7 @@ export const approvalFields = (): Field[] => [
     index: true,
     label: { ar: 'منشور', en: 'Published' },
     access: { update: isAdminOrEditorField },
+    hooks: { beforeDuplicate: [resetOnDuplicate(false)] },
     admin: { position: 'sidebar' },
   },
   {

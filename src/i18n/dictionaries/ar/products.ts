@@ -23,7 +23,7 @@ export const products = {
     },
     search: {
       label: 'ابحث في الكتالوج',
-      placeholder: 'ابحث بالاسم أو الشركة المصنعة أو كود المنتج',
+      placeholder: 'الاسم أو الشركة أو الكود',
       clear: 'مسح البحث',
       submit: 'بحث',
       inCatalog: 'في الكتالوج: {count}',

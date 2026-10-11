@@ -56,7 +56,7 @@ export function CategoryTiles({
               <li
                 key={tile.key}
                 data-reveal="up"
-                className="group relative flex flex-col overflow-hidden rounded-sm bg-stone-100 transition-shadow duration-500 hover:shadow-[0_24px_60px_-32px_rgb(0_0_0/0.45)]"
+                className="group relative flex flex-col overflow-hidden rounded-sm bg-stone-100 transition-shadow duration-500 hover:shadow-[0_24px_60px_-32px_rgb(0_0_0/0.45)] has-[a:focus-visible]:outline-3 has-[a:focus-visible]:outline-offset-3 has-[a:focus-visible]:outline-(--focus)"
               >
                 <div className="relative aspect-[2/1] overflow-hidden sm:aspect-[4/3]">
                   <Photo
@@ -78,7 +78,9 @@ export function CategoryTiles({
                   <h3 className="mt-5 text-title font-bold text-fg">
                     <a
                       href={href(locale, 'products', { category: tile.key, segment })}
-                      className="after:absolute after:inset-0 after:rounded-sm after:content-[''] focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:outline-offset-2 focus-visible:after:outline-(--focus) focus-visible:after:outline-solid"
+                      // The focus ring is drawn on the <li> (has-[a:focus-visible]): the li's overflow-hidden
+                      // clipped an outline on this stretched ::after (A11Y-3).
+                      className="after:absolute after:inset-0 after:rounded-sm after:content-[''] focus-visible:outline-none"
                     >
                       {tile.name}
                     </a>

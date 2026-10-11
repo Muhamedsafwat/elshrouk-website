@@ -13,9 +13,11 @@ export async function EditorialBanner({ locale, t }: { locale: Locale; t: Common
   if (process.env.DEMO_FIXTURES === 'true') messages.push(t.demoBanner)
   if (locale === 'en' && !settings.englishApproved) messages.push(t.englishReviewNotice)
   if (!messages.length) return null
+  // A labelled region, so screen-reader users can find the ribbon from the landmarks list and no page content
+  // sits outside a landmark (axe best-practice `region`).
   return (
-    <div role="note" data-theme="dark" className="relative z-30 text-caption">
-      <div className="container-site flex flex-wrap items-center gap-x-6 gap-y-1 py-2">
+    <section aria-label={t.statusRibbonLabel} data-theme="dark" className="relative z-30 text-caption">
+      <div role="note" className="container-site flex flex-wrap items-center gap-x-6 gap-y-1 py-2">
         {messages.map((m) => (
           <p key={m} className="flex items-center gap-2 text-fg-soft">
             <span aria-hidden className="inline-block size-1.5 rounded-full bg-amber" />
@@ -23,6 +25,6 @@ export async function EditorialBanner({ locale, t }: { locale: Locale; t: Common
           </p>
         ))}
       </div>
-    </div>
+    </section>
   )
 }

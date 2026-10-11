@@ -8,6 +8,7 @@ import { publicContentWhere } from '@/payload/access'
 import { searchTokens } from '@/lib/search/normalize'
 import { CATEGORY_KEYS, PAGE_SIZE, SEGMENT_KEYS, type CatalogParams, type CategoryKey, type SegmentKey } from './catalog-params'
 import { getPayload } from './payload'
+import { SLUG_PATTERN } from './route-table'
 
 /**
  * Public catalogue data access (spec §6.4–6.5, §10). Every public query runs with
@@ -177,7 +178,7 @@ export async function getProductsForSegment(locale: Locale, segment: SegmentKey,
  * payload.auth) — it lets editors see unpublished records with a DRAFT banner and noindex.
  */
 export async function getProductBySlug(locale: Locale, slug: string, preview = false): Promise<ProductDetail | null> {
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) return null
+  if (!SLUG_PATTERN.test(slug)) return null
   const payload = await getPayload()
   const res = await payload.find({
     collection: 'products',

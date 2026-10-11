@@ -19,10 +19,10 @@ const i = (n: number) => ({ '--i': n }) as CSSProperties
 /** How we work hero: white, large authored title (one vermilion phrase), offset intro + primary CTA. */
 export function ProcessHero({ copy, crumbs, crumbsLabel, cta, titleId }: Props) {
   return (
-    <section data-theme="light" aria-labelledby={titleId} className="bg-surface pt-28 pb-16 text-fg sm:pt-32 lg:pt-40 lg:pb-28">
+    <section data-theme="light" aria-labelledby={titleId} className="bg-surface pt-8 pb-16 text-fg sm:pt-10 lg:pt-12 lg:pb-28">
       <div className="container-site">
         <Breadcrumbs items={crumbs} label={crumbsLabel} className="intro-fade" />
-        <p className="eyebrow intro-fade mt-12 lg:mt-20" style={i(1)}>
+        <p className="eyebrow intro-fade mt-10 lg:mt-14" style={i(1)}>
           {copy.eyebrow}
         </p>
         <h1 id={titleId} className="mt-6 text-[clamp(2.2rem,0.9rem+3.4vw,4.25rem)] leading-[1.14] font-bold tracking-[-0.01em] lg:mt-8 rtl:text-[clamp(2.2rem,0.75rem+5.6vw,6.5rem)]">

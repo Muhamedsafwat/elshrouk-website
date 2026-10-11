@@ -19,7 +19,21 @@ export const ALLOWED_TRANSITIONS: Record<InquiryStatus, InquiryStatus[]> = {
   rejected: [],
 }
 
-const enforceLifecycle: CollectionBeforeChangeHook = ({ data, originalDoc, operation, req }) => {
+type HistoryEntry = { id?: string | null; status?: string | null; at?: string | null; by?: string | null }
+
+/** The stored audit trail, copied entry by entry (known keys only). */
+const storedHistory = (doc: unknown): HistoryEntry[] => {
+  const rows = (doc as { statusHistory?: unknown } | undefined)?.statusHistory
+  if (!Array.isArray(rows)) return []
+  return rows.map((row: HistoryEntry) => ({ id: row?.id, status: row?.status, at: row?.at, by: row?.by }))
+}
+
+/**
+ * Lifecycle + audit trail (spec §10.3). `statusHistory` is server-owned: on every update it is REBUILT from the
+ * stored record (plus one entry when the status really changes), so a value sent through REST or the admin is
+ * ignored and the trail cannot be forged or truncated (SEC-02).
+ */
+export const enforceLifecycle: CollectionBeforeChangeHook = ({ data, originalDoc, operation, req }) => {
   if (operation === 'create') {
     data.status = 'new'
     data.statusHistory = [{ status: 'new', at: new Date().toISOString(), by: 'system' }]
@@ -27,16 +41,15 @@ const enforceLifecycle: CollectionBeforeChangeHook = ({ data, originalDoc, opera
   }
   const from = (originalDoc?.status ?? 'new') as InquiryStatus
   const to = (data.status ?? from) as InquiryStatus
+  const history = storedHistory(originalDoc)
   if (to !== from) {
-    if (!ALLOWED_TRANSITIONS[from].includes(to)) {
+    if (!ALLOWED_TRANSITIONS[from]?.includes(to)) {
       throw new APIError(`Invalid status change: ${from} → ${to}`, 400)
     }
     const actor = getUser(req)
-    data.statusHistory = [
-      ...((originalDoc?.statusHistory as unknown[]) ?? []),
-      { status: to, at: new Date().toISOString(), by: actor ? String(actor.id) : 'system' },
-    ]
+    history.push({ status: to, at: new Date().toISOString(), by: actor ? String(actor.id) : 'system' })
   }
+  data.statusHistory = history
   return data
 }
 

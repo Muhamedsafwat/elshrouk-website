@@ -1,7 +1,10 @@
-import type { CollectionConfig } from 'payload'
+import type { CollectionConfig, Where } from 'payload'
 import { getUser, isAdmin, isAdminOrEditor, isStaffField } from '../access'
 
-/** Media library with rights metadata (spec §10.1 "Asset"). Restricted files are never public. */
+/**
+ * Media library with rights metadata (spec §10.1 "Asset"). Restricted files and files whose usage rights are
+ * unknown ("do not publish") are never public: neither the record nor /api/media/file/* (SEC-09).
+ */
 export const Media: CollectionConfig = {
   slug: 'media',
   labels: { singular: { ar: 'ملف وسائط', en: 'Media file' }, plural: { ar: 'الوسائط', en: 'Media' } },
@@ -12,7 +15,8 @@ export const Media: CollectionConfig = {
   access: {
     read: ({ req }) => {
       if (getUser(req)) return true
-      return { restricted: { not_equals: true } }
+      const publicMedia: Where = { and: [{ restricted: { not_equals: true } }, { license: { not_equals: 'unknown' } }] }
+      return publicMedia
     },
     create: isAdminOrEditor,
     update: isAdminOrEditor,

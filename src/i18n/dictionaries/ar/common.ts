@@ -339,6 +339,7 @@ export const common = {
   },
   demoBanner: 'بيئة تجريبية: البيانات المعروضة هنا بيانات اختبار، وليست منتجات حقيقية.',
   englishReviewNotice: 'النسخة الإنجليزية — بانتظار المراجعة التحريرية',
+  statusRibbonLabel: 'حالة الموقع',
   readingTime: '{minutes} دقائق للقراءة',
   readingTimeOne: 'دقيقة واحدة للقراءة',
   readingTimeTwo: 'دقيقتان للقراءة',

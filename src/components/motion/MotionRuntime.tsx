@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 import { ensureGsap, gsap, ScrollTrigger } from '@/lib/motion/gsap'
 import { motion, motionDisabled } from '@/lib/motion/tokens'
+import { LINE_REVEAL, MASK_HIDDEN_Y_PERCENT } from './mask'
 
 declare global {
   interface Window {
@@ -17,6 +18,28 @@ function markRevealed(elements: Element[]) {
   for (const el of elements) el.setAttribute('data-revealed', '')
 }
 
+/**
+ * Turns on the hidden reveal states (`html.reveal`, globals.css) once, on the first load, after hydration.
+ * Everything already in the viewport is marked revealed first, so first-screen content is painted once and stays:
+ * no visible → hidden flash and no LCP delay. Only content below the fold waits for its scroll reveal. On later
+ * client navigations the class is already set, so new pages animate in. If this never runs, nothing is ever hidden.
+ */
+function enableRevealStates() {
+  const root = document.documentElement
+  if (root.classList.contains('reveal')) return
+  const viewport = window.innerHeight
+  markRevealed(
+    Array.from(document.querySelectorAll(SELECTOR)).filter((el) => {
+      const box = el.getBoundingClientRect()
+      return box.top < viewport && box.bottom > 0
+    }),
+  )
+  root.classList.add('reveal')
+}
+
+/** Per-item stagger, capped so a large batch (fast scroll / anchor jump) never spreads over more than ~0.5s. */
+const staggerFor = (count: number) => Math.min(motion.itemStagger, 0.48 / Math.max(1, count - 1))
+
 function animate(batch: Element[]) {
   const groups = new Map<string, HTMLElement[]>()
   for (const el of batch as HTMLElement[]) {
@@ -26,17 +49,23 @@ function animate(batch: Element[]) {
   for (const [type, els] of groups) {
     const done = () => markRevealed(els)
     if (type === 'lines') {
-      els.forEach((el, i) => {
+      // Every heading in a batch starts with the batch (no per-index delay): after a fast scroll or an
+      // anchor jump a batch can hold many headings, and a cumulative delay made them reveal after the
+      // body copy beside them (VQA-04).
+      els.forEach((el) => {
         const lines = el.querySelectorAll<HTMLElement>('.mask-line > span')
+        // `y: 0` is essential: GSAP parses the CSS hidden state (translate3d(0, 170%, 0)) into a px `y`, so
+        // tweening only yPercent left the line parked out of sight until clearProps popped it in at the end.
         gsap.fromTo(
           lines,
-          { yPercent: 110 },
+          { yPercent: MASK_HIDDEN_Y_PERCENT, y: 0 },
           {
             yPercent: 0,
-            duration: 1,
+            y: 0,
+            duration: LINE_REVEAL.duration,
             ease: motion.ease.sunrise,
-            stagger: motion.lineStagger,
-            delay: i * 0.06 + Number(el.dataset.revealDelay ?? 0),
+            stagger: LINE_REVEAL.stagger,
+            delay: Number(el.dataset.revealDelay ?? 0),
             onComplete: () => {
               gsap.set(lines, { clearProps: 'transform' })
               markRevealed([el])
@@ -60,14 +89,14 @@ function animate(batch: Element[]) {
         },
       )
     } else if (type === 'fade') {
-      gsap.to(els, { opacity: 1, duration: 0.8, ease: motion.ease.soft, stagger: motion.itemStagger, onComplete: done })
+      gsap.to(els, { opacity: 1, duration: 0.8, ease: motion.ease.soft, stagger: staggerFor(els.length), onComplete: done })
     } else {
       gsap.to(els, {
         opacity: 1,
         y: 0,
         duration: motion.enter,
         ease: motion.ease.out,
-        stagger: motion.itemStagger,
+        stagger: staggerFor(els.length),
         delay: Number(els[0]?.dataset.revealDelay ?? 0),
         onComplete: () => {
           gsap.set(els, { clearProps: 'transform,opacity' })
@@ -123,6 +152,7 @@ export function MotionRuntime() {
       }
     }
 
+    enableRevealStates()
     register(Array.from(document.querySelectorAll(SELECTOR)))
 
     // Reveal anything left when the reader reaches the very end of a short page.

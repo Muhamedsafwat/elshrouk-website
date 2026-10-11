@@ -33,18 +33,22 @@ The first visit to `/admin` asks you to create the first user — it automatical
 | `pnpm typecheck` | `tsc --noEmit` (strict) |
 | `pnpm lint` | ESLint |
 | `pnpm test:unit` | Vitest unit tests (`tests/unit`) |
-| `pnpm test:e2e` | Playwright journeys against a production build on :3200 with the isolated fixture DB (see below) |
-| `pnpm screenshots` | Viewport-matrix screenshots into `screenshots/` |
+| `pnpm test:e2e` | Playwright suite (desktop + mobile Chromium) against the e2e production build on :3200 with the isolated fixture DB (see below) |
+| `pnpm test:e2e:engines` | Cross-engine smoke of routing, 404s, menus and keyboard paths in WebKit (desktop + iPhone) and Firefox |
+| `pnpm screenshots` | Viewport-matrix screenshots into `screenshots/` (same e2e server) |
 | `pnpm seed` / `pnpm seed:fixtures` | Seed CMS content / + isolated test fixtures |
 | `pnpm generate:types` · `pnpm generate:importmap` | Regenerate Payload types / admin import map after schema or admin-component changes |
 
 ### End-to-end tests (isolated data)
 
 ```bash
-pnpm build
-DATABASE_URL=file:./data/e2e.db pnpm seed:fixtures   # creates [TEST] products + test staff accounts
-pnpm test:e2e                                        # starts `next start -p 3200` against data/e2e.db
+pnpm exec playwright install chromium   # once (add `webkit firefox` for pnpm test:e2e:engines)
+pnpm seed:e2e      # isolated fixture DB data/e2e.db: [TEST] products + test staff accounts
+pnpm build:e2e     # production build into .next-e2e against that DB (demo ribbon on)
+pnpm test:e2e      # starts `pnpm start:e2e` (next start -p 3200) unless a server is already listening there
 ```
+
+Re-seed (`rm data/e2e.db && pnpm seed:e2e`) and rebuild before a clean evidence run; the suites delete the records they create.
 
 Fixture products are flagged `isFixture`, labelled `[اختبار]/[TEST]`, refused unless the database name contains `e2e|test|fixture`, and are never visible on the public site unless `DEMO_FIXTURES=true` (which also shows a "demo data" banner).
 

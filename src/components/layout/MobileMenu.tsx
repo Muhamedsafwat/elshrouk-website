@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 import { Logo } from '@/components/brand/Logo'
 import { SunriseCurve } from '@/components/brand/SunriseCurve'
+import { MASK_HIDDEN_Y_PERCENT } from '@/components/motion/mask'
 import { ButtonLink } from '@/components/ui/Button'
 import { CloseIcon } from '@/components/ui/icons'
 import type { Locale } from '@/i18n/config'
@@ -42,7 +43,7 @@ export function MobileMenu({ open, onClose, locale, items, pathname, labels }: P
         tl.fromTo(dialog, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 0.6, ease: 'expo.inOut' })
           .fromTo(
             dialog.querySelectorAll('[data-menu-line]'),
-            { yPercent: 110 },
+            { yPercent: MASK_HIDDEN_Y_PERCENT },
             { yPercent: 0, duration: 0.8, ease: 'expo.out', stagger: 0.05 },
             '-=0.2',
           )

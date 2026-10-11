@@ -26,11 +26,11 @@ export function AboutHero({ locale, copy, crumbs, crumbsLabel }: Props) {
       <section
         data-theme="light"
         aria-labelledby="about-title"
-        className="bg-surface pt-28 pb-14 text-fg sm:pt-32 sm:pb-16 lg:pt-40 lg:pb-24"
+        className="bg-surface pt-8 pb-14 text-fg sm:pt-10 sm:pb-16 lg:pt-12 lg:pb-24"
       >
         <div className="container-site">
           <Breadcrumbs items={crumbs} label={crumbsLabel} className="intro-fade" />
-          <p className="eyebrow intro-fade mt-12 lg:mt-20" style={i(1)}>
+          <p className="eyebrow intro-fade mt-10 lg:mt-14" style={i(1)}>
             {copy.eyebrow}
           </p>
           <h1
@@ -62,7 +62,8 @@ export function AboutHero({ locale, copy, crumbs, crumbsLabel }: Props) {
             aria-hidden
             className="absolute inset-0 opacity-0 motion-safe:[html.js:not(.motion-off)_&]:opacity-100"
           >
-            <Photo id="farmExterior" locale={locale} sizes="100vw" priority decorative className="absolute inset-0 grayscale" />
+            {/* Same URL as the colour photo above (one request); only the real LCP image carries `priority`. */}
+            <Photo id="farmExterior" locale={locale} sizes="100vw" decorative className="absolute inset-0 grayscale" />
           </div>
         </div>
       </DawnImage>

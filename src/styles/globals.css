@@ -309,15 +309,26 @@
   }
 }
 
-/* Masked line used by TextReveal — padding keeps Arabic ascenders/descenders and dots unclipped. */
+/* Masked line used by TextReveal and the CSS hero intros (VQA-01). Measured Alexandria ink reaches 0.27em
+   above the line box (tanween in «شريكًا») and 0.38em below it (dots under ي in «في»), so the padding alone
+   (Safari has no overflow-clip-margin) leaves 0.3em above / 0.42em below; the negative margins cancel it so
+   layout is unchanged. Sibling lines' vertical margins collapse to the most negative one, hence the explicit
+   `+` rule (0.3 + 0.42 = 0.72em). The padding is not a hit target, so it never covers a neighbouring link.
+   Hidden state: translateY(170%) here, in als-rise and in GSAP (MASK_HIDDEN_Y_PERCENT in
+   src/components/motion/mask.ts): ≥ 1 + (0.46 + 0.27) / line-height, i.e. nothing peeks for line-heights ≥ 1.05. */
 @utility mask-line {
   display: block;
   overflow: clip;
-  overflow-clip-margin: 0.12em;
-  padding-block: 0.06em;
-  margin-block: -0.06em;
+  overflow-clip-margin: 0.04em;
+  padding-block: 0.3em 0.42em;
+  margin-block: -0.3em -0.42em;
+  pointer-events: none;
+  & + & {
+    margin-block-start: -0.72em;
+  }
   & > span {
     display: block;
+    pointer-events: auto;
   }
 }
 
@@ -350,27 +361,30 @@
 
 /* ==========================================================================
    MOTION GATING (spec §8.6): content is never hidden unless JS + motion are active.
-   html.js is added by an inline script; html.motion-off is the fail-safe.
+   html.reveal is added by MotionRuntime after hydration, once everything already in the viewport has been
+   marked [data-revealed]: first-screen content is painted once and stays (no flash, no LCP delay), and only
+   content below the fold waits for its scroll reveal. If the runtime never starts, nothing is ever hidden.
+   html.motion-off (inline boot script, 3.5 s) is the fail-safe; html.js only means JS is running.
    ========================================================================== */
 @media (prefers-reduced-motion: no-preference) {
-  html.js:not(.motion-off) [data-reveal]:not([data-revealed]) {
+  html.reveal:not(.motion-off) [data-reveal]:not([data-revealed]) {
     opacity: 0;
   }
-  html.js:not(.motion-off) [data-reveal='up']:not([data-revealed]) {
+  html.reveal:not(.motion-off) [data-reveal='up']:not([data-revealed]) {
     transform: translate3d(0, 1.25rem, 0);
   }
-  html.js:not(.motion-off) [data-reveal='lines']:not([data-revealed]) {
+  html.reveal:not(.motion-off) [data-reveal='lines']:not([data-revealed]) {
     opacity: 1;
   }
-  html.js:not(.motion-off) [data-reveal='lines']:not([data-revealed]) .mask-line > span {
+  html.reveal:not(.motion-off) [data-reveal='lines']:not([data-revealed]) .mask-line > span {
     display: block;
-    transform: translate3d(0, 110%, 0);
+    transform: translate3d(0, 170%, 0);
   }
-  html.js:not(.motion-off) [data-reveal='image']:not([data-revealed]) {
+  html.reveal:not(.motion-off) [data-reveal='image']:not([data-revealed]) {
     opacity: 1;
     clip-path: inset(100% 0 0 0);
   }
-  html.js:not(.motion-off) [data-reveal='draw']:not([data-revealed]) {
+  html.reveal:not(.motion-off) [data-reveal='draw']:not([data-revealed]) {
     opacity: 1;
   }
 }
@@ -383,7 +397,7 @@
    ========================================================================== */
 @keyframes als-rise {
   from {
-    transform: translate3d(0, 110%, 0);
+    transform: translate3d(0, 170%, 0);
   }
   to {
     transform: none;
@@ -443,13 +457,14 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  /* Short delays (PERF-1): the first headline line starts at 0.08s so text LCP is not held back. */
   .intro-line > span {
-    animation: als-rise 1.1s var(--ease-sunrise) both;
-    animation-delay: calc(0.3s + var(--i, 0) * 0.1s);
+    animation: als-rise 0.95s var(--ease-sunrise) both;
+    animation-delay: calc(0.08s + var(--i, 0) * 0.08s);
   }
   .intro-fade {
-    animation: als-fade-up 0.8s var(--ease-soft) both;
-    animation-delay: calc(0.62s + var(--i, 0) * 0.08s);
+    animation: als-fade-up 0.7s var(--ease-soft) both;
+    animation-delay: calc(0.28s + var(--i, 0) * 0.08s);
   }
   .intro-mask {
     animation: als-sunrise-mask 1.2s var(--ease-soft) 0.05s both;

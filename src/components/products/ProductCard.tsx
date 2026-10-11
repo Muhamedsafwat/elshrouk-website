@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
+import { fallbackLangProps } from '@/components/content/fallbackLang'
 import { Photo } from '@/components/media/Photo'
 import { ArrowIcon, CATEGORY_ICONS } from '@/components/ui/icons'
 import { Tag } from '@/components/ui/States'
@@ -44,7 +45,15 @@ export function ProductCard({
   const Icon = product.category ? CATEGORY_ICONS[product.category.key] : null
   const detail = productHref(locale, product.slug)
   return (
-    <article className={cn('group relative flex flex-col overflow-hidden rounded-md border border-line bg-paper transition-shadow hover:shadow-[0_24px_60px_-36px_rgb(0_0_0/0.45)]', className)}>
+    <article
+      className={cn(
+        'group relative flex flex-col overflow-hidden rounded-md border border-line bg-paper transition-shadow hover:shadow-[0_24px_60px_-36px_rgb(0_0_0/0.45)]',
+        // Keyboard focus on the (stretched) title link rings the whole card (A11Y-2). The ring sits outside
+        // the border box, so the card's own overflow-hidden does not clip it.
+        'has-[h3_a:focus-visible]:outline-3 has-[h3_a:focus-visible]:outline-offset-3 has-[h3_a:focus-visible]:outline-vermilion',
+        className,
+      )}
+    >
       <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
         {product.image ? (
           <Image
@@ -73,7 +82,11 @@ export function ProductCard({
       </div>
       <div className="flex flex-1 flex-col gap-3 p-5 sm:p-6">
         <h3 className="text-title leading-snug font-bold text-fg">
-          <Link href={detail} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none">
+          <Link
+            href={detail}
+            className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
+            {...fallbackLangProps(product.name, locale)}
+          >
             {product.name}
           </Link>
         </h3>
@@ -84,7 +97,11 @@ export function ProductCard({
         ) : null}
         <div className="mt-1 flex flex-wrap gap-2 text-caption">
           {product.manufacturer ? <Tag>{product.manufacturer}</Tag> : null}
-          {product.packSize ? <Tag>{product.packSize}</Tag> : null}
+          {product.packSize ? (
+            <Tag>
+              <span {...fallbackLangProps(product.packSize, locale)}>{product.packSize}</span>
+            </Tag>
+          ) : null}
           {product.segments.map((s) => (
             <Tag key={s.key}>{s.name}</Tag>
           ))}

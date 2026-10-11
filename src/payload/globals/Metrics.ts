@@ -1,5 +1,5 @@
 import { APIError, type GlobalConfig } from 'payload'
-import { anyone, canApproveContent, getUser } from '../access'
+import { anyone, canApproveContent, getUser, isStaffField } from '../access'
 import { revalidateGlobalAfterChange } from '../hooks/revalidate'
 
 export const METRIC_KEYS = ['farms', 'birds', 'products'] as const
@@ -66,7 +66,12 @@ export const Metrics: GlobalConfig = {
         },
         { name: 'label', type: 'text', required: true, localized: true, label: { ar: 'الوصف المعروض', en: 'Display label' } },
         { name: 'srLabel', type: 'text', required: true, localized: true, label: { ar: 'النص الكامل لقارئات الشاشة', en: 'Full screen-reader sentence' } },
-        { name: 'accuracyNote', type: 'textarea', label: { ar: 'ملاحظة الدقة والمصدر (داخلية)', en: 'Accuracy & source note (internal)' } },
+        {
+          name: 'accuracyNote',
+          type: 'textarea',
+          access: { read: isStaffField }, // internal editor note: never in the public API
+          label: { ar: 'ملاحظة الدقة والمصدر (داخلية)', en: 'Accuracy & source note (internal)' },
+        },
       ],
     },
     { name: 'footnote', type: 'text', localized: true, label: { ar: 'الحاشية', en: 'Footnote' } },

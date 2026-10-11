@@ -3,6 +3,7 @@ import { buildSearchText } from '../../lib/search/normalize'
 import { isAdmin, isAdminOrEditor, isStaffField, readPublishedOrStaff } from '../access'
 import { approvalFields, seoGroup, slugField } from '../fields'
 import { approvalGuard } from '../hooks/approval-guard'
+import { restrictHiddenFieldQueries, revealWhen } from '../hooks/public-visibility'
 import { revalidateAfterChange, revalidateAfterDelete } from '../hooks/revalidate'
 
 export const PRODUCT_FORMS = [
@@ -33,9 +34,11 @@ const FORM_LABELS: Record<(typeof PRODUCT_FORMS)[number], { ar: string; en: stri
   other: { ar: 'أخرى', en: 'Other' },
 }
 
+/** Public search text: names and SKU, plus the manufacturer ONLY once it is verified (SEC-04). */
 const computeSearchText: CollectionBeforeChangeHook = ({ data, originalDoc }) => {
   const pick = <K extends string>(key: K) => (data[key] ?? originalDoc?.[key]) as string | undefined
-  data.searchText = buildSearchText([pick('nameAr'), pick('nameEn'), pick('sku'), pick('manufacturer')])
+  const verified = (data.manufacturerVerified ?? originalDoc?.manufacturerVerified) === true
+  data.searchText = buildSearchText([pick('nameAr'), pick('nameEn'), pick('sku'), verified ? pick('manufacturer') : undefined])
   return data
 }
 
@@ -65,7 +68,10 @@ export const Products: CollectionConfig = {
     update: isAdminOrEditor,
     delete: isAdmin,
   },
+  // The flags the public-visibility hooks read must be present even when a query selects only a few fields.
+  forceSelect: { manufacturerVerified: true, labelPdfApproved: true },
   hooks: {
+    beforeOperation: [restrictHiddenFieldQueries({ manufacturer: 'manufacturerVerified', labelPdf: 'labelPdfApproved' })],
     beforeChange: [approvalGuard, computeSearchText],
     afterChange: [revalidateAfterChange],
     afterDelete: [revalidateAfterDelete],
@@ -115,7 +121,13 @@ export const Products: CollectionConfig = {
             {
               type: 'row',
               fields: [
-                { name: 'manufacturer', type: 'text', label: { ar: 'الجهة المصنّعة', en: 'Manufacturer' } },
+                {
+                  name: 'manufacturer',
+                  type: 'text',
+                  label: { ar: 'الجهة المصنّعة', en: 'Manufacturer' },
+                  // Public API: null until verified (staff always see it).
+                  hooks: { afterRead: [revealWhen('manufacturerVerified')] },
+                },
                 {
                   name: 'manufacturerVerified',
                   type: 'checkbox',
@@ -158,6 +170,8 @@ export const Products: CollectionConfig = {
               relationTo: 'media',
               label: { ar: 'النشرة الفنية (PDF)', en: 'Technical label (PDF)' },
               filterOptions: { mimeType: { equals: 'application/pdf' } },
+              // Public API: null until legally approved (staff always see it).
+              hooks: { afterRead: [revealWhen('labelPdfApproved')] },
             },
             {
               name: 'labelPdfApproved',
@@ -205,8 +219,8 @@ export const Products: CollectionConfig = {
     }),
     ...approvalFields(),
     {
-      // Normalised name/SKU/manufacturer text for Arabic-aware search. Readable on purpose: public search
-      // filters on it (Payload rejects filters on unreadable fields); it only contains public name data.
+      // Normalised name/SKU (+ verified manufacturer) text for Arabic-aware search. Readable on purpose: public
+      // search filters on it (Payload rejects filters on unreadable fields); it only contains public name data.
       name: 'searchText',
       type: 'text',
       index: true,

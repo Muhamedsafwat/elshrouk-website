@@ -54,6 +54,23 @@ export default defineConfig({
       testMatch: /screenshots\.spec\.ts/,
       use: { ...devices['Desktop Chrome'] },
     },
+    // Cross-engine smoke (`pnpm test:e2e:engines`; needs `playwright install webkit firefox`): routing, server-rendered
+    // 404s, every route's h1 and console, locale switch, keyboard menu/dropdown, mobile dialog, 320 px overflow.
+    {
+      name: 'webkit',
+      testMatch: /navigation\.spec\.ts/,
+      use: { ...devices['Desktop Safari'], viewport: { width: 1440, height: 900 } },
+    },
+    {
+      name: 'mobile-safari',
+      testMatch: /navigation\.spec\.ts/,
+      use: { ...devices['iPhone 14'] },
+    },
+    {
+      name: 'firefox',
+      testMatch: /navigation\.spec\.ts/,
+      use: { ...devices['Desktop Firefox'], viewport: { width: 1440, height: 900 } },
+    },
   ],
   webServer: startServer
     ? {

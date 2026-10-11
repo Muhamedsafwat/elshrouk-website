@@ -6,6 +6,11 @@ import type { NextConfig } from 'next'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 const isDev = process.env.NODE_ENV !== 'production'
+// `upgrade-insecure-requests` only when the configured public origin is HTTPS. On a production build served over plain
+// HTTP (the local e2e server, an IP-only staging box) WebKit/Safari upgrades every asset request to https and then loads
+// no CSS or JS; Chromium exempts localhost, so this only showed up in the WebKit run. HSTS can stay unconditional:
+// browsers ignore it on plain-HTTP responses (RFC 6797 §8.1).
+const httpsSite = /^https:\/\//.test(process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || '')
 
 /**
  * Content-Security-Policy compatible with Next.js hydration (inline bootstrap scripts) and the Payload
@@ -23,7 +28,7 @@ const csp = [
   "base-uri 'self'",
   "form-action 'self'",
   "frame-ancestors 'self'",
-  ...(isDev ? [] : ['upgrade-insecure-requests']),
+  ...(!isDev && httpsSite ? ['upgrade-insecure-requests'] : []),
 ].join('; ')
 
 const securityHeaders = [

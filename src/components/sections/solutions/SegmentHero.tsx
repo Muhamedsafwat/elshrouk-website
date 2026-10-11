@@ -43,6 +43,8 @@ export function SegmentHero({
         </div>
         <div aria-hidden className="absolute inset-0 bg-black/50" />
         <div aria-hidden className="absolute inset-0 bg-linear-to-t from-black/85 via-black/35 to-black/20" />
+        {/* Extra scrim behind the breadcrumbs only, so bright ceiling lights never drop them below 4.5:1 (A11Y-7). */}
+        <div aria-hidden className="absolute inset-x-0 top-0 h-36 bg-linear-to-b from-black/40 to-transparent" />
       </div>
 
       <div className="container-site flex w-full flex-1 flex-col pt-6 pb-12 lg:pt-8 lg:pb-20">

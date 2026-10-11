@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { CrestPattern } from '@/components/brand/CrestPattern'
 import { Photo } from '@/components/media/Photo'
-import { ArrowIcon, CATEGORY_ICONS } from '@/components/ui/icons'
+import { AlertIcon, ArrowIcon, CATEGORY_ICONS } from '@/components/ui/icons'
 import type { Locale } from '@/i18n/config'
 import { catalogHref, type CategoryKey } from '@/lib/catalog-params'
 import { cn } from '@/lib/cn'
@@ -34,6 +34,8 @@ export function CatalogEmpty({
     selectedLabel: string
     formTitle: string
     formIntro: string
+    /** The exact `common.vetSafetyNote` sentence, shown on the medicines and vaccines cards (CI-02). */
+    vetNote: string
   }
   form: ReactNode
 }) {
@@ -80,6 +82,12 @@ export function CatalogEmpty({
                     </div>
                     <h3 className="mt-6 text-title leading-snug font-bold">{category.name}</h3>
                     <p className="mt-3 text-fg-soft">{category.description}</p>
+                    {category.key === 'medicines' || category.key === 'vaccines' ? (
+                      <p role="note" className="mt-3 flex items-start gap-2 text-small text-fg-muted">
+                        <AlertIcon size={16} className="mt-1 shrink-0 text-fg" />
+                        <span>{copy.vetNote}</span>
+                      </p>
+                    ) : null}
                     <Link
                       href={`${catalogHref(locale, {}, { category: category.key })}#${CATALOG_INQUIRY_ID}`}
                       aria-current={isSelected ? 'true' : undefined}
