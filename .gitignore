@@ -14,13 +14,14 @@ next-env.d.ts
 .env.*
 !.env.example
 
-# local databases & uploads (never commit PII or CMS data)
-data/
+# local databases & uploads (never commit PII or CMS data). Anchored to the repo root: an unanchored `media/`
+# also matched src/components/media/ and kept Photo.tsx out of the repository.
+/data/
 *.db
 *.db-journal
 *.db-wal
 *.db-shm
-media/
+/media/
 
 # large source assets & internal-only research
 assets-src/
@@ -35,6 +36,7 @@ blob-report/
 
 # logs & OS
 *.log
+!docs/evidence/**/*.log
 npm-debug.log*
 pnpm-debug.log*
 .DS_Store

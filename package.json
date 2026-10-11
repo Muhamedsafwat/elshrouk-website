@@ -9,7 +9,7 @@
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev --port 3100",
     "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build",
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start --port 3100",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "lint": "cross-env NODE_OPTIONS=--no-deprecation eslint .",
     "format": "prettier --write .",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
