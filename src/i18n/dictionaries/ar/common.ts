@@ -24,11 +24,14 @@ export const common = {
     about: 'عن الشروق',
     solutions: 'حلول الدواجن',
     products: 'المنتجات',
+    partners: 'شركاؤنا',
     howWeWork: 'كيف نعمل',
     knowledge: 'المعرفة',
     contact: 'تواصل معنا',
   },
   solutionsMenu: {
+    /** Header menu label (breadcrumbs and page titles use nav.solutions). */
+    label: 'حلول الدواجن',
     overview: 'نظرة عامة',
     broilers: 'التسمين',
     layers: 'البياض',

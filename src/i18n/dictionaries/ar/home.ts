@@ -199,6 +199,13 @@ export const home = {
     viewAll: 'عرض كل المنتجات',
     categoriesLabel: 'تصفح الكتالوج حسب الفئة',
   },
+  partners: {
+    // Partner names, links and logos come from src/content/partners.ts (client-supplied 2026-10-25).
+    eyebrow: 'شركاؤنا',
+    title: 'شركاء نعمل معهم',
+    intro: 'تعرّف على شركائنا، واطّلع على منتجاتهم عبر مواقعهم الرسمية.',
+    cta: 'كن شريكًا',
+  },
   partnerProof: {
     // The approximate qualifier exactly as it appears inside `narrative` (emphasised with each approved statement).
     narrativeQualifier: 'حوالي',

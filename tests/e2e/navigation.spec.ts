@@ -4,6 +4,9 @@ import { expect, test } from '@playwright/test'
  * Spec §16.1 journeys 3, 4 (partial) and 7: navigation, locale switching, keyboard menu, routing integrity.
  */
 
+/** Partner names from src/content/partners.ts. */
+const PARTNERS = ['Betra', 'Menon', 'NFT']
+
 test.describe('routing', () => {
   test('root redirects to the Arabic home page', async ({ page }) => {
     const res = await page.goto('/')
@@ -100,6 +103,38 @@ test.describe('header & locale switching', () => {
     await expect(trigger).toHaveAttribute('aria-expanded', 'false')
     await expect(trigger).toBeFocused()
   })
+
+  test('desktop partners dropdown lists partner sites that open in a new tab', async ({ page }, testInfo) => {
+    test.skip(!!testInfo.project.use.isMobile, 'desktop navigation only')
+    await page.goto('/ar')
+    const trigger = page.locator('header').getByRole('button', { name: 'شركاؤنا' })
+    await trigger.focus()
+    await page.keyboard.press('Enter')
+    await expect(trigger).toHaveAttribute('aria-expanded', 'true')
+    const panel = page.locator(`[id="${await trigger.getAttribute('aria-controls')}"]`)
+    const links = panel.getByRole('link')
+    await expect(links).toHaveCount(PARTNERS.length)
+    for (const name of PARTNERS) {
+      const link = panel.getByRole('link', { name: new RegExp(name) })
+      await expect(link).toHaveAttribute('target', '_blank')
+      await expect(link).toHaveAttribute('rel', /noopener/)
+      await expect(link).toHaveAttribute('href', /^https:\/\//)
+    }
+    await page.keyboard.press('Escape')
+    await expect(trigger).toHaveAttribute('aria-expanded', 'false')
+    await expect(trigger).toBeFocused()
+  })
+
+  test('home partners section links each partner in a new tab', async ({ page }) => {
+    await page.goto('/en')
+    const section = page.locator('#partners')
+    await expect(section.getByRole('heading', { level: 2 })).toBeVisible()
+    for (const name of PARTNERS) {
+      const link = section.getByRole('link', { name: new RegExp(name) })
+      await expect(link).toHaveAttribute('target', '_blank')
+      await expect(link).toHaveAttribute('rel', /noopener/)
+    }
+  })
 })
 
 test.describe('mobile menu', () => {
@@ -120,6 +155,19 @@ test.describe('mobile menu', () => {
     await dialog.getByRole('link', { name: 'عن الشروق' }).click()
     await expect(page).toHaveURL(/\/ar\/about$/)
     await expect(page.getByRole('dialog')).toBeHidden()
+  })
+
+  test('partners: external links open in a new tab; the label goes to the home partners section', async ({ page }) => {
+    await page.goto('/ar/about')
+    await page.getByRole('button', { name: 'فتح القائمة' }).first().click()
+    const dialog = page.getByRole('dialog')
+    for (const name of PARTNERS) {
+      await expect(dialog.getByRole('link', { name: new RegExp(name) })).toHaveAttribute('target', '_blank')
+    }
+    await dialog.getByRole('link', { name: 'شركاؤنا' }).click()
+    await expect(page).toHaveURL(/\/ar#partners$/)
+    await expect(page.getByRole('dialog')).toBeHidden()
+    await expect(page.locator('#partners')).toBeInViewport()
   })
 
   test('mobile → About → EN → AR keeps navigation working (journey 3)', async ({ page }) => {

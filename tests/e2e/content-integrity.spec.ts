@@ -49,7 +49,8 @@ const BANNED: Record<string, RegExp[]> = {
     /\bISO ?\d|\bGMP\b|\bGSP\b|HACCP|certif|accredit|cold[- ]chain|\bfleet\b|warehouse|within \d+ (hours?|days?)|same[- ]day|guarantee|world[- ]class|(market|industry|world)[- ]leading|revolutionary|unmatched/i,
     /سلسلة التبريد|أسطول|مستودع|مخازن|خلال [0-9]+ ?(ساعة|ساعات|يوم|أيام)|نضمن|مضمون|الأفضل|الأول في/u,
   ],
-  'testimonials / partner proof': [/testimonial|trusted by|our partners|clients include|award/i, /قالوا عنا|آراء العملاء|شركاؤنا|جائزة|جوائز/u],
+  // "Our partners" / «شركاؤنا» are allowed since the client supplied the partner list (2026-10-25, src/content/partners.ts).
+  'testimonials / partner proof': [/testimonial|trusted by|clients include|award/i, /قالوا عنا|آراء العملاء|جائزة|جوائز/u],
   'placeholder / unresolved string': [/lorem|ipsum|\bTODO\b|\bTBD\b|FIXME|\bundefined\b|\bNaN\b|\[object |\{\{\s*\w+\s*\}\}|\{[a-zA-Z]+\}|coming soon/i, AR_WORD('قريبًا|قريبا')],
   'Arabic-Indic digits': [/[٠-٩۰-۹]/u],
 }

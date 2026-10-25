@@ -18,11 +18,14 @@ export const common: CommonDictionary = {
     about: 'About',
     solutions: 'Poultry solutions',
     products: 'Products',
+    partners: 'Partners',
     howWeWork: 'How we work',
     knowledge: 'Knowledge',
     contact: 'Contact',
   },
   solutionsMenu: {
+    // Shorter than nav.solutions so the one-line English header fits at 1024px and 1280px.
+    label: 'Solutions',
     overview: 'Overview',
     broilers: 'Broilers',
     layers: 'Layers',

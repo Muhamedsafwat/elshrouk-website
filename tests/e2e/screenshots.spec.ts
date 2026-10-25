@@ -324,7 +324,7 @@ test.describe('desktop solutions dropdown open @ 1440', () => {
 
   for (const [routePath, label] of [
     ['/ar', 'حلول الدواجن'],
-    ['/en', 'Poultry solutions'],
+    ['/en', 'Solutions'],
   ] as const) {
     test(`${routePath} solutions dropdown`, async ({ page }, testInfo) => {
       const errors = watchConsole(page)

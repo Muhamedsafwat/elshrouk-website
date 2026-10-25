@@ -6,7 +6,7 @@ import { Logo } from '@/components/brand/Logo'
 import { SunriseCurve } from '@/components/brand/SunriseCurve'
 import { MASK_HIDDEN_Y_PERCENT } from '@/components/motion/mask'
 import { ButtonLink } from '@/components/ui/Button'
-import { CloseIcon } from '@/components/ui/icons'
+import { CloseIcon, ExternalIcon } from '@/components/ui/icons'
 import type { Locale } from '@/i18n/config'
 import { href, isActiveRoute } from '@/i18n/routing'
 import { gsap } from '@/lib/motion/gsap'
@@ -108,13 +108,16 @@ export function MobileMenu({ open, onClose, locale, items, pathname, labels }: P
       <nav aria-label={labels.primaryNav} className="container-site relative z-10 flex-1 py-6">
         <ol className="flex flex-col">
           {items.map((item, i) => {
-            const active = isActiveRoute(pathname, locale, item.key)
+            const external = item.kind === 'external'
+            const id = external ? item.id : item.key
+            const lineHref = external ? item.fallbackHref : href(locale, item.key)
+            const active = !external && isActiveRoute(pathname, locale, item.key)
             return (
-              <li key={item.key} className="border-b border-white/12 py-1">
+              <li key={id} className="border-b border-white/12 py-1">
                 <span className="mask-line">
                   <span data-menu-line>
                     <Link
-                      href={href(locale, item.key)}
+                      href={lineHref}
                       onClick={onClose}
                       aria-current={active ? 'page' : undefined}
                       className="group flex items-baseline gap-4 py-2.5 text-[clamp(1.75rem,7.5vw,2.75rem)] leading-[1.25] font-bold text-paper transition-colors hover:text-vermilion aria-[current=page]:text-vermilion"
@@ -126,7 +129,24 @@ export function MobileMenu({ open, onClose, locale, items, pathname, labels }: P
                     </Link>
                   </span>
                 </span>
-                {item.children?.length ? (
+                {external ? (
+                  <ul className="flex flex-wrap gap-x-5 gap-y-1 ps-12 pb-3" data-menu-fade>
+                    {item.links.map((link) => (
+                      <li key={link.href}>
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="latin inline-flex min-h-11 items-center gap-1.5 text-base font-medium text-stone-300 underline-offset-8 hover:text-paper hover:underline"
+                        >
+                          {link.label}
+                          <ExternalIcon size={14} />
+                          <span className="sr-only">({labels.externalLink})</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : item.children?.length ? (
                   <ul className="flex flex-wrap gap-x-5 gap-y-1 ps-12 pb-3" data-menu-fade>
                     {item.children.map((child) => (
                       <li key={child.key}>

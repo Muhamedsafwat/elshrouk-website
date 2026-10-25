@@ -91,7 +91,7 @@ _Last updated: 2026-10-11 (Orchestrator, final handoff). Items were raised 2026-
 ### OI-08 — Commissioned / approved photography
 - **Why needed:** spec §3.6 and PDF p.14 call for authentic, licensed or commissioned documentary photography of real operations.
 - **Current state:** licensed stock poultry photography — sources and licences in `docs/image-provenance.md`.
-- **Blocked / degraded meanwhile:** imagery is credible and segment-correct but not Alshorouk's own farms, team or operations; no testimonial or partner-logo section (spec §5 Scene 9).
+- **Blocked / degraded meanwhile:** imagery is credible and segment-correct but not Alshorouk's own farms, team or operations; no testimonial section (spec §5 Scene 9). A partner-logo section now exists with the client-supplied partners (2026-10-25, register PT-01); the supplied logos are small PNGs (71–150 px) and the Menon file is a low-resolution wordmark on black, so SVG or transparent PNG logos (≥ 300 px wide) are needed for sharp display.
 - **What we need:** a commissioned shoot or approved company photos with usage rights, consent from identifiable people and farm permissions; optionally real testimonials and partner logos with written permission.
 - **Owner / priority:** client / brand · High.
 

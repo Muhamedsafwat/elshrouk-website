@@ -6,11 +6,13 @@ import { FarmTypes } from '@/components/sections/home/FarmTypes'
 import { Hero } from '@/components/sections/home/Hero'
 import { Journey } from '@/components/sections/home/Journey'
 import { PartnerProof } from '@/components/sections/home/PartnerProof'
+import { Partners } from '@/components/sections/home/Partners'
 import { ProductPreview } from '@/components/sections/home/ProductPreview'
 import { ProductUniverse } from '@/components/sections/home/ProductUniverse'
 import { ProofBand } from '@/components/sections/home/ProofBand'
 import { Statement } from '@/components/sections/home/Statement'
 import { Values } from '@/components/sections/home/Values'
+import { partners } from '@/content/partners'
 import { isLocale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/dictionaries'
 import { getFeaturedProducts } from '@/lib/catalog'
@@ -32,7 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { ...metadata, title: { absolute: `${t.meta.title} | ${dict.common.brand.name}` } }
 }
 
-/** Homepage — 11 sequenced scenes (spec §5; docs/art-direction.md §5). CMS copy overrides dictionary defaults. */
+/** Homepage — sequenced scenes (spec §5; docs/art-direction.md §5). CMS copy overrides dictionary defaults. */
 export default async function HomePage({ params }: Props) {
   const { locale } = await params
   if (!isLocale(locale)) notFound()
@@ -73,6 +75,7 @@ export default async function HomePage({ params }: Props) {
       {s.showProductPreview ? (
         <ProductPreview locale={locale} copy={t.productPreview} products={featured} categories={dict.common.categories} />
       ) : null}
+      <Partners locale={locale} copy={t.partners} partners={partners} externalLabel={dict.common.a11y.externalLink} />
       {s.showPartnerProof ? <PartnerProof locale={locale} copy={t.partnerProof} metrics={metrics.items} /> : null}
       {s.showFaq ? <FaqTeaser locale={locale} copy={t.faq} items={faqs} /> : null}
       <Closing

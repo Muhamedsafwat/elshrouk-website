@@ -3,7 +3,8 @@
 // Arabic is the primary locale; the English file is typed against this shape.
 //
 // Copy expresses openness to discussion only: no existing partners, exclusivity, agencies or geography are claimed.
-// No partner or supplier logos are shown on this page (none are authorised).
+// No partner or supplier logos are shown on this page; the client-supplied partner list (src/content/partners.ts)
+// appears in the header menu and the home page partners section.
 // process.steps describe a PROPOSED process pending client confirmation.
 
 export const partner = {

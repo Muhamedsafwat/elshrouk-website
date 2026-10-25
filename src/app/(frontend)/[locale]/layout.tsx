@@ -8,10 +8,11 @@ import { Header } from '@/components/layout/Header'
 import type { NavItem } from '@/components/layout/types'
 import { MotionRuntime } from '@/components/motion/MotionRuntime'
 import { EditorialBanner } from '@/components/layout/EditorialBanner'
+import { partnerDomain, partners } from '@/content/partners'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { isLocale, localeDirection, locales, type Locale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/dictionaries'
-import { absoluteUrl } from '@/i18n/routing'
+import { absoluteUrl, href } from '@/i18n/routing'
 import { getSiteSettings } from '@/lib/cms'
 import { organizationJsonLd } from '@/lib/seo'
 import { arabicFont, latinFont } from '@/styles/fonts'
@@ -74,8 +75,19 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   ]
   const items: NavItem[] = [
     { key: 'about', label: t.nav.about },
-    { key: 'solutions', label: t.nav.solutions, children: solutionsChildren },
+    { key: 'solutions', label: t.solutionsMenu.label, children: solutionsChildren },
     { key: 'products', label: t.nav.products },
+    ...(partners.length
+      ? [
+          {
+            kind: 'external' as const,
+            id: 'partners',
+            label: t.nav.partners,
+            fallbackHref: href(locale, 'home', undefined, 'partners'),
+            links: partners.map((p) => ({ label: p.name, href: p.link, description: partnerDomain(p.link), logo: p.icon })),
+          },
+        ]
+      : []),
     { key: 'howWeWork', label: t.nav.howWeWork },
     ...(settings.showKnowledgeHub ? [{ key: 'knowledge' as const, label: t.nav.knowledge }] : []),
   ]
@@ -109,6 +121,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
             languageLabel: t.header.language.label,
             switchLanguageShort: locale === 'ar' ? t.header.language.switchToEnglish : t.header.language.switchToArabic,
             switchLanguageName: locale === 'ar' ? t.header.language.englishName : t.header.language.arabicName,
+            externalLink: t.a11y.externalLink,
           }}
         />
         <main id="main" tabIndex={-1} className="outline-none">

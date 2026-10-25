@@ -191,6 +191,12 @@ export const home: HomeDictionary = {
     viewAll: 'View all products',
     categoriesLabel: 'Browse the catalogue by category',
   },
+  partners: {
+    eyebrow: 'Our partners',
+    title: 'Companies we work with',
+    intro: 'Get to know our partners and explore their products on their official websites.',
+    cta: 'Partner with us',
+  },
   partnerProof: {
     // The approximate qualifier exactly as it appears inside `narrative` (emphasised with each approved statement).
     narrativeQualifier: 'around',
